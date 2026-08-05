@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eurasia Natural History Association | dotaltai.org</title>
-    <meta name="description" content="Eurasia Natural History Association - Exchange & Conservation Projects">
+    <title>Avrasya Doğa Tarihi Derneği | dotaltai.org</title>
+    <meta name="description" content="Avrasya Doğa Tarihi Derneği - Değişim ve Koruma Projeleri">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -15,20 +15,51 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">🌿 <span>Eurasia NHA</span></a>
             <nav class="nav-links">
-                <a href="index.html#about">About Us</a>
-                <a href="index.html#services">Services</a>
+                <a href="index.html#about" class="lang-tr">Hakkımızda</a>
+                <a href="index.html#about" class="lang-en" style="display:none;">About Us</a>
+                <a href="index.html#about" class="lang-pt" style="display:none;">Sobre Nós</a>
+
+                <a href="index.html#services" class="lang-tr">Hizmetler</a>
+                <a href="index.html#services" class="lang-en" style="display:none;">Services</a>
+                <a href="index.html#services" class="lang-pt" style="display:none;">Serviços</a>
                 
                 <!-- PROJELER DROPDOWN MENÜ -->
                 <div class="dropdown">
-                    <a href="#" class="dropbtn">Projects ▾</a>
+                    <a href="#" class="dropbtn">
+                        <span class="lang-tr">Projeler ▾</span>
+                        <span class="lang-en" style="display:none;">Projects ▾</span>
+                        <span class="lang-pt" style="display:none;">Projetos ▾</span>
+                    </a>
                     <div class="dropdown-content">
-                        <a href="index.html#projects">Exchange Projects</a>
+                        <a href="index.html#projects">
+                            <span class="lang-tr">Değişim Projeleri</span>
+                            <span class="lang-en" style="display:none;">Exchange Projects</span>
+                            <span class="lang-pt" style="display:none;">Projetos de Intercâmbio</span>
+                        </a>
                         <a href="tijba.html">TİJBA Project</a>
                     </div>
                 </div>
 
-                <a href="index.html#activities">Activities</a>
-                <a href="index.html#partners">Partners</a>
+                <a href="index.html#activities">
+                    <span class="lang-tr">Faaliyetler</span>
+                    <span class="lang-en" style="display:none;">Activities</span>
+                    <span class="lang-pt" style="display:none;">Atividades</span>
+                </a>
+                <a href="index.html#partners">
+                    <span class="lang-tr">Ortaklar</span>
+                    <span class="lang-en" style="display:none;">Partners</span>
+                    <span class="lang-pt" style="display:none;">Parceiros</span>
+                </a>
+
+                <!-- DİL SEÇİCİ -->
+                <div class="dropdown lang-selector">
+                    <a href="#" class="dropbtn">🌐 <span id="current-lang">TR</span> ▾</a>
+                    <div class="dropdown-content" style="min-width: 100px; left: auto; right: 0;">
+                        <a href="#" onclick="setLanguage('tr'); return false;">Türkçe</a>
+                        <a href="#" onclick="setLanguage('en'); return false;">English</a>
+                        <a href="#" onclick="setLanguage('pt'); return false;">Português</a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -36,23 +67,42 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container hero-content">
-            <h1>Eurasia Natural History Association</h1>
-            <p>We aim to create a global awareness of climate issues to care for ecosystems threatened by human activity and support conservation actions for natural heritages.</p>
+            <h1 class="lang-tr">Avrasya Doğa Tarihi Derneği</h1>
+            <h1 class="lang-en" style="display:none;">Eurasia Natural History Association</h1>
+            <h1 class="lang-pt" style="display:none;">Associação de História Natural da Eurásia</h1>
+
+            <p class="lang-tr">İnsan faaliyetleri nedeniyle tehdit altındaki ekosistemleri korumak ve doğal mirasın korunmasına yönelik eylemleri desteklemek amacıyla küresel iklim farkındalığı yaratmayı amaçlıyoruz.</p>
+            <p class="lang-en" style="display:none;">We aim to create a global awareness of climate issues to care for ecosystems threatened by human activity and support conservation actions for natural heritages.</p>
+            <p class="lang-pt" style="display:none;">Objetivamos criar uma consciência global sobre as questões climáticas para cuidar de ecossistemas ameaçados pela atividade humana e apoiar ações de conservação do patrimônio natural.</p>
         </div>
     </section>
 
     <!-- ABOUT US -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Us</h2>
+            <h2 class="section-title">
+                <span class="lang-tr">Hakkımızda</span>
+                <span class="lang-en" style="display:none;">About Us</span>
+                <span class="lang-pt" style="display:none;">Sobre Nós</span>
+            </h2>
             <div class="about-grid">
                 <div class="about-card">
-                    <h3>Board Members</h3>
-                    <p>Our association is led by a dedicated board of experts committed to natural history, climate awareness, and international youth mobility.</p>
+                    <h3 class="lang-tr">Yönetim Kurulu</h3>
+                    <h3 class="lang-en" style="display:none;">Board Members</h3>
+                    <h3 class="lang-pt" style="display:none;">Membros da Direção</h3>
+
+                    <p class="lang-tr">Derneğimiz; doğa tarihi, iklim farkındalığı ve uluslararası gençlik hareketliliği konularında kararlı uzman bir yönetim kurulu tarafından yönetilmektedir.</p>
+                    <p class="lang-en" style="display:none;">Our association is led by a dedicated board of experts committed to natural history, climate awareness, and international youth mobility.</p>
+                    <p class="lang-pt" style="display:none;">Nossa associação é liderada por um conselho dedicado de especialistas comprometidos com a história natural, conscientização climática e mobilidade juvenil internacional.</p>
                 </div>
                 <div class="about-card">
-                    <h3>Departments - Teams</h3>
-                    <p>We operate through specialized departments and field teams focusing on earth sciences, educational exchanges, and sustainable engineering.</p>
+                    <h3 class="lang-tr">Departmanlar - Ekipler</h3>
+                    <h3 class="lang-en" style="display:none;">Departments - Teams</h3>
+                    <h3 class="lang-pt" style="display:none;">Departamentos - Equipes</h3>
+
+                    <p class="lang-tr">Yer bilimi, eğitim değişimleri ve sürdürülebilir mühendislik odaklı özel departmanlar ve saha ekipleriyle faaliyet gösteriyoruz.</p>
+                    <p class="lang-en" style="display:none;">We operate through specialized departments and field teams focusing on earth sciences, educational exchanges, and sustainable engineering.</p>
+                    <p class="lang-pt" style="display:none;">Operamos através de departamentos especializados e equipes de campo focadas em ciências da terra, intercâmbios educacionais e engenharia sustentável.</p>
                 </div>
             </div>
         </div>
@@ -61,19 +111,29 @@
     <!-- SERVICES -->
     <section id="services" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
+            <h2 class="section-title">
+                <span class="lang-tr">Hizmetlerimiz</span>
+                <span class="lang-en" style="display:none;">Our Services</span>
+                <span class="lang-pt" style="display:none;">Nossos Serviços</span>
+            </h2>
             <div class="cards-grid">
                 <article class="card text-center">
                     <div class="app-icon">🌍</div>
-                    <h3>Geotechnical Consulting</h3>
+                    <h3 class="lang-tr">Geoteknik Danışmanlık</h3>
+                    <h3 class="lang-en" style="display:none;">Geotechnical Consulting</h3>
+                    <h3 class="lang-pt" style="display:none;">Consultoria Geotécnica</h3>
                 </article>
                 <article class="card text-center">
                     <div class="app-icon">🏛️</div>
-                    <h3>Architectural Design</h3>
+                    <h3 class="lang-tr">Mimari Tasarım</h3>
+                    <h3 class="lang-en" style="display:none;">Architectural Design</h3>
+                    <h3 class="lang-pt" style="display:none;">Design Arquitetônico</h3>
                 </article>
                 <article class="card text-center">
                     <div class="app-icon">⚙️</div>
-                    <h3>HVAC Design</h3>
+                    <h3 class="lang-tr">İklimlendirme (HVAC) Tasarımı</h3>
+                    <h3 class="lang-en" style="display:none;">HVAC Design</h3>
+                    <h3 class="lang-pt" style="display:none;">Design de HVAC</h3>
                 </article>
             </div>
         </div>
@@ -82,25 +142,43 @@
     <!-- EXCHANGE PROJECTS -->
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Exchange Projects & European Solidarity Corps</h2>
+            <h2 class="section-title">
+                <span class="lang-tr">Değişim Projeleri ve Avrupa Dayanışma Programı</span>
+                <span class="lang-en" style="display:none;">Exchange Projects & European Solidarity Corps</span>
+                <span class="lang-pt" style="display:none;">Projetos de Intercâmbio e Corpo Europeu de Solidariedade</span>
+            </h2>
             <div class="cards-grid">
                 <article class="card">
                     <div class="card-badge">Erasmus+ / ESC</div>
-                    <h3>Sociedade de História Natural (SHN) Partnership</h3>
-                    <p>Our Portuguese main partner <strong>Sociedade de História Natural</strong> had a Quality Label under our consultancy for the 2021-2027 season as a hosting organization and leading organization in European Solidarity Corps and Erasmus+ projects.</p>
-                    <div class="protocol-img" style="margin-top: 1rem;">
-                        <img src="images/esclabel.jpg" alt="ESC Quality Label Document">
-                    </div>
-                    <div class="protocol-img" style="margin-top: 1rem;">
-                        <img src="images/shnposter.jpg" alt="SHN Volunteer Activities">
-                    </div>
-                    <p style="margin-top: 1rem;">We are fully open to mutual collaborations to host international volunteers and send Turkish participants to European partners.</p>
+                    <h3 class="lang-tr">Sociedade de História Natural (SHN) Ortaklığı</h3>
+                    <h3 class="lang-en" style="display:none;">Sociedade de História Natural (SHN) Partnership</h3>
+                    <h3 class="lang-pt" style="display:none;">Parceria Sociedade de História Natural (SHN)</h3>
+
+                    <p class="lang-tr">Portekizli ana ortağımız <strong>Sociedade de História Natural</strong>, Avrupa Dayanışma Programı (ESC) ve Erasmus+ projelerinde ev sahibi ve lider kuruluş olarak 2021-2027 dönemi için danışmanlığımız altında Kalite Etiketi almıştır.</p>
+                    <p class="lang-en" style="display:none;">Our Portuguese main partner <strong>Sociedade de História Natural</strong> had a Quality Label under our consultancy for the 2021-2027 season as a hosting organization and leading organization in European Solidarity Corps and Erasmus+ projects.</p>
+                    <p class="lang-pt" style="display:none;">Nosso principal parceiro português, <strong>Sociedade de História Natural</strong>, obteve um Selo de Qualidade sob nossa consultoria para a temporada 2021-2027 como organização de acolhimento e líder em projetos do Corpo Europeu de Solidariedade e Erasmus+.</p>
+
+                    <div class="protocol-img" style="margin-top: 1rem;"><img src="images/esclabel.jpg" alt="ESC Quality Label Document"></div>
+                    <div class="protocol-img" style="margin-top: 1rem;"><img src="images/shnposter.jpg" alt="SHN Volunteer Activities"></div>
+
+                    <p style="margin-top: 1rem;" class="lang-tr">Uluslararası gönüllüleri ağırlamak ve Avrupalı ortaklara Türk katılımcılar göndermek için karşılıklı iş birliğine tamamen açığız.</p>
+                    <p style="margin-top: 1rem;" class="lang-en" style="display:none;">We are fully open to mutual collaborations to host international volunteers and send Turkish participants to European partners.</p>
+                    <p style="margin-top: 1rem;" class="lang-pt" style="display:none;">Estamos totalmente abertos a colaborações mútuas para receber voluntários internacionais e enviar participantes turcos para parceiros europeus.</p>
                 </article>
 
                 <article class="card">
                     <div class="card-badge complete">CampUSA</div>
-                    <h3>CampUSA for Portugal</h3>
-                    <p>Facilitating international cultural exchange and youth development programs between Portugal and the USA.</p>
+                    <h3 class="lang-tr">Portekiz için CampUSA</h3>
+                    <h3 class="lang-en" style="display:none;">CampUSA for Portugal</h3>
+                    <h3 class="lang-pt" style="display:none;">CampUSA para Portugal</h3>
+
+                    <p class="lang-tr">Portekiz ve ABD arasında uluslararası kültürel değişim ve gençlik gelişim programlarını kolaylaştırmaktayız.</p>
+                    <p class="lang-en" style="display:none;">Facilitating international cultural exchange and youth development programs between Portugal and the USA.</p>
+                    <p class="lang-pt" style="display:none;">Facilitando o intercâmbio cultural internacional e programas de desenvolvimento juvenil entre Portugal e os EUA.</p>
+
+                    <div class="protocol-img" style="margin-top: 1rem;">
+                        <img src="images/campusapt.jpg" alt="CampUSA Portugal">
+                    </div>
                 </article>
             </div>
         </div>
@@ -109,21 +187,35 @@
     <!-- ACTIVITIES IN PORTUGAL -->
     <section id="activities" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Activities in Portugal</h2>
-            <p class="section-subtitle">According to our aim of creating global climate awareness, we have some basic learning elements in the field:</p>
+            <h2 class="section-title">
+                <span class="lang-tr">Portekiz'deki Faaliyetler</span>
+                <span class="lang-en" style="display:none;">Activities in Portugal</span>
+                <span class="lang-pt" style="display:none;">Atividades em Portugal</span>
+            </h2>
+            <p class="section-subtitle">
+                <span class="lang-tr">Küresel iklim farkındalığı yaratma amacımız doğrultusunda sahada temel öğrenme unsurlarımız bulunmaktadır:</span>
+                <span class="lang-en" style="display:none;">According to our aim of creating global climate awareness, we have some basic learning elements in the field:</span>
+                <span class="lang-pt" style="display:none;">De acordo com o nosso objetivo de criar conscientização climática global, temos alguns elementos básicos de aprendizado em campo:</span>
+            </p>
             
             <div class="cards-grid">
                 <article class="card">
                     <h3>🌋 GeoHeritage & GeoPark</h3>
-                    <p>GeoHeritage and GeoPark-themed field tours for social awareness on Earth Sciences.</p>
+                    <p class="lang-tr">Yer Bilimleri konusunda toplumsal farkındalık yaratmak amacıyla Jeomiras ve Jeopark temalı saha gezileri.</p>
+                    <p class="lang-en" style="display:none;">GeoHeritage and GeoPark-themed field tours for social awareness on Earth Sciences.</p>
+                    <p class="lang-pt" style="display:none;">Visitas de campo com os temas GeoPatrimônio e GeoParque para conscientização social em Ciências da Terra.</p>
                 </article>
                 <article class="card">
                     <h3>🗺️ GIS Applications</h3>
-                    <p>Geographic Information System applications for understanding land degradation and climate change threatened by environmental and human impact.</p>
+                    <p class="lang-tr">Çevresel ve insan etkisiyle tehdit altındaki arazi bozulmasını ve iklim değişikliğini anlamak için Coğrafi Bilgi Sistemleri (CBS) uygulamaları.</p>
+                    <p class="lang-en" style="display:none;">Geographic Information System applications for understanding land degradation and climate change threatened by environmental and human impact.</p>
+                    <p class="lang-pt" style="display:none;">Aplicações de Sistemas de Informação Geográfica para entender a degradação da terra e as mudanças climáticas ameaçadas por impactos ambientais e humanos.</p>
                 </article>
                 <article class="card">
                     <h3>🔬 Laboratory Works</h3>
-                    <p>Laboratory works with fossils to understand paleo-ecosystems and paleo-climate to shed light on recent issues regarding climate and ecosystems.</p>
+                    <p class="lang-tr">İklim ve ekosistemlerdeki güncel sorunlara ışık tutmak amacıyla paleo-ekosistemleri ve paleo-iklimi anlamak için fosillerle laboratuvar çalışmaları.</p>
+                    <p class="lang-en" style="display:none;">Laboratory works with fossils to understand paleo-ecosystems and paleo-climate to shed light on recent issues regarding climate and ecosystems.</p>
+                    <p class="lang-pt" style="display:none;">Trabalhos laboratoriais com fósseis para entender paleoecossistemas e paleoclimas, lançando luz sobre questões recentes relacionadas ao clima e ecossistemas.</p>
                 </article>
             </div>
         </div>
@@ -132,7 +224,11 @@
     <!-- REFERENCES / PARTNERS -->
     <section id="partners" class="section">
         <div class="container">
-            <h2 class="section-title">References & Partners</h2>
+            <h2 class="section-title">
+                <span class="lang-tr">Referanslar ve Ortaklar</span>
+                <span class="lang-en" style="display:none;">References & Partners</span>
+                <span class="lang-pt" style="display:none;">Referências e Parceiros</span>
+            </h2>
             <div class="partners-container">
                 <span class="partner-tag">Sociedade de História Natural</span>
                 <span class="partner-tag">Centre for European Volunteering</span>
@@ -153,12 +249,14 @@
                 <p>Instagram: <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener">@tdoteurasia</a></p>
             </div>
             <div class="footer-links">
-                <h4>Quick Links</h4>
+                <h4 class="lang-tr">Hızlı Bağlantılar</h4>
+                <h4 class="lang-en" style="display:none;">Quick Links</h4>
+                <h4 class="lang-pt" style="display:none;">Links Rápidos</h4>
                 <ul>
-                    <li><a href="index.html#about">About Us</a></li>
-                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#about"><span class="lang-tr">Hakkımızda</span><span class="lang-en" style="display:none;">About Us</span><span class="lang-pt" style="display:none;">Sobre Nós</span></a></li>
+                    <li><a href="index.html#projects"><span class="lang-tr">Projeler</span><span class="lang-en" style="display:none;">Projects</span><span class="lang-pt" style="display:none;">Projetos</span></a></li>
                     <li><a href="tijba.html">TİJBA Project</a></li>
-                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#services"><span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span></a></li>
                 </ul>
             </div>
         </div>
@@ -169,5 +267,30 @@
         </div>
     </footer>
 
+    <!-- DİL DEĞİŞTİRME SCRIPTİ -->
+    <script>
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.getElementById('current-lang').innerText = lang.toUpperCase();
+            
+            // Tüm dil bloklarını gizle/göster
+            document.querySelectorAll('.lang-tr, .lang-en, .lang-pt').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.lang-' + lang).forEach(el => {
+                el.style.display = 'inline';
+                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4') {
+                    el.style.display = 'block';
+                }
+            });
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        // Sayfa açıldığında hafızadaki dili uygula
+        window.onload = function() {
+            const savedLang = localStorage.getItem('preferred_lang') || 'tr';
+            setLanguage(savedLang);
+        }
+    </script>
 </body>
 </html>
