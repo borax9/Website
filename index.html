@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avrasya Doğa Tarihi Derneği | dotader.com</title>
+    <title>Avrasya Doğa Tarihi Derneği | dotaltai.org</title>
     <meta name="description" content="Avrasya Doğa Tarihi Derneği - Değişim ve Koruma Projeleri">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- ========================================== -->
     <!-- GOOGLE ADSENSE DOĞRULAMA KODU BURAYA EKLENİR -->
-    <!-- (Google AdSense hesabınızdan alacağınız script kodunu buraya yapıştırın) -->
-    <!-- Örnek: -->
     <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-SİZİN_YAYINCI_KODUNUZ" crossorigin="anonymous"></script> -->
-    <!-- ========================================== -->
-
 </head>
 <body>
 
     <!-- NAVBAR -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo">🌿 <span>Eurasia NHA</span></a>
+            <!-- logo.png İle Güncellenen Logo Alanı -->
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="images/logo.png" alt="Eurasia NHA Logo" style="height: 40px; object-fit: contain;">
+                <span>Eurasia NHA</span>
+            </a>
+            
             <nav class="nav-links">
                 <a href="index.html#about" class="lang-tr">Hakkımızda</a>
                 <a href="index.html#about" class="lang-en" style="display:none;">About Us</a>
@@ -51,10 +51,10 @@
                 <a href="index.html#activities">
                     <span class="lang-tr">Faaliyetler</span>
                     <span class="lang-en" style="display:none;">Activities</span>
-                    <span class="lang-pt" style="display:none;">Atividades</span>
+                    <span class="lang-pt" style="display:none;">Atividades</i>
                 </a>
                 
-                <!-- Bağımsız Haberler Sayfasına Yönlendirildi -->
+                <!-- Bağımsız Haberler Sayfası Bağlantısı -->
                 <a href="news.html" class="lang-tr">Haberler</a>
                 <a href="news.html" class="lang-en" style="display:none;">News</a>
                 <a href="news.html" class="lang-pt" style="display:none;">Notícias</a>
@@ -186,32 +186,24 @@
                 <article class="card">
                     <div class="app-icon" style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🌍</div>
                     <h3 class="lang-tr text-center">Geotechnical Consulting</h3>
-                    <h3 class="lang-en text-center" style="display:none;">Geotechnical Consulting</h3>
-                    <h3 class="lang-pt text-center" style="display:none;">Consultoria Geotécnica</h3>
                     <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem;">Zemin etütleri, temel tasarımı ve yapısal risk değerlendirmeleri ile ana yüklenicinin güvenli adımlar atmasını sağlıyoruz.</p>
                 </article>
                 
                 <article class="card">
                     <div class="app-icon" style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🗺️</div>
                     <h3 class="lang-tr text-center">Geological Mapping & Survey</h3>
-                    <h3 class="lang-en text-center" style="display:none;">Geological Mapping & Survey</h3>
-                    <h3 class="lang-pt text-center" style="display:none;">Mapeamento Geológico</h3>
                     <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem;">Sahadaki yapı taşlarının kökenini belirlemek ve doğru materyal tedariki için detaylı haritalama yapıyoruz.</p>
                 </article>
 
                 <article class="card">
                     <div class="app-icon" style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🏛️</div>
                     <h3 class="lang-tr text-center">Architectural Design</h3>
-                    <h3 class="lang-en text-center" style="display:none;">Architectural Design</h3>
-                    <h3 class="lang-pt text-center" style="display:none;">Design Arquitetônico</h3>
                     <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem;">Restorasyon projelerinde tarihi dokuya sadık, yeni yapılarda ise modern ve sürdürülebilir mimari tasarımlar üretiyoruz.</p>
                 </article>
                 
                 <article class="card">
                     <div class="app-icon" style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">⚙️</div>
                     <h3 class="lang-tr text-center">HVAC Design</h3>
-                    <h3 class="lang-en text-center" style="display:none;">HVAC Design</h3>
-                    <h3 class="lang-pt" style="display:none;">Design de HVAC</h3>
                     <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem;">Tarihi yapılara zarar vermeyen, enerji verimli ve modern mekanik tesisat çözümleri tasarlıyoruz.</p>
                 </article>
             </div>
@@ -236,8 +228,6 @@
             </h2>
             <p class="section-subtitle">
                 <span class="lang-tr">Küresel iklim farkındalığı yaratma amacımız doğrultusunda sahada temel öğrenme unsurlarımız bulunmaktadır:</span>
-                <span class="lang-en" style="display:none;">According to our aim of creating global climate awareness, we have some basic learning elements in the field:</span>
-                <span class="lang-pt" style="display:none;">De acordo com o nosso objetivo de criar conscientização climática global, temos alguns elementos básicos de aprendizado em campo:</span>
             </p>
             
             <div class="cards-grid">
@@ -256,25 +246,6 @@
             </div>
         </div>
     </section>
-
-    <!-- ========================================== -->
-    <!-- GOOGLE ADSENSE REKLAM ALANI ÖRNEĞİ -->
-    <!-- (Reklamların görünmesini istediğiniz yere ekleyin) -->
-    <!-- ========================================== -->
-    <div class="container" style="text-align: center; margin: 30px auto;">
-        <!-- 
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-SİZİN_YAYINCI_KODUNUZ" crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-SİZİN_YAYINCI_KODUNUZ"
-             data-ad-slot="REKLAM_SLOT_NUMARASI"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        -->
-    </div>
 
     <!-- REFERENCES / PARTNERS -->
     <section id="partners" class="section bg-light">
@@ -298,11 +269,26 @@
     <!-- FOOTER -->
     <footer id="contact" class="footer">
         <div class="container footer-content">
-            <div class="footer-info">
-                <h3>Eurasia Natural History Association</h3>
-                <p>Email: info@dotaltai.org</p>
-                <p>Instagram: <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener">@tdoteurasia</a></p>
+            <div class="footer-info" style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                <!-- logo2.png İle Güncellenen Footer Logo Alanı -->
+                <img src="images/logo2.png" alt="Eurasia NHA Logo 2" style="height: 55px; object-fit: contain;">
+                <div>
+                    <h3 style="margin-bottom: 5px;">Eurasia Natural History Association</h3>
+                    <p style="margin: 2px 0;">Email: info@dotaltai.org</p>
+                    <p style="margin: 2px 0;">Instagram: <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener">@tdoteurasia</a></p>
+                </div>
             </div>
+            
+            <!-- ZİYAREÇİ SAYACI ALANI -->
+            <div class="footer-counter" style="text-align: center; margin: 1rem 0;">
+                <p style="font-size: 0.9rem; color: #ccc; margin-bottom: 5px;">
+                    <span class="lang-tr">Toplam Ziyaretçi:</span>
+                    <span class="lang-en" style="display:none;">Total Visitors:</span>
+                    <span class="lang-pt" style="display:none;">Total de Visitantes:</span>
+                </p>
+                <img src="https://api.counterapi.dev/v1/dotaltai/homepage/badge?theme=rule34" alt="Ziyaretçi Sayacı" style="vertical-align: middle;">
+            </div>
+
             <div class="footer-links">
                 <h4 class="lang-tr">Hızlı Bağlantılar</h4>
                 <h4 class="lang-en" style="display:none;">Quick Links</h4>
