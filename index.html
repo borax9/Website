@@ -11,12 +11,65 @@
 <body>
 
     <!-- NAVBAR -->
+  <!-- NAVBAR -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Eurasia NHA Logo" style="height: 40px; object-fit: contain;">
-                <span>Eurasia NHA</span>
+            <a href="index.html" class="logo" style="font-size: 1.8rem; font-weight: 700; display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--primary-color, #2c5e3b);">
+                <span style="font-size: 2.2rem;">🌿</span> <span style="font-size: 1.6rem; letter-spacing: 0.5px;">DOTA-DER</span>
             </a>
+            <nav class="nav-links">
+                <a href="index.html#about" class="lang-tr">Hakkımızda</a>
+                <a href="index.html#about" class="lang-en" style="display:none;">About Us</a>
+                <a href="index.html#about" class="lang-pt" style="display:none;">Sobre Nós</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <span class="lang-tr">Projeler ▾</span>
+                        <span class="lang-en" style="display:none;">Projects ▾</span>
+                        <span class="lang-pt" style="display:none;">Projetos ▾</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="index.html#projects">
+                            <span class="lang-tr">Değişim Projeleri</span>
+                            <span class="lang-en" style="display:none;">Exchange Projects</span>
+                            <span class="lang-pt" style="display:none;">Projetos de Intercâmbio</span>
+                        </a>
+                        <a href="tijba.html">TİJBA Project</a>
+                    </div>
+                </div>
+
+                <a href="services.html" class="lang-tr">Hizmetler</a>
+                <a href="services.html" class="lang-en" style="display:none;">Services</a>
+                <a href="services.html" class="lang-pt" style="display:none;">Serviços</a>
+                
+                <a href="index.html#activities">
+                    <span class="lang-tr">Faaliyetler</span>
+                    <span class="lang-en" style="display:none;">Activities</span>
+                    <span class="lang-pt" style="display:none;">Atividades</span>
+                </a>
+                
+                <a href="news.html" class="lang-tr">Haberler</a>
+                <a href="news.html" class="lang-en" style="display:none;">News</a>
+                <a href="news.html" class="lang-pt" style="display:none;">Notícias</a>
+
+                <a href="index.html#partners">
+                    <span class="lang-tr">Ortaklar</span>
+                    <span class="lang-en" style="display:none;">Partners</span>
+                    <span class="lang-pt" style="display:none;">Parceiros</span>
+                </a>
+
+                <!-- DİL SEÇİCİ -->
+                <div class="dropdown lang-selector">
+                    <a href="#" class="dropbtn">🌐 <span id="current-lang">TR</span> ▾</a>
+                    <div class="dropdown-content" style="min-width: 100px; left: auto; right: 0;">
+                        <a href="#" onclick="setLanguage('tr'); return false;">Türkçe</a>
+                        <a href="#" onclick="setLanguage('en'); return false;">English</a>
+                        <a href="#" onclick="setLanguage('pt'); return false;">Português</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
             
             <nav class="nav-links">
                 <a href="index.html#about" class="lang-tr">Hakkımızda</a>
