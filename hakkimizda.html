@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda, Ekip ve Tüzük | DOTA-DER</title>
+    <meta name="description" content="DOTA-DER Hakkımızda bilgileri, yönetim ekibimiz ve dernek tüzüğümüz.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+                <img src="images/logo.png" alt="DOTA-DER Logo" style="height: 50px; width: auto; object-fit: contain;">
+                <span style="font-size: 1.8rem; font-weight: 700; color: var(--primary-color, #2c5e3b); letter-spacing: 0.5px;">DOTA-DER</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="lang-tr">Ana Sayfa</a>
+                <a href="index.html" class="lang-en" style="display:none;">Home</a>
+                <a href="index.html" class="lang-pt" style="display:none;">Início</a>
+
+                <a href="hakkimizda.html" class="lang-tr" style="color: var(--accent-color); font-weight: 600;">Hakkımızda</a>
+                <a href="hakkimizda.html" class="lang-en" style="display:none; color: var(--accent-color); font-weight: 600;">About Us</a>
+                <a href="hakkimizda.html" class="lang-pt" style="display:none; color: var(--accent-color); font-weight: 600;">Sobre Nós</a>
+
+                <a href="index.html#projects" class="lang-tr">Projeler</a>
+                <a href="index.html#projects" class="lang-en" style="display:none;">Projects</a>
+                <a href="index.html#projects" class="lang-pt" style="display:none;">Projetos</a>
+                
+                <a href="news.html" class="lang-tr">Haberler</a>
+                <a href="news.html" class="lang-en" style="display:none;">News</a>
+                <a href="news.html" class="lang-pt" style="display:none;">Notícias</a>
+
+                <!-- DİL SEÇİCİ -->
+                <div class="dropdown lang-selector">
+                    <a href="#" class="dropbtn">🌐 <span id="current-lang">TR</span> ▾</a>
+                    <div class="dropdown-content" style="min-width: 100px; left: auto; right: 0;">
+                        <a href="#" onclick="setLanguage('tr'); return false;">Türkçe</a>
+                        <a href="#" onclick="setLanguage('en'); return false;">English</a>
+                        <a href="#" onclick="setLanguage('pt'); return false;">Português</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SAYFA BAŞLIĞI -->
+    <section class="section bg-light" style="padding-top: 8rem; text-align: center;">
+        <div class="container">
+            <h1 class="lang-tr" style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">Hakkımızda</h1>
+            <h1 class="lang-en" style="display:none; font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">About Us</h1>
+            <h1 class="lang-pt" style="display:none; font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">Sobre Nós</h1>
+            
+            <p class="lang-tr" style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Derneğimizin misyonu, vizyonu, yönetim ekibi ve tüzük bilgileri.</p>
+            <p class="lang-en" style="display:none; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Our association's mission, vision, management team, and statutes.</p>
+            <p class="lang-pt" style="display:none; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">A missão, visão, equipa de gestão e estatutos da nossa associação.</p>
+        </div>
+    </section>
+
+    <!-- İÇERİK BÖLÜMÜ -->
+    <section class="section">
+        <div class="container" style="max-width: 900px; margin: 0 auto;">
+            
+            <!-- Dernek Hakkında Genel Bilgi -->
+            <article class="card" style="margin-bottom: 2rem; padding: 2rem;">
+                <h2 class="lang-tr" style="margin-bottom: 1rem; color: var(--primary-color);">Derneğimiz Hakkında</h2>
+                <h2 class="lang-en" style="display:none; margin-bottom: 1rem; color: var(--primary-color);">About Our Association</h2>
+                <h2 class="lang-pt" style="display:none; margin-bottom: 1rem; color: var(--primary-color);">Sobre a Nossa Associação</h2>
+                
+                <p class="lang-tr">DOTA-DER (Doğa Tarihi Derneği), doğa tarihi, paleontoloji, jeoloji ve kültürel miras alanlarında araştırmalar yapmak, ulusal ve uluslararası projeler yürütmek ve gençlerin gelişimini desteklemek amacıyla kurulmuş sivil toplum kuruluşudur.</p>
+                <p class="lang-en" style="display:none;">DOTA-DER is a nongovernmental organization established to conduct research in natural history, paleontology, geology, and cultural heritage, carry out national and international projects, and support youth development.</p>
+                <p class="lang-pt" style="display:none;">A DOTA-DER é uma organização não governamental criada para realizar pesquisas em história natural, paleontologia, geologia e património cultural, desenvolver projetos nacionais e internacionais e apoiar o desenvolvimento juvenil.</p>
+            </article>
+
+            <!-- Ekip Listesi -->
+            <article class="card" style="margin-bottom: 2rem; padding: 2rem;">
+                <h2 class="lang-tr" style="margin-bottom: 1rem; color: var(--primary-color);">Yönetim ve Ekibimiz</h2>
+                <h2 class="lang-en" style="display:none; margin-bottom: 1rem; color: var(--primary-color);">Our Team & Management</h2>
+                <h2 class="lang-pt" style="display:none; margin-bottom: 1rem; color: var(--primary-color);">A Nossa Equipa</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 1.5rem;">
+                    <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                        <h4 style="margin-bottom: 5px;">Yönetim Kurulu Başkanı</h4>
+                        <p style="font-size: 0.9rem; color: #555;">Ad Soyad / Unvan</p>
+                    </div>
+                    <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                        <h4 style="margin-bottom: 5px;">Proje Koordinatörü</h4>
+                        <p style="font-size: 0.9rem; color: #555;">Ad Soyad / Unvan</p>
+                    </div>
+                    <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                        <h4 style="margin-bottom: 5px;">Saha ve Arştırma Sorumlusu</h4>
+                        <p style="font-size: 0.9rem; color: #555;">Ad Soyad / Unvan</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tüzük Bölümü -->
+            <article class="card" style="margin-bottom: 2rem; padding: 2rem;">
+                <h2 class="lang-tr" style="margin-bottom: 1rem; color: var(--primary-color);">Dernek Tüzüğü</h2>
+                <h2 class="lang-en" style="display:none; margin-bottom: 1rem; color: var(--primary-color);">Association Statutes</h2>
+                <h2 class="lang-pt" style="display:none; margin-bottom: 1rem; color: var(--primary-color);">Estatutos da Associação</h2>
+                
+                <p class="lang-tr">Derneğimizin kuruluş amaçlarını, faaliyet alanlarını, üyelik şartlarını ve yönetim organlarının işleyişini belirleyen resmi tüzüğümüze aşağıdaki bağlantıdan ulaşabilirsiniz:</p>
+                <p class="lang-en" style="display:none;">You can access our official statutes that determine the establishment purposes, fields of activity, membership conditions, and operation of management bodies through the link below:</p>
+                <p class="lang-pt" style="display:none;">Pode aceder aos nossos estatutos oficiais que determinam os objetivos de estabelecimento, campos de atividade, condições de membros e funcionamento dos órgãos de gestão através da ligação abaixo:</p>
+                
+                <div style="margin-top: 1.5rem;">
+                    <a href="#" target="_blank" style="display: inline-block; background-color: var(--primary-color, #2c5e3b); color: white; padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: 600;">
+                        <span class="lang-tr">Tüzüğü İndir / İncele (PDF)</span>
+                        <span class="lang-en" style="display:none;">Download / View Statutes (PDF)</span>
+                        <span class="lang-pt" style="display:none;">Descarregar / Ver Estatutos (PDF)</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>DOTA-DER</h3>
+                <p>Email: info@dotaltai.org</p>
+                <p>Instagram: <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener">@tdoteurasia</a></p>
+            </div>
+            <div class="footer-links">
+                <h4 class="lang-tr">Hızlı Bağlantılar</h4>
+                <h4 class="lang-en" style="display:none;">Quick Links</h4>
+                <h4 class="lang-pt" style="display:none;">Links Rápidos</h4>
+                <ul>
+                    <li><a href="hakkimizda.html"><span class="lang-tr">Hakkımızda</span><span class="lang-en" style="display:none;">About Us</span><span class="lang-pt" style="display:none;">Sobre Nós</span></a></li>
+                    <li><a href="index.html#projects"><span class="lang-tr">Projeler</span><span class="lang-en" style="display:none;">Projects</span><span class="lang-pt" style="display:none;">Projetos</span></a></li>
+                    <li><a href="news.html"><span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 DOTA-DER (dotaltai.org). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DİL DEĞİŞTİRME SCRIPTİ -->
+    <script>
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.getElementById('current-lang').innerText = lang.toUpperCase();
+            
+            document.querySelectorAll('.lang-tr, .lang-en, .lang-pt').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.lang-' + lang).forEach(el => {
+                el.style.display = 'inline';
+                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4') {
+                    el.style.display = 'block';
+                }
+            });
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        window.onload = function() {
+            const savedLang = localStorage.getItem('preferred_lang') || 'tr';
+            setLanguage(savedLang);
+        }
+    </script>
+</body>
+</html>
