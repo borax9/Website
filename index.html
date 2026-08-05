@@ -1,87 +1,171 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Avrasya Doğa Tarihi Derneği | Uluslararası Projeler</title>
-    <!-- Harici CSS dosyanızı bağlar -->
+    <title>Eurasia Natural History Association | dotaltai.org</title>
+    <meta name="description" content="Eurasia Natural History Association - Exchange & Conservation Projects">
     <link rel="stylesheet" href="style.css">
-    <!-- Modern ve profesyonel bir font olan 'Inter' eklendi -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Menü (Navbar) -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Dot Altai</div>
-            <ul class="nav-links">
-                <li><a href="#hero">Ana Sayfa</a></li>
-                <li><a href="#projects">Projelerimiz</a></li>
-            </ul>
-        </nav>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">🌿 <span>Eurasia NHA</span></a>
+            <nav class="nav-links">
+                <a href="index.html#about">About Us</a>
+                <a href="index.html#services">Services</a>
+                
+                <!-- PROJELER DROPDOWN MENÜ -->
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Projects ▾</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#projects">Exchange Projects</a>
+                        <a href="tijba.html">TİJBA Project</a>
+                    </div>
+                </div>
+
+                <a href="index.html#activities">Activities</a>
+                <a href="index.html#partners">Partners</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- Karşılama Ekranı (Hero Section) -->
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1>Sınırları Aşan Projeler, Yeni Deneyimler</h1>
-            <p>CampUSA, European Solidarity Corps ve Tijba ile global çapta kültürel değişim ve gelişim fırsatlarını keşfedin.</p>
-            <a href="#projects" class="btn">Projeleri İncele</a>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Eurasia Natural History Association</h1>
+            <p>We aim to create a global awareness of climate issues to care for ecosystems threatened by human activity and support conservation actions for natural heritages.</p>
         </div>
     </section>
 
-    <!-- Projeler Bölümü -->
-    <section id="projects" class="projects-section">
+    <!-- ABOUT US -->
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">Öne Çıkan Projelerimiz</h2>
-            
-            <div class="projects-grid">
-                
-                <!-- 1. Tijba Ana Projesi -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <!-- Tijba görseli images klasöründen çekiliyor -->
-                        <img src="images/tijba.png" alt="Tijba Ana Proje Afişi">
-                    </div>
-                    <div class="project-info">
-                        <h3>Tijba Ana Projesi</h3>
-                        <p>Tijba projemiz ile yenilikçi, sürdürülebilir ve topluma değer katan vizyonumuzu hayata geçiriyoruz. Geleceğe atılan sağlam bir adım.</p>
-                    </div>
+            <h2 class="section-title">About Us</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Board Members</h3>
+                    <p>Our association is led by a dedicated board of experts committed to natural history, climate awareness, and international youth mobility.</p>
                 </div>
-
-                <!-- 2. CampUSA Projesi -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <!-- CampUSA görseli images klasöründen çekiliyor -->
-                        <img src="images/campusapt.jpg" alt="CampUSA Proje Fotoğrafı">
-                    </div>
-                    <div class="project-info">
-                        <h3>Camp USA</h3>
-                        <p>Amerika'da unutulmaz bir yaz kampı deneyimi! Gençler için uluslararası çalışma, kültürel değişim ve benzersiz bir kişisel gelişim fırsatı.</p>
-                    </div>
+                <div class="about-card">
+                    <h3>Departments - Teams</h3>
+                    <p>We operate through specialized departments and field teams focusing on earth sciences, educational exchanges, and sustainable engineering.</p>
                 </div>
-
-                <!-- 3. European Solidarity Corps -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <!-- Eğer bu proje için fotoğrafınız yoksa varsayılan şık bir resim çekiliyor, varsa src kısmını images/resim.jpg olarak değiştirebilirsiniz -->
-                        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80" alt="European Solidarity Corps">
-                    </div>
-                    <div class="project-info">
-                        <h3>European Solidarity Corps</h3>
-                        <p>Avrupa Dayanışma Programı kapsamında, Avrupa'nın dört bir yanında gönüllülük faaliyetlerine katılarak topluma katkı sağlayın.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Alt Bilgi (Footer) -->
-    <footer>
+    <!-- SERVICES -->
+    <section id="services" class="section bg-light">
         <div class="container">
-            <p>&copy; 2026 Avrasya Doğa Tarihi Derneği. Tüm hakları saklıdır.</p>
+            <h2 class="section-title">Our Services</h2>
+            <div class="cards-grid">
+                <article class="card text-center">
+                    <div class="app-icon">🌍</div>
+                    <h3>Geotechnical Consulting</h3>
+                </article>
+                <article class="card text-center">
+                    <div class="app-icon">🏛️</div>
+                    <h3>Architectural Design</h3>
+                </article>
+                <article class="card text-center">
+                    <div class="app-icon">⚙️</div>
+                    <h3>HVAC Design</h3>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXCHANGE PROJECTS -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Exchange Projects & European Solidarity Corps</h2>
+            <div class="cards-grid">
+                <article class="card">
+                    <div class="card-badge">Erasmus+ / ESC</div>
+                    <h3>Sociedade de História Natural (SHN) Partnership</h3>
+                    <p>Our Portuguese main partner <strong>Sociedade de História Natural</strong> had a Quality Label under our consultancy for the 2021-2027 season as a hosting organization and leading organization in European Solidarity Corps and Erasmus+ projects.</p>
+                    <div class="protocol-img" style="margin-top: 1rem;">
+                        <img src="images/esclabel.jpg" alt="ESC Quality Label Document">
+                    </div>
+                    <div class="protocol-img" style="margin-top: 1rem;">
+                        <img src="images/shnposter.jpg" alt="SHN Volunteer Activities">
+                    </div>
+                    <p style="margin-top: 1rem;">We are fully open to mutual collaborations to host international volunteers and send Turkish participants to European partners.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-badge complete">CampUSA</div>
+                    <h3>CampUSA for Portugal</h3>
+                    <p>Facilitating international cultural exchange and youth development programs between Portugal and the USA.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACTIVITIES IN PORTUGAL -->
+    <section id="activities" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Activities in Portugal</h2>
+            <p class="section-subtitle">According to our aim of creating global climate awareness, we have some basic learning elements in the field:</p>
+            
+            <div class="cards-grid">
+                <article class="card">
+                    <h3>🌋 GeoHeritage & GeoPark</h3>
+                    <p>GeoHeritage and GeoPark-themed field tours for social awareness on Earth Sciences.</p>
+                </article>
+                <article class="card">
+                    <h3>🗺️ GIS Applications</h3>
+                    <p>Geographic Information System applications for understanding land degradation and climate change threatened by environmental and human impact.</p>
+                </article>
+                <article class="card">
+                    <h3>🔬 Laboratory Works</h3>
+                    <p>Laboratory works with fossils to understand paleo-ecosystems and paleo-climate to shed light on recent issues regarding climate and ecosystems.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- REFERENCES / PARTNERS -->
+    <section id="partners" class="section">
+        <div class="container">
+            <h2 class="section-title">References & Partners</h2>
+            <div class="partners-container">
+                <span class="partner-tag">Sociedade de História Natural</span>
+                <span class="partner-tag">Centre for European Volunteering</span>
+                <span class="partner-tag">NOVA University of Lisbon</span>
+                <span class="partner-tag">T.C Ankara Police Department</span>
+                <span class="partner-tag">T.C Düzce Governorship</span>
+                <span class="partner-tag">Municipality of Torres Vedras</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Eurasia Natural History Association</h3>
+                <p>Email: info@dotaltai.org</p>
+                <p>Instagram: <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener">@tdoteurasia</a></p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="tijba.html">TİJBA Project</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Eurasia Natural History Association (dotaltai.org). All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
