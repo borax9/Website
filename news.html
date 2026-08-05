@@ -7,6 +7,104 @@
     <meta name="description" content="Avrasya Doğa Tarihi Derneği'nden en güncel haberler, projeler ve saha gelişmeleri.">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Sosyal Medya, Beğeni ve Yorum Ek Stilleri */
+        .news-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+            padding: 12px 0;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .action-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-color, #2c5e3b);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+        .action-btn:hover {
+            opacity: 0.7;
+        }
+        .share-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .share-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+        .share-content a {
+            color: #333;
+            padding: 10px 14px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.85rem;
+        }
+        .share-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .share-dropdown:hover .share-content {
+            display: block;
+        }
+        .comments-section {
+            margin-top: 15px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .comment-input-group {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .comment-input-group input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        .comment-input-group button {
+            padding: 8px 16px;
+            background-color: var(--primary-color, #2c5e3b);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .comments-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+            font-size: 0.85rem;
+        }
+        .comments-list li {
+            background: #fff;
+            padding: 6px 10px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            border: 1px solid #eee;
+        }
+    </style>
 </head>
 <body>
 
@@ -87,17 +185,20 @@
         <div class="container">
             <div class="news-container" style="max-width: 900px; margin: 0 auto;">
                 
-                <!-- PORTEKİZ ESC GÖNÜLLÜLÜK PROJESİ (YENİ) -->
-                <article class="card" style="margin-bottom: 2rem; padding: 2rem;">
+                <!-- PORTEKİZ ESC GÖNÜLLÜLÜK PROJESİ (TEK AKTİF HABER) -->
+                <article class="card" id="news-details" style="margin-bottom: 2rem; padding: 2rem; transition: transform 0.2s;">
                     <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
                         <span class="lang-tr">5 Ağustos 2026</span>
                         <span class="lang-en" style="display:none;">August 5, 2026</span>
                         <span class="lang-pt" style="display:none;">5 de Agosto de 2026</span>
                     </div>
                     
-                    <h2 class="lang-tr" style="margin-bottom: 1rem;">Portekiz'de Uzun Dönem Gönüllülük Projesi Başvurusu (ESC)</h2>
-                    <h2 class="lang-en" style="display:none; margin-bottom: 1rem;">Long-Term Volunteering Project Application in Portugal (ESC)</h2>
-                    <h2 class="lang-pt" style="display:none; margin-bottom: 1rem;">Candidatura a Projeto de Voluntariado de Longa Duração em Portugal (ESC)</h2>
+                    <!-- Haberin içine girildiğinde odaklanılacak veya tıklanınca detay açılacak başlık -->
+                    <a href="#news-details" style="text-decoration: none; color: inherit;">
+                        <h2 class="lang-tr" style="margin-bottom: 1rem; cursor: pointer;">Portekiz'de Uzun Dönem Gönüllülük Projesi Başvurusu (ESC)</h2>
+                        <h2 class="lang-en" style="display:none; margin-bottom: 1rem; cursor: pointer;">Long-Term Volunteering Project Application in Portugal (ESC)</h2>
+                        <h2 class="lang-pt" style="display:none; margin-bottom: 1rem; cursor: pointer;">Candidatura a Projeto de Voluntariado de Longa Duração em Portugal (ESC)</h2>
+                    </a>
                     
                     <p class="lang-tr">Avrupa Dayanışma Programı (ESC) kapsamında Portekiz’in Santa Cruz / Torres Vedras bölgesinde gerçekleştirilecek 4 aylık uzun dönem ESC Gönüllülük Projesi için başvurular başlamıştır. Kahramanmaraş Sütçü İmam Üniversitesi ABAUM koordinatörlüğünde yürütülecek projede gönüllüler Sociedade de História Natural (SHN) bünyesinde paleontoloji, doğa tarihi, çevresel koruma ve kültürel miras çalışmalarına destek olacaktır.</p>
                     <p class="lang-en" style="display:none;">Applications are open for the 4-month long-term ESC Volunteering Project in Santa Cruz / Torres Vedras, Portugal, under the European Solidarity Corps. Coordinated by KSÜ ABAUM, selected volunteers will support paleontology, natural history, environmental protection, and cultural heritage activities at Sociedade de História Natural (SHN).</p>
@@ -124,40 +225,50 @@
                         </a>
                     </div>
 
-                    <img src="images/escnovo.jpg" alt="Portekiz ESC Gönüllülük Projesi" style="width: 100%; border-radius: 8px; margin-top: 1rem; object-fit: cover; max-height: 450px;">
-                </article>
-
-                <!-- DİĞER HABERLER -->
-                <article class="card" style="margin-bottom: 2rem; padding: 2rem;">
-                    <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
-                        <span class="lang-tr">5 Ağustos 2026</span>
-                        <span class="lang-en" style="display:none;">August 5, 2026</span>
-                        <span class="lang-pt" style="display:none;">5 de Agosto de 2026</span>
+                    <!-- TAM GÖZÜKEN RESMİ (object-fit kaldırıldı / orjinal oran korundu) -->
+                    <div style="width: 100%; text-align: center; background: #000; border-radius: 8px; overflow: hidden; margin-top: 1rem;">
+                        <img src="images/escnovo.jpg" alt="Portekiz ESC Gönüllülük Projesi" style="width: 100%; height: auto; display: block; border-radius: 8px;">
                     </div>
-                    
-                    <h2 class="lang-tr" style="margin-bottom: 1rem;">Yeni Geoteknik Danışmanlık Projemiz Başladı</h2>
-                    <h2 class="lang-en" style="display:none; margin-bottom: 1rem;">Our New Geotechnical Consulting Project Has Started</h2>
-                    <h2 class="lang-pt" style="display:none; margin-bottom: 1rem;">Nosso Novo Projeto de Consultoria Geotécnica Começou</h2>
-                    
-                    <p class="lang-tr">İnşaat ve restorasyon alanındaki ana yüklenici ortaklarımıza yönelik sunduğumuz yeni teknik danışmanlık hizmetimizle ilgili ilk saha değerlendirmesi bu hafta tamamlandı. Detaylı raporlar çok yakında eklenecektir.</p>
-                    <p class="lang-en" style="display:none;">The first field assessment regarding our new technical consultancy service offered to our main contractor partners in the construction and restoration field was completed this week.</p>
-                    <p class="lang-pt" style="display:none;">A primeira avaliação de campo sobre o nosso novo serviço de consultoria técnica oferecido aos nossos parceiros de construção e restauração foi concluída esta semana.</p>
-                </article>
 
-                <article class="card" style="margin-bottom: 2rem; padding: 2rem;">
-                    <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
-                        <span class="lang-tr">28 Temmuz 2026</span>
-                        <span class="lang-en" style="display:none;">July 28, 2026</span>
-                        <span class="lang-pt" style="display:none;">28 de Julho de 2026</span>
+                    <!-- ETKİLEŞİM ALANLARI: BEĞENİ, YORUM, PAYLAŞIM -->
+                    <div class="news-actions">
+                        <!-- Beğeni Butonu -->
+                        <button class="action-btn" onclick="likePost()">
+                            ❤️ <span id="like-text">Beğen</span> (<span id="like-count">14</span>)
+                        </button>
+
+                        <!-- Sosyal Medyada Paylaş Dropdown -->
+                        <div class="share-dropdown">
+                            <button class="action-btn">
+                                🔗 <span class="lang-tr">Paylaş</span><span class="lang-en" style="display:none;">Share</span><span class="lang-pt" style="display:none;">Partilhar</span>
+                            </button>
+                            <div class="share-content">
+                                <a href="javascript:void(0);" onclick="shareSocial('whatsapp')">WhatsApp</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('twitter')">X (Twitter)</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('facebook')">Facebook</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('copy')">Bağlantıyı Kopyala</a>
+                            </div>
+                        </div>
+
+                        <!-- Yorum Yap Açma Butonu -->
+                        <button class="action-btn" onclick="toggleComments()">
+                            💬 <span class="lang-tr">Yorumlar</span><span class="lang-en" style="display:none;">Comments</span><span class="lang-pt" style="display:none;">Comentários</span> (<span id="comment-count">2</span>)
+                        </button>
                     </div>
-                    
-                    <h2 class="lang-tr" style="margin-bottom: 1rem;">Avrupa Dayanışma Programı Kapsamında Yeni Gönüllülerimizi Bekliyoruz</h2>
-                    <h2 class="lang-en" style="display:none; margin-bottom: 1rem;">We Are Waiting For Our New Volunteers Under the ESC</h2>
-                    <h2 class="lang-pt" style="display:none; margin-bottom: 1rem;">Estamos Aguardando Nossos Novos Voluntários no Âmbito do CES</h2>
-                    
-                    <p class="lang-tr">Erasmus+ ve Avrupa Dayanışma Programı (ESC) çerçevesinde Sociedade de História Natural iş birliği ile düzenleyeceğimiz sonbahar dönemi hareketlilikleri için başvurular açılmıştır.</p>
-                    <p class="lang-en" style="display:none;">Applications are open for the autumn period mobilities that we will organize in cooperation with Sociedade de História Natural within the framework of Erasmus+ and the European Solidarity Corps (ESC).</p>
-                    <p class="lang-pt" style="display:none;">Estão abertas as inscrições para as mobilidades de outono que organizaremos em cooperação com a Sociedade de História Natural no âmbito do Erasmus+ e do Corpo Europeu de Solidariedade.</p>
+
+                    <!-- Yorum Bölümü (Başlangıçta Gizli / Tıklanınca Açılır) -->
+                    <div id="comments-box" class="comments-section" style="display: none;">
+                        <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Yorumlar</h4>
+                        <ul id="comments-list" class="comments-list">
+                            <li><strong>Ahmet Y.:</strong> Harika bir fırsat, başvurdum!</li>
+                            <li><strong>Elif K.:</strong> Bilgi paketi çok detaylı hazırlanmış, başarılar.</li>
+                        </ul>
+                        <div class="comment-input-group">
+                            <input type="text" id="comment-input" placeholder="Yorumunuzu yazın...">
+                            <button onclick="addComment()">Gönder</button>
+                        </div>
+                    </div>
+
                 </article>
 
             </div>
@@ -192,7 +303,7 @@
         </div>
     </footer>
 
-    <!-- DİL DEĞİŞTİRME SCRIPTİ -->
+    <!-- DİL VE ETKİLEŞİM SCRIPTLERİ -->
     <script>
         function setLanguage(lang) {
             document.documentElement.lang = lang;
@@ -213,6 +324,64 @@
         window.onload = function() {
             const savedLang = localStorage.getItem('preferred_lang') || 'tr';
             setLanguage(savedLang);
+        }
+
+        // Beğenme Fonksiyonu
+        let liked = false;
+        function likePost() {
+            let countElem = document.getElementById('like-count');
+            let count = parseInt(countElem.innerText);
+            if (!liked) {
+                count++;
+                liked = true;
+                document.getElementById('like-text').innerText = "Beğenildi";
+            } else {
+                count--;
+                liked = false;
+                document.getElementById('like-text').innerText = "Beğen";
+            }
+            countElem.innerText = count;
+        }
+
+        // Yorum Bölümünü Aç/Kapat
+        function toggleComments() {
+            let box = document.getElementById('comments-box');
+            box.style.display = box.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Yorum Ekleme Fonksiyonu
+        function addComment() {
+            let input = document.getElementById('comment-input');
+            let text = input.value.trim();
+            if (text !== "") {
+                let list = document.getElementById('comments-list');
+                let newItem = document.createElement('li');
+                newItem.innerHTML = `<strong>Ziyaretçi:</strong> ${text}`;
+                list.appendChild(newItem);
+                
+                let countElem = document.getElementById('comment-count');
+                countElem.innerText = parseInt(countElem.innerText) + 1;
+                
+                input.value = "";
+            }
+        }
+
+        // Sosyal Medyada Paylaşım Fonksiyonu
+        function shareSocial(platform) {
+            let url = window.fLocation ? window.fLocation.href : window.location.href;
+            let text = "Portekiz'de Uzun Dönem Gönüllülük Projesi Başvurusu (ESC)";
+            
+            if (platform === 'whatsapp') {
+                window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text + " - " + url)}`, '_blank');
+            } else if (platform === 'twitter') {
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            } else if (platform === 'facebook') {
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+            } else if (platform === 'copy') {
+                navigator.clipboard.writeText(url).then(() => {
+                    alert("Haber bağlantısı panoya kopyalandı!");
+                });
+            }
         }
     </script>
 </body>
