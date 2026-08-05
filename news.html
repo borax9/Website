@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haberler ve Blog | Eurasia NHA</title>
+    <meta name="description" content="Avrasya Doğa Tarihi Derneği'nden en güncel haberler, projeler ve saha gelişmeleri.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">🌿 <span>Eurasia NHA</span></a>
+            <nav class="nav-links">
+                <a href="index.html#about" class="lang-tr">Hakkımızda</a>
+                <a href="index.html#about" class="lang-en" style="display:none;">About Us</a>
+                <a href="index.html#about" class="lang-pt" style="display:none;">Sobre Nós</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <span class="lang-tr">Projeler ▾</span>
+                        <span class="lang-en" style="display:none;">Projects ▾</span>
+                        <span class="lang-pt" style="display:none;">Projetos ▾</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="index.html#projects">
+                            <span class="lang-tr">Değişim Projeleri</span>
+                            <span class="lang-en" style="display:none;">Exchange Projects</span>
+                            <span class="lang-pt" style="display:none;">Projetos de Intercâmbio</span>
+                        </a>
+                        <a href="tijba.html">TİJBA Project</a>
+                    </div>
+                </div>
+
+                <a href="services.html" class="lang-tr">Hizmetler</a>
+                <a href="services.html" class="lang-en" style="display:none;">Services</a>
+                <a href="services.html" class="lang-pt" style="display:none;">Serviços</a>
+                
+                <a href="index.html#activities">
+                    <span class="lang-tr">Faaliyetler</span>
+                    <span class="lang-en" style="display:none;">Activities</span>
+                    <span class="lang-pt" style="display:none;">Atividades</span>
+                </a>
+                
+                <!-- Aktif Sayfa: Haberler -->
+                <a href="news.html" class="lang-tr" style="color: var(--accent-color); font-weight: 600;">Haberler</a>
+                <a href="news.html" class="lang-en" style="display:none; color: var(--accent-color); font-weight: 600;">News</a>
+                <a href="news.html" class="lang-pt" style="display:none; color: var(--accent-color); font-weight: 600;">Notícias</a>
+
+                <a href="index.html#partners">
+                    <span class="lang-tr">Ortaklar</span>
+                    <span class="lang-en" style="display:none;">Partners</span>
+                    <span class="lang-pt" style="display:none;">Parceiros</span>
+                </a>
+
+                <!-- DİL SEÇİCİ -->
+                <div class="dropdown lang-selector">
+                    <a href="#" class="dropbtn">🌐 <span id="current-lang">TR</span> ▾</a>
+                    <div class="dropdown-content" style="min-width: 100px; left: auto; right: 0;">
+                        <a href="#" onclick="setLanguage('tr'); return false;">Türkçe</a>
+                        <a href="#" onclick="setLanguage('en'); return false;">English</a>
+                        <a href="#" onclick="setLanguage('pt'); return false;">Português</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SAYFA BAŞLIĞI -->
+    <section class="section bg-light" style="padding-top: 8rem; text-align: center;">
+        <div class="container">
+            <h1 class="lang-tr" style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">Haberler ve Blog</h1>
+            <h1 class="lang-en" style="display:none; font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">News & Blog</h1>
+            <h1 class="lang-pt" style="display:none; font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">Notícias e Blog</h1>
+            
+            <p class="lang-tr" style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Derneğimizden, projelerimizden ve sahadan en güncel gelişmeler.</p>
+            <p class="lang-en" style="display:none; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Latest updates from our association, projects, and the field.</p>
+            <p class="lang-pt" style="display:none; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Últimas atualizações da nossa associação, projetos e campo.</p>
+        </div>
+    </section>
+
+    <!-- HABERLER LİSTESİ -->
+    <section class="section">
+        <div class="container">
+            <div class="news-container" style="max-width: 900px; margin: 0 auto;">
+                
+                <!-- YENİ HABER EKLERKEN BURADAN KOPYALAYIN -->
+                <article class="card" style="margin-bottom: 2rem; padding: 2rem;">
+                    <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                        <span class="lang-tr">5 Ağustos 2026</span>
+                        <span class="lang-en" style="display:none;">August 5, 2026</span>
+                        <span class="lang-pt" style="display:none;">5 de Agosto de 2026</span>
+                    </div>
+                    
+                    <h2 class="lang-tr" style="margin-bottom: 1rem;">Yeni Geoteknik Danışmanlık Projemiz Başladı</h2>
+                    <h2 class="lang-en" style="display:none; margin-bottom: 1rem;">Our New Geotechnical Consulting Project Has Started</h2>
+                    <h2 class="lang-pt" style="display:none; margin-bottom: 1rem;">Nosso Novo Projeto de Consultoria Geotécnica Começou</h2>
+                    
+                    <p class="lang-tr">İnşaat ve restorasyon alanındaki ana yüklenici ortaklarımıza yönelik sunduğumuz yeni teknik danışmanlık hizmetimizle ilgili ilk saha değerlendirmesi bu hafta tamamlandı. Detaylı raporlar çok yakında eklenecektir.</p>
+                    <p class="lang-en" style="display:none;">The first field assessment regarding our new technical consultancy service offered to our main contractor partners in the construction and restoration field was completed this week.</p>
+                    <p class="lang-pt" style="display:none;">A primeira avaliação de campo sobre o nosso novo serviço de consultoria técnica oferecido aos nossos parceiros de construção e restauração foi concluída esta semana.</p>
+                    
+                    <!-- Görsel eklemek isterseniz burayı kullanabilirsiniz -->
+                    <!-- <img src="images/news1.jpg" alt="Haber Görseli" style="width: 100%; border-radius: 8px; margin-top: 1.5rem;"> -->
+                </article>
+                <!-- KOPYALANACAK KISIM BİTİŞİ -->
+
+                <article class="card" style="margin-bottom: 2rem; padding: 2rem;">
+                    <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                        <span class="lang-tr">28 Temmuz 2026</span>
+                        <span class="lang-en" style="display:none;">July 28, 2026</span>
+                        <span class="lang-pt" style="display:none;">28 de Julho de 2026</span>
+                    </div>
+                    
+                    <h2 class="lang-tr" style="margin-bottom: 1rem;">Avrupa Dayanışma Programı Kapsamında Yeni Gönüllülerimizi Bekliyoruz</h2>
+                    <h2 class="lang-en" style="display:none; margin-bottom: 1rem;">We Are Waiting For Our New Volunteers Under the ESC</h2>
+                    <h2 class="lang-pt" style="display:none; margin-bottom: 1rem;">Estamos Aguardando Nossos Novos Voluntários no Âmbito do CES</h2>
+                    
+                    <p class="lang-tr">Erasmus+ ve Avrupa Dayanışma Programı (ESC) çerçevesinde Sociedade de História Natural iş birliği ile düzenleyeceğimiz sonbahar dönemi hareketlilikleri için başvurular açılmıştır.</p>
+                    <p class="lang-en" style="display:none;">Applications are open for the autumn period mobilities that we will organize in cooperation with Sociedade de História Natural within the framework of Erasmus+ and the European Solidarity Corps (ESC).</p>
+                    <p class="lang-pt" style="display:none;">Estão abertas as inscrições para as mobilidades de outono que organizaremos em cooperação com a Sociedade de História Natural no âmbito do Erasmus+ e do Corpo Europeu de Solidariedade.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Eurasia Natural History Association</h3>
+                <p>Email: info@dotaltai.org</p>
+                <p>Instagram: <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener">@tdoteurasia</a></p>
+            </div>
+            <div class="footer-links">
+                <h4 class="lang-tr">Hızlı Bağlantılar</h4>
+                <h4 class="lang-en" style="display:none;">Quick Links</h4>
+                <h4 class="lang-pt" style="display:none;">Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html#about"><span class="lang-tr">Hakkımızda</span><span class="lang-en" style="display:none;">About Us</span><span class="lang-pt" style="display:none;">Sobre Nós</span></a></li>
+                    <li><a href="index.html#projects"><span class="lang-tr">Projeler</span><span class="lang-en" style="display:none;">Projects</span><span class="lang-pt" style="display:none;">Projetos</span></a></li>
+                    <li><a href="services.html"><span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span></a></li>
+                    <li><a href="news.html"><span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span></a></li>
+                    <li><a href="tijba.html">TİJBA Project</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Eurasia Natural History Association (dotaltai.org). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DİL DEĞİŞTİRME SCRIPTİ -->
+    <script>
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.getElementById('current-lang').innerText = lang.toUpperCase();
+            
+            document.querySelectorAll('.lang-tr, .lang-en, .lang-pt').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.lang-' + lang).forEach(el => {
+                el.style.display = 'inline';
+                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4') {
+                    el.style.display = 'block';
+                }
+            });
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        window.onload = function() {
+            const savedLang = localStorage.getItem('preferred_lang') || 'tr';
+            setLanguage(savedLang);
+        }
+    </script>
+</body>
+</html>
