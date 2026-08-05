@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetlerimiz | Eurasia NHA</title>
+    <meta name="description" content="İnşaat ve restorasyon projelerinde ana yükleniciye teknik danışmanlık hizmetleri.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR (Tüm linkler index.html'e dönecek şekilde ayarlandı) -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">🌿 <span>Eurasia NHA</span></a>
+            <nav class="nav-links">
+                <a href="index.html#about" class="lang-tr">Hakkımızda</a>
+                <a href="index.html#about" class="lang-en" style="display:none;">About Us</a>
+                <a href="index.html#about" class="lang-pt" style="display:none;">Sobre Nós</a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <span class="lang-tr">Projeler ▾</span>
+                        <span class="lang-en" style="display:none;">Projects ▾</span>
+                        <span class="lang-pt" style="display:none;">Projetos ▾</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="index.html#projects">
+                            <span class="lang-tr">Değişim Projeleri</span>
+                            <span class="lang-en" style="display:none;">Exchange Projects</span>
+                            <span class="lang-pt" style="display:none;">Projetos de Intercâmbio</span>
+                        </a>
+                        <a href="tijba.html">TİJBA Project</a>
+                    </div>
+                </div>
+
+                <!-- Aktif Sayfa -->
+                <a href="services.html" class="lang-tr" style="color: var(--accent-color); font-weight: 600;">Hizmetler</a>
+                <a href="services.html" class="lang-en" style="display:none; color: var(--accent-color); font-weight: 600;">Services</a>
+                <a href="services.html" class="lang-pt" style="display:none; color: var(--accent-color); font-weight: 600;">Serviços</a>
+                
+                <a href="index.html#activities">
+                    <span class="lang-tr">Faaliyetler</span>
+                    <span class="lang-en" style="display:none;">Activities</span>
+                    <span class="lang-pt" style="display:none;">Atividades</span>
+                </a>
+                
+                <a href="index.html#news">
+                    <span class="lang-tr">Haberler</span>
+                    <span class="lang-en" style="display:none;">News</span>
+                    <span class="lang-pt" style="display:none;">Notícias</span>
+                </a>
+
+                <a href="index.html#partners">
+                    <span class="lang-tr">Ortaklar</span>
+                    <span class="lang-en" style="display:none;">Partners</span>
+                    <span class="lang-pt" style="display:none;">Parceiros</span>
+                </a>
+
+                <div class="dropdown lang-selector">
+                    <a href="#" class="dropbtn">🌐 <span id="current-lang">TR</span> ▾</a>
+                    <div class="dropdown-content" style="min-width: 100px; left: auto; right: 0;">
+                        <a href="#" onclick="setLanguage('tr'); return false;">Türkçe</a>
+                        <a href="#" onclick="setLanguage('en'); return false;">English</a>
+                        <a href="#" onclick="setLanguage('pt'); return false;">Português</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SAYFA BAŞLIĞI (HERO İÇİN KÜÇÜK VERSİYON) -->
+    <section class="section bg-light" style="padding-top: 8rem; text-align: center;">
+        <div class="container">
+            <h1 class="lang-tr" style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">Hizmetlerimiz</h1>
+            <h1 class="lang-en" style="display:none; font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">Our Services</h1>
+            <h1 class="lang-pt" style="display:none; font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary-color);">Nossos Serviços</h1>
+            
+            <p class="lang-tr" style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Özellikle <strong>inşaat ve restorasyon projelerinde</strong> ana yükleniciye kapsamlı teknik danışmanlık ve saha desteği verilmektedir.</p>
+            <p class="lang-en" style="display:none; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Technical consultancy and support are provided to the main contractor, especially in <strong>construction and restoration projects</strong>.</p>
+            <p class="lang-pt" style="display:none; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Consultoria técnica e suporte são fornecidos ao empreiteiro principal, especialmente em <strong>projetos de construção e restauração</strong>.</p>
+        </div>
+    </section>
+
+    <!-- HİZMET DETAYLARI -->
+    <section class="section">
+        <div class="container">
+            <div class="cards-grid">
+                
+                <!-- HİZMET 1 -->
+                <article class="card">
+                    <div class="app-icon" style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🌍</div>
+                    <h3 class="lang-tr text-center">Geotechnical Consulting</h3>
+                    <h3 class="lang-en text-center" style="display:none;">Geotechnical Consulting</h3>
+                    <h3 class="lang-pt text-center" style="display:none;">Consultoria Geotécnica</h3>
+                    
+                    <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem;">Zemin etütleri, temel tasarımı ve yapısal risk değerlendirmeleri ile restorasyon ve yeni inşaat projelerinde ana yüklenicinin güvenli ve sürdürülebilir adımlar atmasını sağlıyoruz.</p>
+                    <p class="lang-en" style="display:none; margin-top: 1rem; font-size: 0.95rem;">We ensure that the main contractor takes safe and sustainable steps in restoration and new construction projects through comprehensive soil investigations, foundation design, and structural risk assessments.</p>
+                    <p class="lang-pt" style="display:none; margin-top: 1rem; font-size: 0.95rem;">Garantimos que o empreiteiro principal dê passos seguros e sustentáveis em projetos de restauração e novas construções através de investigações de solo, design de fundações e avaliações de risco estrutural.</p>
+                </article>
+                
+                <!-- HİZMET 2 -->
+                <article class="card">
+                    <div class="app-icon" style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🗺️</div>
+                    <h3 class="lang-tr text-center">Geological Mapping and Survey</h3>
+                    <h3 class="lang-en text-center" style="display:none;">Geological Mapping and Survey</h3>
+                    <h3 class="lang-pt text-center" style="display:none;">Mapeamento e Levantamento Geológico</h3>
+                    
+                    <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem;">Tarihi yapıların restorasyon sürecinde sahadaki yapı taşlarının jeolojik kökenini belirlemek, çevresel etkileri analiz etmek ve doğru materyal tedariki için detaylı haritalama çalışmaları yürütüyoruz.</p>
+                    <p class="lang-en" style="display:none; margin-top: 1rem; font-size: 0.95rem;">During the restoration of historical buildings, we conduct detailed mapping studies to determine the geological origin of building stones on site, analyze environmental impacts, and source the correct materials.</p>
+                    <p class="lang-pt" style="display:none; margin-top: 1rem; font-size: 0.95rem;">Durante a restauração de edifícios históricos, realizamos estudos de mapeamento detalhados para determinar a origem geológica das pedras, analisar impactos ambientais e obter os materiais corretos.</p>
+                </article>
+                
+                <!-- HİZMET 3 -->
+                <article class="card">
+                    <div class="app-icon" style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">⚙️</div>
+                    <h3 class="lang-tr text-center">HVAC Design</h3>
+                    <h3 class="lang-en text-center" style="display:none;">HVAC Design</h3>
+                    <h3 class="lang-pt text-center" style="display:none;">Design de HVAC</h3>
+                    
+                    <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem;">Özellikle hassas dokuya sahip tarihi yapı restorasyonlarında; yapıya zarar vermeyen, enerji verimli ve modern mekanik tesisat (iklimlendirme ve havalandırma) çözümleri tasarlıyoruz.</p>
+                    <p class="lang-en" style="display:none; margin-top: 1rem; font-size: 0.95rem;">Especially in historical building restorations with sensitive textures, we design modern, energy-efficient mechanical installation (climate control and ventilation) solutions that do not damage the structure.</p>
+                    <p class="lang-pt" style="display:none; margin-top: 1rem; font-size: 0.95rem;">Especialmente em restaurações de edifícios históricos com texturas sensíveis, projetamos soluções modernas e eficientes de instalação mecânica (controle climático e ventilação) que não danificam a estrutura.</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Eurasia Natural History Association</h3>
+                <p>Email: info@dotaltai.org</p>
+                <p>Instagram: <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener">@tdoteurasia</a></p>
+            </div>
+            <div class="footer-links">
+                <h4 class="lang-tr">Hızlı Bağlantılar</h4>
+                <h4 class="lang-en" style="display:none;">Quick Links</h4>
+                <h4 class="lang-pt" style="display:none;">Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html#about"><span class="lang-tr">Hakkımızda</span><span class="lang-en" style="display:none;">About Us</span><span class="lang-pt" style="display:none;">Sobre Nós</span></a></li>
+                    <li><a href="index.html#projects"><span class="lang-tr">Projeler</span><span class="lang-en" style="display:none;">Projects</span><span class="lang-pt" style="display:none;">Projetos</span></a></li>
+                    <li><a href="services.html"><span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span></a></li>
+                    <li><a href="index.html#news"><span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span></a></li>
+                    <li><a href="tijba.html">TİJBA Project</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Eurasia Natural History Association (dotaltai.org). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DİL DEĞİŞTİRME SCRIPTİ -->
+    <script>
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.getElementById('current-lang').innerText = lang.toUpperCase();
+            
+            document.querySelectorAll('.lang-tr, .lang-en, .lang-pt').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.lang-' + lang).forEach(el => {
+                el.style.display = 'inline';
+                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4') {
+                    el.style.display = 'block';
+                }
+            });
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        window.onload = function() {
+            const savedLang = localStorage.getItem('preferred_lang') || 'tr';
+            setLanguage(savedLang);
+        }
+    </script>
+</body>
+</html>
