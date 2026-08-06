@@ -14,12 +14,12 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
             margin-top: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
         .esc-collage img {
             width: 100%;
             height: 220px;
-            object-fit: cover;
+            object-fit: cover; /* Bu sadece ilk 5 poster için geçerli */
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
@@ -27,6 +27,20 @@
         .esc-collage img:hover {
             transform: scale(1.03);
         }
+        
+        /* 6. Poster için özel tam görünüm stili (Kırpmasız) */
+        .full-poster {
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .full-poster img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -65,6 +79,7 @@
             padding: 4px 8px;
             border-radius: 4px;
             font-size: 0.9rem;
+            white-space: nowrap;
         }
         /* Navbar fix */
         .navbar { z-index: 9999 !important; position: relative; }
@@ -73,7 +88,7 @@
 </head>
 <body>
 
-    <!-- NAVBAR (Standart Aynı) -->
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
@@ -101,7 +116,10 @@
             
             <div class="card" style="margin-bottom: 2rem; padding: 2rem;">
                 <p style="line-height: 1.6; font-size: 1.05rem;">
-                    Portekizli ana ortağımız <strong>Sociedade de História Natural</strong>, Avrupa Dayanışma Programı (ESC) ve Erasmus+ projelerinde ev sahibi ve lider kuruluş olarak 2021-2027 dönemi için danışmanlığımız altında Kalite Etiketi (Quality Label) almıştır. Karşılıklı olarak Türk gönüllüleri ve Portekizli gönüllüleri desteklemekteyiz.
+                    Portekizli ana ortağımız <strong>Sociedade de História Natural</strong>, Avrupa Dayanışma Programı (ESC) ve Erasmus+ projelerinde ev sahibi ve lider kuruluş olarak 2021-2027 dönemi için danışmanlığımız altında Kalite Etiketi (Quality Label) almıştır. 
+                </p>
+                <p style="line-height: 1.6; font-size: 1.05rem; margin-top: 1rem; color: #333;">
+                    Bugüne kadar sadece Türk gönüllülere değil; <strong>Alman (German), İtalyan (Italian), Estonyalı (Estonian), Slovak (Slovak), Hollandalı (Dutch), İspanyol (Spanish), Fransız (French), Azerbaycanlı (Azerbaijan) ve Belçikalı (Belgian)</strong> gönüllülere de ev sahipliği yaptık. Kapsamımızı genişleterek Avrupa'daki ve çevre ülkelerdeki tüm gönüllülere kapılarımızı sonuna kadar açıyoruz!
                 </p>
                 
                 <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 2rem; justify-content: center;">
@@ -130,6 +148,25 @@
             <!-- Projeler Listesi -->
             <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--secondary-color, #0056b3);">ESC Projeleri Listesi</h3>
             <ul class="project-list">
+                <!-- Yeni Eklenen Numara Odaklı Projeler -->
+                <li>
+                    <span><strong>2025-1-IT03-ESC51-VTJ-000348869</strong> [Geoconservation of Portuguese Jurassic Coast]</span>
+                    <span class="duration">2 months - 1 Volunteer</span>
+                </li>
+                <li>
+                    <span><strong>2024-1-DE04-ESC51-VTJ-000198524</strong> [Paleontological Inventory Management]</span>
+                    <span class="duration">1 year - 1 volunteer</span>
+                </li>
+                <li>
+                    <span><strong>2025-DE04-ESC51-VTJ-000346590</strong> [Paleontological Heritage Management]</span>
+                    <span class="duration">1 year - 1 volunteer</span>
+                </li>
+                <li>
+                    <span><strong>2024-1-EE01-ESC51-VTJ-000-209801</strong> [Geoheritage of the Jurassic Coast]</span>
+                    <span class="duration">2 months - 1 volunteer</span>
+                </li>
+                
+                <!-- Mevcut Diğer Projeler -->
                 <li><span>Waterways Heritage Action Together</span><span class="duration">2 weeks for 15 volunteers</span></li>
                 <li><span>Natural Heritage Management</span><span class="duration">1 years for 1 volunteer</span></li>
                 <li><span>Health and Safety Management</span><span class="duration">2 months for 6 volunteers</span></li>
@@ -159,12 +196,17 @@
                 <img src="images/escposter3.png" alt="ESC Poster 3">
                 <img src="images/escposter4.png" alt="ESC Poster 4">
                 <img src="images/escposter5.png" alt="ESC Poster 5">
-                <img src="images/escposter6.png" alt="ESC Poster 6">
             </div>
+
+            <!-- Poster 6 Tam Hali (Kırpma Yapılmadan) -->
+            <div class="full-poster">
+                <img src="images/escposter6.png" alt="ESC Poster 6 Full Size">
+            </div>
+            
         </div>
     </section>
 
-    <!-- FOOTER (Standart) -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-bottom">
             <div class="container">
