@@ -65,6 +65,32 @@
             object-fit: cover;
         }
 
+        /* YouTube Video Grid Stili */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         @media (max-width: 768px) {
             .nav-container { flex-direction: column; gap: 10px; }
             .nav-links { flex-wrap: wrap; justify-content: center; }
@@ -198,15 +224,15 @@
                     </ul>
                 </div>
 
-                <!-- FEES -->
+                <!-- FEES (Updated to €500 total) -->
                 <div class="campusa-section">
                     <h3 style="color: var(--secondary-color, #0056b3);">
-                        <span class="lang-pt">Custos do Programa (Total: €400)</span>
-                        <span class="lang-en" style="display:none;">Program Fees (Total: €400)</span>
+                        <span class="lang-pt">Custos do Programa (Total: €500)</span>
+                        <span class="lang-en" style="display:none;">Program Fees (Total: €500)</span>
                     </h3>
                     <div class="fee-grid">
                         <div class="fee-card">
-                            <h4>€75</h4>
+                            <h4>€100</h4>
                             <strong><span class="lang-pt">Candidatura e Entrevista</span><span class="lang-en" style="display:none;">Application & Interview</span></strong>
                             <p style="font-size: 0.85rem; color:#666; margin-top:5px;">
                                 <span class="lang-pt">Pago no início. Não reembolsável.</span>
@@ -214,7 +240,7 @@
                             </p>
                         </div>
                         <div class="fee-card">
-                            <h4>€125</h4>
+                            <h4>€150</h4>
                             <strong><span class="lang-pt">Taxa do Programa</span><span class="lang-en" style="display:none;">Program Fee</span></strong>
                             <p style="font-size: 0.85rem; color:#666; margin-top:5px;">
                                 <span class="lang-pt">Pago após aceitação do perfil. 50% reembolsável (recusa de visto/cancelamento).</span>
@@ -222,7 +248,7 @@
                             </p>
                         </div>
                         <div class="fee-card">
-                            <h4>€200</h4>
+                            <h4>€250</h4>
                             <strong><span class="lang-pt">Colocação e Suporte</span><span class="lang-en" style="display:none;">Placement & Support</span></strong>
                             <p style="font-size: 0.85rem; color:#666; margin-top:5px;">
                                 <span class="lang-pt">Pago após oferta de trabalho. 75% reembolsável (recusa de visto/cancelamento).</span>
@@ -255,6 +281,28 @@
                     </p>
                 </div>
 
+                <!-- YOUTUBE VIDEOS SECTION -->
+                <div class="campusa-section">
+                    <h3 style="color: var(--secondary-color, #0056b3); margin-bottom: 1rem;">
+                        <span class="lang-pt">Vídeos do Programa</span>
+                        <span class="lang-en" style="display:none;">Program Videos</span>
+                    </h3>
+                    <div class="video-grid">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/eACmLTFHY1w" title="CampUSA Video 1" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/gRWEoWECnLQ" title="CampUSA Video 2" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/0tswi7xNedo" title="CampUSA Video 3" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/-Ls2rLwZKHQ" title="CampUSA Video 4" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- OUR EXPERIENCE & IMAGES -->
                 <div class="campusa-section" style="border-bottom: none; margin-bottom: 0;">
                     <h3 style="color: var(--secondary-color, #0056b3);">
@@ -269,7 +317,7 @@
                     </p>
                     
                     <div class="experience-images">
-                        <img src="images/camp1.jpeg" alt="CampUSA Experience 1">
+                        <img src="images/camp1.png" alt="CampUSA Experience 1">
                         <img src="images/camp2.png" alt="CampUSA Experience 2">
                     </div>
                 </div>
