@@ -39,7 +39,7 @@
                 min-width: 140px;
             }
         }
-        /* Basit Buton Stili (Eğer CSS'te yoksa) */
+        /* Basit Buton Stili */
         .btn-primary {
             display: inline-block;
             background: #0056b3;
@@ -54,80 +54,52 @@
             background: #004494;
         }
 
-        /* --- YENİ KAPAK KOLAJI STİLLERİ --- */
-        .hero-wrapper {
-            background-color: #2c5e3b; /* Yeşil zemin */
-            padding: 40px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        .hero-logo {
-            flex: 0 0 150px;
-            display: flex;
-            justify-content: center;
-        }
-        .hero-logo img {
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-        .hero-collage {
-            flex: 1;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .hero-collage img {
+        /* --- YENİ KAPAK ŞERİDİ (FOTO KOLAJ) STİLLERİ --- */
+        .photo-strip-container {
             width: 100%;
-            height: auto;
-            object-fit: contain; /* Fotoğrafların kırpılmasını önler, gerçek oranını korur */
+            background-color: #f8f9fa; /* Hafif arkaplan rengi */
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05) inset;
+        }
+        .photo-strip {
+            display: flex;
+            justify-content: center; /* Fotoğrafları ortalar */
+            align-items: center;
+            gap: 15px; /* Fotoğraflar arası boşluk */
+            height: 280px; /* Aşağı uzamayı engelleyen sabit yükseklik */
+            width: 100%;
+            overflow-x: auto; /* Yana doğru kaydırma barı (fazla foto varsa) */
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        /* Kaydırma çubuğunun daha şık görünmesi için */
+        .photo-strip::-webkit-scrollbar {
+            height: 8px;
+        }
+        .photo-strip::-webkit-scrollbar-thumb {
+            background: #bbb;
+            border-radius: 4px;
+        }
+        .photo-strip img {
+            height: 100%; /* Hepsi aynı yükseklikte olur */
+            width: 350px; /* Hepsi aynı genişlikte kutu içinde durur */
+            object-fit: contain; /* KIRPILMAYI ENGELLER, fotoğraf kutuya sığar */
+            background-color: #fff; /* Fotoğraf kenarlarında boşluk kalırsa beyaz arka plan sağlar */
+            border: 1px solid #ddd;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            background-color: rgba(0,0,0,0.1); /* Transparan kısımlar için hafif arka plan */
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            flex-shrink: 0; /* Daralmayı önler, yan yana dizer */
         }
 
-        /* Responsive Kolaj */
-        @media (max-width: 992px) {
-            .hero-logo { flex: 0 0 100px; }
-        }
+        /* Kapak şeridi mobil uyumluluk */
         @media (max-width: 768px) {
-            .hero-wrapper {
-                flex-direction: column;
+            .photo-strip {
+                height: 200px;
+                justify-content: flex-start; /* Mobilde kaydırmak daha rahat olsun diye sola yaslar */
             }
-            .hero-logo {
-                margin: 20px 0;
+            .photo-strip img {
+                width: 250px;
             }
-            .hero-collage {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        @media (max-width: 480px) {
-            .hero-collage {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Yeni Metin Alanı Stili */
-        .intro-text-section {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #f9f9f9;
-        }
-        .intro-text-section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .intro-text-section p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #555;
         }
     </style>
 </head>
@@ -197,35 +169,22 @@
         </div>
     </header>
 
-    <!-- HERO SECTION: FOTOĞRAF KOLAJI VE LOGOLAR -->
-    <section class="hero-wrapper">
-        <!-- Sol Logo -->
-        <div class="hero-logo">
-            <img src="images/logo.png" alt="Eurasia NHA Sol Logo">
-        </div>
-
-        <!-- 9 Fotoğraflık Kolaj -->
-        <div class="hero-collage">
-            <img src="images/kapak.jpg" alt="Kapak Fotoğrafı 1">
-            <img src="images/kapak1.jpg" alt="Kapak Fotoğrafı 2">
-            <img src="images/kapak2.jpg" alt="Kapak Fotoğrafı 3">
-            <img src="images/kapak3.jpg" alt="Kapak Fotoğrafı 4">
-            <img src="images/kapak4.jpg" alt="Kapak Fotoğrafı 5">
-            <img src="images/kapak5.jpg" alt="Kapak Fotoğrafı 6">
-            <img src="images/kapak6.jpg" alt="Kapak Fotoğrafı 7">
-            <img src="images/kapak7.jpg" alt="Kapak Fotoğrafı 8">
-            <img src="images/kapak8.jpg" alt="Kapak Fotoğrafı 9">
-        </div>
-
-        <!-- Sağ Logo -->
-        <div class="hero-logo">
-            <img src="images/logo2.png" alt="Eurasia NHA Sağ Logo">
+    <!-- KAPAK FOTOĞRAFLARI ŞERİDİ (YENİ EKLENEN KISIM) -->
+    <section class="photo-strip-container">
+        <div class="photo-strip">
+            <!-- Dosya yollarını (images/kapak1.png vb.) kendi mevcut fotoğraflarına göre güncelle -->
+            <img src="images/kapak1.jpg" alt="Kapak 1">
+            <img src="images/kapak2.jpg" alt="Kapak 2">
+            <img src="images/kapak3.jpg" alt="Kapak 3">
+            <img src="images/kapak4.jpg" alt="Kapak 4">
+            <img src="images/kapak5.jpg" alt="Kapak 5">
+            <img src="images/kapak6.jpg" alt="Kapak 6">
         </div>
     </section>
 
-    <!-- İÇERİK METNİ (Kolajın altı, Hakkımızda'nın üstü) -->
-    <section class="intro-text-section">
-        <div class="container">
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-content">
             <h1 class="lang-tr">Avrasya Doğa Tarihi Derneği</h1>
             <h1 class="lang-en" style="display:none;">Eurasia Natural History Association</h1>
             <h1 class="lang-pt" style="display:none;">Associação de História Natural da Eurásia</h1>
@@ -267,7 +226,7 @@
         </div>
     </section>
 
-    <!-- PROJECTS (YENİ ESC & CAMPUSA ALT BAŞLIKLARI) -->
+    <!-- PROJECTS -->
     <section id="projects" class="section bg-light">
         <div class="container">
             <h2 class="section-title">
