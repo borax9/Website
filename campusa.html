@@ -113,7 +113,7 @@
         .custom-list { list-style: none; padding-left: 0; line-height: 1.8; }
         .custom-list li::before { content: "✔️ "; }
 
-        /* YENİ EKLENEN CSS: Modal ve Buton Stilleri */
+        /* Modal ve Buton Stilleri */
         .apply-btn-container {
             text-align: center;
             margin: -1rem 0 3rem 0;
@@ -212,6 +212,48 @@
         @media (max-width: 600px) {
             .checkbox-group { grid-template-columns: 1fr; }
             .modal-content { padding: 25px; margin: 10% auto; }
+        }
+
+        /* YENİ: Trustpilot Banner Stilleri */
+        .trustpilot-banner {
+            background: #fff;
+            border: 1px solid #e1e1e1;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 1.5rem auto 0 auto;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .trustpilot-banner:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .tp-stars {
+            background-color: #00b67a;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 3px;
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+            display: inline-block;
+        }
+        .tp-btn {
+            background-color: #00b67a;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        .tp-btn:hover {
+            background-color: #009c69;
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -430,7 +472,7 @@
                 </div>
 
                 <!-- OUR EXPERIENCE & IMAGES -->
-                <div class="campusa-section" style="border-bottom: none; margin-bottom: 0;">
+                <div class="campusa-section">
                     <h3 style="color: var(--secondary-color, #0056b3);">
                         <span class="lang-pt">A Nossa Experiência</span>
                         <span class="lang-en" style="display:none;">Our Experience</span>
@@ -448,6 +490,30 @@
                     </div>
                 </div>
 
+                <!-- YENİ EKLENEN: TRUSTPILOT REVIEWS -->
+                <div class="campusa-section" style="border-bottom: none; margin-bottom: 0;">
+                    <h3 style="color: var(--secondary-color, #0056b3); text-align: center;">
+                        <span class="lang-pt">O Que Dizem Sobre Nós</span>
+                        <span class="lang-en" style="display:none;">What People Say About Us</span>
+                    </h3>
+                    
+                    <div class="trustpilot-banner">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px;">
+                            <span style="font-weight: 800; font-size: 1.5rem; color: #191919;">Excellent</span>
+                            <div class="tp-stars">★★★★★</div>
+                        </div>
+                        <p style="margin: 10px 0; font-size: 1.1rem; color: #555;">
+                            <span class="lang-pt">Apoiado por incríveis avaliações no</span>
+                            <span class="lang-en" style="display:none;">Backed by amazing reviews on</span>
+                            <strong style="color: #191919;">Trustpilot</strong>
+                        </p>
+                        <a href="https://www.trustpilot.com/review/interexchange.org?utm_medium=trustbox&utm_source=Horizontal" target="_blank" class="tp-btn">
+                            <span class="lang-pt">Ler todas as avaliações</span>
+                            <span class="lang-en" style="display:none;">Read all reviews</span>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -461,7 +527,7 @@
         </div>
     </footer>
 
-    <!-- Başvuru Formu Modalı (GÜNCELLENEN KISIM BURADA) -->
+    <!-- Başvuru Formu Modalı -->
     <div id="applicationModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModalBtn">&times;</span>
@@ -471,7 +537,7 @@
                 <p>Upon successful submission of this form, InterExchange Camp USA will provide an official registration link to the Email address you provide below and you will grant access to Camp USA Portal to complete your enrollment.</p>
             </div>
 
-            <!-- Formspree Entegrasyonu GÜNCELLENDİ -->
+            <!-- Formspree Entegrasyonu -->
             <form action="https://formspree.io/f/mvkpgrnb" method="POST">
                 
                 <div class="form-group">
@@ -548,7 +614,7 @@
         // Butona tıklanınca formu aç
         btn.onclick = function() {
             modal.style.display = "block";
-            document.body.style.overflow = "hidden"; // Arka planın kaymasını engeller
+            document.body.style.overflow = "hidden";
         }
 
         // Çarpıya basılınca formu kapat
