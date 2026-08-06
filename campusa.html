@@ -10,21 +10,24 @@
     <style>
         .navbar { z-index: 9999 !important; position: relative; }
         
-        /* CampUSA Özel Stiller */
+        /* CampUSA Custom Styles */
         .campusa-header {
             text-align: center;
             margin-bottom: 2rem;
         }
-        .campusa-content {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+        .campusa-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+        .campusa-section:last-child {
+            border-bottom: none;
         }
         .campusa-features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
         .feature-box {
             background: #f9f9f9;
@@ -33,33 +36,44 @@
             border-left: 5px solid var(--secondary-color, #0056b3);
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        .feature-box h4 {
-            color: var(--secondary-color, #0056b3);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
+        .fee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 1.5rem;
         }
-        .campusa-image-container {
-            text-align: center;
-            margin: 2rem 0;
-        }
-        .campusa-image-container img {
-            max-width: 100%;
-            width: 800px;
+        .fee-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
         }
+        .fee-card h4 { color: #28a745; font-size: 1.5rem; margin-bottom: 5px; }
         
-        /* Mobil Menü Düzeltmeleri */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+        .experience-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 2rem;
         }
+        .experience-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 10px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; }
+            .experience-images { grid-template-columns: 1fr; }
+        }
+
+        /* Lists */
+        .custom-list { list-style: none; padding-left: 0; line-height: 1.8; }
+        .custom-list li::before { content: "✔️ "; }
     </style>
 </head>
 <body>
@@ -76,7 +90,6 @@
                 <a href="index.html#about" class="lang-pt">Sobre Nós</a>
                 <a href="index.html#about" class="lang-en" style="display:none;">About Us</a>
 
-                <!-- PROJELER DROPDOWN -->
                 <div class="dropdown">
                     <a href="#" class="dropbtn">
                         <span class="lang-pt">Projetos ▾</span>
@@ -108,7 +121,6 @@
                     <span class="lang-en" style="display:none;">Partners</span>
                 </a>
 
-                <!-- DİL SEÇİCİ (Sadece PT ve EN) -->
                 <div class="dropdown lang-selector">
                     <a href="#" class="dropbtn">🌐 <span id="current-lang">PT</span> ▾</a>
                     <div class="dropdown-content" style="min-width: 100px; left: auto; right: 0;">
@@ -120,74 +132,146 @@
         </div>
     </header>
 
-    <section class="section" style="padding-top: 6rem; min-height: 80vh;">
+    <section class="section" style="padding-top: 6rem;">
         <div class="container">
             <div class="campusa-header">
                 <h1 class="section-title">
-                    <span class="lang-pt">Programa CampUSA para Portugal</span>
-                    <span class="lang-en" style="display:none;">CampUSA Program for Portugal</span>
+                    <span class="lang-pt">Programa CampUSA</span>
+                    <span class="lang-en" style="display:none;">CampUSA Program</span>
                 </h1>
                 <p class="lang-pt" style="font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto;">
-                    Facilitando o intercâmbio cultural internacional e programas de desenvolvimento juvenil entre Portugal e os Estados Unidos da América.
+                    O programa InterExchange Camp USA permite que jovens passem de 9 a 15 semanas num acampamento de verão americano. Uma oportunidade única de trabalhar como monitor, ganhar uma bolsa, desenvolver amizades duradouras e viver um verdadeiro intercâmbio cultural.
                 </p>
                 <p class="lang-en" style="display:none; font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto;">
-                    Facilitating international cultural exchange and youth development programs between Portugal and the United States of America.
+                    The InterExchange Camp USA program allows youth to spend 9-15 weeks at an American summer camp. A unique opportunity to work as a counselor, earn a stipend, develop lifelong friendships, and experience true cultural exchange.
                 </p>
             </div>
             
             <div class="card" style="padding: 2rem;">
                 
-                <div class="campusa-content">
-                    <div>
-                        <h3 class="lang-pt" style="font-size: 1.6rem; margin-bottom: 1rem; color: var(--secondary-color, #0056b3);">Sobre o Programa</h3>
-                        <h3 class="lang-en" style="display:none; font-size: 1.6rem; margin-bottom: 1rem; color: var(--secondary-color, #0056b3);">About the Program</h3>
-                        
-                        <p class="lang-pt" style="line-height: 1.8; font-size: 1.05rem;">
-                            O programa CampUSA, organizado em parceria com a Eurasia Natural History Association, oferece aos jovens em Portugal uma oportunidade única de passar o verão nos EUA. Como monitores de acampamento ou em funções de suporte, os participantes mergulham na cultura americana, aprimoram a sua proficiência em inglês e desenvolvem competências de liderança inestimáveis enquanto partilham a sua própria cultura com jovens americanos.
-                        </p>
-                        <p class="lang-en" style="display:none; line-height: 1.8; font-size: 1.05rem;">
-                            The CampUSA program, organized in partnership with the Eurasia Natural History Association, offers youth in Portugal a unique opportunity to spend their summer in the USA. Whether as camp counselors or in support roles, participants immerse themselves in American culture, improve their English proficiency, and build invaluable leadership skills while sharing their own culture with American youth.
-                        </p>
-                    </div>
-
+                <!-- THE ROLE -->
+                <div class="campusa-section">
+                    <h3 style="color: var(--secondary-color, #0056b3);">
+                        <span class="lang-pt">O Seu Papel como Monitor de Acampamento</span>
+                        <span class="lang-en" style="display:none;">Your Role as a Camp Counselor</span>
+                    </h3>
+                    <p class="lang-pt">Os monitores são o coração dos acampamentos de verão americanos. Você guiará e inspirará os campistas enquanto desfruta de um intercâmbio inesquecível. As funções incluem supervisão diária, liderança de atividades, e garantia de saúde e segurança.</p>
+                    <p class="lang-en" style="display:none;">Camp counselors are the heart of American summer camps. You guide, support, and inspire campers while enjoying an unforgettable cultural exchange experience. Duties include daily supervision, activity leadership, and ensuring health and safety.</p>
+                    
                     <div class="campusa-features">
-                        <!-- Feature 1 -->
                         <div class="feature-box">
-                            <h4 class="lang-pt">🌎 Intercâmbio Cultural</h4>
-                            <h4 class="lang-en" style="display:none;">🌎 Cultural Exchange</h4>
-                            <p class="lang-pt">Mergulhe na cultura americana e partilhe as tradições portuguesas. Crie laços de amizade internacionais duradouros.</p>
-                            <p class="lang-en" style="display:none;">Immerse yourself in American culture and share Portuguese traditions. Build lasting international friendships.</p>
+                            <strong>🎨 Especialistas de Atividades / Activity Specialists</strong>
+                            <p class="lang-pt" style="font-size: 0.9rem; margin-top:10px;">Lidere desportos, artes, aventuras ao ar livre, STEM, ou atividades aquáticas usando as suas habilidades específicas.</p>
+                            <p class="lang-en" style="display:none; font-size: 0.9rem; margin-top:10px;">Lead sports, arts, outdoor adventures, STEM, or waterfront activities using your specific skills.</p>
                         </div>
-                        
-                        <!-- Feature 2 -->
                         <div class="feature-box">
-                            <h4 class="lang-pt">🚀 Desenvolvimento Pessoal</h4>
-                            <h4 class="lang-en" style="display:none;">🚀 Personal Development</h4>
-                            <p class="lang-pt">Desenvolva competências cruciais como liderança, trabalho em equipa e resolução de problemas num ambiente dinâmico.</p>
-                            <p class="lang-en" style="display:none;">Develop crucial skills such as leadership, teamwork, and problem-solving in a dynamic environment.</p>
-                        </div>
-                        
-                        <!-- Feature 3 -->
-                        <div class="feature-box">
-                            <h4 class="lang-pt">🗣️ Imersão Linguística</h4>
-                            <h4 class="lang-en" style="display:none;">🗣️ Language Immersion</h4>
-                            <p class="lang-pt">Melhore significativamente o seu nível de inglês trabalhando e interagindo diariamente com falantes nativos.</p>
-                            <p class="lang-en" style="display:none;">Significantly improve your English proficiency by working and interacting daily with native speakers.</p>
+                            <strong>🎒 Monitor Geral / General Counselor</strong>
+                            <p class="lang-pt" style="font-size: 0.9rem; margin-top:10px;">Supervisione um grupo, apoie as rotinas diárias, ajude na inclusão e participe em eventos especiais.</p>
+                            <p class="lang-en" style="display:none; font-size: 0.9rem; margin-top:10px;">Supervise a cabin group, support daily routines, help with inclusion, and participate in special events.</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="campusa-image-container">
-                    <img src="images/campusapt.jpg" alt="CampUSA Portugal">
+
+                <!-- EARNINGS AND BENEFITS -->
+                <div class="campusa-section">
+                    <h3 style="color: var(--secondary-color, #0056b3);">
+                        <span class="lang-pt">Ganhos e Benefícios</span>
+                        <span class="lang-en" style="display:none;">Earnings and Benefits</span>
+                    </h3>
+                    <ul class="custom-list">
+                        <li>
+                            <span class="lang-pt"><strong>Bolsa:</strong> $2300 a $3200 USD (antes de impostos) por 9 semanas. (Bónus por dias extras).</span>
+                            <span class="lang-en" style="display:none;"><strong>Stipend:</strong> Minimum $2300 up to $3200 USD Pre-tax for 9 weeks. (Extra pay for extra days).</span>
+                        </li>
+                        <li>
+                            <span class="lang-pt"><strong>Incluso:</strong> Alojamento e alimentação gratuitos durante o trabalho.</span>
+                            <span class="lang-en" style="display:none;"><strong>Included:</strong> Free room and board while working.</span>
+                        </li>
+                        <li>
+                            <span class="lang-pt"><strong>Seguro:</strong> Seguro de acidentes e doenças para toda a duração do programa.</span>
+                            <span class="lang-en" style="display:none;"><strong>Insurance:</strong> Accident and sickness insurance for the entire duration of the program.</span>
+                        </li>
+                        <li>
+                            <span class="lang-pt"><strong>Visto e Viagem:</strong> Patrocínio do Visto J1 (Formulário DS2019) e 30 dias de viagem pós-acampamento.</span>
+                            <span class="lang-en" style="display:none;"><strong>Visa & Travel:</strong> J1 visa sponsorship (DS2019 Form) and 30-day travel period after camp.</span>
+                        </li>
+                    </ul>
                 </div>
-                
-                <div style="text-align: center; margin-top: 2rem;">
-                    <h3 class="lang-pt" style="margin-bottom: 1rem; color: #333;">Pronto para a aventura de uma vida?</h3>
-                    <h3 class="lang-en" style="display:none; margin-bottom: 1rem; color: #333;">Ready for the adventure of a lifetime?</h3>
-                    <a href="index.html#contact" class="btn btn-primary" style="padding: 12px 25px; font-size: 1.1rem; text-decoration: none; color: white; background: #0056b3; border-radius: 5px;">
-                        <span class="lang-pt">Contacte-nos para mais detalhes</span>
-                        <span class="lang-en" style="display:none;">Contact us for details</span>
-                    </a>
+
+                <!-- FEES -->
+                <div class="campusa-section">
+                    <h3 style="color: var(--secondary-color, #0056b3);">
+                        <span class="lang-pt">Custos do Programa (Total: €400)</span>
+                        <span class="lang-en" style="display:none;">Program Fees (Total: €400)</span>
+                    </h3>
+                    <div class="fee-grid">
+                        <div class="fee-card">
+                            <h4>€75</h4>
+                            <strong><span class="lang-pt">Candidatura e Entrevista</span><span class="lang-en" style="display:none;">Application & Interview</span></strong>
+                            <p style="font-size: 0.85rem; color:#666; margin-top:5px;">
+                                <span class="lang-pt">Pago no início. Não reembolsável.</span>
+                                <span class="lang-en" style="display:none;">Paid at the start. Non-refundable.</span>
+                            </p>
+                        </div>
+                        <div class="fee-card">
+                            <h4>€125</h4>
+                            <strong><span class="lang-pt">Taxa do Programa</span><span class="lang-en" style="display:none;">Program Fee</span></strong>
+                            <p style="font-size: 0.85rem; color:#666; margin-top:5px;">
+                                <span class="lang-pt">Pago após aceitação do perfil. 50% reembolsável (recusa de visto/cancelamento).</span>
+                                <span class="lang-en" style="display:none;">Paid after profile acceptance. 50% refundable (visa denial/cancellation).</span>
+                            </p>
+                        </div>
+                        <div class="fee-card">
+                            <h4>€200</h4>
+                            <strong><span class="lang-pt">Colocação e Suporte</span><span class="lang-en" style="display:none;">Placement & Support</span></strong>
+                            <p style="font-size: 0.85rem; color:#666; margin-top:5px;">
+                                <span class="lang-pt">Pago após oferta de trabalho. 75% reembolsável (recusa de visto/cancelamento).</span>
+                                <span class="lang-en" style="display:none;">Paid after job offer. 75% refundable (visa denial/cancellation).</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #555; margin-top: 15px;">
+                        <em>* <span class="lang-pt">Despesas Pessoais Extras: Visto ($185 USD) e Voo de Ida e Volta (Estimativa $350 - $600 USD).</span>
+                        <span class="lang-en" style="display:none;">Extra Personal Expenses: Visa Fee ($185 USD) and Round-Trip Flight ($350 - $600 USD).</span></em>
+                    </p>
+                </div>
+
+                <!-- ELIGIBILITY & MODEL -->
+                <div class="campusa-section">
+                    <h3 style="color: var(--secondary-color, #0056b3);">
+                        <span class="lang-pt">Elegibilidade & Nosso Modelo</span>
+                        <span class="lang-en" style="display:none;">Eligibility & Our Model</span>
+                    </h3>
+                    <ul class="custom-list">
+                        <li><span class="lang-pt">Ter entre 18 e 28 anos de idade.</span><span class="lang-en" style="display:none;">Between 18 and 28 years of age.</span></li>
+                        <li><span class="lang-pt">Forte nível de inglês e interesse em trabalhar com crianças ao ar livre.</span><span class="lang-en" style="display:none;">Strong English speaker genuinely interested in working with children outdoors.</span></li>
+                        <li><span class="lang-pt">Disponibilidade de meados de junho a final de agosto.</span><span class="lang-en" style="display:none;">Available from mid-June through late August.</span></li>
+                    </ul>
+                    <p class="lang-pt" style="margin-top:15px; font-size:0.95rem; line-height: 1.6;">
+                        <strong>Modelo de 4 Passos:</strong> 1. Seleção e Entrevista (Avaliação de perfil online/presencial) → 2. Suporte de Visto e Viagem (Apoio DS-2019 e burocracia) → 3. Orientação Pré-Partida → 4. Suporte Contínuo (Assistência 24/7 nos EUA).
+                    </p>
+                    <p class="lang-en" style="display:none; margin-top:15px; font-size:0.95rem; line-height: 1.6;">
+                        <strong>4-Step Model:</strong> 1. Selection and Interview (Profile evaluation) → 2. Visa and Travel Support (DS-2019 and bureaucracy aid) → 3. Pre-Departure Orientation → 4. Ongoing Support (24/7 assistance in the US).
+                    </p>
+                </div>
+
+                <!-- OUR EXPERIENCE & IMAGES -->
+                <div class="campusa-section" style="border-bottom: none; margin-bottom: 0;">
+                    <h3 style="color: var(--secondary-color, #0056b3);">
+                        <span class="lang-pt">A Nossa Experiência</span>
+                        <span class="lang-en" style="display:none;">Our Experience</span>
+                    </h3>
+                    <p class="lang-pt" style="line-height: 1.6;">
+                        A nossa experiência com o programa J-1 começou em 2018. Estabelecemos ligações com vários acampamentos de verão dos EUA, mantendo relações profissionais com diretores em Camp Watitoh, Point O'Pines, Camp Mah-Kee-Nac e Camp Greylock. O nosso escritório em Ancara garante acesso direto para resolução rápida de procedimentos burocráticos. Adicionalmente, entre 2019 e 2025, focamo-nos fortemente em programas da UE (Corpo Europeu de Solidariedade), enviando mais de 40 jovens para o exterior, o que nos confere sólida experiência em logística de mobilidade e treino intercultural.
+                    </p>
+                    <p class="lang-en" style="display:none; line-height: 1.6;">
+                        Our J-1 program experience began in 2018. We established connections with several U.S. camps, maintaining professional relationships with directors at Camp Watitoh, Point O'Pines, Camp Mah-Kee-Nac, and Camp Greylock. Our Ankara office grants direct access for quick bureaucratic resolutions. Additionally, from 2019-2025, we successfully managed EU programs (European Solidarity Corps), sending over 40 youth abroad, giving us solid expertise in mobility logistics and intercultural training.
+                    </p>
+                    
+                    <div class="experience-images">
+                        <img src="images/camp1.jpeg" alt="CampUSA Experience 1">
+                        <img src="images/camp2.png" alt="CampUSA Experience 2">
+                    </div>
                 </div>
 
             </div>
@@ -203,29 +287,28 @@
         </div>
     </footer>
 
-    <!-- DİL DEĞİŞTİRME SCRIPTİ (Sadece PT ve EN) -->
+    <!-- LANGUAGE SCRIPT -->
     <script>
         function setLanguage(lang) {
             document.documentElement.lang = lang;
             document.getElementById('current-lang').innerText = lang.toUpperCase();
             
-            // Tüm dil öğelerini gizle
             document.querySelectorAll('.lang-pt, .lang-en').forEach(el => {
                 el.style.display = 'none';
             });
             
-            // Seçilen dili göster
             document.querySelectorAll('.lang-' + lang).forEach(el => {
                 el.style.display = 'inline';
-                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4' || el.tagName === 'LI') {
-                    el.style.display = 'block';
+                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4' || el.tagName === 'LI' || el.tagName === 'DIV') {
+                    if(!el.classList.contains('lang-selector') && el.tagName !== 'DIV') {
+                        el.style.display = 'block';
+                    }
                 }
             });
             localStorage.setItem('preferred_lang_campusa', lang);
         }
 
         window.onload = function() {
-            // "pt" temel dil (base language) olarak belirlendi
             const savedLang = localStorage.getItem('preferred_lang_campusa') || 'pt';
             setLanguage(savedLang);
         }
