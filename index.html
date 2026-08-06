@@ -4,72 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avrasya Doğa Tarihi Derneği | dotaltai.org</title>
-    <meta name="description" content="Avrasya Doğa Tarihi Derneği - Değişim ve Koruma Projeleri">
+    <meta name="description" content="Avrasya Doğa Tarihi Derneği - Projeler ve Hizmetler">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Proje Kolaj ve ESC Ek Stilleri */
-        .esc-collage {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-        }
-        .esc-collage img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .esc-collage img:hover {
-            transform: scale(1.03);
-        }
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .team-card {
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 6px;
-            text-align: center;
-            border-left: 4px solid var(--secondary-color, #0056b3);
-        }
-        .project-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 1.5rem;
-        }
-        .project-list li {
-            background: #fff;
-            margin-bottom: 10px;
-            padding: 12px 15px;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .project-list li span.duration {
-            font-weight: 600;
-            color: #555;
-            background: #eee;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-
         /* --- MOBİL MENÜ DÜZELTMELERİ --- */
         .navbar {
-            z-index: 9999 !important; /* Katman çakışmasını önler, menüyü en üste alır */
+            z-index: 9999 !important;
             position: relative;
         }
         @media (max-width: 768px) {
@@ -88,15 +29,29 @@
                 width: 100%;
             }
             .nav-links a {
-                padding: 8px 10px; /* Mobilde dokunma (tıklama) alanını genişletir */
+                padding: 8px 10px;
             }
             .dropdown {
-                position: relative; /* Dropdown menünün düzgün açılması için */
+                position: relative;
             }
             .dropdown-content {
                 z-index: 10000 !important;
                 min-width: 140px;
             }
+        }
+        /* Basit Buton Stili (Eğer CSS'te yoksa) */
+        .btn-primary {
+            display: inline-block;
+            background: #0056b3;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .btn-primary:hover {
+            background: #004494;
         }
     </style>
 </head>
@@ -123,11 +78,12 @@
                         <span class="lang-pt" style="display:none;">Projetos ▾</span>
                     </a>
                     <div class="dropdown-content">
-                        <a href="index.html#projects">
-                            <span class="lang-tr">Değişim Projeleri</span>
-                            <span class="lang-en" style="display:none;">Exchange Projects</span>
-                            <span class="lang-pt" style="display:none;">Projetos de Intercâmbio</span>
+                        <a href="esc.html">
+                            <span class="lang-tr">ESC Programı</span>
+                            <span class="lang-en" style="display:none;">ESC Program</span>
+                            <span class="lang-pt" style="display:none;">Programa ESC</span>
                         </a>
+                        <a href="campusa.html">CampUSA</a>
                         <a href="tijba.html">TİJBA Project</a>
                     </div>
                 </div>
@@ -209,132 +165,56 @@
         </div>
     </section>
 
-    <!-- EXCHANGE PROJECTS & EUROPEAN SOLIDARITY CORPS -->
+    <!-- PROJECTS (YENİ ESC & CAMPUSA ALT BAŞLIKLARI) -->
     <section id="projects" class="section bg-light">
         <div class="container">
             <h2 class="section-title">
-                <span class="lang-tr">Değişim Projeleri ve Avrupa Dayanışma Programı</span>
-                <span class="lang-en" style="display:none;">Exchange Projects & European Solidarity Corps</span>
-                <span class="lang-pt" style="display:none;">Projetos de Intercâmbio e Corpo Europeu de Solidariedade</span>
+                <span class="lang-tr">Projeler</span>
+                <span class="lang-en" style="display:none;">Projects</span>
+                <span class="lang-pt" style="display:none;">Projetos</span>
             </h2>
             
             <div class="cards-grid" style="margin-bottom: 3rem;">
+                
+                <!-- ESC ALT BAŞLIĞI -->
                 <article class="card">
                     <div class="card-badge">Erasmus+ / ESC</div>
-                    <h3 class="lang-tr">Sociedade de História Natural (SHN) Ortaklığı</h3>
-                    <h3 class="lang-en" style="display:none;">Sociedade de História Natural (SHN) Partnership</h3>
-                    <h3 class="lang-pt" style="display:none;">Parceria Sociedade de História Natural (SHN)</h3>
+                    <h3>
+                        <span class="lang-tr">ESC (Avrupa Dayanışma Programı)</span>
+                        <span class="lang-en" style="display:none;">ESC (European Solidarity Corps)</span>
+                        <span class="lang-pt" style="display:none;">ESC (Corpo Europeu de Solidariedade)</span>
+                    </h3>
 
-                    <p class="lang-tr">Portekizli ana ortağımız <strong>Sociedade de História Natural</strong>, Avrupa Dayanışma Programı (ESC) ve Erasmus+ projelerinde ev sahibi ve lider kuruluş olarak 2021-2027 dönemi için danışmanlığımız altında Kalite Etiketi almıştır[cite: 1].</p>
-                    <p class="lang-en" style="display:none;">Our Portuguese main partner <strong>Sociedade de História Natural</strong> had a Quality Label under our consultancy for the 2021-2027 season as a hosting organization and leading organization in European Solidarity Corps and Erasmus+ projects. We are all open to any mutual collaborations to send Portuguese volunteers to Turkish hosting organizations too.</p>
-                    <p class="lang-pt" style="display:none;">Nosso principal parceiro português, <strong>Sociedade de História Natural</strong>, obteve um Selo de Qualidade sob nossa consultoria para a temporada 2021-2027 como organização de acolhimento e líder em projetos do Corpo Europeu de Solidariedade e Erasmus+.</p>
+                    <p class="lang-tr">Portekizli ana ortağımız <strong>Sociedade de História Natural</strong> ile Avrupa Dayanışma Programı (ESC) ve Erasmus+ projelerinde ev sahibi ve lider kuruluş olarak ortaklaşa çalışmalar yürütmekteyiz.</p>
+                    <p class="lang-en" style="display:none;">We conduct European Solidarity Corps and Erasmus+ projects with our Portuguese main partner <strong>Sociedade de História Natural</strong> as a hosting and leading organization.</p>
+                    <p class="lang-pt" style="display:none;">Conduzimos projetos do Corpo Europeu de Solidariedade e Erasmus+ com nosso principal parceiro português, <strong>Sociedade de História Natural</strong>.</p>
 
-                    <div class="protocol-img" style="margin-top: 1rem;"><img src="images/esclabel.jpg" alt="ESC Quality Label Document"></div>
-                    <div class="protocol-img" style="margin-top: 1rem;"><img src="images/shnposter.jpg" alt="SHN Volunteer Activities"></div>
+                    <div style="margin-top: 1.5rem; text-align: center;">
+                        <a href="esc.html" class="btn btn-primary">
+                            <span class="lang-tr">Tüm ESC Detaylarını Gör</span>
+                            <span class="lang-en" style="display:none;">View All ESC Details</span>
+                            <span class="lang-pt" style="display:none;">Ver Todos os Detalhes do ESC</span>
+                        </a>
+                    </div>
                 </article>
 
+                <!-- CampUSA ALT BAŞLIĞI -->
                 <article class="card">
                     <div class="card-badge complete">CampUSA</div>
-                    <h3 class="lang-tr">Portekiz için CampUSA</h3>
-                    <h3 class="lang-en" style="display:none;">CampUSA for Portugal</h3>
-                    <h3 class="lang-pt" style="display:none;">CampUSA para Portugal</h3>
+                    <h3>CampUSA</h3>
 
-                    <p class="lang-tr">Portekiz ve ABD arasında uluslararası kültürel değişim ve gençlik gelişim programlarını kolaylaştırmaktayız[cite: 1].</p>
-                    <p class="lang-en" style="display:none;">Facilitating international cultural exchange and youth development programs between Portugal and the USA[cite: 1].</p>
-                    <p class="lang-pt" style="display:none;">Facilitando o intercâmbio cultural internacional e programas de desenvolvimento juvenil entre Portugal e os EUA[cite: 1].</p>
+                    <p class="lang-tr">Portekiz ve ABD arasında uluslararası kültürel değişim ve gençlik gelişim programlarını kolaylaştırmaktayız.</p>
+                    <p class="lang-en" style="display:none;">Facilitating international cultural exchange and youth development programs between Portugal and the USA.</p>
+                    <p class="lang-pt" style="display:none;">Facilitando o intercâmbio cultural internacional e programas de desenvolvimento juvenil entre Portugal e os EUA.</p>
 
-                    <div class="protocol-img" style="margin-top: 1rem;">
-                        <img src="images/campusapt.jpg" alt="CampUSA Portugal">
+                    <div style="margin-top: 1.5rem; text-align: center;">
+                        <a href="campusa.html" class="btn btn-primary">
+                            <span class="lang-tr">CampUSA Detaylarını Gör</span>
+                            <span class="lang-en" style="display:none;">View CampUSA Details</span>
+                            <span class="lang-pt" style="display:none;">Ver Detalhes do CampUSA</span>
+                        </a>
                     </div>
                 </article>
-            </div>
-
-            <!-- EUROPEAN SOLIDARITY CORPS ALT BÖLÜMÜ -->
-            <div class="card" style="margin-top: 2rem; padding: 2rem;">
-                <div class="card-badge">ESC Details</div>
-                <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--secondary-color, #0056b3);">European Solidarity Corps</h3>
-                
-                <!-- Koordinatörler ve Yetkililer -->
-                <div class="team-grid">
-                    <div class="team-card">
-                        <strong>Bora Agbulut</strong>
-                        <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">Quality Label Holder</p>
-                    </div>
-                    <div class="team-card">
-                        <strong>Lucia Agbulut</strong>
-                        <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">Proje Mentoru</p>
-                    </div>
-                    <div class="team-card">
-                        <strong>Bruno Camilo Silva</strong>
-                        <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">Hosting Coordinator</p>
-                    </div>
-                </div>
-
-                <p style="margin-top: 1.5rem; line-height: 1.6;">
-                    Our Portuguese main partner Sociedade de Historia Natural had a Quality Label under our consultancy for the 2021-2027 season as a hosting organization and Leading organization in European Solidarity Corps and Erasmus+ projects. We are all open to any mutual collaborations to send Portuguese volunteers to Turkish hosting organizations too.
-                </p>
-
-                <!-- Projeler Listesi -->
-                <h4 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.3rem;">Projects / Projeler</h4>
-                <ul class="project-list">
-                    <li>
-                        <span>Waterways Heritage Action Together</span>
-                        <span class="duration">2 weeks for 15 volunteers</span>
-                    </li>
-                    <li>
-                        <span>Natural Heritage Management</span>
-                        <span class="duration">1 years for 1 volunteer</span>
-                    </li>
-                    <li>
-                        <span>Health and Safety Management</span>
-                        <span class="duration">2 months for 6 volunteers</span>
-                    </li>
-                    <li>
-                        <span>ESC in Paleontological Excavation</span>
-                        <span class="duration">1 month for 1 volunteer</span>
-                    </li>
-                    <li>
-                        <span>ESC Short Term Paleo - 1</span>
-                        <span class="duration">2 months for 4 volunteers</span>
-                    </li>
-                    <li>
-                        <span>ESC Short Term Paleo - 2</span>
-                        <span class="duration">2 months for 2 volunteers</span>
-                    </li>
-                    <li>
-                        <span>ESC in Paleontology with Kozder</span>
-                        <span class="duration">2 Months for 4 Volunteers</span>
-                    </li>
-                    <li>
-                        <span>ESC in Paleo with Eurodesk Gursu</span>
-                        <span class="duration">2 Months for 2 Volunteers</span>
-                    </li>
-                    <li>
-                        <span>ESC in Paleontology with Kozder II</span>
-                        <span class="duration">2 Months for 3 Volunteers</span>
-                    </li>
-                </ul>
-
-                <!-- Faaliyetler (Activities in Portugal) -->
-                <h4 style="margin-top: 2rem; margin-bottom: 0.8rem; font-size: 1.3rem;">Activities in Portugal</h4>
-                <p style="line-height: 1.6; margin-bottom: 1rem;">
-                    We aim to create a global awareness of climate issues to care for other ecosystems threatened by human activity and the conservation actions for the natural heritages. According to this aim, we have some basic learning elements;
-                </p>
-                <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
-                    <li>✔️ GeoHeritage and GeoPark-themed field tours for social awareness on Earth Sciences</li>
-                    <li>✔️ Geographic Information System applications for understanding the land degradation and climate change threatened by environmental and human impact.</li>
-                    <li>✔️ Laboratory works with fossils to understand paleo-ecosystems and paleo-climate to shed light on the recent issues on climate and ecosystems.</li>
-                </ul>
-
-                <!-- Proje Fotoğrafları Kolajı (.png uzantılı) -->
-                <div class="esc-collage">
-                    <img src="images/escposter1.png" alt="ESC Poster 1">
-                    <img src="images/escposter2.png" alt="ESC Poster 2">
-                    <img src="images/escposter3.png" alt="ESC Poster 3">
-                    <img src="images/escposter4.png" alt="ESC Poster 4">
-                    <img src="images/escposter5.png" alt="ESC Poster 5">
-                    <img src="images/escposter6.png" alt="ESC Poster 6">
-                </div>
             </div>
         </div>
     </section>
@@ -349,12 +229,12 @@
             </h2>
 
             <div class="card" style="margin-bottom: 2rem; background-color: var(--secondary-color); color: white;">
-                <p class="lang-tr" style="color: white;">Özellikle <strong>inşaat ve restorasyon projelerinde</strong> ana yükleniciye kapsamlı teknik danışmanlık ve saha desteği verilmektedir[cite: 1].</p>
-                <p class="lang-en" style="display:none; color: white;">Technical consultancy and support are provided to the main contractor, especially in <strong>construction and restoration projects</strong>[cite: 1].</p>
-                <p class="lang-pt" style="display:none; color: white;">Consultoria técnica e suporte são fornecidos ao empreiteiro principal, especialmente em <strong>projetos de construção e restauração</strong>[cite: 1].</p>
+                <p class="lang-tr" style="color: white;">Özellikle <strong>inşaat ve restorasyon projelerinde</strong> ana yükleniciye kapsamlı teknik danışmanlık ve saha desteği verilmektedir.</p>
+                <p class="lang-en" style="display:none; color: white;">Technical consultancy and support are provided to the main contractor, especially in <strong>construction and restoration projects</strong>.</p>
+                <p class="lang-pt" style="display:none; color: white;">Consultoria técnica e suporte são fornecidos ao empreiteiro principal, especialmente em <strong>projetos de construção e restauração</strong>.</p>
             </div>
 
-            <!-- HUGGING FACE SPACE (SURVEY APP) GÖMMETİ (IFRAME) -->
+            <!-- HUGGING FACE SPACE (SURVEY APP) -->
             <div style="margin-bottom: 2.5rem; background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                 <iframe src="https://bora9-survey.hf.space/" width="100%" height="650px" style="border: none; border-radius: 6px;"></iframe>
             </div>
@@ -363,25 +243,25 @@
                 <article class="card">
                     <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🌍</div>
                     <h3 style="text-align: center;">Geotechnical Consulting</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Zemin etütleri, temel tasarımı ve yapısal risk değerlendirmeleri ile ana yüklenicinin güvenli adımlar atmasını sağlıyoruz[cite: 1].</p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">Zemin etütleri, temel tasarımı ve yapısal risk değerlendirmeleri ile ana yüklenicinin güvenli adımlar atmasını sağlıyoruz.</p>
                 </article>
                 
                 <article class="card">
                     <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🗺️</div>
                     <h3 style="text-align: center;">Geological Mapping & Survey</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Sahadaki yapı taşlarının kökenini belirlemek ve doğru materyal tedariki için detaylı haritalama yapıyoruz[cite: 1].</p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">Sahadaki yapı taşlarının kökenini belirlemek ve doğru materyal tedariki için detaylı haritalama yapıyoruz.</p>
                 </article>
 
                 <article class="card">
                     <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🏛️</div>
                     <h3 style="text-align: center;">Architectural Design</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Restorasyon projelerinde tarihi dokuya sadık, yeni yapılarda ise modern ve sürdürülebilir mimari tasarımlar üretiyoruz[cite: 1].</p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">Restorasyon projelerinde tarihi dokuya sadık, yeni yapılarda ise modern ve sürdürülebilir mimari tasarımlar üretiyoruz.</p>
                 </article>
                 
                 <article class="card">
                     <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">⚙️</div>
                     <h3 style="text-align: center;">HVAC Design</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Tarihi yapılara zarar vermeyen, enerji verimli ve modern mekanik tesisat çözümleri tasarlıyoruz[cite: 1].</p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">Tarihi yapılara zarar vermeyen, enerji verimli ve modern mekanik tesisat çözümleri tasarlıyoruz.</p>
                 </article>
             </div>
             
@@ -404,9 +284,9 @@
                 <span class="lang-pt" style="display:none;">Documentos</span>
             </h2>
             <p class="section-subtitle">
-                <span class="lang-tr">Derneğimiz tarafından sağlanan coğrafi bilgi ve veri setleri[cite: 1]:</span>
-                <span class="lang-en" style="display:none;">Geographic information and datasets provided by our association[cite: 1]:</span>
-                <span class="lang-pt" style="display:none;">Informações geográficas e conjuntos de dados fornecidos por nossa associação[cite: 1]:</span>
+                <span class="lang-tr">Derneğimiz tarafından sağlanan coğrafi bilgi ve veri setleri:</span>
+                <span class="lang-en" style="display:none;">Geographic information and datasets provided by our association:</span>
+                <span class="lang-pt" style="display:none;">Informações geográficas e conjuntos de dados fornecidos por nossa associação:</span>
             </p>
             
             <div class="cards-grid" style="max-width: 900px; margin: 0 auto;">
@@ -415,28 +295,28 @@
                     <h3>Geological Map of Turkiye</h3>
                     
                     <p class="lang-tr" style="white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
-                        Türkiye jeoloji haritası verileri (1:500.000 ölçekli, 1961) MapInfo formatında sayısallaştırılmış ve WGS84 (enlem/boylam) koordinat sistemine dönüştürülmüştür. Veri seti şunları içerir[cite: 1]:
-                        • Faylar: "Turkey500k_Faults"[cite: 1]
-                        • Jeoloji Lejandı: "Turkey500k_GeologyLegend"[cite: 1]
-                        • Litoloji: "Turkey500k_Lithology"[cite: 1]
-                        • Mineral Oluşumları: "Turkey500k_MinOcc"[cite: 1]
-                        Tam öznitelikli olarak MapInfo formatında sağlanmış olup, ArcGIS ve QGIS ile uyumludur (stiller QGIS'te yorumlanmaz)[cite: 1].
+                        Türkiye jeoloji haritası verileri (1:500.000 ölçekli, 1961) MapInfo formatında sayısallaştırılmış ve WGS84 (enlem/boylam) koordinat sistemine dönüştürülmüştür. Veri seti şunları içerir:
+                        • Faylar: "Turkey500k_Faults"
+                        • Jeoloji Lejandı: "Turkey500k_GeologyLegend"
+                        • Litoloji: "Turkey500k_Lithology"
+                        • Mineral Oluşumları: "Turkey500k_MinOcc"
+                        Tam öznitelikli olarak MapInfo formatında sağlanmış olup, ArcGIS ve QGIS ile uyumludur (stiller QGIS'te yorumlanmaz).
                     </p>
                     <p class="lang-en" style="display:none; white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
-                        Geological map data of Turkey (1:500,000 scale, 1961) was digitised in MapInfo and reprojected to WGS84 (lat/long). The dataset includes[cite: 1]:
-                        • Faults: "Turkey500k_Faults"[cite: 1]
-                        • Geology Legend: "Turkey500k_GeologyLegend"[cite: 1]
-                        • Lithology: "Turkey500k_Lithology"[cite: 1]
-                        • Mineral Occurrences: "Turkey500k_MinOcc"[cite: 1]
-                        Fully attributed and provided in MapInfo format, with ArcGIS and QGIS compatibility (styles not interpreted in QGIS)[cite: 1].
+                        Geological map data of Turkey (1:500,000 scale, 1961) was digitised in MapInfo and reprojected to WGS84 (lat/long). The dataset includes:
+                        • Faults: "Turkey500k_Faults"
+                        • Geology Legend: "Turkey500k_GeologyLegend"
+                        • Lithology: "Turkey500k_Lithology"
+                        • Mineral Occurrences: "Turkey500k_MinOcc"
+                        Fully attributed and provided in MapInfo format, with ArcGIS and QGIS compatibility (styles not interpreted in QGIS).
                     </p>
                     <p class="lang-pt" style="display:none; white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
-                        Os dados do mapa geológico da Turquia (escala 1:500.000, 1961) foram digitalizados no MapInfo e reprojetados para WGS84 (lat/long). O conjunto de dados inclui[cite: 1]:
-                        • Falhas: "Turkey500k_Faults"[cite: 1]
-                        • Legenda Geológica: "Turkey500k_GeologyLegend"[cite: 1]
-                        • Litologia: "Turkey500k_Lithology"[cite: 1]
-                        • Ocorrências Minerais: "Turkey500k_MinOcc"[cite: 1]
-                        Totalmente atribuído e fornecido no formato MapInfo, com compatibilidade ArcGIS e QGIS (estilos não interpretados no QGIS)[cite: 1].
+                        Os dados do mapa geológico da Turquia (escala 1:500.000, 1961) foram digitalizados no MapInfo e reprojetados para WGS84 (lat/long). O conjunto de dados inclui:
+                        • Falhas: "Turkey500k_Faults"
+                        • Legenda Geológica: "Turkey500k_GeologyLegend"
+                        • Litologia: "Turkey500k_Lithology"
+                        • Ocorrências Minerais: "Turkey500k_MinOcc"
+                        Totalmente atribuído e fornecido no formato MapInfo, com compatibilidade ArcGIS e QGIS (estilos não interpretados no QGIS).
                     </p>
 
                     <div style="margin-top: 2rem;">
