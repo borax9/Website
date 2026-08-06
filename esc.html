@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESC Programı | Eurasia NHA</title>
+    <meta name="description" content="European Solidarity Corps (ESC) Programı ve Proje Detayları">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Proje Kolaj ve ESC Ek Stilleri */
+        .esc-collage {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .esc-collage img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .esc-collage img:hover {
+            transform: scale(1.03);
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .team-card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            border-left: 4px solid var(--secondary-color, #0056b3);
+        }
+        .project-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+        .project-list li {
+            background: #fff;
+            margin-bottom: 10px;
+            padding: 12px 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .project-list li span.duration {
+            font-weight: 600;
+            color: #555;
+            background: #eee;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        /* Navbar fix */
+        .navbar { z-index: 9999 !important; position: relative; }
+        .dropdown { position: relative; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR (Standart Aynı) -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Eurasia NHA Logo" style="height: 40px; object-fit: contain;">
+                <span>Eurasia NHA</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html#about">Hakkımızda</a>
+                <a href="index.html#projects">Projeler</a>
+                <a href="services.html">Hizmetler</a>
+                <a href="index.html#documents">Belgeler</a>
+                <a href="news.html">Haberler</a>
+                <a href="index.html#partners">Ortaklar</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: 6rem;">
+        <div class="container">
+            <h1 class="section-title">European Solidarity Corps (ESC)</h1>
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <p><strong>Sociedade de História Natural (SHN) Ortaklığı</strong></p>
+            </div>
+            
+            <div class="card" style="margin-bottom: 2rem; padding: 2rem;">
+                <p style="line-height: 1.6; font-size: 1.05rem;">
+                    Portekizli ana ortağımız <strong>Sociedade de História Natural</strong>, Avrupa Dayanışma Programı (ESC) ve Erasmus+ projelerinde ev sahibi ve lider kuruluş olarak 2021-2027 dönemi için danışmanlığımız altında Kalite Etiketi (Quality Label) almıştır. Karşılıklı olarak Türk gönüllüleri ve Portekizli gönüllüleri desteklemekteyiz.
+                </p>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 2rem; justify-content: center;">
+                    <img src="images/esclabel.jpg" alt="ESC Quality Label Document" style="max-width: 400px; width: 100%; border-radius: 8px;">
+                    <img src="images/shnposter.jpg" alt="SHN Volunteer Activities" style="max-width: 400px; width: 100%; border-radius: 8px;">
+                </div>
+            </div>
+
+            <!-- Koordinatörler ve Yetkililer -->
+            <h3 style="font-size: 1.5rem; margin-top: 2rem; color: var(--secondary-color, #0056b3);">Proje Ekibimiz</h3>
+            <div class="team-grid">
+                <div class="team-card">
+                    <strong>Bora Agbulut</strong>
+                    <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">Quality Label Holder</p>
+                </div>
+                <div class="team-card">
+                    <strong>Lucia Agbulut</strong>
+                    <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">Proje Mentoru</p>
+                </div>
+                <div class="team-card">
+                    <strong>Bruno Camilo Silva</strong>
+                    <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">Hosting Coordinator</p>
+                </div>
+            </div>
+
+            <!-- Projeler Listesi -->
+            <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.5rem; color: var(--secondary-color, #0056b3);">ESC Projeleri Listesi</h3>
+            <ul class="project-list">
+                <li><span>Waterways Heritage Action Together</span><span class="duration">2 weeks for 15 volunteers</span></li>
+                <li><span>Natural Heritage Management</span><span class="duration">1 years for 1 volunteer</span></li>
+                <li><span>Health and Safety Management</span><span class="duration">2 months for 6 volunteers</span></li>
+                <li><span>ESC in Paleontological Excavation</span><span class="duration">1 month for 1 volunteer</span></li>
+                <li><span>ESC Short Term Paleo - 1</span><span class="duration">2 months for 4 volunteers</span></li>
+                <li><span>ESC Short Term Paleo - 2</span><span class="duration">2 months for 2 volunteers</span></li>
+                <li><span>ESC in Paleontology with Kozder</span><span class="duration">2 Months for 4 Volunteers</span></li>
+                <li><span>ESC in Paleo with Eurodesk Gursu</span><span class="duration">2 Months for 2 Volunteers</span></li>
+                <li><span>ESC in Paleontology with Kozder II</span><span class="duration">2 Months for 3 Volunteers</span></li>
+            </ul>
+
+            <!-- Faaliyetler (Activities in Portugal) -->
+            <h3 style="margin-top: 2.5rem; margin-bottom: 0.8rem; font-size: 1.5rem; color: var(--secondary-color, #0056b3);">Portekiz'deki Faaliyetler</h3>
+            <p style="line-height: 1.6; margin-bottom: 1rem;">
+                We aim to create a global awareness of climate issues to care for other ecosystems threatened by human activity and the conservation actions for the natural heritages. According to this aim, we have some basic learning elements;
+            </p>
+            <ul style="list-style: none; padding-left: 0; line-height: 1.8;">
+                <li>✔️ GeoHeritage and GeoPark-themed field tours for social awareness on Earth Sciences</li>
+                <li>✔️ Geographic Information System applications for understanding the land degradation and climate change threatened by environmental and human impact.</li>
+                <li>✔️ Laboratory works with fossils to understand paleo-ecosystems and paleo-climate to shed light on the recent issues on climate and ecosystems.</li>
+            </ul>
+
+            <!-- Proje Fotoğrafları Kolajı -->
+            <div class="esc-collage">
+                <img src="images/escposter1.png" alt="ESC Poster 1">
+                <img src="images/escposter2.png" alt="ESC Poster 2">
+                <img src="images/escposter3.png" alt="ESC Poster 3">
+                <img src="images/escposter4.png" alt="ESC Poster 4">
+                <img src="images/escposter5.png" alt="ESC Poster 5">
+                <img src="images/escposter6.png" alt="ESC Poster 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Standart) -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Eurasia Natural History Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
