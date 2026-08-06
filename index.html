@@ -54,51 +54,106 @@
             background: #004494;
         }
 
-        /* --- YENİ KAPAK ŞERİDİ (FOTO KOLAJ) STİLLERİ --- */
-        .photo-strip-container {
+        /* --- YENİ POSTER/KOLAJ BÖLÜMÜ (HERO YERİNE) --- */
+        .poster-section {
             width: 100%;
-            background-color: #f8f9fa; /* Hafif arkaplan rengi */
-            padding: 20px 0;
+            background-color: #f8f9fa; /* Temiz ve ferah bir arkaplan */
+            padding: 40px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05) inset;
         }
-        .photo-strip {
+
+        .poster-top {
             display: flex;
-            justify-content: center; /* Fotoğrafları ortalar */
             align-items: center;
-            gap: 15px; /* Fotoğraflar arası boşluk */
-            height: 280px; /* Aşağı uzamayı engelleyen sabit yükseklik */
+            justify-content: space-between;
             width: 100%;
-            overflow-x: auto; /* Yana doğru kaydırma barı (fazla foto varsa) */
-            padding: 10px 20px;
-            box-sizing: border-box;
-        }
-        /* Kaydırma çubuğunun daha şık görünmesi için */
-        .photo-strip::-webkit-scrollbar {
-            height: 8px;
-        }
-        .photo-strip::-webkit-scrollbar-thumb {
-            background: #bbb;
-            border-radius: 4px;
-        }
-        .photo-strip img {
-            height: 100%; /* Hepsi aynı yükseklikte olur */
-            width: 350px; /* Hepsi aynı genişlikte kutu içinde durur */
-            object-fit: contain; /* KIRPILMAYI ENGELLER, fotoğraf kutuya sığar */
-            background-color: #fff; /* Fotoğraf kenarlarında boşluk kalırsa beyaz arka plan sağlar */
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-            flex-shrink: 0; /* Daralmayı önler, yan yana dizer */
+            max-width: 1400px; /* Çok geniş ekranlarda yayılmayı önler */
+            gap: 20px;
         }
 
-        /* Kapak şeridi mobil uyumluluk */
-        @media (max-width: 768px) {
-            .photo-strip {
-                height: 200px;
-                justify-content: flex-start; /* Mobilde kaydırmak daha rahat olsun diye sola yaslar */
+        .poster-logos {
+            flex: 0 0 auto;
+            width: 120px; /* Logoların genişliği */
+            display: flex;
+            justify-content: center;
+        }
+
+        .poster-logos img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .poster-grid {
+            flex: 1 1 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Yan yana 5 fotoğraf (Toplam 10 foto için 5x2) */
+            gap: 12px;
+            width: 100%;
+        }
+
+        .poster-grid img {
+            width: 100%;
+            aspect-ratio: 4 / 3; /* Tüm kutuları aynı boyutta tutar */
+            object-fit: contain; /* FOTOĞRAFLARI KIRPMADAN İÇİNE SIĞDIRIR */
+            background-color: #ffffff; /* Kenarlarda boşluk kalırsa beyaz çerçeve gibi görünür */
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+            border: 1px solid #e0e0e0;
+        }
+
+        .poster-text {
+            text-align: center;
+            max-width: 900px;
+            margin: 30px auto 0 auto;
+        }
+
+        .poster-text h1 {
+            font-size: 2.5rem;
+            color: #222;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .poster-text p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* --- MOBİL UYUMLULUK --- */
+        @media (max-width: 992px) {
+            .poster-grid {
+                grid-template-columns: repeat(3, 1fr); /* Orta ekranlarda 3 sütun */
             }
-            .photo-strip img {
-                width: 250px;
+        }
+
+        @media (max-width: 768px) {
+            .poster-top {
+                flex-wrap: wrap; /* Logoları ve ızgarayı kaydırır */
+                justify-content: center;
+            }
+            .logo-left {
+                order: 1; /* Sol logo üst sola */
+                width: 80px;
+                margin-right: auto;
+            }
+            .logo-right {
+                order: 2; /* Sağ logo üst sağa */
+                width: 80px;
+                margin-left: auto;
+            }
+            .poster-grid {
+                order: 3; /* Fotoğraflar logoların altına geçer */
+                grid-template-columns: repeat(2, 1fr); /* Mobilde 2 sütun (2x5 simetrik) */
+                margin-top: 15px;
+                gap: 8px;
+            }
+            .poster-text h1 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -169,22 +224,36 @@
         </div>
     </header>
 
-    <!-- KAPAK FOTOĞRAFLARI ŞERİDİ (YENİ EKLENEN KISIM) -->
-    <section class="photo-strip-container">
-        <div class="photo-strip">
-            <!-- Dosya yollarını (images/kapak1.png vb.) kendi mevcut fotoğraflarına göre güncelle -->
-            <img src="images/kapak1.jpg" alt="Kapak 1">
-            <img src="images/kapak2.jpg" alt="Kapak 2">
-            <img src="images/kapak3.jpg" alt="Kapak 3">
-            <img src="images/kapak4.jpg" alt="Kapak 4">
-            <img src="images/kapak5.jpg" alt="Kapak 5">
-            <img src="images/kapak6.jpg" alt="Kapak 6">
-        </div>
-    </section>
+    <!-- YENİ ANA POSTER BÖLÜMÜ (ESKİ HERO YERİNE) -->
+    <section class="poster-section">
+        <div class="poster-top">
+            <!-- Sol Logo -->
+            <div class="poster-logos logo-left">
+                <img src="images/logo.png" alt="Eurasia NHA Sol Logo">
+            </div>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container hero-content">
+            <!-- Fotoğraf Izgarası (10 Fotoğraf Poster Düzeni) -->
+            <div class="poster-grid">
+                <img src="images/kapak.jpg" alt="Kapak Foto 1">
+                <img src="images/kapak2.jpg" alt="Kapak Foto 2">
+                <img src="images/kapak3.jpg" alt="Kapak Foto 3">
+                <img src="images/kapak6.jpg" alt="Kapak Foto 6">
+                <img src="images/kapak7.jpg" alt="Kapak Foto 7">
+                <img src="images/kapak8.jpg" alt="Kapak Foto 8">
+                <img src="images/kapak9.jpg" alt="Kapak Foto 9">
+                <img src="images/kapak10.jpg" alt="Kapak Foto 10">
+                <img src="images/kapak11.jpg" alt="Kapak Foto 11">
+                <img src="images/kapak12.jpg" alt="Kapak Foto 12">
+            </div>
+
+            <!-- Sağ Logo -->
+            <div class="poster-logos logo-right">
+                <img src="images/logo2.png" alt="Eurasia NHA Sağ Logo">
+            </div>
+        </div>
+
+        <!-- Yazı ve Açıklama (Alt Kısım) -->
+        <div class="poster-text">
             <h1 class="lang-tr">Avrasya Doğa Tarihi Derneği</h1>
             <h1 class="lang-en" style="display:none;">Eurasia Natural History Association</h1>
             <h1 class="lang-pt" style="display:none;">Associação de História Natural da Eurásia</h1>
@@ -280,7 +349,7 @@
         </div>
     </section>
 
-    <!-- SERVICES (ÖZET) & HUGGING FACE SPACE EMBED -->
+    <!-- SERVICES & HUGGING FACE SPACE EMBED -->
     <section id="services-summary" class="section">
         <div class="container">
             <h2 class="section-title">
