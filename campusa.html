@@ -1,19 +1,70 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CampUSA | Eurasia NHA</title>
-    <meta name="description" content="CampUSA Uluslararası Kültürel Değişim Programı">
+    <meta name="description" content="Programa de Intercâmbio Cultural Internacional CampUSA">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         .navbar { z-index: 9999 !important; position: relative; }
+        
+        /* CampUSA Özel Stiller */
+        .campusa-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .campusa-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .campusa-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+        .feature-box {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary-color, #0056b3);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .feature-box h4 {
+            color: var(--secondary-color, #0056b3);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .campusa-image-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .campusa-image-container img {
+            max-width: 100%;
+            width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Mobil Menü Düzeltmeleri */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR (Standart Aynı) -->
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
@@ -22,34 +73,128 @@
             </a>
             
             <nav class="nav-links">
-                <a href="index.html#about">Hakkımızda</a>
-                <a href="index.html#projects">Projeler</a>
-                <a href="services.html">Hizmetler</a>
-                <a href="index.html#documents">Belgeler</a>
-                <a href="news.html">Haberler</a>
-                <a href="index.html#partners">Ortaklar</a>
+                <a href="index.html#about" class="lang-pt">Sobre Nós</a>
+                <a href="index.html#about" class="lang-en" style="display:none;">About Us</a>
+
+                <!-- PROJELER DROPDOWN -->
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <span class="lang-pt">Projetos ▾</span>
+                        <span class="lang-en" style="display:none;">Projects ▾</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="esc.html">
+                            <span class="lang-pt">Programa ESC</span>
+                            <span class="lang-en" style="display:none;">ESC Program</span>
+                        </a>
+                        <a href="campusa.html">CampUSA</a>
+                        <a href="tijba.html">TİJBA Project</a>
+                    </div>
+                </div>
+
+                <a href="services.html" class="lang-pt">Serviços</a>
+                <a href="services.html" class="lang-en" style="display:none;">Services</a>
+                
+                <a href="index.html#documents">
+                    <span class="lang-pt">Documentos</span>
+                    <span class="lang-en" style="display:none;">Documents</span>
+                </a>
+                
+                <a href="news.html" class="lang-pt">Notícias</a>
+                <a href="news.html" class="lang-en" style="display:none;">News</a>
+
+                <a href="index.html#partners">
+                    <span class="lang-pt">Parceiros</span>
+                    <span class="lang-en" style="display:none;">Partners</span>
+                </a>
+
+                <!-- DİL SEÇİCİ (Sadece PT ve EN) -->
+                <div class="dropdown lang-selector">
+                    <a href="#" class="dropbtn">🌐 <span id="current-lang">PT</span> ▾</a>
+                    <div class="dropdown-content" style="min-width: 100px; left: auto; right: 0;">
+                        <a href="#" onclick="setLanguage('pt'); return false;">Português</a>
+                        <a href="#" onclick="setLanguage('en'); return false;">English</a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
 
-    <section class="section" style="padding-top: 6rem; min-height: 70vh;">
+    <section class="section" style="padding-top: 6rem; min-height: 80vh;">
         <div class="container">
-            <h1 class="section-title">CampUSA Programı</h1>
-            
-            <div class="card" style="margin-bottom: 2rem; padding: 2rem; text-align: center;">
-                <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: var(--secondary-color, #0056b3);">Portekiz için CampUSA</h3>
-                <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Avrasya Doğa Tarihi Derneği olarak, Portekiz ve ABD arasında uluslararası kültürel değişim ve gençlik gelişim programlarını (CampUSA) kolaylaştırmaktayız. Gençlerin uluslararası alanda vizyon kazanmalarını ve kültürel etkileşimde bulunmalarını destekliyoruz.
+            <div class="campusa-header">
+                <h1 class="section-title">
+                    <span class="lang-pt">Programa CampUSA para Portugal</span>
+                    <span class="lang-en" style="display:none;">CampUSA Program for Portugal</span>
+                </h1>
+                <p class="lang-pt" style="font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto;">
+                    Facilitando o intercâmbio cultural internacional e programas de desenvolvimento juvenil entre Portugal e os Estados Unidos da América.
                 </p>
+                <p class="lang-en" style="display:none; font-size: 1.2rem; color: #555; max-width: 800px; margin: 0 auto;">
+                    Facilitating international cultural exchange and youth development programs between Portugal and the United States of America.
+                </p>
+            </div>
+            
+            <div class="card" style="padding: 2rem;">
                 
-                <div style="margin-top: 1rem;">
-                    <img src="images/campusapt.jpg" alt="CampUSA Portugal" style="max-width: 100%; width: 600px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <div class="campusa-content">
+                    <div>
+                        <h3 class="lang-pt" style="font-size: 1.6rem; margin-bottom: 1rem; color: var(--secondary-color, #0056b3);">Sobre o Programa</h3>
+                        <h3 class="lang-en" style="display:none; font-size: 1.6rem; margin-bottom: 1rem; color: var(--secondary-color, #0056b3);">About the Program</h3>
+                        
+                        <p class="lang-pt" style="line-height: 1.8; font-size: 1.05rem;">
+                            O programa CampUSA, organizado em parceria com a Eurasia Natural History Association, oferece aos jovens em Portugal uma oportunidade única de passar o verão nos EUA. Como monitores de acampamento ou em funções de suporte, os participantes mergulham na cultura americana, aprimoram a sua proficiência em inglês e desenvolvem competências de liderança inestimáveis enquanto partilham a sua própria cultura com jovens americanos.
+                        </p>
+                        <p class="lang-en" style="display:none; line-height: 1.8; font-size: 1.05rem;">
+                            The CampUSA program, organized in partnership with the Eurasia Natural History Association, offers youth in Portugal a unique opportunity to spend their summer in the USA. Whether as camp counselors or in support roles, participants immerse themselves in American culture, improve their English proficiency, and build invaluable leadership skills while sharing their own culture with American youth.
+                        </p>
+                    </div>
+
+                    <div class="campusa-features">
+                        <!-- Feature 1 -->
+                        <div class="feature-box">
+                            <h4 class="lang-pt">🌎 Intercâmbio Cultural</h4>
+                            <h4 class="lang-en" style="display:none;">🌎 Cultural Exchange</h4>
+                            <p class="lang-pt">Mergulhe na cultura americana e partilhe as tradições portuguesas. Crie laços de amizade internacionais duradouros.</p>
+                            <p class="lang-en" style="display:none;">Immerse yourself in American culture and share Portuguese traditions. Build lasting international friendships.</p>
+                        </div>
+                        
+                        <!-- Feature 2 -->
+                        <div class="feature-box">
+                            <h4 class="lang-pt">🚀 Desenvolvimento Pessoal</h4>
+                            <h4 class="lang-en" style="display:none;">🚀 Personal Development</h4>
+                            <p class="lang-pt">Desenvolva competências cruciais como liderança, trabalho em equipa e resolução de problemas num ambiente dinâmico.</p>
+                            <p class="lang-en" style="display:none;">Develop crucial skills such as leadership, teamwork, and problem-solving in a dynamic environment.</p>
+                        </div>
+                        
+                        <!-- Feature 3 -->
+                        <div class="feature-box">
+                            <h4 class="lang-pt">🗣️ Imersão Linguística</h4>
+                            <h4 class="lang-en" style="display:none;">🗣️ Language Immersion</h4>
+                            <p class="lang-pt">Melhore significativamente o seu nível de inglês trabalhando e interagindo diariamente com falantes nativos.</p>
+                            <p class="lang-en" style="display:none;">Significantly improve your English proficiency by working and interacting daily with native speakers.</p>
+                        </div>
+                    </div>
                 </div>
+                
+                <div class="campusa-image-container">
+                    <img src="images/campusapt.jpg" alt="CampUSA Portugal">
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <h3 class="lang-pt" style="margin-bottom: 1rem; color: #333;">Pronto para a aventura de uma vida?</h3>
+                    <h3 class="lang-en" style="display:none; margin-bottom: 1rem; color: #333;">Ready for the adventure of a lifetime?</h3>
+                    <a href="index.html#contact" class="btn btn-primary" style="padding: 12px 25px; font-size: 1.1rem; text-decoration: none; color: white; background: #0056b3; border-radius: 5px;">
+                        <span class="lang-pt">Contacte-nos para mais detalhes</span>
+                        <span class="lang-en" style="display:none;">Contact us for details</span>
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- FOOTER (Standart) -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-bottom">
             <div class="container">
@@ -57,5 +202,33 @@
             </div>
         </div>
     </footer>
+
+    <!-- DİL DEĞİŞTİRME SCRIPTİ (Sadece PT ve EN) -->
+    <script>
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.getElementById('current-lang').innerText = lang.toUpperCase();
+            
+            // Tüm dil öğelerini gizle
+            document.querySelectorAll('.lang-pt, .lang-en').forEach(el => {
+                el.style.display = 'none';
+            });
+            
+            // Seçilen dili göster
+            document.querySelectorAll('.lang-' + lang).forEach(el => {
+                el.style.display = 'inline';
+                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4' || el.tagName === 'LI') {
+                    el.style.display = 'block';
+                }
+            });
+            localStorage.setItem('preferred_lang_campusa', lang);
+        }
+
+        window.onload = function() {
+            // "pt" temel dil (base language) olarak belirlendi
+            const savedLang = localStorage.getItem('preferred_lang_campusa') || 'pt';
+            setLanguage(savedLang);
+        }
+    </script>
 </body>
 </html>
