@@ -54,10 +54,10 @@
             background: #004494;
         }
 
-        /* --- YENİ POSTER/KOLAJ BÖLÜMÜ (HERO YERİNE) --- */
+        /* --- POSTER/KOLAJ BÖLÜMÜ --- */
         .poster-section {
             width: 100%;
-            background-color: #f8f9fa; /* Temiz ve ferah bir arkaplan */
+            background-color: #f8f9fa;
             padding: 40px 15px;
             display: flex;
             flex-direction: column;
@@ -70,13 +70,13 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            max-width: 1400px; /* Çok geniş ekranlarda yayılmayı önler */
+            max-width: 1400px;
             gap: 20px;
         }
 
         .poster-logos {
             flex: 0 0 auto;
-            width: 120px; /* Logoların genişliği */
+            width: 120px;
             display: flex;
             justify-content: center;
         }
@@ -90,16 +90,16 @@
         .poster-grid {
             flex: 1 1 auto;
             display: grid;
-            grid-template-columns: repeat(5, 1fr); /* Yan yana 5 fotoğraf (Toplam 10 foto için 5x2) */
+            grid-template-columns: repeat(5, 1fr);
             gap: 12px;
             width: 100%;
         }
 
         .poster-grid img {
             width: 100%;
-            aspect-ratio: 4 / 3; /* Tüm kutuları aynı boyutta tutar */
-            object-fit: contain; /* FOTOĞRAFLARI KIRPMADAN İÇİNE SIĞDIRIR */
-            background-color: #ffffff; /* Kenarlarda boşluk kalırsa beyaz çerçeve gibi görünür */
+            aspect-ratio: 4 / 3;
+            object-fit: contain;
+            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 3px 6px rgba(0,0,0,0.08);
             border: 1px solid #e0e0e0;
@@ -127,28 +127,28 @@
         /* --- MOBİL UYUMLULUK --- */
         @media (max-width: 992px) {
             .poster-grid {
-                grid-template-columns: repeat(3, 1fr); /* Orta ekranlarda 3 sütun */
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
         @media (max-width: 768px) {
             .poster-top {
-                flex-wrap: wrap; /* Logoları ve ızgarayı kaydırır */
+                flex-wrap: wrap;
                 justify-content: center;
             }
             .logo-left {
-                order: 1; /* Sol logo üst sola */
+                order: 1;
                 width: 80px;
                 margin-right: auto;
             }
             .logo-right {
-                order: 2; /* Sağ logo üst sağa */
+                order: 2;
                 width: 80px;
                 margin-left: auto;
             }
             .poster-grid {
-                order: 3; /* Fotoğraflar logoların altına geçer */
-                grid-template-columns: repeat(2, 1fr); /* Mobilde 2 sütun (2x5 simetrik) */
+                order: 3;
+                grid-template-columns: repeat(2, 1fr);
                 margin-top: 15px;
                 gap: 8px;
             }
@@ -211,6 +211,13 @@
                     <span class="lang-pt" style="display:none;">Parceiros</span>
                 </a>
 
+                <!-- İLETİŞİM LİNKİ (YENİ) -->
+                <a href="index.html#contact">
+                    <span class="lang-tr">İletişim</span>
+                    <span class="lang-en" style="display:none;">Contact</span>
+                    <span class="lang-pt" style="display:none;">Contato</span>
+                </a>
+
                 <!-- DİL SEÇİCİ -->
                 <div class="dropdown lang-selector">
                     <a href="#" class="dropbtn">🌐 <span id="current-lang">TR</span> ▾</a>
@@ -224,7 +231,7 @@
         </div>
     </header>
 
-    <!-- YENİ ANA POSTER BÖLÜMÜ (ESKİ HERO YERİNE) -->
+    <!-- ANA POSTER BÖLÜMÜ -->
     <section class="poster-section">
         <div class="poster-top">
             <!-- Sol Logo -->
@@ -480,15 +487,59 @@
         </div>
     </section>
 
+    <!-- İLETİŞİM (YENİ EKLENEN BÖLÜM) -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-tr">İletişim</span>
+                <span class="lang-en" style="display:none;">Contact</span>
+                <span class="lang-pt" style="display:none;">Contato</span>
+            </h2>
+            <div class="contact-card" style="text-align: center; max-width: 600px; margin: 0 auto; background: #fff; padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <p style="font-size: 1.1rem; margin-bottom: 25px; color: #555;">
+                    <span class="lang-tr">Bizimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz.</span>
+                    <span class="lang-en" style="display:none;">You can use the channels below to contact us.</span>
+                    <span class="lang-pt" style="display:none;">Você pode usar os canais abaixo para nos contatar.</span>
+                </p>
+                <p style="font-size: 1.2rem; margin-bottom: 20px;">
+                    📧 <strong>Email:</strong> <a href="mailto:tdotaltai@gmail.com" style="color: #0056b3; text-decoration: none; font-weight: 600;">tdotaltai@gmail.com</a>
+                </p>
+                <p style="font-size: 1.2rem;">
+                    <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; color: #E1306C; font-weight: bold; padding: 10px 20px; border: 2px solid #E1306C; border-radius: 50px; transition: 0.3s;">
+                        <!-- INSTAGRAM İKONU (SVG) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <span class="lang-tr">Instagram'da Bizi Takip Edin</span>
+                        <span class="lang-en" style="display:none;">Follow Us on Instagram</span>
+                        <span class="lang-pt" style="display:none;">Siga-nos no Instagram</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container footer-content">
             <div class="footer-info" style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
                 <img src="images/logo2.png" alt="Eurasia NHA Logo 2" style="height: 55px; object-fit: contain;">
                 <div>
                     <h3 style="margin-bottom: 5px;">Eurasia Natural History Association</h3>
                     <p style="margin: 2px 0;">Email: tdotaltai@gmail.com</p>
-                    <p style="margin: 2px 0;">Instagram: <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener">@tdoteurasia</a></p>
+                    <p style="margin: 2px 0; display: flex; align-items: center; gap: 6px;">
+                        Instagram: 
+                        <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 4px; color: #4da3ff; text-decoration: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            @tdoteurasia
+                        </a>
+                    </p>
                 </div>
             </div>
             
@@ -511,7 +562,7 @@
                     <li><a href="services.html"><span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span></a></li>
                     <li><a href="index.html#documents"><span class="lang-tr">Belgeler</span><span class="lang-en" style="display:none;">Documents</span><span class="lang-pt" style="display:none;">Documentos</span></a></li>
                     <li><a href="news.html"><span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span></a></li>
-                    <li><a href="tijba.html">TİJBA Project</a></li>
+                    <li><a href="index.html#contact"><span class="lang-tr">İletişim</span><span class="lang-en" style="display:none;">Contact</span><span class="lang-pt" style="display:none;">Contato</span></a></li>
                 </ul>
             </div>
         </div>
@@ -533,8 +584,11 @@
             });
             document.querySelectorAll('.lang-' + lang).forEach(el => {
                 el.style.display = 'inline';
-                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4' || el.tagName === 'ARTICLE') {
-                    el.style.display = 'block';
+                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4' || el.tagName === 'ARTICLE' || el.tagName === 'SPAN') {
+                    // İçerideki spanların da düzgün görünmesi için display kontrolü
+                    if (el.classList.contains('lang-tr') || el.classList.contains('lang-en') || el.classList.contains('lang-pt')) {
+                         el.style.display = ''; // varsayılan formata dön
+                    }
                 }
             });
             localStorage.setItem('preferred_lang', lang);
