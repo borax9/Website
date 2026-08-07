@@ -176,6 +176,23 @@
                 font-size: 2rem;
             }
         }
+
+        /* Tıklanabilir Hizmet Kartları İçin Efekt */
+        .service-link-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+        .service-link-card .card {
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .service-link-card:hover .card {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -201,37 +218,42 @@
                         <span class="lang-pt" style="display:none;">Projetos ▾</span>
                     </a>
                     <div class="dropdown-content">
-                        <a href="esc.html">
+                        <!-- target="_blank" ile ayrı pencerede açılıyor -->
+                        <a href="esc.html" target="_blank">
                             <span class="lang-tr">ESC Programı</span>
                             <span class="lang-en" style="display:none;">ESC Program</span>
                             <span class="lang-pt" style="display:none;">Programa ESC</span>
                         </a>
-                        <a href="campusa.html">CampUSA</a>
-                        <a href="tijba.html">TİJBA Project</a>
+                        <a href="campusa.html" target="_blank">CampUSA</a>
+                        <a href="tijba.html" target="_blank">TİJBA Project</a>
                     </div>
                 </div>
 
-                <a href="services.html" class="lang-tr">Hizmetler</a>
-                <a href="services.html" class="lang-en" style="display:none;">Services</a>
-                <a href="services.html" class="lang-pt" style="display:none;">Serviços</a>
+                <!-- HİZMETLER -->
+                <a href="services.html" target="_blank" class="lang-tr">Hizmetler</a>
+                <a href="services.html" target="_blank" class="lang-en" style="display:none;">Services</a>
+                <a href="services.html" target="_blank" class="lang-pt" style="display:none;">Serviços</a>
                 
+                <!-- BELGELER -->
                 <a href="index.html#documents">
                     <span class="lang-tr">Belgeler</span>
                     <span class="lang-en" style="display:none;">Documents</span>
                     <span class="lang-pt" style="display:none;">Documentos</span>
                 </a>
                 
-                <a href="news.html" class="lang-tr">Haberler</a>
-                <a href="news.html" class="lang-en" style="display:none;">News</a>
-                <a href="news.html" class="lang-pt" style="display:none;">Notícias</a>
+                <!-- HABERLER -->
+                <a href="news.html" target="_blank" class="lang-tr">Haberler</a>
+                <a href="news.html" target="_blank" class="lang-en" style="display:none;">News</a>
+                <a href="news.html" target="_blank" class="lang-pt" style="display:none;">Notícias</a>
 
+                <!-- ORTAKLAR -->
                 <a href="index.html#partners">
                     <span class="lang-tr">Ortaklar</span>
                     <span class="lang-en" style="display:none;">Partners</span>
                     <span class="lang-pt" style="display:none;">Parceiros</span>
                 </a>
 
-                <!-- İLETİŞİM LİNKİ -->
+                <!-- İLETİŞİM -->
                 <a href="index.html#contact">
                     <span class="lang-tr">İletişim</span>
                     <span class="lang-en" style="display:none;">Contact</span>
@@ -254,12 +276,10 @@
     <!-- ANA POSTER BÖLÜMÜ -->
     <section class="poster-section">
         <div class="poster-top">
-            <!-- Sol Logo -->
             <div class="poster-logos logo-left">
                 <img src="images/logo.png" alt="Eurasia NHA Sol Logo">
             </div>
 
-            <!-- Fotoğraf Izgarası (SEO için alt etiketleri güncellendi) -->
             <div class="poster-grid">
                 <img src="images/kapak.jpg" alt="Avrasya Doğa Tarihi Derneği Etkinlikleri">
                 <img src="images/kapak2.jpg" alt="Eurasia NHA Uluslararası Gençlik Projeleri">
@@ -273,13 +293,11 @@
                 <img src="images/kapak12.jpg" alt="Avrasya Doğa Tarihi Derneği Ekibi">
             </div>
 
-            <!-- Sağ Logo -->
             <div class="poster-logos logo-right">
                 <img src="images/logo2.png" alt="Eurasia NHA Kurumsal Logosu">
             </div>
         </div>
 
-        <!-- Yazı ve Açıklama -->
         <div class="poster-text">
             <h1 class="lang-tr">Avrasya Doğa Tarihi Derneği</h1>
             <h1 class="lang-en" style="display:none;">Eurasia Natural History Association</h1>
@@ -333,8 +351,13 @@
             
             <div class="cards-grid" style="margin-bottom: 3rem;">
                 
+                <!-- ESC PROJESİ -->
                 <article class="card">
                     <div class="card-badge">Erasmus+ / ESC</div>
+                    
+                    <!-- ESC POSTER FOTOĞRAFI -->
+                    <img src="images/esc-poster.jpg" alt="ESC Poster" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; border: 1px solid #eee;">
+
                     <h3>
                         <span class="lang-tr">ESC (Avrupa Dayanışma Programı)</span>
                         <span class="lang-en" style="display:none;">ESC (European Solidarity Corps)</span>
@@ -346,7 +369,7 @@
                     <p class="lang-pt" style="display:none;">Conduzimos projetos do Corpo Europeu de Solidariedade e Erasmus+ com nosso principal parceiro português, <strong>Sociedade de História Natural</strong>.</p>
 
                     <div style="margin-top: 1.5rem; text-align: center;">
-                        <a href="esc.html" class="btn btn-primary">
+                        <a href="esc.html" target="_blank" class="btn btn-primary">
                             <span class="lang-tr">Tüm ESC Detaylarını Gör</span>
                             <span class="lang-en" style="display:none;">View All ESC Details</span>
                             <span class="lang-pt" style="display:none;">Ver Todos os Detalhes do ESC</span>
@@ -354,8 +377,13 @@
                     </div>
                 </article>
 
+                <!-- CAMPUSA PROJESİ -->
                 <article class="card">
                     <div class="card-badge complete">CampUSA</div>
+                    
+                    <!-- CAMPUSA POSTER FOTOĞRAFI -->
+                    <img src="images/campusa-poster.jpg" alt="CampUSA Poster" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; border: 1px solid #eee;">
+
                     <h3>CampUSA</h3>
 
                     <p class="lang-tr">Portekiz ve ABD arasında uluslararası kültürel değişim ve gençlik gelişim programlarını kolaylaştırmaktayız.</p>
@@ -363,7 +391,7 @@
                     <p class="lang-pt" style="display:none;">Facilitando o intercâmbio cultural internacional e programas de desenvolvimento juvenil entre Portugal e os EUA.</p>
 
                     <div style="margin-top: 1.5rem; text-align: center;">
-                        <a href="campusa.html" class="btn btn-primary">
+                        <a href="campusa.html" target="_blank" class="btn btn-primary">
                             <span class="lang-tr">CampUSA Detaylarını Gör</span>
                             <span class="lang-en" style="display:none;">View CampUSA Details</span>
                             <span class="lang-pt" style="display:none;">Ver Detalhes do CampUSA</span>
@@ -374,7 +402,7 @@
         </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- SERVICES (YENİLENEN KISIM) -->
     <section id="services-summary" class="section">
         <div class="container">
             <h2 class="section-title">
@@ -394,37 +422,49 @@
                 <iframe src="https://bora9-survey.hf.space/" width="100%" height="650px" style="border: none; border-radius: 6px;"></iframe>
             </div>
 
-            <div class="cards-grid">
-                <article class="card">
-                    <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🌍</div>
-                    <h3 style="text-align: center;">Geotechnical Consulting</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Zemin etütleri, temel tasarımı ve yapısal risk değerlendirmeleri ile ana yüklenicinin güvenli adımlar atmasını sağlıyoruz.</p>
-                </article>
+            <!-- TIKLANABİLİR HİZMET KARTLARI (YENİ 3'LÜ YAPI) -->
+            <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                 
-                <article class="card">
-                    <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🗺️</div>
-                    <h3 style="text-align: center;">Geological Mapping & Survey</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Sahadaki yapı taşlarının kökenini belirlemek ve doğru materyal tedariki için detaylı haritalama yapıyoruz.</p>
-                </article>
+                <!-- 1. Hizmet -->
+                <a href="services.html" target="_blank" class="service-link-card">
+                    <article class="card">
+                        <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">🌍</div>
+                        <h3 style="text-align: center; font-size: 1.3rem;">Geological Reporting, Surveying and GIS Analysis</h3>
+                        <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem; text-align: center;">Kapsamlı zemin ve jeoloji raporlaması, arazi ölçümleri ve CBS (GIS) analizleri ile projelerinize güvenilir altyapı verileri sağlıyoruz.</p>
+                        <p class="lang-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; text-align: center;">We provide reliable infrastructure data for your projects through comprehensive soil and geological reporting, land surveying, and GIS analysis.</p>
+                        <p class="lang-pt" style="display:none; margin-top: 1rem; font-size: 0.95rem; text-align: center;">Fornecemos dados de infraestrutura confiáveis para seus projetos através de relatórios abrangentes de solo e geologia, levantamento topográfico e análise GIS.</p>
+                    </article>
+                </a>
+                
+                <!-- 2. Hizmet -->
+                <a href="services.html" target="_blank" class="service-link-card">
+                    <article class="card">
+                        <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">🏛️</div>
+                        <h3 style="text-align: center; font-size: 1.3rem;">Architectural Design, 3D Rendering, Restoration Plan</h3>
+                        <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem; text-align: center;">Tarihi dokuya uygun restorasyon planları, modern mimari tasarımlar ve gerçekçi 3D modelleme/görselleştirme hizmetleri sunuyoruz.</p>
+                        <p class="lang-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; text-align: center;">We offer restoration plans suitable for historical texture, modern architectural designs, and realistic 3D modeling/visualization services.</p>
+                        <p class="lang-pt" style="display:none; margin-top: 1rem; font-size: 0.95rem; text-align: center;">Oferecemos planos de restauração adequados à textura histórica, projetos arquitetônicos modernos e serviços realistas de modelagem e visualização 3D.</p>
+                    </article>
+                </a>
 
-                <article class="card">
-                    <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🏛️</div>
-                    <h3 style="text-align: center;">Architectural Design</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Restorasyon projelerinde tarihi dokuya sadık, yeni yapılarda ise modern ve sürdürülebilir mimari tasarımlar üretiyoruz.</p>
-                </article>
+                <!-- 3. Hizmet -->
+                <a href="services.html" target="_blank" class="service-link-card">
+                    <article class="card">
+                        <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">⚙️</div>
+                        <h3 style="text-align: center; font-size: 1.3rem;">HVAC Design, CAD Analysis, Mechanical Plan</h3>
+                        <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem; text-align: center;">Enerji verimli mekanik tesisat planları, CAD analizleri ve yapıya özel profesyonel HVAC sistem tasarımı gerçekleştiriyoruz.</p>
+                        <p class="lang-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; text-align: center;">We perform energy-efficient mechanical installation plans, CAD analysis, and professional HVAC system design specific to the structure.</p>
+                        <p class="lang-pt" style="display:none; margin-top: 1rem; font-size: 0.95rem; text-align: center;">Realizamos planos de instalação mecânica energeticamente eficientes, análise CAD e projeto de sistema HVAC profissional específico para a estrutura.</p>
+                    </article>
+                </a>
                 
-                <article class="card">
-                    <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">⚙️</div>
-                    <h3 style="text-align: center;">HVAC Design</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Tarihi yapılara zarar vermeyen, enerji verimli ve modern mekanik tesisat çözümleri tasarlıyoruz.</p>
-                </article>
             </div>
             
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="services.html" class="btn btn-primary">
-                    <span class="lang-tr">Tüm Detayları Gör</span>
-                    <span class="lang-en" style="display:none;">See All Details</span>
-                    <span class="lang-pt" style="display:none;">Ver Todos os Detalhes</span>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="services.html" target="_blank" class="btn btn-primary">
+                    <span class="lang-tr">Tüm Detayları Gör (Hizmetler Sayfasına Git)</span>
+                    <span class="lang-en" style="display:none;">See All Details (Go to Services Page)</span>
+                    <span class="lang-pt" style="display:none;">Ver Todos os Detalhes (Ir para a Página de Serviços)</span>
                 </a>
             </div>
         </div>
@@ -576,9 +616,9 @@
                 <ul>
                     <li><a href="index.html#about"><span class="lang-tr">Hakkımızda</span><span class="lang-en" style="display:none;">About Us</span><span class="lang-pt" style="display:none;">Sobre Nós</span></a></li>
                     <li><a href="index.html#projects"><span class="lang-tr">Projeler</span><span class="lang-en" style="display:none;">Projects</span><span class="lang-pt" style="display:none;">Projetos</span></a></li>
-                    <li><a href="services.html"><span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span></a></li>
+                    <li><a href="services.html" target="_blank"><span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span></a></li>
                     <li><a href="index.html#documents"><span class="lang-tr">Belgeler</span><span class="lang-en" style="display:none;">Documents</span><span class="lang-pt" style="display:none;">Documentos</span></a></li>
-                    <li><a href="news.html"><span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span></a></li>
+                    <li><a href="news.html" target="_blank"><span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span></a></li>
                     <li><a href="index.html#contact"><span class="lang-tr">İletişim</span><span class="lang-en" style="display:none;">Contact</span><span class="lang-pt" style="display:none;">Contato</span></a></li>
                 </ul>
             </div>
