@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ================= SEO AYARLARI ================= -->
+    <title>Belgeler ve Veri Setleri | Avrasya Doğa Tarihi Derneği</title>
+    <meta name="description" content="Avrasya Doğa Tarihi Derneği tarafından sağlanan coğrafi bilgi sistemleri (GIS) veri setleri, haritalar ve resmi belgeler.">
+    <meta name="keywords" content="Avrasya Doğa Tarihi Derneği, GIS Dataset, Türkiye Jeoloji Haritası, MapInfo, QGIS, ArcGIS, dotaltai belgeler">
+    <link rel="canonical" href="https://dotaltai.org/documents.html" />
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- MOBİL MENÜ DÜZELTMELERİ --- */
+        .navbar {
+            z-index: 9999 !important;
+            position: relative;
+        }
+        @media (max-width: 768px) {
+            .nav-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding: 15px 10px;
+            }
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+                width: 100%;
+            }
+            .nav-links a {
+                padding: 8px 10px;
+            }
+            .dropdown {
+                position: relative;
+            }
+            .dropdown-content {
+                z-index: 10000 !important;
+                min-width: 140px;
+            }
+        }
+        .btn-primary {
+            display: inline-block;
+            background: #0056b3;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .btn-primary:hover {
+            background: #004494;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Eurasia NHA Logo" style="height: 40px; object-fit: contain;">
+                <span>Eurasia NHA</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html#about">
+                    <span class="lang-tr">Hakkımızda</span>
+                    <span class="lang-en" style="display:none;">About Us</span>
+                    <span class="lang-pt" style="display:none;">Sobre Nós</span>
+                </a>
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <span class="lang-tr">Projeler ▾</span>
+                        <span class="lang-en" style="display:none;">Projects ▾</span>
+                        <span class="lang-pt" style="display:none;">Projetos ▾</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="esc.html" target="_blank">
+                            <span class="lang-tr">ESC Programı</span>
+                            <span class="lang-en" style="display:none;">ESC Program</span>
+                            <span class="lang-pt" style="display:none;">Programa ESC</span>
+                        </a>
+                        <a href="campusa.html" target="_blank">CampUSA</a>
+                        <a href="tijba.html" target="_blank">TİJBA Project</a>
+                    </div>
+                </div>
+
+                <a href="services.html" target="_blank">
+                    <span class="lang-tr">Hizmetler</span>
+                    <span class="lang-en" style="display:none;">Services</span>
+                    <span class="lang-pt" style="display:none;">Serviços</span>
+                </a>
+                
+                <a href="documents.html" target="_blank">
+                    <span class="lang-tr">Belgeler</span>
+                    <span class="lang-en" style="display:none;">Documents</span>
+                    <span class="lang-pt" style="display:none;">Documentos</span>
+                </a>
+                
+                <a href="news.html" target="_blank">
+                    <span class="lang-tr">Haberler</span>
+                    <span class="lang-en" style="display:none;">News</span>
+                    <span class="lang-pt" style="display:none;">Notícias</span>
+                </a>
+
+                <a href="index.html#partners">
+                    <span class="lang-tr">Ortaklar</span>
+                    <span class="lang-en" style="display:none;">Partners</span>
+                    <span class="lang-pt" style="display:none;">Parceiros</span>
+                </a>
+
+                <a href="index.html#contact">
+                    <span class="lang-tr">İletişim</span>
+                    <span class="lang-en" style="display:none;">Contact</span>
+                    <span class="lang-pt" style="display:none;">Contato</span>
+                </a>
+
+                <div class="dropdown lang-selector">
+                    <a href="#" class="dropbtn">🌐 <span id="current-lang">TR</span> ▾</a>
+                    <div class="dropdown-content" style="min-width: 100px; left: auto; right: 0;">
+                        <a href="#" onclick="setLanguage('tr'); return false;">Türkçe</a>
+                        <a href="#" onclick="setLanguage('en'); return false;">English</a>
+                        <a href="#" onclick="setLanguage('pt'); return false;">Português</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- DOCUMENTS SECTION -->
+    <section class="section" style="padding: 60px 0;">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-tr">Belgeler ve Veri Setleri</span>
+                <span class="lang-en" style="display:none;">Documents & Datasets</span>
+                <span class="lang-pt" style="display:none;">Documentos e Conjuntos de Dados</span>
+            </h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 40px;">
+                <span class="lang-tr">Derneğimiz tarafından sağlanan coğrafi bilgi ve veri setleri:</span>
+                <span class="lang-en" style="display:none;">Geographic information and datasets provided by our association:</span>
+                <span class="lang-pt" style="display:none;">Informações geográficas e conjuntos de dados fornecidos por nossa associação:</span>
+            </p>
+            
+            <div class="cards-grid" style="max-width: 900px; margin: 0 auto;">
+                <article class="card" style="grid-column: 1 / -1;">
+                    <div class="card-badge">GIS Dataset</div>
+                    <h3>Geological Map of Turkiye</h3>
+                    
+                    <p class="lang-tr" style="white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
+                        Türkiye jeoloji haritası verileri (1:500.000 ölçekli, 1961) MapInfo formatında sayısallaştırılmış ve WGS84 (enlem/boylam) koordinat sistemine dönüştürülmüştür. Veri seti şunları içerir:
+                        • Faylar: "Turkey500k_Faults"
+                        • Jeoloji Lejandı: "Turkey500k_GeologyLegend"
+                        • Litoloji: "Turkey500k_Lithology"
+                        • Mineral Oluşumları: "Turkey500k_MinOcc"
+                        Tam öznitelikli olarak MapInfo formatında sağlanmış olup, ArcGIS ve QGIS ile uyumludur (stiller QGIS'te yorumlanmaz).
+                    </p>
+                    <p class="lang-en" style="display:none; white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
+                        Geological map data of Turkey (1:500,000 scale, 1961) was digitised in MapInfo and reprojected to WGS84 (lat/long). The dataset includes:
+                        • Faults: "Turkey500k_Faults"
+                        • Geology Legend: "Turkey500k_GeologyLegend"
+                        • Lithology: "Turkey500k_Lithology"
+                        • Mineral Occurrences: "Turkey500k_MinOcc"
+                        Fully attributed and provided in MapInfo format, with ArcGIS and QGIS compatibility (styles not interpreted in QGIS).
+                    </p>
+                    <p class="lang-pt" style="display:none; white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
+                        Os dados do mapa geológico da Turquia (escala 1:500.000, 1961) foram digitalizados no MapInfo e reprojetados para WGS84 (lat/long). O conjunto de dados inclui:
+                        • Falhas: "Turkey500k_Faults"
+                        • Legenda Geológica: "Turkey500k_GeologyLegend"
+                        • Litologia: "Turkey500k_Lithology"
+                        • Ocorrências Minerais: "Turkey500k_MinOcc"
+                        Totalmente atribuído e fornecido no formato MapInfo, com compatibilidade ArcGIS e QGIS (estilos não interpretados no QGIS).
+                    </p>
+
+                    <div style="margin-top: 2rem;">
+                        <a href="https://drive.google.com/drive/folders/1xvPsnM9V4szwejZ9tCtQnpEJ_-EdV9WU?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                            📥 <span class="lang-tr">İndir (Download)</span>
+                            <span class="lang-en" style="display:none;">Download</span>
+                            <span class="lang-pt" style="display:none;">Baixar</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info" style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                <img src="images/logo2.png" alt="Eurasia NHA Logo" style="height: 55px; object-fit: contain;">
+                <div>
+                    <h3 style="margin-bottom: 5px;">Eurasia Natural History Association</h3>
+                    <p style="margin: 2px 0;">Email: tdotaltai@gmail.com</p>
+                    <p style="margin: 2px 0; display: flex; align-items: center; gap: 6px;">
+                        Instagram: 
+                        <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 4px; color: #4da3ff; text-decoration: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                            @tdoteurasia
+                        </a>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-counter" style="text-align: center; margin: 1rem 0;">
+                <p style="font-size: 0.95rem; color: #fff; margin-bottom: 5px;">
+                    <span class="lang-tr">Toplam Ziyaretçi:</span>
+                    <span class="lang-en" style="display:none;">Total Visitors:</span>
+                    <span class="lang-pt" style="display:none;">Total de Visitantes:</span>
+                    <span id="visitor-count" style="font-weight: bold; color: #4da3ff; margin-left: 5px;">Yükleniyor...</span>
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="lang-tr">Hızlı Bağlantılar</h4>
+                <h4 class="lang-en" style="display:none;">Quick Links</h4>
+                <h4 class="lang-pt" style="display:none;">Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html#about"><span class="lang-tr">Hakkımızda</span><span class="lang-en" style="display:none;">About Us</span><span class="lang-pt" style="display:none;">Sobre Nós</span></a></li>
+                    <li><a href="index.html#projects"><span class="lang-tr">Projeler</span><span class="lang-en" style="display:none;">Projects</span><span class="lang-pt" style="display:none;">Projetos</span></a></li>
+                    <li><a href="services.html" target="_blank"><span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span></a></li>
+                    <li><a href="documents.html" target="_blank"><span class="lang-tr">Belgeler</span><span class="lang-en" style="display:none;">Documents</span><span class="lang-pt" style="display:none;">Documentos</span></a></li>
+                    <li><a href="news.html" target="_blank"><span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span></a></li>
+                    <li><a href="index.html#contact"><span class="lang-tr">İletişim</span><span class="lang-en" style="display:none;">Contact</span><span class="lang-pt" style="display:none;">Contato</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Eurasia Natural History Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DİL DEĞİŞTİRME VE SAYAC SCRIPTİ -->
+    <script>
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.getElementById('current-lang').innerText = lang.toUpperCase();
+            
+            document.querySelectorAll('.lang-tr, .lang-en, .lang-pt').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.lang-' + lang).forEach(el => {
+                el.style.display = 'inline';
+                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4' || el.tagName === 'ARTICLE' || el.tagName === 'SPAN') {
+                    if (el.classList.contains('lang-tr') || el.classList.contains('lang-en') || el.classList.contains('lang-pt')) {
+                         el.style.display = ''; 
+                    }
+                }
+            });
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        window.onload = function() {
+            const savedLang = localStorage.getItem('preferred_lang') || 'tr';
+            setLanguage(savedLang);
+
+            fetch('https://api.counterapi.dev/v1/dotaltai/documents/up')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('visitor-count').innerText = data.count;
+                })
+                .catch(error => {
+                    document.getElementById('visitor-count').innerText = '-';
+                });
+        }
+    </script>
+</body>
+</html>
