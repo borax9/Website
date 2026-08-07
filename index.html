@@ -197,7 +197,7 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR (Tüm sayfalarda aynı olması gereken alan) -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
@@ -206,9 +206,12 @@
             </a>
             
             <nav class="nav-links">
-                <a href="index.html#about" class="lang-tr">Hakkımızda</a>
-                <a href="index.html#about" class="lang-en" style="display:none;">About Us</a>
-                <a href="index.html#about" class="lang-pt" style="display:none;">Sobre Nós</a>
+                <!-- HAKKIMIZDA -->
+                <a href="index.html#about">
+                    <span class="lang-tr">Hakkımızda</span>
+                    <span class="lang-en" style="display:none;">About Us</span>
+                    <span class="lang-pt" style="display:none;">Sobre Nós</span>
+                </a>
 
                 <!-- PROJELER DROPDOWN -->
                 <div class="dropdown">
@@ -218,7 +221,6 @@
                         <span class="lang-pt" style="display:none;">Projetos ▾</span>
                     </a>
                     <div class="dropdown-content">
-                        <!-- target="_blank" ile ayrı pencerede açılıyor -->
                         <a href="esc.html" target="_blank">
                             <span class="lang-tr">ESC Programı</span>
                             <span class="lang-en" style="display:none;">ESC Program</span>
@@ -230,21 +232,25 @@
                 </div>
 
                 <!-- HİZMETLER -->
-                <a href="services.html" target="_blank" class="lang-tr">Hizmetler</a>
-                <a href="services.html" target="_blank" class="lang-en" style="display:none;">Services</a>
-                <a href="services.html" target="_blank" class="lang-pt" style="display:none;">Serviços</a>
+                <a href="services.html" target="_blank">
+                    <span class="lang-tr">Hizmetler</span>
+                    <span class="lang-en" style="display:none;">Services</span>
+                    <span class="lang-pt" style="display:none;">Serviços</span>
+                </a>
                 
-                <!-- BELGELER -->
-                <a href="index.html#documents">
+                <!-- BELGELER (Ayrı bir sayfaya bağlandı) -->
+                <a href="documents.html" target="_blank">
                     <span class="lang-tr">Belgeler</span>
                     <span class="lang-en" style="display:none;">Documents</span>
                     <span class="lang-pt" style="display:none;">Documentos</span>
                 </a>
                 
                 <!-- HABERLER -->
-                <a href="news.html" target="_blank" class="lang-tr">Haberler</a>
-                <a href="news.html" target="_blank" class="lang-en" style="display:none;">News</a>
-                <a href="news.html" target="_blank" class="lang-pt" style="display:none;">Notícias</a>
+                <a href="news.html" target="_blank">
+                    <span class="lang-tr">Haberler</span>
+                    <span class="lang-en" style="display:none;">News</span>
+                    <span class="lang-pt" style="display:none;">Notícias</span>
+                </a>
 
                 <!-- ORTAKLAR -->
                 <a href="index.html#partners">
@@ -272,6 +278,7 @@
             </nav>
         </div>
     </header>
+    <!-- NAVBAR SONU -->
 
     <!-- ANA POSTER BÖLÜMÜ -->
     <section class="poster-section">
@@ -355,8 +362,11 @@
                 <article class="card">
                     <div class="card-badge">Erasmus+ / ESC</div>
                     
-                    <!-- ESC POSTER FOTOĞRAFI -->
-                    <img src="images/esc-poster.jpg" alt="ESC Poster" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; border: 1px solid #eee;">
+                    <!-- ESC İÇİN YAN YANA İKİ POSTER -->
+                    <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                        <img src="images/shnposter.jpg" alt="SHN Poster" style="width: 50%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
+                        <img src="images/esclabel.jpg" alt="ESC Label Poster" style="width: 50%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
+                    </div>
 
                     <h3>
                         <span class="lang-tr">ESC (Avrupa Dayanışma Programı)</span>
@@ -382,7 +392,7 @@
                     <div class="card-badge complete">CampUSA</div>
                     
                     <!-- CAMPUSA POSTER FOTOĞRAFI -->
-                    <img src="images/campusa-poster.jpg" alt="CampUSA Poster" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; border: 1px solid #eee;">
+                    <img src="images/campusapt.jpg" alt="CampUSA Poster" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; border: 1px solid #eee;">
 
                     <h3>CampUSA</h3>
 
@@ -402,7 +412,7 @@
         </div>
     </section>
 
-    <!-- SERVICES (YENİLENEN KISIM) -->
+    <!-- SERVICES -->
     <section id="services-summary" class="section">
         <div class="container">
             <h2 class="section-title">
@@ -422,10 +432,9 @@
                 <iframe src="https://bora9-survey.hf.space/" width="100%" height="650px" style="border: none; border-radius: 6px;"></iframe>
             </div>
 
-            <!-- TIKLANABİLİR HİZMET KARTLARI (YENİ 3'LÜ YAPI) -->
+            <!-- TIKLANABİLİR HİZMET KARTLARI -->
             <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                 
-                <!-- 1. Hizmet -->
                 <a href="services.html" target="_blank" class="service-link-card">
                     <article class="card">
                         <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">🌍</div>
@@ -436,7 +445,6 @@
                     </article>
                 </a>
                 
-                <!-- 2. Hizmet -->
                 <a href="services.html" target="_blank" class="service-link-card">
                     <article class="card">
                         <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">🏛️</div>
@@ -447,7 +455,6 @@
                     </article>
                 </a>
 
-                <!-- 3. Hizmet -->
                 <a href="services.html" target="_blank" class="service-link-card">
                     <article class="card">
                         <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">⚙️</div>
@@ -466,62 +473,6 @@
                     <span class="lang-en" style="display:none;">See All Details (Go to Services Page)</span>
                     <span class="lang-pt" style="display:none;">Ver Todos os Detalhes (Ir para a Página de Serviços)</span>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- DOCUMENTS -->
-    <section id="documents" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="lang-tr">Belgeler</span>
-                <span class="lang-en" style="display:none;">Documents</span>
-                <span class="lang-pt" style="display:none;">Documentos</span>
-            </h2>
-            <p class="section-subtitle">
-                <span class="lang-tr">Derneğimiz tarafından sağlanan coğrafi bilgi ve veri setleri:</span>
-                <span class="lang-en" style="display:none;">Geographic information and datasets provided by our association:</span>
-                <span class="lang-pt" style="display:none;">Informações geográficas e conjuntos de dados fornecidos por nossa associação:</span>
-            </p>
-            
-            <div class="cards-grid" style="max-width: 900px; margin: 0 auto;">
-                <article class="card" style="grid-column: 1 / -1;">
-                    <div class="card-badge">GIS Dataset</div>
-                    <h3>Geological Map of Turkiye</h3>
-                    
-                    <p class="lang-tr" style="white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
-                        Türkiye jeoloji haritası verileri (1:500.000 ölçekli, 1961) MapInfo formatında sayısallaştırılmış ve WGS84 (enlem/boylam) koordinat sistemine dönüştürülmüştür. Veri seti şunları içerir:
-                        • Faylar: "Turkey500k_Faults"
-                        • Jeoloji Lejandı: "Turkey500k_GeologyLegend"
-                        • Litoloji: "Turkey500k_Lithology"
-                        • Mineral Oluşumları: "Turkey500k_MinOcc"
-                        Tam öznitelikli olarak MapInfo formatında sağlanmış olup, ArcGIS ve QGIS ile uyumludur (stiller QGIS'te yorumlanmaz).
-                    </p>
-                    <p class="lang-en" style="display:none; white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
-                        Geological map data of Turkey (1:500,000 scale, 1961) was digitised in MapInfo and reprojected to WGS84 (lat/long). The dataset includes:
-                        • Faults: "Turkey500k_Faults"
-                        • Geology Legend: "Turkey500k_GeologyLegend"
-                        • Lithology: "Turkey500k_Lithology"
-                        • Mineral Occurrences: "Turkey500k_MinOcc"
-                        Fully attributed and provided in MapInfo format, with ArcGIS and QGIS compatibility (styles not interpreted in QGIS).
-                    </p>
-                    <p class="lang-pt" style="display:none; white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
-                        Os dados do mapa geológico da Turquia (escala 1:500.000, 1961) foram digitalizados no MapInfo e reprojetados para WGS84 (lat/long). O conjunto de dados inclui:
-                        • Falhas: "Turkey500k_Faults"
-                        • Legenda Geológica: "Turkey500k_GeologyLegend"
-                        • Litologia: "Turkey500k_Lithology"
-                        • Ocorrências Minerais: "Turkey500k_MinOcc"
-                        Totalmente atribuído e fornecido no formato MapInfo, com compatibilidade ArcGIS e QGIS (estilos não interpretados no QGIS).
-                    </p>
-
-                    <div style="margin-top: 2rem;">
-                        <a href="https://drive.google.com/drive/folders/1xvPsnM9V4szwejZ9tCtQnpEJ_-EdV9WU?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-                            📥 <span class="lang-tr">İndir (Download)</span>
-                            <span class="lang-en" style="display:none;">Download</span>
-                            <span class="lang-pt" style="display:none;">Baixar</span>
-                        </a>
-                    </div>
-                </article>
             </div>
         </div>
     </section>
@@ -617,7 +568,7 @@
                     <li><a href="index.html#about"><span class="lang-tr">Hakkımızda</span><span class="lang-en" style="display:none;">About Us</span><span class="lang-pt" style="display:none;">Sobre Nós</span></a></li>
                     <li><a href="index.html#projects"><span class="lang-tr">Projeler</span><span class="lang-en" style="display:none;">Projects</span><span class="lang-pt" style="display:none;">Projetos</span></a></li>
                     <li><a href="services.html" target="_blank"><span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span></a></li>
-                    <li><a href="index.html#documents"><span class="lang-tr">Belgeler</span><span class="lang-en" style="display:none;">Documents</span><span class="lang-pt" style="display:none;">Documentos</span></a></li>
+                    <li><a href="documents.html" target="_blank"><span class="lang-tr">Belgeler</span><span class="lang-en" style="display:none;">Documents</span><span class="lang-pt" style="display:none;">Documentos</span></a></li>
                     <li><a href="news.html" target="_blank"><span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span></a></li>
                     <li><a href="index.html#contact"><span class="lang-tr">İletişim</span><span class="lang-en" style="display:none;">Contact</span><span class="lang-pt" style="display:none;">Contato</span></a></li>
                 </ul>
