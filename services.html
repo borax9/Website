@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Standart Menü Ayarları */
         .navbar { z-index: 9999 !important; position: relative; }
         @media (max-width: 768px) {
             .nav-container { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 15px 10px; }
@@ -18,7 +17,6 @@
             .dropdown-content { z-index: 10000 !important; min-width: 180px; }
         }
 
-        /* Hero ve Kart Stilleri */
         .hero-banner {
             background: linear-gradient(135deg, #07192c 0%, #004494 100%);
             color: #ffffff;
@@ -90,7 +88,7 @@
         .feature-list {
             list-style: none;
             padding: 0;
-            margin: 1.5rem 0;
+            margin: 1.5rem 0 1rem 0;
         }
         .feature-list li {
             position: relative;
@@ -107,6 +105,30 @@
             color: #0056b3;
             font-weight: bold;
         }
+        
+        /* CampUSA Özel Yönlendirme Kartı */
+        .campusa-subcard {
+            margin-top: 1.2rem;
+            padding: 1rem 1.2rem;
+            background: #f0f7ff;
+            border-left: 4px solid #0056b3;
+            border-radius: 8px;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+        .campusa-subcard:hover {
+            background: #e1f0ff;
+            transform: translateX(4px);
+        }
+        .campusa-subcard a {
+            text-decoration: none;
+            color: #0056b3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
         .engineering-teaser-box {
             background: linear-gradient(to right, #f8fafc, #edf2f7);
             border-left: 5px solid #0056b3;
@@ -168,7 +190,6 @@
                             <span class="lang-tr" style="display:none;">ESC Programı</span>
                             <span class="lang-pt" style="display:none;">Programa ESC</span>
                         </a>
-                        <a href="campusa.html">CampUSA</a>
                         <a href="tijba.html">TİJBA Project</a>
                     </div>
                 </div>
@@ -302,7 +323,7 @@
                             Strategic end-to-end consulting, grant management, and operational coordination for European youth mobility, volunteering, and international exchange programs.
                         </p>
                         <p class="lang-tr" style="display:none; color: #334155; line-height: 1.6;">
-                            Avrupa gençlik, eğitim ve kültürel değişim projelerinde kurumlara ve bireylere stratejik danışmanlık, proje ortaklığı ve operational rehberlik sağlıyoruz.
+                            Avrupa gençlik, eğitim ve kültürel değişim projelerinde kurumlara ve bireylere stratejik danışmanlık, proje ortaklığı ve operasyonel rehberlik sağlıyoruz.
                         </p>
                         <p class="lang-pt" style="display:none; color: #334155; line-height: 1.6;">
                             Consultoria estratégica e gestão para programas de mobilidade de jovens e projetos de intercâmbio europeu.
@@ -312,8 +333,20 @@
                             <li><strong>European Solidarity Corps (ESC):</strong> Program accreditation, application strategy, and project oversight.</li>
                             <li><strong>International WorkCamps:</strong> Placement coordination and international volunteer project management.</li>
                             <li><strong>SummerCamps & Youth Exchanges:</strong> Organizational support for educational summer programs.</li>
-                            <li><strong>CampUSA Process Advisory:</strong> Complete consulting for US-based cultural exchange frameworks.</li>
                         </ul>
+
+                        <!-- CAMPUSA ALT BAŞLIK & LİNKİ -->
+                        <div class="campusa-subcard">
+                            <a href="campusa.html">
+                                <span>🇺🇸 CampUSA Cultural Exchange</span>
+                                <span>➔</span>
+                            </a>
+                            <p style="margin: 6px 0 0 0; font-size: 0.88rem; color: #475569; font-weight: 400; line-height: 1.4;">
+                                <span class="lang-en">Specialized consultancy & operational guidance for USA cultural exchange programs.</span>
+                                <span class="lang-tr" style="display:none;">ABD kültürel değişim programları için özel danışmanlık ve operasyonel rehberlik.</span>
+                                <span class="lang-pt" style="display:none;">Consultoria especializada e orientação operacional para programas de intercâmbio nos EUA.</span>
+                            </p>
+                        </div>
                     </div>
                 </article>
 
@@ -358,7 +391,6 @@
     <footer id="contact" class="footer">
         <div class="container footer-content" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
             
-            <!-- Company Info & Contact -->
             <div class="footer-info" style="flex: 2; min-width: 300px;">
                 <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                     <img src="images/logo2.png" alt="Eurasia NHA Logo 2" style="height: 55px; object-fit: contain;">
@@ -394,7 +426,6 @@
                 </div>
             </div>
             
-            <!-- Quick Links -->
             <div class="footer-links" style="flex: 1; min-width: 200px;">
                 <h4 class="lang-en">Quick Links</h4>
                 <h4 class="lang-tr" style="display:none;">Hızlı Bağlantılar</h4>
@@ -408,7 +439,6 @@
                     <li style="margin-bottom: 8px;"><a href="index.html#contact" style="color: #fff; text-decoration: none;"><span class="lang-en">Contact</span><span class="lang-tr" style="display:none;">İletişim</span><span class="lang-pt" style="display:none;">Contato</span></a></li>
                 </ul>
 
-                <!-- SAYAÇ -->
                 <div style="margin-top: 2rem;">
                     <p style="font-size: 0.95rem; color: #fff; margin-bottom: 5px;">
                         <span class="lang-en">Total Visitors:</span>
@@ -427,7 +457,6 @@
         </div>
     </footer>
 
-    <!-- SCRIPT -->
     <script>
         function setLanguage(lang) {
             document.documentElement.lang = lang;
