@@ -4,31 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- ================= SEO AYARLARI BAŞLANGICI ================= -->
     <title>Avrasya Doğa Tarihi Derneği | Eurasia NHA | dotaltai.org</title>
     <meta name="description" content="Avrasya Doğa Tarihi Derneği (Eurasia NHA), iklim farkındalığı, ESC programı, CampUSA, jeoloji ve mühendislik danışmanlığı ile doğa koruma projeleri yürütmektedir.">
     <meta name="keywords" content="Avrasya Doğa Tarihi Derneği, Eurasia Natural History Association, dotaltai, dotaltai.org, ESC programı, CampUSA, iklim farkındalığı, jeoloji haritası, geotechnical consulting, restorasyon, gençlik projeleri, doğa koruma">
     <meta name="author" content="Avrasya Doğa Tarihi Derneği">
     <link rel="canonical" href="https://dotaltai.org/" />
 
-    <!-- Open Graph / Facebook & WhatsApp Önizleme Ayarları -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dotaltai.org/">
     <meta property="og:title" content="Avrasya Doğa Tarihi Derneği | Eurasia NHA">
     <meta property="og:description" content="İnsan faaliyetleri nedeniyle tehdit altındaki ekosistemleri korumak ve uluslararası doğa/gençlik projeleri yürütmek için buradayız.">
     <meta property="og:image" content="https://dotaltai.org/images/logo.png">
 
-    <!-- Twitter Önizleme Ayarları -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Avrasya Doğa Tarihi Derneği | Eurasia NHA">
     <meta name="twitter:description" content="İnsan faaliyetleri nedeniyle tehdit altındaki ekosistemleri korumak ve uluslararası projeler üretmek için çalışıyoruz.">
     <meta name="twitter:image" content="https://dotaltai.org/images/logo.png">
-    <!-- ================= SEO AYARLARI BİTİŞİ ================= -->
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- MOBİL MENÜ DÜZELTMELERİ --- */
         .navbar {
             z-index: 9999 !important;
             position: relative;
@@ -59,7 +54,6 @@
                 min-width: 140px;
             }
         }
-        /* Basit Buton Stili */
         .btn-primary {
             display: inline-block;
             background: #0056b3;
@@ -74,7 +68,6 @@
             background: #004494;
         }
 
-        /* --- POSTER/KOLAJ BÖLÜMÜ --- */
         .poster-section {
             width: 100%;
             background-color: #f8f9fa;
@@ -144,7 +137,6 @@
             line-height: 1.6;
         }
 
-        /* --- MOBİL UYUMLULUK --- */
         @media (max-width: 992px) {
             .poster-grid {
                 grid-template-columns: repeat(3, 1fr);
@@ -177,7 +169,6 @@
             }
         }
 
-        /* Tıklanabilir Hizmet Kartları İçin Efekt */
         .service-link-card {
             text-decoration: none;
             color: inherit;
@@ -197,7 +188,7 @@
 </head>
 <body>
 
-    <!-- NAVBAR (Tüm sayfalarda aynı olması gereken alan) -->
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
@@ -206,14 +197,13 @@
             </a>
             
             <nav class="nav-links">
-                <!-- HAKKIMIZDA -->
                 <a href="about.html">
                     <span class="lang-tr">Hakkımızda</span>
                     <span class="lang-en" style="display:none;">About Us</span>
                     <span class="lang-pt" style="display:none;">Sobre Nós</span>
                 </a>
 
-                <!-- PROJELER DROPDOWN -->
+                <!-- PROJELER DROPDOWN (CampUSA Çıkarıldı) -->
                 <div class="dropdown">
                     <a href="#" class="dropbtn">
                         <span class="lang-tr">Projeler ▾</span>
@@ -226,40 +216,34 @@
                             <span class="lang-en" style="display:none;">ESC Program</span>
                             <span class="lang-pt" style="display:none;">Programa ESC</span>
                         </a>
-                        <a href="campusa.html">CampUSA</a>
                         <a href="tijba.html">TİJBA Project</a>
                     </div>
                 </div>
 
-                <!-- HİZMETLER -->
                 <a href="services.html">
                     <span class="lang-tr">Hizmetler</span>
                     <span class="lang-en" style="display:none;">Services</span>
                     <span class="lang-pt" style="display:none;">Serviços</span>
                 </a>
                 
-                <!-- BELGELER -->
                 <a href="documents.html">
                     <span class="lang-tr">Belgeler</span>
                     <span class="lang-en" style="display:none;">Documents</span>
                     <span class="lang-pt" style="display:none;">Documentos</span>
                 </a>
                 
-                <!-- HABERLER -->
                 <a href="news.html">
                     <span class="lang-tr">Haberler</span>
                     <span class="lang-en" style="display:none;">News</span>
                     <span class="lang-pt" style="display:none;">Notícias</span>
                 </a>
 
-                <!-- ORTAKLAR -->
                 <a href="index.html#partners">
                     <span class="lang-tr">Ortaklar</span>
                     <span class="lang-en" style="display:none;">Partners</span>
                     <span class="lang-pt" style="display:none;">Parceiros</span>
                 </a>
 
-                <!-- İLETİŞİM -->
                 <a href="index.html#contact">
                     <span class="lang-tr">İletişim</span>
                     <span class="lang-en" style="display:none;">Contact</span>
@@ -278,9 +262,8 @@
             </nav>
         </div>
     </header>
-    <!-- NAVBAR SONU -->
 
-    <!-- ANA POSTER BÖLÜMÜ -->
+    <!-- POSTER -->
     <section class="poster-section">
         <div class="poster-top">
             <div class="poster-logos logo-left">
@@ -316,7 +299,7 @@
         </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS (CampUSA Çıkarıldı) -->
     <section id="projects" class="section bg-light">
         <div class="container">
             <h2 class="section-title">
@@ -325,7 +308,7 @@
                 <span class="lang-pt" style="display:none;">Projetos</span>
             </h2>
             
-            <div class="cards-grid" style="margin-bottom: 3rem;">
+            <div class="cards-grid" style="margin-bottom: 3rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
                 
                 <!-- ESC PROJESİ -->
                 <article class="card">
@@ -351,27 +334,6 @@
                             <span class="lang-tr">Tüm ESC Detaylarını Gör</span>
                             <span class="lang-en" style="display:none;">View All ESC Details</span>
                             <span class="lang-pt" style="display:none;">Ver Todos os Detalhes do ESC</span>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- CAMPUSA PROJESİ -->
-                <article class="card">
-                    <div class="card-badge complete">CampUSA</div>
-                    
-                    <img src="images/campusapt.jpg" alt="CampUSA Poster" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; border: 1px solid #eee;">
-
-                    <h3>CampUSA</h3>
-
-                    <p class="lang-tr">Portekiz ve ABD arasında uluslararası kültürel değişim ve gençlik gelişim programlarını kolaylaştırmaktayız.</p>
-                    <p class="lang-en" style="display:none;">Facilitating international cultural exchange and youth development programs between Portugal and the USA.</p>
-                    <p class="lang-pt" style="display:none;">Facilitando o intercâmbio cultural internacional e programas de desenvolvimento juvenil entre Portugal e os EUA.</p>
-
-                    <div style="margin-top: 1.5rem; text-align: center;">
-                        <a href="campusa.html" class="btn btn-primary">
-                            <span class="lang-tr">CampUSA Detaylarını Gör</span>
-                            <span class="lang-en" style="display:none;">View CampUSA Details</span>
-                            <span class="lang-pt" style="display:none;">Ver Detalhes do CampUSA</span>
                         </a>
                     </div>
                 </article>
@@ -419,12 +381,10 @@
                 <p class="lang-pt" style="display:none; color: white;">Consultoria técnica e suporte são fornecidos ao empreiteiro principal, especialmente em <strong>projetos de construção e restauração</strong>.</p>
             </div>
 
-            <!-- HUGGING FACE SPACE -->
             <div style="margin-bottom: 2.5rem; background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                 <iframe src="https://bora9-survey.hf.space/" width="100%" height="650px" style="border: none; border-radius: 6px;"></iframe>
             </div>
 
-            <!-- TIKLANABİLİR HİZMET KARTLARI -->
             <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
                 
                 <a href="services.html" class="service-link-card">
@@ -543,7 +503,6 @@
                 </div>
             </div>
             
-            <!-- SAYAÇ BURADA -->
             <div class="footer-counter" style="text-align: center; margin: 1rem 0;">
                 <p style="font-size: 0.95rem; color: #fff; margin-bottom: 5px;">
                     <span class="lang-tr">Toplam Ziyaretçi:</span>
@@ -574,7 +533,6 @@
         </div>
     </footer>
 
-    <!-- SCRIPT (ZİYARETÇİ SAYACI DAHİL) -->
     <script>
         function setLanguage(lang) {
             document.documentElement.lang = lang;
@@ -598,7 +556,6 @@
             const savedLang = localStorage.getItem('preferred_lang') || 'tr';
             setLanguage(savedLang);
 
-            // Ziyaretçi sayacını getiren güncel API isteği
             fetch('https://abacus.jasoncameron.dev/hit/dotaltai/homepage')
                 .then(response => response.json())
                 .then(data => {
