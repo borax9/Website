@@ -3,25 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hizmetler | Avrasya Doğa Tarihi Derneği</title>
-    <meta name="description" content="Avrasya Doğa Tarihi Derneği - Hizmetlerimiz ve Teknik Danışmanlık">
+    <title>Hizmetler | BORAX Consulting & Eurasia NHA</title>
+    <meta name="description" content="BORAX - Geological Consulting Subcontractor & European Exchange Projects Consulting">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Standart Menü Ayarları (Tüm sayfalarda aynı) */
+        /* Standart Menü Ayarları */
         .navbar { z-index: 9999 !important; position: relative; }
         @media (max-width: 768px) {
             .nav-container { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 15px 10px; }
             .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; width: 100%; }
             .nav-links a { padding: 8px 10px; }
             .dropdown { position: relative; }
-            .dropdown-content { z-index: 10000 !important; min-width: 140px; }
+            .dropdown-content { z-index: 10000 !important; min-width: 180px; }
+        }
+
+        /* Kurumsal Hero ve Kart Özel Stilleri */
+        .hero-banner {
+            background: linear-gradient(135deg, #0a2540 0%, #0056b3 100%);
+            color: #ffffff;
+            padding: 3.5rem 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .consulting-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .consulting-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .consulting-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+        .card-icon-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            background: #f0f4f8;
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            color: #0056b3;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: #4a5568;
+            line-height: 1.5;
+        }
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .engineering-teaser-box {
+            background: linear-gradient(to right, #f8fafc, #edf2f7);
+            border-left: 5px solid #0056b3;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        .btn-primary-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #0056b3;
+            color: #ffffff !important;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,86,179,0.25);
+        }
+        .btn-primary-action:hover {
+            background-color: #003d82;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR (Tüm sayfalarda standart ve aynı) -->
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
@@ -53,11 +163,26 @@
                     </div>
                 </div>
 
-                <a href="services.html" style="color: var(--secondary-color, #0056b3); font-weight: bold;">
-                    <span class="lang-tr">Hizmetler</span>
-                    <span class="lang-en" style="display:none;">Services</span>
-                    <span class="lang-pt" style="display:none;">Serviços</span>
-                </a>
+                <!-- HİZMETLER DROPDOWN MENU -->
+                <div class="dropdown">
+                    <a href="services.html" class="dropbtn" style="color: var(--secondary-color, #0056b3); font-weight: bold;">
+                        <span class="lang-tr">Hizmetler ▾</span>
+                        <span class="lang-en" style="display:none;">Services ▾</span>
+                        <span class="lang-pt" style="display:none;">Serviços ▾</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="services.html" style="font-weight: 600;">
+                            <span class="lang-tr">BORAX Danışmanlık</span>
+                            <span class="lang-en" style="display:none;">BORAX Consulting</span>
+                            <span class="lang-pt" style="display:none;">BORAX Consultoria</span>
+                        </a>
+                        <a href="engineering-services.html">
+                            <span class="lang-tr">Engineering Services</span>
+                            <span class="lang-en" style="display:none;">Engineering Services</span>
+                            <span class="lang-pt" style="display:none;">Engineering Services</span>
+                        </a>
+                    </div>
+                </div>
                 
                 <a href="documents.html">
                     <span class="lang-tr">Belgeler</span>
@@ -96,86 +221,130 @@
         </div>
     </header>
 
-    <!-- HİZMETLER İÇERİK BÖLÜMÜ (Hatalı HTML yapısı düzeltildi) -->
-    <section class="section" style="margin-top: 40px;">
+    <!-- ANA HİZMETLER İÇERİK BÖLÜMÜ -->
+    <section class="section" style="padding-top: 2rem;">
         <div class="container">
             
-            <!-- Başlık -->
-            <h2 class="section-title">
-                <span class="lang-tr">Hizmetlerimiz</span>
-                <span class="lang-en" style="display:none;">Our Services</span>
-                <span class="lang-pt" style="display:none;">Nossos Serviços</span>
-            </h2>
-
-            <!-- Açıklama -->
-            <div class="card" style="margin-bottom: 2.5rem; background-color: var(--secondary-color, #0056b3); color: white;">
-                <p class="lang-tr" style="color: white; margin: 0; font-size: 1.1rem;">Özellikle <strong>inşaat ve restorasyon projelerinde</strong> ana yükleniciye kapsamlı teknik danışmanlık ve saha desteği verilmektedir.</p>
-                <p class="lang-en" style="display:none; color: white; margin: 0; font-size: 1.1rem;">Technical consultancy and support are provided to the main contractor, especially in <strong>construction and restoration projects</strong>.</p>
-                <p class="lang-pt" style="display:none; color: white; margin: 0; font-size: 1.1rem;">Consultoria técnica e suporte são fornecidos ao empreiteiro principal, especialmente em <strong>projetos de construção e restauração</strong>.</p>
-            </div>
-
-            <!-- HİZMET KARTLARI KISMI (Alt alta / Yanyana düzenli grid) -->
-            <div class="cards-grid" style="margin-bottom: 4rem;">
-                <!-- GEOLOGICAL KARTI -->
-                <article class="card">
-                    <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🌍</div>
-                    <h3 style="text-align: center;">Geological Reporting, Surveying and GIS Analysis</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Kapsamlı zemin ve jeoloji raporlaması, arazi ölçümleri ve CBS (GIS) analizleri ile projelerinize güvenilir altyapı verileri sağlıyoruz.</p>
-                    <div style="margin-top: 1.5rem; border-top: 1px solid #eee; padding-top: 1.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
-                        <div style="text-align: center;">
-                            <img src="images/bora.jfif" alt="Bora Agbulut" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 0.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                            <h4 style="margin: 0; font-size: 1.1rem; color: #333;">Bora Agbulut</h4>
-                            <p style="margin: 0.2rem 0 0 0; font-size: 0.9rem; color: #666;">Geological Engineer, Mgr. Ing.</p>
-                        </div>
-                        <div style="text-align: center;">
-                            <img src="images/kutay.jpg" alt="Kutay Kaya" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 0.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                            <h4 style="margin: 0; font-size: 1.1rem; color: #333;">Kutay Kaya</h4>
-                            <p style="margin: 0.2rem 0 0 0; font-size: 0.9rem; color: #666;">Civil Engineer, Ing.</p>
-                        </div>
-                    </div>
-                </article>
+            <!-- HERO BANNER (BORAX FOCUS) -->
+            <div class="hero-banner">
+                <span class="hero-badge">BORAX CONSULTING FIRM</span>
                 
-                <!-- ARCHITECTURAL KARTI -->
-                <article class="card">
-                    <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">🏛️</div>
-                    <h3 style="text-align: center;">Architectural Design, 3D Rendering, Restoration Plan</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Tarihi dokuya uygun restorasyon planları, modern mimari tasarımlar ve gerçekçi 3D modelleme/görselleştirme hizmetleri sunuyoruz.</p>
-                    <div style="margin-top: 1.5rem; text-align: center; border-top: 1px solid #eee; padding-top: 1.5rem;">
-                        <img src="images/burak.jfif" alt="Burak Agbulut" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 0.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                        <h4 style="margin: 0; font-size: 1.1rem; color: #333;">Burak Agbulut</h4>
-                        <p style="margin: 0.2rem 0 0 0; font-size: 0.9rem; color: #666;">Architect, Arch.</p>
+                <h1 class="lang-tr" style="margin: 0 0 1rem 0; font-size: 2.2rem; font-weight: 700;">Uluslararası Teknik Danışmanlık ve Proje Yönetimi</h1>
+                <h1 class="lang-en" style="display:none; margin: 0 0 1rem 0; font-size: 2.2rem; font-weight: 700;">International Technical Consultancy & Project Management</h1>
+                <h1 class="lang-pt" style="display:none; margin: 0 0 1rem 0; font-size: 2.2rem; font-weight: 700;">Consultoria Técnica Internacional e Gestão de Projetos</h1>
+
+                <p class="lang-tr" style="margin: 0; font-size: 1.15rem; opacity: 0.95; max-width: 850px; line-height: 1.6;">
+                    BORAX; mühendislik altyapıları, jeolojik saha analizleri, restorasyon projelerinde alt yüklenicilik ve Avrupa Birliği uluslararası değişim programlarında uzmanlaşmış yüksek düzeyde bağımsız bir danışmanlık firmasıdır.
+                </p>
+                <p class="lang-en" style="display:none; margin: 0; font-size: 1.15rem; opacity: 0.95; max-width: 850px; line-height: 1.6;">
+                    BORAX is a premier independent consulting firm specializing in engineering infrastructure, geological sub-contracting, restoration project advisory, and European Union international exchange frameworks.
+                </p>
+                <p class="lang-pt" style="display:none; margin: 0; font-size: 1.15rem; opacity: 0.95; max-width: 850px; line-height: 1.6;">
+                    BORAX é uma empresa líder de consultoria independente especializada em infraestrutura de engenharia, subcontratação geológica e projetos de intercâmbio internacional da UE.
+                </p>
+            </div>
+
+            <!-- İKİ ANA DANIŞMANLIK SÜTUNU -->
+            <div class="consulting-grid">
+                
+                <!-- 1. GEOLOGICAL CONSULTING SUBCONTRACTOR -->
+                <article class="consulting-card">
+                    <div>
+                        <div class="card-icon-header">
+                            <div class="card-icon">🌍</div>
+                            <div>
+                                <h3 style="margin:0; font-size: 1.3rem; color: #1a202c;">Geological Consulting Subcontractor</h3>
+                                <small style="color: #0056b3; font-weight: 600;">Teknik & Saha Alt Yükleniciliği</small>
+                            </div>
+                        </div>
+
+                        <p class="lang-tr" style="color: #4a5568; line-height: 1.6;">
+                            İnşaat, altyapı ve restorasyon projelerinde ana yüklenici firmalara uluslararası standartlarda profesyonel jeolojik danışmanlık, zemin etüdü ve teknik raporlama çözümleri sunuyoruz.
+                        </p>
+                        <p class="lang-en" style="display:none; color: #4a5568; line-height: 1.6;">
+                            Providing high-level geological consulting, sub-contracting site support, and comprehensive GIS reporting for main contractors in major construction and restoration developments.
+                        </p>
+                        <p class="lang-pt" style="display:none; color: #4a5568; line-height: 1.6;">
+                            Prestação de consultoria geológica profissional e suporte de subcontratação em projetos de construção e restauração.
+                        </p>
+
+                        <ul class="feature-list">
+                            <li><strong>Geotechnical Surveying & Reporting:</strong> Zemin mekaniği ve jeoteknik raporlama.</li>
+                            <li><strong>GIS & Environmental Spatial Analysis:</strong> Coğrafi Bilgi Sistemleri tabanlı risk ve alan analizi.</li>
+                            <li><strong>Restoration Subcontracting Support:</strong> Tarihi yapı ve arazi restorasyonlarına özel alt yüklenici saha desteği.</li>
+                            <li><strong>Site Hazard & Risk Assessments:</strong> Doğal afet ve zemin riski değerlendirmeleri.</li>
+                        </ul>
                     </div>
                 </article>
 
-                <!-- HVAC KARTI -->
-                <article class="card">
-                    <div style="font-size: 2.5rem; text-align: center; margin-bottom: 1rem;">⚙️</div>
-                    <h3 style="text-align: center;">HVAC Design, CAD Analysis, Mechanical Plan</h3>
-                    <p style="margin-top: 1rem; font-size: 0.95rem;">Enerji verimli mekanik tesisat planları, CAD analizleri ve yapıya özel profesyonel HVAC sistem tasarımı gerçekleştiriyoruz.</p>
-                    <div style="margin-top: 1.5rem; border-top: 1px solid #eee; padding-top: 1.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
-                        <div style="text-align: center;">
-                            <img src="images/berkay.jfif" alt="Mustafa Berkay Kaya" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 0.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                            <h4 style="margin: 0; font-size: 1.1rem; color: #333;">Mustafa Berkay Kaya</h4>
-                            <p style="margin: 0.2rem 0 0 0; font-size: 0.9rem; color: #666;">Mechanical Engineer, Ing.</p>
+                <!-- 2. EUROPEAN EXCHANGE PROJECTS CONSULTING -->
+                <article class="consulting-card">
+                    <div>
+                        <div class="card-icon-header">
+                            <div class="card-icon">🇪🇺</div>
+                            <div>
+                                <h3 style="margin:0; font-size: 1.3rem; color: #1a202c;">European Exchange Projects Consulting</h3>
+                                <small style="color: #0056b3; font-weight: 600;">Uluslararası Proje & Hibe Danışmanlığı</small>
+                            </div>
                         </div>
-                        <div style="text-align: center;">
-                            <img src="images/utku.jfif" alt="Utku Cekmegul" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 0.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                            <h4 style="margin: 0; font-size: 1.1rem; color: #333;">Utku Cekmegul</h4>
-                            <p style="margin: 0.2rem 0 0 0; font-size: 0.9rem; color: #666;">Electronics Engineer, Ing.</p>
-                        </div>
+
+                        <p class="lang-tr" style="color: #4a5568; line-height: 1.6;">
+                            Avrupa Birliği gençlik, eğitim, gönüllülük ve kültürel değişim projelerinde kurumlara ve bireylere uçtan uca stratejik danışmanlık, proje ortaklığı ve operasyonel rehberlik sağlıyoruz.
+                        </p>
+                        <p class="lang-en" style="display:none; color: #4a5568; line-height: 1.6;">
+                            Strategic end-to-end consulting, grant management, and operational coordination for European Union youth mobility, volunteering, and exchange programs.
+                        </p>
+                        <p class="lang-pt" style="display:none; color: #4a5568; line-height: 1.6;">
+                            Consultoria estratégica e gestão para programas de mobilidade de jovens e projetos de intercâmbio da União Europeia.
+                        </p>
+
+                        <ul class="feature-list">
+                            <li><strong>European Solidarity Corps (ESC):</strong> ESC proje hazırlığı, akreditasyon danışmanlığı ve süreç yönetimi.</li>
+                            <li><strong>International WorkCamps:</strong> Uluslararası çalışma kampları koordinasyonu ve yerleştirme.</li>
+                            <li><strong>SummerCamps & Youth Exchanges:</strong> Gençlik değişimleri ve yaz kampları organizasyonel danışmanlığı.</li>
+                            <li><strong>CampUSA Consultancy:</strong> ABD odaklı kültürel değişim ve kamp programları süreç danışmanlığı.</li>
+                        </ul>
                     </div>
                 </article>
+
             </div>
 
-            <!-- HUGGING FACE SPACE (APP - Kartların altında akıcı şekilde yerleştirildi) -->
-            <div style="margin-bottom: 3rem; background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                <iframe src="https://bora9-survey.hf.space/" width="100%" height="650px" style="border: none; border-radius: 6px;"></iframe>
+            <!-- TEASER SECTION / SECONDARY PAGE PROMOTION -->
+            <div class="engineering-teaser-box">
+                <div style="flex: 1; min-width: 280px;">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.5rem;">⚙️</span>
+                        <h3 style="margin: 0; font-size: 1.3rem; color: #1a202c;">
+                            <span class="lang-tr">Teknik Ekip & Mühendislik Hizmetleri</span>
+                            <span class="lang-en" style="display:none;">Engineering Services & Technical Team</span>
+                            <span class="lang-pt" style="display:none;">Serviços de Engenharia e Equipe Técnica</span>
+                        </h3>
+                    </div>
+                    <p class="lang-tr" style="margin: 0; color: #4a5568; font-size: 0.95rem; line-height: 1.5;">
+                        Jeoloji, İnşaat, Mimari, HVAC Mekanik Tesisat ve Elektronik alanlarındaki uzman mühendis kadromuzu, teknik detaylarımızı ve canlı harita/anket yazılımımızı detaylı incelemek içinikincil sayfamızı ziyaret edin.
+                    </p>
+                    <p class="lang-en" style="display:none; margin: 0; color: #4a5568; font-size: 0.95rem; line-height: 1.5;">
+                        Explore our multi-disciplinary engineering team (Geological, Civil, Architectural, HVAC & Electronics) along with our live surveying apps on our dedicated Engineering Services portal.
+                    </p>
+                    <p class="lang-pt" style="display:none; margin: 0; color: #4a5568; font-size: 0.95rem; line-height: 1.5;">
+                        Explore nossa equipe de engenharia multidisciplinar e ferramentas técnicas em nossa página dedicada aos Serviços de Engenharia.
+                    </p>
+                </div>
+
+                <div>
+                    <a href="engineering-services.html" class="btn-primary-action">
+                        <span class="lang-tr">Engineering Services Sayfasına Git</span>
+                        <span class="lang-en" style="display:none;">Go to Engineering Services</span>
+                        <span class="lang-pt" style="display:none;">Ver Serviços de Engenharia</span>
+                        <span>➔</span>
+                    </a>
+                </div>
             </div>
 
-        </div> <!-- /.container bitişi -->
+        </div> <!-- /.container -->
     </section>
 
-    <!-- FOOTER (Sizin sayfanıza özel detaylar + Sayaç eklendi) -->
+    <!-- FOOTER -->
     <footer id="contact" class="footer">
         <div class="container footer-content" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between;">
             
@@ -224,14 +393,14 @@
                 <h4 class="lang-pt" style="display:none;">Links Rápidos</h4>
                 <ul style="list-style: none; padding: 0; margin-top: 10px;">
                     <li style="margin-bottom: 8px;"><a href="about.html" style="color: #fff; text-decoration: none;"><span class="lang-tr">Hakkımızda</span><span class="lang-en" style="display:none;">About Us</span><span class="lang-pt" style="display:none;">Sobre Nós</span></a></li>
-                    <li style="margin-bottom: 8px;"><a href="index.html#projects" style="color: #fff; text-decoration: none;"><span class="lang-tr">Projeler</span><span class="lang-en" style="display:none;">Projects</span><span class="lang-pt" style="display:none;">Projetos</span></a></li>
-                    <li style="margin-bottom: 8px;"><a href="services.html" style="color: #fff; text-decoration: none;"><span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span></a></li>
+                    <li style="margin-bottom: 8px;"><a href="services.html" style="color: #fff; text-decoration: none;"><span class="lang-tr">BORAX Danışmanlık</span><span class="lang-en" style="display:none;">BORAX Consulting</span><span class="lang-pt" style="display:none;">BORAX Consultoria</span></a></li>
+                    <li style="margin-bottom: 8px;"><a href="engineering-services.html" style="color: #fff; text-decoration: none;"><span class="lang-tr">Engineering Services</span><span class="lang-en" style="display:none;">Engineering Services</span><span class="lang-pt" style="display:none;">Engineering Services</span></a></li>
                     <li style="margin-bottom: 8px;"><a href="documents.html" style="color: #fff; text-decoration: none;"><span class="lang-tr">Belgeler</span><span class="lang-en" style="display:none;">Documents</span><span class="lang-pt" style="display:none;">Documentos</span></a></li>
                     <li style="margin-bottom: 8px;"><a href="news.html" style="color: #fff; text-decoration: none;"><span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span></a></li>
                     <li style="margin-bottom: 8px;"><a href="index.html#contact" style="color: #fff; text-decoration: none;"><span class="lang-tr">İletişim</span><span class="lang-en" style="display:none;">Contact</span><span class="lang-pt" style="display:none;">Contato</span></a></li>
                 </ul>
 
-                <!-- SAYAÇ BURADA (Tüm Sayfalarla Uyumlu) -->
+                <!-- SAYAÇ -->
                 <div style="margin-top: 2rem;">
                     <p style="font-size: 0.95rem; color: #fff; margin-bottom: 5px;">
                         <span class="lang-tr">Toplam Ziyaretçi:</span>
@@ -245,7 +414,7 @@
         
         <div class="footer-bottom" style="margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 15px; text-align: center;">
             <div class="container">
-                <p style="margin: 0; font-size: 0.9rem;">&copy; 2026 Eurasia Natural History Association - All rights reserved. The association has no any business activitiy, this page is only advertising the personal company of BORAX</p>
+                <p style="margin: 0; font-size: 0.9rem;">&copy; 2026 Eurasia Natural History Association - All rights reserved. The association has no any business activity, this page is only advertising the personal company of BORAX</p>
             </div>
         </div>
     </footer>
@@ -261,7 +430,7 @@
             });
             document.querySelectorAll('.lang-' + lang).forEach(el => {
                 el.style.display = 'inline';
-                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4' || el.tagName === 'ARTICLE' || el.tagName === 'SPAN') {
+                if(['H1','H2','H3','P','H4','ARTICLE','SPAN','DIV'].includes(el.tagName)) {
                     if(el.tagName === 'SPAN') {
                         el.style.display = 'inline';
                     } else {
