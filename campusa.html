@@ -214,7 +214,7 @@
             .modal-content { padding: 25px; margin: 10% auto; }
         }
 
-        /* YENİ: Trustpilot Banner Stilleri */
+        /* Trustpilot Banner Stilleri */
         .trustpilot-banner {
             background: #fff;
             border: 1px solid #e1e1e1;
@@ -254,6 +254,69 @@
             background-color: #009c69;
             color: white;
             text-decoration: none;
+        }
+
+        /* Footer Stilleri */
+        .site-footer {
+            background-color: #1a252f;
+            color: #ecf0f1;
+            padding: 3rem 0 1.5rem 0;
+            margin-top: 4rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        .footer-col p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0.6rem;
+            color: #bdc3c7;
+        }
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+        .footer-col ul li a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+        .visitor-count {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #27ae60;
+            font-weight: 600;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #95a5a6;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -490,7 +553,7 @@
                     </div>
                 </div>
 
-                <!-- YENİ EKLENEN: TRUSTPILOT REVIEWS -->
+                <!-- TRUSTPILOT REVIEWS -->
                 <div class="campusa-section" style="border-bottom: none; margin-bottom: 0;">
                     <h3 style="color: var(--secondary-color, #0056b3); text-align: center;">
                         <span class="lang-pt">O Que Dizem Sobre Nós</span>
@@ -519,10 +582,46 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 Eurasia Natural History Association. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Şirket Bilgileri -->
+                <div class="footer-col">
+                    <h4>BORAX</h4>
+                    <p><strong>BORAX - ATIVIDADES DE CONSULTORIA, CIENTIFICAS, TÉCNICAS E ENGENHARIA</strong></p>
+                    <p><strong>VAT:</strong> 308356829</p>
+                    <p><strong>CAE:</strong> 74992, 71120</p>
+                    <p><strong>Kuruluş:</strong> Lisbon, Portugal 2560-192</p>
+                    <p><strong>Adres:</strong> Bratislava, Slovakia 811 02</p>
+                </div>
+
+                <!-- Hızlı Bağlantılar -->
+                <div class="footer-col">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul>
+                        <li><a href="index.html#about">Hakkımızda</a></li>
+                        <li><a href="services.html">BORAX Danışmanlık</a></li>
+                        <li><a href="services.html">Engineering Services</a></li>
+                        <li><a href="index.html#documents">Belgeler</a></li>
+                        <li><a href="news.html">Haberler</a></li>
+                        <li><a href="index.html#contact">İletişim</a></li>
+                    </ul>
+                </div>
+
+                <!-- İletişim Bilgileri & İstatistik -->
+                <div class="footer-col">
+                    <h4>İletişim</h4>
+                    <p><strong>Telefon:</strong> +421 940 194 980</p>
+                    <p><strong>Email:</strong> tdotaltai@gmail.com / agbulut1@uniba.sk</p>
+                    <p><strong>Instagram:</strong> @tdoteurasia</p>
+                    <div class="visitor-count">
+                        Toplam Ziyaretçi: 58
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Eurasia Natural History Association - All rights reserved. The association has no any business activity, this page is only advertising the personal company of BORAX</p>
             </div>
         </div>
     </footer>
