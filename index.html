@@ -586,7 +586,7 @@
         </div>
     </footer>
 
-    <script>
+   <script>
         function setLanguage(lang) {
             document.documentElement.lang = lang;
             document.getElementById('current-lang').innerText = lang.toUpperCase();
@@ -609,13 +609,16 @@
             const savedLang = localStorage.getItem('preferred_lang') || 'tr';
             setLanguage(savedLang);
 
-            fetch('https://api.counterapi.dev/v1/dotaltai/homepage/up')
+            // Ziyaretçi sayacını getiren güncel API isteği
+            fetch('https://abacus.jasoncameron.dev/hit/dotaltai/homepage')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('visitor-count').innerText = data.count;
+                    // Yeni servis veriyi 'data.value' içerisinde döndürür
+                    document.getElementById('visitor-count').innerText = data.value;
                 })
                 .catch(error => {
                     document.getElementById('visitor-count').innerText = '-';
+                    console.error('Sayaç çekilirken bir hata oluştu:', error);
                 });
         }
     </script>
