@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üyelik | Eurasia NHA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .membership-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+        
+        .header-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* Tasarıma Özel Input Çerçeveleri */
+        fieldset.custom-input {
+            border: 1px solid #b3b3b3;
+            border-radius: 4px;
+            padding: 0 10px 5px 10px;
+            margin-bottom: 15px;
+            background: #fff;
+        }
+        fieldset.custom-input legend {
+            font-size: 0.75rem;
+            color: #777;
+            padding: 0 5px;
+            margin-bottom: 0;
+            width: auto;
+        }
+        .req-star { color: red; }
+        
+        fieldset.custom-input input,
+        fieldset.custom-input select,
+        fieldset.custom-input textarea {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 0.95rem;
+            color: #333;
+            background: transparent;
+            font-family: inherit;
+        }
+        
+        /* Grid Düzenleri */
+        .top-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        /* Kimlik ve Adres Kartları */
+        .info-card {
+            border: 2px solid #2c3e50;
+            border-radius: 12px;
+            position: relative;
+            padding: 30px 20px 20px 20px;
+            background: #fff;
+        }
+        .info-card-header {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #2c3e50;
+            color: #fff;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .kvkk-text {
+            color: red;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-align: right;
+            margin-bottom: 15px;
+        }
+        
+        .submit-btn-container {
+            text-align: right;
+            margin-top: 30px;
+        }
+        .submit-btn {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .submit-btn:hover { background-color: #004494; }
+
+        @media (max-width: 768px) {
+            .top-grid { grid-template-columns: 1fr 1fr; }
+            .main-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .top-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR (Basitleştirilmiş) -->
+    <header class="navbar" style="background:#2c3e50; padding:10px 0;">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+            <a href="index.html" style="color:white; text-decoration:none; display:flex; align-items:center; gap:10px; font-weight:bold;">
+                <img src="images/logo.png" alt="Logo" style="height:40px; background:white; border-radius:50%; padding:2px;">
+                <span>Eurasia NHA</span>
+            </a>
+            <div style="color:white; font-size:14px; cursor:pointer;" onclick="toggleLangMenu()">
+                🌐 <span id="current-lang">TR</span> ▾
+                <div id="langDropdown" style="display:none; position:absolute; right:20px; background:white; color:black; padding:10px; border-radius:4px; box-shadow:0 2px 5px rgba(0,0,0,0.2); margin-top:10px;">
+                    <div onclick="setLanguage('tr')" style="padding:5px 0;">Türkçe</div>
+                    <div onclick="setLanguage('en')" style="padding:5px 0;">English</div>
+                    <div onclick="setLanguage('pt')" style="padding:5px 0;">Português</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="membership-container">
+        <h2 class="header-title">
+            <span class="lang-tr">Üyeler</span>
+            <span class="lang-en" style="display:none;">Members</span>
+            <span class="lang-pt" style="display:none;">Membros</span>
+        </h2>
+        
+        <form action="#" method="POST">
+            <!-- Üst Bölüm (Görseldeki gibi) -->
+            <fieldset class="custom-input">
+                <legend>
+                    <span class="lang-tr">Üye Tipi</span>
+                    <span class="lang-en" style="display:none;">Member Type</span>
+                    <span class="lang-pt" style="display:none;">Tipo de Membro</span>
+                    <span class="req-star">*</span>
+                </legend>
+                <select required>
+                    <option class="lang-tr">Gerçek Kişi</option>
+                    <option class="lang-en" style="display:none;">Real Person</option>
+                    <option class="lang-pt" style="display:none;">Pessoa Física</option>
+                </select>
+            </fieldset>
+
+            <div class="top-grid">
+                <fieldset class="custom-input">
+                    <legend>
+                        <span class="lang-tr">TC Kimlik No</span>
+                        <span class="lang-en" style="display:none;">National ID No</span>
+                        <span class="lang-pt" style="display:none;">Nº de Identificação</span>
+                        <span class="req-star">*</span>
+                    </legend>
+                    <input type="text" required>
+                </fieldset>
+                <fieldset class="custom-input">
+                    <legend>
+                        <span class="lang-tr">Doğum Tarihi</span>
+                        <span class="lang-en" style="display:none;">Date of Birth</span>
+                        <span class="lang-pt" style="display:none;">Data de Nascimento</span>
+                        <span class="req-star">*</span>
+                    </legend>
+                    <input type="date" required>
+                </fieldset>
+                <fieldset class="custom-input">
+                    <legend>
+                        <span class="lang-tr">Ad</span>
+                        <span class="lang-en" style="display:none;">Name</span>
+                        <span class="lang-pt" style="display:none;">Nome</span>
+                        <span class="req-star">*</span>
+                    </legend>
+                    <input type="text" required>
+                </fieldset>
+                <fieldset class="custom-input">
+                    <legend>
+                        <span class="lang-tr">Soyad</span>
+                        <span class="lang-en" style="display:none;">Surname</span>
+                        <span class="lang-pt" style="display:none;">Sobrenome</span>
+                        <span class="req-star">*</span>
+                    </legend>
+                    <input type="text" required>
+                </fieldset>
+            </div>
+
+            <!-- Alt İkili Kart Tasarımı -->
+            <div class="main-grid">
+                
+                <!-- Kimlik Bilgileri -->
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <span class="lang-tr">Kimlik Bilgileri</span>
+                        <span class="lang-en" style="display:none;">Identity Information</span>
+                        <span class="lang-pt" style="display:none;">Informações de Identidade</span>
+                    </div>
+
+                    <fieldset class="custom-input">
+                        <legend>Ad</legend>
+                        <input type="text" placeholder="Ad">
+                    </fieldset>
+                    
+                    <fieldset class="custom-input">
+                        <legend>Soyad</legend>
+                        <input type="text" placeholder="Soyad">
+                    </fieldset>
+
+                    <fieldset class="custom-input">
+                        <legend>
+                            <span class="lang-tr">Meslek</span>
+                            <span class="lang-en" style="display:none;">Profession</span>
+                            <span class="lang-pt" style="display:none;">Profissão</span>
+                            <span class="req-star">*</span>
+                        </legend>
+                        <select required>
+                            <option value=""></option>
+                            <option>Öğrenci</option>
+                            <option>Mühendis</option>
+                            <option>Diğer</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset class="custom-input">
+                        <legend>
+                            <span class="lang-tr">Öğrenim Durumu</span>
+                            <span class="lang-en" style="display:none;">Education Status</span>
+                            <span class="lang-pt" style="display:none;">Escolaridade</span>
+                            <span class="req-star">*</span>
+                        </legend>
+                        <select required>
+                            <option value=""></option>
+                            <option>Lise</option>
+                            <option>Lisans</option>
+                            <option>Yüksek Lisans</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset class="custom-input">
+                        <legend>
+                            <span class="lang-tr">İletişim No</span>
+                            <span class="lang-en" style="display:none;">Contact No</span>
+                            <span class="lang-pt" style="display:none;">Nº de Contato</span>
+                            <span class="req-star">*</span>
+                        </legend>
+                        <input type="text" placeholder="(___) ___-____" required>
+                    </fieldset>
+
+                    <fieldset class="custom-input">
+                        <legend>
+                            <span class="lang-tr">E-Posta</span>
+                            <span class="lang-en" style="display:none;">E-Mail</span>
+                            <span class="lang-pt" style="display:none;">E-Mail</span>
+                        </legend>
+                        <input type="email" placeholder="E-Posta">
+                    </fieldset>
+
+                    <fieldset class="custom-input">
+                        <legend>
+                            <span class="lang-tr">İnternet Sitesi</span>
+                            <span class="lang-en" style="display:none;">Website</span>
+                            <span class="lang-pt" style="display:none;">Site</span>
+                        </legend>
+                        <input type="text" placeholder="İnternet Sitesi">
+                    </fieldset>
+                </div>
+
+                <!-- Adres Bilgileri -->
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <span class="lang-tr">Adres Bilgileri</span>
+                        <span class="lang-en" style="display:none;">Address Information</span>
+                        <span class="lang-pt" style="display:none;">Informações de Endereço</span>
+                    </div>
+
+                    <div class="kvkk-text">
+                        <span class="lang-tr">""KVKK KAPSAMINDA ADRES BİLGİLERİNİZ GİZLİ TUTULACAKTIR.""</span>
+                        <span class="lang-en" style="display:none;">""YOUR ADDRESS IS KEPT CONFIDENTIAL UNDER KVKK.""</span>
+                        <span class="lang-pt" style="display:none;">""SEU ENDEREÇO É MANTIDO CONFIDENCIAL SOB KVKK.""</span>
+                    </div>
+
+                    <fieldset class="custom-input" style="height: 120px;">
+                        <legend>
+                            <span class="lang-tr">Açık Adres</span>
+                            <span class="lang-en" style="display:none;">Full Address</span>
+                            <span class="lang-pt" style="display:none;">Endereço Completo</span>
+                            <span class="req-star">*</span>
+                        </legend>
+                        <textarea style="height: 90px; resize: none;" required></textarea>
+                    </fieldset>
+
+                    <div style="display: flex; gap: 15px;">
+                        <fieldset class="custom-input" style="flex:1;">
+                            <legend>
+                                <span class="lang-tr">İl</span>
+                                <span class="lang-en" style="display:none;">City</span>
+                                <span class="lang-pt" style="display:none;">Cidade</span>
+                                <span class="req-star">*</span>
+                            </legend>
+                            <input type="text" required>
+                        </fieldset>
+                        <fieldset class="custom-input" style="flex:1;">
+                            <legend>
+                                <span class="lang-tr">İlçe</span>
+                                <span class="lang-en" style="display:none;">District</span>
+                                <span class="lang-pt" style="display:none;">Distrito</span>
+                                <span class="req-star">*</span>
+                            </legend>
+                            <input type="text" required>
+                        </fieldset>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="submit-btn-container">
+                <button type="submit" class="submit-btn">
+                    <span class="lang-tr">Kaydet / Üye Ol</span>
+                    <span class="lang-en" style="display:none;">Save / Join</span>
+                    <span class="lang-pt" style="display:none;">Salvar / Juntar-se</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function toggleLangMenu() {
+            var menu = document.getElementById('langDropdown');
+            menu.style.display = menu.style.display === 'none' || menu.style.display === '' ? 'block' : 'none';
+        }
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.getElementById('current-lang').innerText = lang.toUpperCase();
+            
+            document.querySelectorAll('.lang-tr, .lang-en, .lang-pt').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.lang-' + lang).forEach(el => {
+                el.style.display = 'inline';
+            });
+            localStorage.setItem('preferred_lang', lang);
+            document.getElementById('langDropdown').style.display = 'none';
+        }
+
+        window.onload = function() {
+            const savedLang = localStorage.getItem('preferred_lang') || 'tr';
+            setLanguage(savedLang);
+        }
+    </script>
+</body>
+</html>
