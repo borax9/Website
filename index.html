@@ -54,6 +54,23 @@
                 min-width: 140px;
             }
         }
+        
+        /* Navbar Üye Ol Butonu Tasarımı */
+        .nav-join-btn {
+            background-color: #28a745;
+            color: #fff !important;
+            padding: 8px 18px !important;
+            border-radius: 20px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(40,167,69,0.3);
+        }
+        .nav-join-btn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(40,167,69,0.4);
+        }
+
         .btn-primary {
             display: inline-block;
             background: #0056b3;
@@ -184,6 +201,12 @@
             transform: translateY(-8px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
+
+        /* Yeni Üyelik Alanı Hover Efekti */
+        .premium-join-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3) !important;
+        }
     </style>
 </head>
 <body>
@@ -247,6 +270,13 @@
                     <span class="lang-tr">İletişim</span>
                     <span class="lang-en" style="display:none;">Contact</span>
                     <span class="lang-pt" style="display:none;">Contato</span>
+                </a>
+
+                <!-- ÜYE OL BUTONU (NAVBAR EKLENTİSİ) -->
+                <a href="uyelik.html" class="nav-join-btn">
+                    <span class="lang-tr">Üye Ol</span>
+                    <span class="lang-en" style="display:none;">Join Us</span>
+                    <span class="lang-pt" style="display:none;">Junte-se</span>
                 </a>
 
                 <!-- DİL SEÇİCİ -->
@@ -462,24 +492,57 @@
         </div>
     </section>
 
-    <!-- ÜYELİK (MEMBERSHIP) -->
-    <section id="membership" class="section">
-        <div class="container" style="text-align: center; padding: 40px 15px;">
-            <h2 class="section-title">
-                <span class="lang-tr">Derneğe Katılın</span>
-                <span class="lang-en" style="display:none;">Join the Association</span>
-                <span class="lang-pt" style="display:none;">Junte-se à Associação</span>
-            </h2>
-            <p style="margin-bottom: 25px; font-size: 1.1rem; color: #555;">
-                <span class="lang-tr">Doğa koruma projelerimizde yer almak ve uluslararası ekibimizin bir parçası olmak için hemen derneğimize üye olun.</span>
-                <span class="lang-en" style="display:none;">Become a member of our association today to take part in our nature conservation projects and be a part of our international team.</span>
-                <span class="lang-pt" style="display:none;">Torne-se um membro da nossa associação hoje para participar dos nossos projetos de conservação da natureza.</span>
-            </p>
-            <a href="uyelik.html" class="btn-primary" style="font-size: 1.2rem; padding: 15px 35px; background-color: #2c3e50; border-radius: 8px;">
-                <span class="lang-tr">Derneğe Üye Ol</span>
-                <span class="lang-en" style="display:none;">Become a Member</span>
-                <span class="lang-pt" style="display:none;">Torne-se um Membro</span>
-            </a>
+    <!-- YENİ PROFESYONEL ÜYELİK ALANI (MEMBERSHIP) -->
+    <section id="membership" class="section" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 70px 15px;">
+        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px;">
+            
+            <div style="flex: 1 1 500px;">
+                <h2 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 20px; color: #fff;">
+                    <span class="lang-tr">Büyük Değişimin Bir Parçası Olun</span>
+                    <span class="lang-en" style="display:none;">Be Part of the Great Change</span>
+                    <span class="lang-pt" style="display:none;">Faça Parte da Grande Mudança</span>
+                </h2>
+                <p style="font-size: 1.15rem; line-height: 1.6; margin-bottom: 25px; opacity: 0.9;">
+                    <span class="lang-tr">Doğa koruma projelerimizde yer almak, uluslararası gençlik programlarına (ESC) katılmak ve alanında uzman küresel ağımızın değerli bir üyesi olmak için şimdi derneğimize katılın.</span>
+                    <span class="lang-en" style="display:none;">Join our association now to take part in nature conservation projects, participate in international youth programs (ESC), and become a valuable member of our expert global network.</span>
+                    <span class="lang-pt" style="display:none;">Junte-se à nossa associação agora para participar de projetos de conservação da natureza, programas internacionais (ESC) e tornar-se um membro valioso da nossa rede global.</span>
+                </p>
+                <ul style="list-style: none; padding: 0; margin-bottom: 0; font-size: 1.05rem;">
+                    <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 5px; border-radius: 50%;">✅</span>
+                        <span class="lang-tr">Uluslararası ESC ve Erasmus+ Projeleri</span>
+                        <span class="lang-en" style="display:none;">International ESC and Erasmus+ Projects</span>
+                        <span class="lang-pt" style="display:none;">Projetos Internacionais ESC e Erasmus+</span>
+                    </li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 5px; border-radius: 50%;">✅</span>
+                        <span class="lang-tr">Doğa ve Çevre Koruma Ağlarına Katılım</span>
+                        <span class="lang-en" style="display:none;">Participation in Nature and Environmental Conservation Networks</span>
+                        <span class="lang-pt" style="display:none;">Participação em Redes de Conservação da Natureza e Meio Ambiente</span>
+                    </li>
+                    <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                        <span style="background: rgba(255,255,255,0.2); padding: 5px; border-radius: 50%;">✅</span>
+                        <span class="lang-tr">Profesyonel Gelişim, Eğitim ve Atölye Çalışmaları</span>
+                        <span class="lang-en" style="display:none;">Professional Development, Trainings and Workshops</span>
+                        <span class="lang-pt" style="display:none;">Desenvolvimento Profissional, Treinamentos e Workshops</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="flex: 0 1 auto; text-align: center; background: rgba(255, 255, 255, 0.08); padding: 50px 40px; border-radius: 16px; backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                <div style="font-size: 4rem; margin-bottom: 20px;">🤝</div>
+                <a href="uyelik.html" class="premium-join-btn" style="display: inline-block; background-color: #fff; color: #1e3c72; font-size: 1.25rem; font-weight: bold; padding: 15px 45px; border-radius: 30px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <span class="lang-tr">Hemen Üye Ol</span>
+                    <span class="lang-en" style="display:none;">Join Now</span>
+                    <span class="lang-pt" style="display:none;">Junte-se Agora</span>
+                </a>
+                <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">
+                    <span class="lang-tr">Kayıt işlemi sadece 2 dakika sürer.</span>
+                    <span class="lang-en" style="display:none;">Registration takes only 2 minutes.</span>
+                    <span class="lang-pt" style="display:none;">O registro leva apenas 2 minutos.</span>
+                </p>
+            </div>
+
         </div>
     </section>
 
