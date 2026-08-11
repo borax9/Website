@@ -150,8 +150,11 @@
             <span class="lang-pt" style="display:none;">Membros</span>
         </h2>
         
-        <form action="#" method="POST">
-            <!-- Üst Bölüm (Görseldeki gibi) -->
+        <!-- FORMSPREE ENTEGRASYONU BURADA BAŞLIYOR -->
+        <!-- Lütfen SİZİN_FORMSPREE_KODUNUZ yazan yeri kendi ID'niz ile değiştirin -->
+        <form action="https://formspree.io/f/SİZİN_FORMSPREE_KODUNUZ" method="POST">
+            
+            <!-- Üst Bölüm -->
             <fieldset class="custom-input">
                 <legend>
                     <span class="lang-tr">Üye Tipi</span>
@@ -159,7 +162,7 @@
                     <span class="lang-pt" style="display:none;">Tipo de Membro</span>
                     <span class="req-star">*</span>
                 </legend>
-                <select required>
+                <select name="Uye_Tipi" required>
                     <option class="lang-tr">Gerçek Kişi</option>
                     <option class="lang-en" style="display:none;">Real Person</option>
                     <option class="lang-pt" style="display:none;">Pessoa Física</option>
@@ -174,7 +177,7 @@
                         <span class="lang-pt" style="display:none;">Nº de Identificação</span>
                         <span class="req-star">*</span>
                     </legend>
-                    <input type="text" required>
+                    <input type="text" name="TC_Kimlik_No" required>
                 </fieldset>
                 <fieldset class="custom-input">
                     <legend>
@@ -183,7 +186,7 @@
                         <span class="lang-pt" style="display:none;">Data de Nascimento</span>
                         <span class="req-star">*</span>
                     </legend>
-                    <input type="date" required>
+                    <input type="date" name="Dogum_Tarihi" required>
                 </fieldset>
                 <fieldset class="custom-input">
                     <legend>
@@ -192,7 +195,7 @@
                         <span class="lang-pt" style="display:none;">Nome</span>
                         <span class="req-star">*</span>
                     </legend>
-                    <input type="text" required>
+                    <input type="text" name="Ad_1" required>
                 </fieldset>
                 <fieldset class="custom-input">
                     <legend>
@@ -201,7 +204,7 @@
                         <span class="lang-pt" style="display:none;">Sobrenome</span>
                         <span class="req-star">*</span>
                     </legend>
-                    <input type="text" required>
+                    <input type="text" name="Soyad_1" required>
                 </fieldset>
             </div>
 
@@ -218,12 +221,12 @@
 
                     <fieldset class="custom-input">
                         <legend>Ad</legend>
-                        <input type="text" placeholder="Ad">
+                        <input type="text" name="Kimlik_Ad" placeholder="Ad">
                     </fieldset>
                     
                     <fieldset class="custom-input">
                         <legend>Soyad</legend>
-                        <input type="text" placeholder="Soyad">
+                        <input type="text" name="Kimlik_Soyad" placeholder="Soyad">
                     </fieldset>
 
                     <!-- Meslek (Serbest Metin - Freestyle) -->
@@ -234,7 +237,7 @@
                             <span class="lang-pt" style="display:none;">Profissão</span>
                             <span class="req-star">*</span>
                         </legend>
-                        <input type="text" required>
+                        <input type="text" name="Meslek" required>
                     </fieldset>
 
                     <fieldset class="custom-input">
@@ -244,7 +247,7 @@
                             <span class="lang-pt" style="display:none;">Escolaridade</span>
                             <span class="req-star">*</span>
                         </legend>
-                        <select required>
+                        <select name="Ogrenim_Durumu" required>
                             <option value=""></option>
                             <option>Lise</option>
                             <option>Ön Lisans</option>
@@ -261,7 +264,7 @@
                             <span class="lang-pt" style="display:none;">Nº de Contato</span>
                             <span class="req-star">*</span>
                         </legend>
-                        <input type="text" placeholder="(___) ___-____" required>
+                        <input type="text" name="Iletisim_No" placeholder="(___) ___-____" required>
                     </fieldset>
 
                     <fieldset class="custom-input">
@@ -270,7 +273,7 @@
                             <span class="lang-en" style="display:none;">E-Mail</span>
                             <span class="lang-pt" style="display:none;">E-Mail</span>
                         </legend>
-                        <input type="email" placeholder="E-Posta">
+                        <input type="email" name="email" placeholder="E-Posta">
                     </fieldset>
 
                     <fieldset class="custom-input">
@@ -279,7 +282,7 @@
                             <span class="lang-en" style="display:none;">Website</span>
                             <span class="lang-pt" style="display:none;">Site</span>
                         </legend>
-                        <input type="text" placeholder="İnternet Sitesi">
+                        <input type="text" name="Internet_Sitesi" placeholder="İnternet Sitesi">
                     </fieldset>
                 </div>
 
@@ -304,7 +307,7 @@
                             <span class="lang-pt" style="display:none;">Endereço Completo</span>
                             <span class="req-star">*</span>
                         </legend>
-                        <textarea style="height: 90px; resize: none;" required></textarea>
+                        <textarea name="Acik_Adres" style="height: 90px; resize: none;" required></textarea>
                     </fieldset>
 
                     <div style="display: flex; gap: 15px;">
@@ -315,7 +318,7 @@
                                 <span class="lang-pt" style="display:none;">Cidade</span>
                                 <span class="req-star">*</span>
                             </legend>
-                            <input type="text" required>
+                            <input type="text" name="Il" required>
                         </fieldset>
                         <fieldset class="custom-input" style="flex:1;">
                             <legend>
@@ -324,12 +327,15 @@
                                 <span class="lang-pt" style="display:none;">Distrito</span>
                                 <span class="req-star">*</span>
                             </legend>
-                            <input type="text" required>
+                            <input type="text" name="Ilce" required>
                         </fieldset>
                     </div>
                 </div>
 
             </div>
+
+            <!-- Kayıt sonrası kullanıcının sitenize geri dönmesi için (İsteğe bağlı) -->
+            <!-- <input type="hidden" name="_next" value="https://dotaltai.org/uyelik.html"> -->
 
             <div class="submit-btn-container">
                 <button type="submit" class="submit-btn">
