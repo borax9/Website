@@ -211,7 +211,7 @@
             transform: translateY(-1px);
         }
 
-        /* Tıklanabilir Proje Kutucukları */
+        /* Tıklanabilir Proje Kutucukları - Tıklanma Alanı */
         .clickable-card {
             display: block;
             text-decoration: none !important;
@@ -259,7 +259,8 @@
                 </a>
 
                 <div class="dropdown">
-                    <a href="projeler.html" class="dropbtn">
+                    <!-- Tıklama sorunu çözüldü: onclick yönlendirmesi eklendi -->
+                    <a href="projeler.html" class="dropbtn" onclick="window.location.href='projeler.html';">
                         <span class="lang-tr">Projeler ▾</span>
                         <span class="lang-en" style="display:none;">Projects ▾</span>
                         <span class="lang-pt" style="display:none;">Projetos ▾</span>
@@ -270,7 +271,11 @@
                             <span class="lang-en" style="display:none;">ESC Program</span>
                             <span class="lang-pt" style="display:none;">Programa ESC</span>
                         </a>
-                        <a href="tijba.html">TİJBA Project</a>
+                        <a href="tijba.html">
+                            <span class="lang-tr">TİJBA Projesi</span>
+                            <span class="lang-en" style="display:none;">TİJBA Project</span>
+                            <span class="lang-pt" style="display:none;">Projeto TİJBA</span>
+                        </a>
                     </div>
                 </div>
 
@@ -353,7 +358,7 @@
         </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJELER BÖLÜMÜ (İletişimden Önce) -->
     <section id="projects" class="section bg-light" style="padding: 60px 15px;">
         <div class="container">
             <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">
@@ -563,7 +568,7 @@
                 <h4 class="lang-pt" style="display:none;">Links Rápidos</h4>
                 <ul>
                     <li><a href="about.html"><span class="lang-tr">Hakkımızda</span><span class="lang-en" style="display:none;">About Us</span><span class="lang-pt" style="display:none;">Sobre Nós</span></a></li>
-                    <li><a href="index.html#projects"><span class="lang-tr">Projeler</span><span class="lang-en" style="display:none;">Projects</span><span class="lang-pt" style="display:none;">Projetos</span></a></li>
+                    <li><a href="projeler.html"><span class="lang-tr">Projeler</span><span class="lang-en" style="display:none;">Projects</span><span class="lang-pt" style="display:none;">Projetos</span></a></li>
                     <li><a href="services.html"><span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span></a></li>
                     <li><a href="documents.html"><span class="lang-tr">Belgeler</span><span class="lang-en" style="display:none;">Documents</span><span class="lang-pt" style="display:none;">Documentos</span></a></li>
                     <li><a href="news.html"><span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span></a></li>
