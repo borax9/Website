@@ -210,6 +210,35 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.06);
             transform: translateY(-1px);
         }
+
+        /* Tıklanabilir Proje Kutucukları */
+        .clickable-card {
+            display: block;
+            text-decoration: none !important;
+            color: inherit !important;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            height: 100%;
+        }
+        .clickable-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+            border-color: #1e3c72;
+        }
+        .cards-grid.two-cols {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .cards-grid.two-cols {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -230,7 +259,7 @@
                 </a>
 
                 <div class="dropdown">
-                    <a href="#" class="dropbtn">
+                    <a href="projeler.html" class="dropbtn">
                         <span class="lang-tr">Projeler ▾</span>
                         <span class="lang-en" style="display:none;">Projects ▾</span>
                         <span class="lang-pt" style="display:none;">Projetos ▾</span>
@@ -325,58 +354,47 @@
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section bg-light">
+    <section id="projects" class="section bg-light" style="padding: 60px 15px;">
         <div class="container">
-            <h2 class="section-title">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">
                 <span class="lang-tr">Projeler</span>
                 <span class="lang-en" style="display:none;">Projects</span>
                 <span class="lang-pt" style="display:none;">Projetos</span>
             </h2>
             
-            <div class="cards-grid" style="margin-bottom: 3rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+            <!-- Yan yana 2 kutucuk düzeni -->
+            <div class="cards-grid two-cols">
                 
-                <article class="card">
-                    <div class="card-badge">Erasmus+ / ESC</div>
-                    <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-                        <img src="images/shnposter.jpg" alt="SHN Poster" style="width: 50%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
-                        <img src="images/esclabel.jpg" alt="ESC Label Poster" style="width: 50%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
+                <!-- ESC Kutucuğu (Tamamı Tıklanabilir) -->
+                <a href="esc.html" class="clickable-card">
+                    <div class="card-badge" style="display: inline-block; background: #0056b3; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">Erasmus+ / ESC</div>
+                    <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                        <img src="images/shnposter.jpg" alt="SHN Poster" style="width: 50%; height: 250px; object-fit: cover; border-radius: 8px; border: 1px solid #eee;">
+                        <img src="images/esclabel.jpg" alt="ESC Label Poster" style="width: 50%; height: 250px; object-fit: cover; border-radius: 8px; border: 1px solid #eee;">
                     </div>
-                    <h3>
+                    <h3 style="color: #1e3c72; margin-bottom: 15px;">
                         <span class="lang-tr">ESC (Avrupa Dayanışma Programı)</span>
                         <span class="lang-en" style="display:none;">ESC (European Solidarity Corps)</span>
                         <span class="lang-pt" style="display:none;">ESC (Corpo Europeu de Solidariedade)</span>
                     </h3>
-                    <p class="lang-tr">Portekizli ana ortağımız <strong>Sociedade de História Natural</strong> ile Avrupa Dayanışma Programı (ESC) ve Erasmus+ projelerinde ev sahibi ve lider kuruluş olarak ortaklaşa çalışmalar yürütmekteyiz.</p>
-                    <p class="lang-en" style="display:none;">We conduct European Solidarity Corps and Erasmus+ projects with our Portuguese main partner <strong>Sociedade de História Natural</strong> as a hosting and leading organization.</p>
-                    <p class="lang-pt" style="display:none;">Conduzimos projetos do Corpo Europeu de Solidariedade e Erasmus+ com nosso principal parceiro português, <strong>Sociedade de História Natural</strong>.</p>
-                    <div style="margin-top: 1.5rem; text-align: center;">
-                        <a href="esc.html" class="btn btn-primary">
-                            <span class="lang-tr">Tüm ESC Detaylarını Gör</span>
-                            <span class="lang-en" style="display:none;">View All ESC Details</span>
-                            <span class="lang-pt" style="display:none;">Ver Todos os Detalhes do ESC</span>
-                        </a>
-                    </div>
-                </article>
+                    <p class="lang-tr" style="color: #555; line-height: 1.6;">Portekizli ana ortağımız <strong>Sociedade de História Natural</strong> ile Avrupa Dayanışma Programı (ESC) ve Erasmus+ projelerinde ev sahibi ve lider kuruluş olarak ortaklaşa çalışmalar yürütmekteyiz.</p>
+                    <p class="lang-en" style="display:none; color: #555; line-height: 1.6;">We conduct European Solidarity Corps and Erasmus+ projects with our Portuguese main partner <strong>Sociedade de História Natural</strong> as a hosting and leading organization.</p>
+                    <p class="lang-pt" style="display:none; color: #555; line-height: 1.6;">Conduzimos projetos do Corpo Europeu de Solidariedade e Erasmus+ com nosso principal parceiro português, <strong>Sociedade de História Natural</strong>.</p>
+                </a>
 
-                <article class="card">
-                    <div class="card-badge" style="background-color: #28a745;">TİJBA</div>
-                    <img src="images/tijba.png" alt="TİJBA Poster" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; border: 1px solid #eee;">
-                    <h3>
+                <!-- TİJBA Kutucuğu (Tamamı Tıklanabilir) -->
+                <a href="tijba.html" class="clickable-card">
+                    <div class="card-badge" style="display: inline-block; background: #28a745; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">TİJBA</div>
+                    <img src="images/tijba.png" alt="TİJBA Poster" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border: 1px solid #eee;">
+                    <h3 style="color: #1e3c72; margin-bottom: 15px;">
                         <span class="lang-tr">TİJBA Projesi</span>
                         <span class="lang-en" style="display:none;">TİJBA Project</span>
                         <span class="lang-pt" style="display:none;">Projeto TİJBA</span>
                     </h3>
-                    <p class="lang-tr">Doğa koruma, iklim farkındalığı ve jeolojik araştırmalar odağında yürüttüğümüz kapsamlı bilim ve gençlik projemizdir.</p>
-                    <p class="lang-en" style="display:none;">Our comprehensive science and youth project focused on nature conservation, climate awareness, and geological research.</p>
-                    <p class="lang-pt" style="display:none;">Nosso projeto abrangente de ciência e juventude focado na conservação da natureza, conscientização climática e pesquisa geológica.</p>
-                    <div style="margin-top: 1.5rem; text-align: center;">
-                        <a href="tijba.html" class="btn btn-primary">
-                            <span class="lang-tr">TİJBA Detaylarını Gör</span>
-                            <span class="lang-en" style="display:none;">View TİJBA Details</span>
-                            <span class="lang-pt" style="display:none;">Ver Detalhes do TİJBA</span>
-                        </a>
-                    </div>
-                </article>
+                    <p class="lang-tr" style="color: #555; line-height: 1.6;">Doğa koruma, iklim farkındalığı ve jeolojik araştırmalar odağında yürüttüğümüz kapsamlı bilim ve gençlik projemizdir.</p>
+                    <p class="lang-en" style="display:none; color: #555; line-height: 1.6;">Our comprehensive science and youth project focused on nature conservation, climate awareness, and geological research.</p>
+                    <p class="lang-pt" style="display:none; color: #555; line-height: 1.6;">Nosso projeto abrangente de ciência e juventude focado na conservação da natureza, conscientização climática e pesquisa geológica.</p>
+                </a>
             </div>
         </div>
     </section>
