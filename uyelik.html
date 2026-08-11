@@ -176,7 +176,11 @@
             <span class="lang-pt" style="display:none;">Formulário de Inscrição</span>
         </h2>
         
-        <form action="submit-membership.php" method="POST">
+        <!-- FORMSPREE BAGLANTISI -->
+        <form action="https://formspree.io/f/xvkpavwj" method="POST">
+            
+            <!-- E-posta Konu Başlığı (Formspree E-postasında Görünür) -->
+            <input type="hidden" name="_subject" value="Yeni Üyelik Başvurusu - Avrasya Doğa Tarihi Derneği">
             
             <!-- Üye Tipi -->
             <fieldset class="custom-input">
@@ -186,7 +190,7 @@
                     <span class="lang-pt" style="display:none;">Tipo de Membro</span>
                     <span class="req-star">*</span>
                 </legend>
-                <select name="member_type" id="member_type" required>
+                <select name="Uye_Tipi" id="member_type" required>
                     <option value="Gerçek Kişi">Gerçek Kişi</option>
                     <option value="Tüzel Kişi">Tüzel Kişi</option>
                 </select>
@@ -201,7 +205,7 @@
                         <span class="lang-pt" style="display:none;">Nº de Identificação</span>
                         <span class="req-star">*</span>
                     </legend>
-                    <input type="text" name="tc_no" id="tc_no" maxlength="11" pattern="[0-9]{11}" placeholder="11 haneli TC No" required>
+                    <input type="text" name="TC_Kimlik_No" id="tc_no" maxlength="11" pattern="[0-9]{11}" placeholder="11 haneli TC No" required>
                 </fieldset>
 
                 <fieldset class="custom-input">
@@ -211,7 +215,7 @@
                         <span class="lang-pt" style="display:none;">Data de Nascimento</span>
                         <span class="req-star">*</span>
                     </legend>
-                    <input type="date" name="birth_date" id="birth_date" required>
+                    <input type="date" name="Dogum_Tarihi" id="birth_date" required>
                 </fieldset>
 
                 <fieldset class="custom-input">
@@ -221,7 +225,7 @@
                         <span class="lang-pt" style="display:none;">Nome</span>
                         <span class="req-star">*</span>
                     </legend>
-                    <input type="text" name="first_name" id="first_name" placeholder="Adınız" required>
+                    <input type="text" name="Ad" id="first_name" placeholder="Adınız" required>
                 </fieldset>
 
                 <fieldset class="custom-input">
@@ -231,7 +235,7 @@
                         <span class="lang-pt" style="display:none;">Sobrenome</span>
                         <span class="req-star">*</span>
                     </legend>
-                    <input type="text" name="surname" id="surname" placeholder="Soyadınız" required>
+                    <input type="text" name="Soyad" id="surname" placeholder="Soyadınız" required>
                 </fieldset>
             </div>
 
@@ -252,7 +256,7 @@
                             <span class="lang-en" style="display:none;">ID First Name</span>
                             <span class="lang-pt" style="display:none;">Nome no Documento</span>
                         </legend>
-                        <input type="text" name="identity_first_name" placeholder="Ad (Varsa ikinci ad)">
+                        <input type="text" name="Kimlikteki_Ad" placeholder="Ad (Varsa ikinci ad)">
                     </fieldset>
                     
                     <fieldset class="custom-input">
@@ -261,7 +265,7 @@
                             <span class="lang-en" style="display:none;">ID Surname</span>
                             <span class="lang-pt" style="display:none;">Sobrenome no Doc.</span>
                         </legend>
-                        <input type="text" name="identity_surname" placeholder="Soyad">
+                        <input type="text" name="Kimlikteki_Soyad" placeholder="Soyad">
                     </fieldset>
 
                     <fieldset class="custom-input">
@@ -271,7 +275,7 @@
                             <span class="lang-pt" style="display:none;">Profissão</span>
                             <span class="req-star">*</span>
                         </legend>
-                        <input type="text" name="profession" placeholder="Mesleğiniz" required>
+                        <input type="text" name="Meslek" placeholder="Mesleğiniz" required>
                     </fieldset>
 
                     <fieldset class="custom-input">
@@ -281,7 +285,7 @@
                             <span class="lang-pt" style="display:none;">Escolaridade</span>
                             <span class="req-star">*</span>
                         </legend>
-                        <select name="education_status" id="education_status" required>
+                        <select name="Ogrenim_Durumu" id="education_status" required>
                             <option value="">Seçiniz...</option>
                             <option value="Lise">Lise</option>
                             <option value="Ön Lisans">Ön Lisans</option>
@@ -298,7 +302,7 @@
                             <span class="lang-pt" style="display:none;">Nº de Contato</span>
                             <span class="req-star">*</span>
                         </legend>
-                        <input type="tel" name="phone" placeholder="05XX XXX XX XX" required>
+                        <input type="tel" name="Telefon" placeholder="05XX XXX XX XX" required>
                     </fieldset>
 
                     <fieldset class="custom-input">
@@ -307,7 +311,7 @@
                             <span class="lang-en" style="display:none;">E-Mail</span>
                             <span class="lang-pt" style="display:none;">E-Mail</span>
                         </legend>
-                        <input type="email" name="email" placeholder="ornek@email.com">
+                        <input type="email" name="email" placeholder="ornek@email.com" required>
                     </fieldset>
 
                     <fieldset class="custom-input">
@@ -316,7 +320,7 @@
                             <span class="lang-en" style="display:none;">Website</span>
                             <span class="lang-pt" style="display:none;">Site</span>
                         </legend>
-                        <input type="url" name="website" placeholder="https://www.example.com">
+                        <input type="url" name="Web_Sitesi" placeholder="https://www.example.com">
                     </fieldset>
                 </div>
 
@@ -341,7 +345,7 @@
                             <span class="lang-pt" style="display:none;">Endereço Completo</span>
                             <span class="req-star">*</span>
                         </legend>
-                        <textarea name="address" style="height: 100px; resize: none;" placeholder="Sokak, Mahalle, Bina No..." required></textarea>
+                        <textarea name="Acik_Adres" style="height: 100px; resize: none;" placeholder="Sokak, Mahalle, Bina No..." required></textarea>
                     </fieldset>
 
                     <div style="display: flex; gap: 15px;">
@@ -352,7 +356,7 @@
                                 <span class="lang-pt" style="display:none;">Cidade</span>
                                 <span class="req-star">*</span>
                             </legend>
-                            <input type="text" name="city" placeholder="İl" required>
+                            <input type="text" name="Il" placeholder="İl" required>
                         </fieldset>
 
                         <fieldset class="custom-input" style="flex:1;">
@@ -362,7 +366,7 @@
                                 <span class="lang-pt" style="display:none;">Distrito</span>
                                 <span class="req-star">*</span>
                             </legend>
-                            <input type="text" name="district" placeholder="İlçe" required>
+                            <input type="text" name="Ilce" placeholder="İlçe" required>
                         </fieldset>
                     </div>
                 </div>
@@ -387,7 +391,6 @@
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
 
-        // Menü dışına tıklandığında dil menüsünü kapatma
         document.addEventListener('click', function(e) {
             var menu = document.getElementById('langDropdown');
             var selector = document.getElementById('langSelector');
@@ -396,7 +399,6 @@
             }
         });
 
-        // Select açılır kutularının dil çevirileri
         const selectTranslations = {
             tr: {
                 memberTypes: ["Gerçek Kişi", "Tüzel Kişi"],
@@ -416,7 +418,6 @@
             document.documentElement.lang = lang;
             document.getElementById('current-lang').innerText = lang.toUpperCase();
             
-            // Tüm metin etiketlerini gizle/göster
             document.querySelectorAll('.lang-tr, .lang-en, .lang-pt').forEach(el => {
                 el.style.display = 'none';
             });
@@ -424,7 +425,6 @@
                 el.style.display = 'inline';
             });
 
-            // Select seçeneklerini güncelle
             if (selectTranslations[lang]) {
                 const mSelect = document.getElementById('member_type');
                 if (mSelect) {
