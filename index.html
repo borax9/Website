@@ -22,8 +22,10 @@
     <meta name="twitter:image" content="https://dotaltai.org/images/logo.png">
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        body { font-family: 'Inter', sans-serif; }
+        
         .navbar {
             z-index: 9999 !important;
             position: relative;
@@ -55,7 +57,6 @@
             }
         }
         
-        /* Navbar Üye Ol Butonu Tasarımı */
         .nav-join-btn {
             background-color: #28a745;
             color: #fff !important;
@@ -69,20 +70,6 @@
             background-color: #218838;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(40,167,69,0.4);
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background: #0056b3;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        .btn-primary:hover {
-            background: #004494;
         }
 
         .poster-section {
@@ -137,21 +124,22 @@
 
         .poster-text {
             text-align: center;
-            max-width: 900px;
-            margin: 30px auto 0 auto;
+            max-width: 1000px;
+            margin: 40px auto 10px auto;
         }
 
         .poster-text h1 {
-            font-size: 2.5rem;
-            color: #222;
-            margin-bottom: 15px;
+            font-size: 2.6rem;
+            color: #1e3c72;
+            margin-bottom: 20px;
             font-weight: 700;
         }
 
         .poster-text p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.6;
+            font-size: 1.15rem;
+            color: #444;
+            line-height: 1.7;
+            font-weight: 400;
         }
 
         @media (max-width: 992px) {
@@ -186,26 +174,27 @@
             }
         }
 
-        .service-link-card {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            height: 100%;
-        }
-        .service-link-card .card {
-            height: 100%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-        .service-link-card:hover .card {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        /* Yeni Üyelik Alanı Hover Efekti */
         .premium-join-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.3) !important;
+        }
+
+        .partner-tag {
+            font-size: 0.85rem;
+            padding: 8px 16px;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            color: #555;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .partner-tag:hover {
+            border-color: #1e3c72;
+            color: #1e3c72;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+            transform: translateY(-1px);
         }
     </style>
 </head>
@@ -260,19 +249,12 @@
                     <span class="lang-pt" style="display:none;">Notícias</span>
                 </a>
 
-                <a href="index.html#partners">
-                    <span class="lang-tr">Ortaklar</span>
-                    <span class="lang-en" style="display:none;">Partners</span>
-                    <span class="lang-pt" style="display:none;">Parceiros</span>
-                </a>
-
                 <a href="index.html#contact">
                     <span class="lang-tr">İletişim</span>
                     <span class="lang-en" style="display:none;">Contact</span>
                     <span class="lang-pt" style="display:none;">Contato</span>
                 </a>
 
-                <!-- ÜYE OL BUTONU (NAVBAR EKLENTİSİ) -->
                 <a href="uyelik.html" class="nav-join-btn">
                     <span class="lang-tr">Üye Ol</span>
                     <span class="lang-en" style="display:none;">Join Us</span>
@@ -292,7 +274,7 @@
         </div>
     </header>
 
-    <!-- POSTER -->
+    <!-- POSTER / GİRİŞ -->
     <section class="poster-section">
         <div class="poster-top">
             <div class="poster-logos logo-left">
@@ -322,177 +304,64 @@
             <h1 class="lang-en" style="display:none;">Eurasia Natural History Association</h1>
             <h1 class="lang-pt" style="display:none;">Associação de História Natural da Eurásia</h1>
 
-            <p class="lang-tr">İnsan faaliyetleri nedeniyle tehdit altındaki ekosistemleri korumak ve doğal mirasın korunmasına yönelik eylemleri desteklemek amacıyla küresel iklim farkındalığı yaratmayı amaçlıyoruz.</p>
-            <p class="lang-en" style="display:none;">We aim to create a global awareness of climate issues to care for ecosystems threatened by human activity and support conservation actions for natural heritages.</p>
-            <p class="lang-pt" style="display:none;">Objetivamos criar uma consciência global sobre as questões climáticas para cuidar de ecossistemas ameaçados pela atividade humana e apoiar ações de conservação do patrimônio natural.</p>
+            <p class="lang-tr">Avrasya Doğa Tarihi Derneği'nin amacı; iklim, çevre ve ekoloji sorunlarına yönelik sürdürülebilir yaklaşımlar oluşturmak ve geliştirmek hedefiyle doğal mirası korumak, incelemek ve yönetmektir.</p>
+            <p class="lang-en" style="display:none;">The Eurasia Natural History Association's objective is to safeguard, study, and administer natural heritage, with the aim of creating and enhancing sustainable approaches to climate, environmental, and ecological issues.</p>
+            <p class="lang-pt" style="display:none;">O objetivo da Associação de História Natural da Eurásia é salvaguardar, estudar e administrar o patrimônio natural, com o objetivo de criar e aprimorar abordagens sustentáveis para as questões climáticas, ambientais e ecológicas.</p>
         </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section bg-light">
+    <!-- İLETİŞİM (PROFESYONEL TASARIM) -->
+    <section id="contact" class="section bg-light" style="padding: 70px 15px;">
         <div class="container">
-            <h2 class="section-title">
-                <span class="lang-tr">Projeler</span>
-                <span class="lang-en" style="display:none;">Projects</span>
-                <span class="lang-pt" style="display:none;">Projetos</span>
-            </h2>
-            
-            <div class="cards-grid" style="margin-bottom: 3rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-                
-                <article class="card">
-                    <div class="card-badge">Erasmus+ / ESC</div>
-                    <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-                        <img src="images/shnposter.jpg" alt="SHN Poster" style="width: 50%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
-                        <img src="images/esclabel.jpg" alt="ESC Label Poster" style="width: 50%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
-                    </div>
-                    <h3>
-                        <span class="lang-tr">ESC (Avrupa Dayanışma Programı)</span>
-                        <span class="lang-en" style="display:none;">ESC (European Solidarity Corps)</span>
-                        <span class="lang-pt" style="display:none;">ESC (Corpo Europeu de Solidariedade)</span>
-                    </h3>
-                    <p class="lang-tr">Portekizli ana ortağımız <strong>Sociedade de História Natural</strong> ile Avrupa Dayanışma Programı (ESC) ve Erasmus+ projelerinde ev sahibi ve lider kuruluş olarak ortaklaşa çalışmalar yürütmekteyiz.</p>
-                    <p class="lang-en" style="display:none;">We conduct European Solidarity Corps and Erasmus+ projects with our Portuguese main partner <strong>Sociedade de História Natural</strong> as a hosting and leading organization.</p>
-                    <p class="lang-pt" style="display:none;">Conduzimos projetos do Corpo Europeu de Solidariedade e Erasmus+ com nosso principal parceiro português, <strong>Sociedade de História Natural</strong>.</p>
-                    <div style="margin-top: 1.5rem; text-align: center;">
-                        <a href="esc.html" class="btn btn-primary">
-                            <span class="lang-tr">Tüm ESC Detaylarını Gör</span>
-                            <span class="lang-en" style="display:none;">View All ESC Details</span>
-                            <span class="lang-pt" style="display:none;">Ver Todos os Detalhes do ESC</span>
-                        </a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-badge" style="background-color: #28a745;">TİJBA</div>
-                    <img src="images/tijba.png" alt="TİJBA Poster" style="width: 100%; height: 250px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; border: 1px solid #eee;">
-                    <h3>
-                        <span class="lang-tr">TİJBA Projesi</span>
-                        <span class="lang-en" style="display:none;">TİJBA Project</span>
-                        <span class="lang-pt" style="display:none;">Projeto TİJBA</span>
-                    </h3>
-                    <p class="lang-tr">Doğa koruma, iklim farkındalığı ve jeolojik araştırmalar odağında yürüttüğümüz kapsamlı bilim ve gençlik projemizdir.</p>
-                    <p class="lang-en" style="display:none;">Our comprehensive science and youth project focused on nature conservation, climate awareness, and geological research.</p>
-                    <p class="lang-pt" style="display:none;">Nosso projeto abrangente de ciência e juventude focado na conservação da natureza, conscientização climática e pesquisa geológica.</p>
-                    <div style="margin-top: 1.5rem; text-align: center;">
-                        <a href="tijba.html" class="btn btn-primary">
-                            <span class="lang-tr">TİJBA Detaylarını Gör</span>
-                            <span class="lang-en" style="display:none;">View TİJBA Details</span>
-                            <span class="lang-pt" style="display:none;">Ver Detalhes do TİJBA</span>
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services-summary" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="lang-tr">Hizmetlerimiz</span>
-                <span class="lang-en" style="display:none;">Our Services</span>
-                <span class="lang-pt" style="display:none;">Nossos Serviços</span>
-            </h2>
-            <div class="card" style="margin-bottom: 2rem; background-color: var(--secondary-color); color: white;">
-                <p class="lang-tr" style="color: white;">Özellikle <strong>inşaat ve restorasyon projelerinde</strong> ana yükleniciye kapsamlı teknik danışmanlık ve saha desteği verilmektedir.</p>
-                <p class="lang-en" style="display:none; color: white;">Technical consultancy and support are provided to the main contractor, especially in <strong>construction and restoration projects</strong>.</p>
-                <p class="lang-pt" style="display:none; color: white;">Consultoria técnica e suporte são fornecidos ao empreiteiro principal, especialmente em <strong>projetos de construção e restauração</strong>.</p>
-            </div>
-
-            <div style="margin-bottom: 2.5rem; background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                <iframe src="https://bora9-survey.hf.space/" width="100%" height="650px" style="border: none; border-radius: 6px;"></iframe>
-            </div>
-
-            <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                <a href="services.html" class="service-link-card">
-                    <article class="card">
-                        <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">🌍</div>
-                        <h3 style="text-align: center; font-size: 1.3rem;">Geological Reporting, Surveying and GIS Analysis</h3>
-                        <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem; text-align: center;">Kapsamlı zemin ve jeoloji raporlaması, arazi ölçümleri ve CBS (GIS) analizleri ile projelerinize güvenilir altyapı verileri sağlıyoruz.</p>
-                        <p class="lang-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; text-align: center;">We provide reliable infrastructure data for your projects through comprehensive soil and geological reporting, land surveying, and GIS analysis.</p>
-                    </article>
-                </a>
-                <a href="services.html" class="service-link-card">
-                    <article class="card">
-                        <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">🏛️</div>
-                        <h3 style="text-align: center; font-size: 1.3rem;">Architectural Design, 3D Rendering, Restoration Plan</h3>
-                        <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem; text-align: center;">Tarihi dokuya uygun restorasyon planları, modern mimari tasarımlar ve gerçekçi 3D modelleme/görselleştirme hizmetleri sunuyoruz.</p>
-                        <p class="lang-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; text-align: center;">We offer restoration plans suitable for historical texture, modern architectural designs, and realistic 3D modeling/visualization services.</p>
-                    </article>
-                </a>
-                <a href="services.html" class="service-link-card">
-                    <article class="card">
-                        <div style="font-size: 3rem; text-align: center; margin-bottom: 1rem;">⚙️</div>
-                        <h3 style="text-align: center; font-size: 1.3rem;">HVAC Design, CAD Analysis, Mechanical Plan</h3>
-                        <p class="lang-tr" style="margin-top: 1rem; font-size: 0.95rem; text-align: center;">Enerji verimli mekanik tesisat planları, CAD analizleri ve yapıya özel profesyonel HVAC sistem tasarımı gerçekleştiriyoruz.</p>
-                        <p class="lang-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; text-align: center;">We perform energy-efficient mechanical installation plans, CAD analysis, and professional HVAC system design specific to the structure.</p>
-                    </article>
-                </a>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <a href="services.html" class="btn btn-primary">
-                    <span class="lang-tr">Tüm Detayları Gör (Hizmetler Sayfasına Git)</span>
-                    <span class="lang-en" style="display:none;">See All Details (Go to Services Page)</span>
-                    <span class="lang-pt" style="display:none;">Ver Todos os Detalhes (Ir para a Página de Serviços)</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- REFERENCES / PARTNERS -->
-    <section id="partners" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="lang-tr">Referanslar ve Ortaklar</span>
-                <span class="lang-en" style="display:none;">References & Partners</span>
-                <span class="lang-pt" style="display:none;">Referências e Parceiros</span>
-            </h2>
-            <div class="partners-container">
-                <span class="partner-tag">Sociedade de História Natural</span>
-                <span class="partner-tag">Centre for European Volunteering</span>
-                <span class="partner-tag">NOVA University of Lisbon</span>
-                <span class="partner-tag">T.C Ankara Police Department</span>
-                <span class="partner-tag">T.C Düzce Governorship</span>
-                <span class="partner-tag">Municipality of Torres Vedras</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- İLETİŞİM -->
-    <section id="contact" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">
+            <h2 class="section-title" style="margin-bottom: 40px;">
                 <span class="lang-tr">İletişim</span>
-                <span class="lang-en" style="display:none;">Contact</span>
-                <span class="lang-pt" style="display:none;">Contato</span>
+                <span class="lang-en" style="display:none;">Contact Us</span>
+                <span class="lang-pt" style="display:none;">Contate-Nos</span>
             </h2>
-            <div class="contact-card" style="text-align: center; max-width: 600px; margin: 0 auto; background: #fff; padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                <p style="font-size: 1.1rem; margin-bottom: 25px; color: #555;">
-                    <span class="lang-tr">Bizimle iletişime geçmek için aşağıdaki kanalları kullanabilirsiniz.</span>
-                    <span class="lang-en" style="display:none;">You can use the channels below to contact us.</span>
-                    <span class="lang-pt" style="display:none;">Você pode usar os canais abaixo para nos contatar.</span>
+            
+            <div class="contact-card" style="text-align: center; max-width: 650px; margin: 0 auto; background: #fff; padding: 45px 35px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.06); border: 1px solid #eaeaea;">
+                <p style="font-size: 1.1rem; margin-bottom: 35px; color: #555; line-height: 1.6;">
+                    <span class="lang-tr">Sorularınız, iş birlikleri ve detaylı bilgi için bize aşağıdaki iletişim kanallarından ulaşabilirsiniz.</span>
+                    <span class="lang-en" style="display:none;">For inquiries, collaborations, and detailed information, please contact us through the channels below.</span>
+                    <span class="lang-pt" style="display:none;">Para dúvidas, colaborações e informações detalhadas, entre em contato conosco através dos canais abaixo.</span>
                 </p>
-                <p style="font-size: 1.2rem; margin-bottom: 20px;">
-                    📧 <strong>Email:</strong> <a href="mailto:tdotaltai@gmail.com" style="color: #0056b3; text-decoration: none; font-weight: 600;">tdotaltai@gmail.com</a>
-                </p>
-                <p style="font-size: 1.2rem;">
-                    <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; color: #E1306C; font-weight: bold; padding: 10px 20px; border: 2px solid #E1306C; border-radius: 50px; transition: 0.3s;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                        <span class="lang-tr">Instagram'da Bizi Takip Edin</span>
-                        <span class="lang-en" style="display:none;">Follow Us on Instagram</span>
-                        <span class="lang-pt" style="display:none;">Siga-nos no Instagram</span>
-                    </a>
-                </p>
+                
+                <div style="display: flex; flex-direction: column; gap: 20px; align-items: center; margin-bottom: 40px;">
+                    <!-- Email -->
+                    <div style="display: flex; align-items: center; gap: 15px; font-size: 1.15rem;">
+                        <div style="background: #f0f7ff; padding: 12px; border-radius: 50%; color: #0056b3;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <a href="mailto:tdotaltai@gmail.com" style="color: #333; text-decoration: none; font-weight: 600;">tdotaltai@gmail.com</a>
+                    </div>
+                    
+                    <!-- Phone Numbers -->
+                    <div style="display: flex; align-items: center; gap: 15px; font-size: 1.15rem;">
+                        <div style="background: #e8f5e9; padding: 12px; border-radius: 50%; color: #28a745;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 4px;">
+                            <a href="tel:+905074968616" style="color: #333; text-decoration: none; font-weight: 600;">+90 507 496 86 16</a>
+                            <a href="tel:+421940194980" style="color: #333; text-decoration: none; font-weight: 600;">+421 940 194 980</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://www.instagram.com/tdoteurasia/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; color: #fff; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); font-weight: 600; padding: 12px 28px; border-radius: 50px; transition: 0.3s; box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span class="lang-tr">Instagram'da Bizi Takip Edin</span>
+                    <span class="lang-en" style="display:none;">Follow Us on Instagram</span>
+                    <span class="lang-pt" style="display:none;">Siga-nos no Instagram</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- YENİ PROFESYONEL ÜYELİK ALANI (MEMBERSHIP) -->
+    <!-- ÜYELİK ALANI (MEMBERSHIP) -->
     <section id="membership" class="section" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 70px 15px;">
         <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px;">
             
@@ -546,6 +415,28 @@
         </div>
     </section>
 
+    <!-- REFERENCES / PARTNERS -->
+    <section id="partners" class="section" style="padding: 50px 15px; background-color: #fcfcfc;">
+        <div class="container">
+            <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 30px;">
+                <span class="lang-tr">Referanslar ve Ortaklarımız</span>
+                <span class="lang-en" style="display:none;">References & Partners</span>
+                <span class="lang-pt" style="display:none;">Referências e Parceiros</span>
+            </h2>
+            <div class="partners-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 900px; margin: 0 auto;">
+                <span class="partner-tag">InterExchange, Inc.</span>
+                <span class="partner-tag">Avrupa Birliği Araştırma ve Uygulama Merkezi (KSÜ-ABAUM)</span>
+                <span class="partner-tag">Gürsu Belediyesi</span>
+                <span class="partner-tag">Sociedade de História Natural</span>
+                <span class="partner-tag">Centre for European Volunteering</span>
+                <span class="partner-tag">NOVA University of Lisbon</span>
+                <span class="partner-tag">T.C Ankara Police Department</span>
+                <span class="partner-tag">T.C Düzce Governorship</span>
+                <span class="partner-tag">Municipality of Torres Vedras</span>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-content">
@@ -583,7 +474,6 @@
                 <h4 class="lang-pt" style="display:none;">Links Rápidos</h4>
                 <ul>
                     <li><a href="about.html"><span class="lang-tr">Hakkımızda</span><span class="lang-en" style="display:none;">About Us</span><span class="lang-pt" style="display:none;">Sobre Nós</span></a></li>
-                    <li><a href="index.html#projects"><span class="lang-tr">Projeler</span><span class="lang-en" style="display:none;">Projects</span><span class="lang-pt" style="display:none;">Projetos</span></a></li>
                     <li><a href="services.html"><span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span></a></li>
                     <li><a href="documents.html"><span class="lang-tr">Belgeler</span><span class="lang-en" style="display:none;">Documents</span><span class="lang-pt" style="display:none;">Documentos</span></a></li>
                     <li><a href="news.html"><span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span></a></li>
