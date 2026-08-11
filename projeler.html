@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Projeler | Avrasya Doğa Tarihi Derneği</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; }
+        
+        .navbar { z-index: 9999 !important; position: relative; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        @media (max-width: 768px) {
+            .nav-container { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 15px 10px; }
+            .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; width: 100%; }
+            .nav-links a { padding: 8px 10px; }
+            .dropdown { position: relative; }
+            .dropdown-content { z-index: 10000 !important; min-width: 140px; }
+        }
+        
+        .nav-join-btn { background-color: #28a745; color: #fff !important; padding: 8px 18px !important; border-radius: 20px; font-weight: 700; transition: all 0.3s ease; }
+        .nav-join-btn:hover { background-color: #218838; transform: translateY(-2px); }
+
+        /* Tıklanabilir Proje Kutucukları CSS */
+        .clickable-card {
+            display: block;
+            text-decoration: none !important;
+            color: inherit !important;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            height: 100%;
+        }
+        .clickable-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+            border-color: #1e3c72;
+        }
+        .cards-grid.two-cols {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .cards-grid.two-cols {
+                grid-template-columns: 1fr;
+            }
+        }
+        .page-header { background: #1e3c72; color: #fff; padding: 60px 20px; text-align: center; }
+        .page-header h1 { margin: 0; font-size: 2.5rem; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Eurasia NHA Logo" style="height: 40px; object-fit: contain;">
+                <span>Eurasia NHA</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="about.html">
+                    <span class="lang-tr">Hakkımızda</span>
+                    <span class="lang-en" style="display:none;">About Us</span>
+                    <span class="lang-pt" style="display:none;">Sobre Nós</span>
+                </a>
+                <div class="dropdown">
+                    <a href="projeler.html" class="dropbtn">
+                        <span class="lang-tr">Projeler ▾</span>
+                        <span class="lang-en" style="display:none;">Projects ▾</span>
+                        <span class="lang-pt" style="display:none;">Projetos ▾</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="esc.html">
+                            <span class="lang-tr">ESC Programı</span>
+                            <span class="lang-en" style="display:none;">ESC Program</span>
+                            <span class="lang-pt" style="display:none;">Programa ESC</span>
+                        </a>
+                        <a href="tijba.html">TİJBA Project</a>
+                    </div>
+                </div>
+                <a href="services.html">
+                    <span class="lang-tr">Hizmetler</span><span class="lang-en" style="display:none;">Services</span><span class="lang-pt" style="display:none;">Serviços</span>
+                </a>
+                <a href="documents.html">
+                    <span class="lang-tr">Belgeler</span><span class="lang-en" style="display:none;">Documents</span><span class="lang-pt" style="display:none;">Documentos</span>
+                </a>
+                <a href="news.html">
+                    <span class="lang-tr">Haberler</span><span class="lang-en" style="display:none;">News</span><span class="lang-pt" style="display:none;">Notícias</span>
+                </a>
+                <a href="index.html#contact">
+                    <span class="lang-tr">İletişim</span><span class="lang-en" style="display:none;">Contact</span><span class="lang-pt" style="display:none;">Contato</span>
+                </a>
+                <a href="uyelik.html" class="nav-join-btn">
+                    <span class="lang-tr">Üye Ol</span><span class="lang-en" style="display:none;">Join Us</span><span class="lang-pt" style="display:none;">Junte-se</span>
+                </a>
+                <div class="dropdown lang-selector">
+                    <a href="#" class="dropbtn">🌐 <span id="current-lang">TR</span> ▾</a>
+                    <div class="dropdown-content" style="min-width: 100px; left: auto; right: 0;">
+                        <a href="#" onclick="setLanguage('tr'); return false;">Türkçe</a>
+                        <a href="#" onclick="setLanguage('en'); return false;">English</a>
+                        <a href="#" onclick="setLanguage('pt'); return false;">Português</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SAYFA BAŞLIĞI -->
+    <div class="page-header">
+        <h1 class="lang-tr">Projelerimiz</h1>
+        <h1 class="lang-en" style="display:none;">Our Projects</h1>
+        <h1 class="lang-pt" style="display:none;">Nossos Projetos</h1>
+    </div>
+
+    <!-- PROJECTS LİSTESİ -->
+    <section class="section" style="padding: 60px 15px;">
+        <div class="container">
+            <div class="cards-grid two-cols">
+                
+                <a href="esc.html" class="clickable-card">
+                    <div class="card-badge" style="display: inline-block; background: #0056b3; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">Erasmus+ / ESC</div>
+                    <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                        <img src="images/shnposter.jpg" alt="SHN Poster" style="width: 50%; height: 250px; object-fit: cover; border-radius: 8px; border: 1px solid #eee;">
+                        <img src="images/esclabel.jpg" alt="ESC Label Poster" style="width: 50%; height: 250px; object-fit: cover; border-radius: 8px; border: 1px solid #eee;">
+                    </div>
+                    <h3 style="color: #1e3c72; margin-bottom: 15px;">
+                        <span class="lang-tr">ESC (Avrupa Dayanışma Programı)</span>
+                        <span class="lang-en" style="display:none;">ESC (European Solidarity Corps)</span>
+                        <span class="lang-pt" style="display:none;">ESC (Corpo Europeu de Solidariedade)</span>
+                    </h3>
+                    <p class="lang-tr" style="color: #555; line-height: 1.6;">Portekizli ana ortağımız <strong>Sociedade de História Natural</strong> ile Avrupa Dayanışma Programı (ESC) ve Erasmus+ projelerinde ev sahibi ve lider kuruluş olarak ortaklaşa çalışmalar yürütmekteyiz.</p>
+                    <p class="lang-en" style="display:none; color: #555; line-height: 1.6;">We conduct European Solidarity Corps and Erasmus+ projects with our Portuguese main partner <strong>Sociedade de História Natural</strong> as a hosting and leading organization.</p>
+                    <p class="lang-pt" style="display:none; color: #555; line-height: 1.6;">Conduzimos projetos do Corpo Europeu de Solidariedade e Erasmus+ com nosso principal parceiro português, <strong>Sociedade de História Natural</strong>.</p>
+                </a>
+
+                <a href="tijba.html" class="clickable-card">
+                    <div class="card-badge" style="display: inline-block; background: #28a745; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px;">TİJBA</div>
+                    <img src="images/tijba.png" alt="TİJBA Poster" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border: 1px solid #eee;">
+                    <h3 style="color: #1e3c72; margin-bottom: 15px;">
+                        <span class="lang-tr">TİJBA Projesi</span>
+                        <span class="lang-en" style="display:none;">TİJBA Project</span>
+                        <span class="lang-pt" style="display:none;">Projeto TİJBA</span>
+                    </h3>
+                    <p class="lang-tr" style="color: #555; line-height: 1.6;">Doğa koruma, iklim farkındalığı ve jeolojik araştırmalar odağında yürüttüğümüz kapsamlı bilim ve gençlik projemizdir.</p>
+                    <p class="lang-en" style="display:none; color: #555; line-height: 1.6;">Our comprehensive science and youth project focused on nature conservation, climate awareness, and geological research.</p>
+                    <p class="lang-pt" style="display:none; color: #555; line-height: 1.6;">Nosso projeto abrangente de ciência e juventude focado na conservação da natureza, conscientização climática e pesquisa geológica.</p>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" style="background: #1e3c72; color: #fff; padding: 40px 0 20px 0;">
+        <div class="container footer-content" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+            <div class="footer-info">
+                <h3 style="margin-bottom: 5px;">Eurasia Natural History Association</h3>
+                <p style="margin: 2px 0;">Email: tdotaltai@gmail.com</p>
+            </div>
+            <div class="footer-links">
+                <ul style="list-style:none; padding:0; display:flex; gap:15px;">
+                    <li><a href="index.html" style="color:#fff; text-decoration:none;"><span class="lang-tr">Ana Sayfa</span><span class="lang-en" style="display:none;">Home</span></a></li>
+                    <li><a href="about.html" style="color:#fff; text-decoration:none;"><span class="lang-tr">Hakkımızda</span><span class="lang-en" style="display:none;">About Us</span></a></li>
+                    <li><a href="index.html#contact" style="color:#fff; text-decoration:none;"><span class="lang-tr">İletişim</span><span class="lang-en" style="display:none;">Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom" style="text-align: center; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+            <p>&copy; 2026 Eurasia Natural History Association. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- DİL SCRİPTİ -->
+    <script>
+        function setLanguage(lang) {
+            document.documentElement.lang = lang;
+            document.getElementById('current-lang').innerText = lang.toUpperCase();
+            
+            document.querySelectorAll('.lang-tr, .lang-en, .lang-pt').forEach(el => { el.style.display = 'none'; });
+            document.querySelectorAll('.lang-' + lang).forEach(el => {
+                el.style.display = 'inline';
+                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4' || el.tagName === 'SPAN') {
+                    if (el.classList.contains('lang-tr') || el.classList.contains('lang-en') || el.classList.contains('lang-pt')) { el.style.display = ''; }
+                }
+            });
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        window.onload = function() {
+            const savedLang = localStorage.getItem('preferred_lang') || 'tr';
+            setLanguage(savedLang);
+        }
+    </script>
+</body>
+</html>
