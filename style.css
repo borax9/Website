@@ -1,4 +1,4 @@
-css_content = """/* ================================================================= *
+/* ================================================================= *
  * Eurasia Natural History Association - Professional Stylesheet     *
  * Modern, Clean, Responsive & Accessible Design                     *
  * ================================================================= */
@@ -236,6 +236,13 @@ a:hover {
     gap: 2rem;
 }
 
+/* İki Sütunlu Grid Düzeni (Projeler İçin) */
+.cards-grid.two-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -263,6 +270,34 @@ a:hover {
 .card h3, .about-card h3 {
     font-size: 1.35rem;
     margin-bottom: 1rem;
+}
+
+/* Tamamı Tıklanabilir Proje Kutucukları */
+.clickable-card {
+    display: block;
+    text-decoration: none !important;
+    color: inherit !important;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.clickable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.clickable-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
 }
 
 /* Badges */
@@ -417,9 +452,8 @@ a:hover {
     .hero {
         padding: 8rem 0 4rem 0;
     }
+    .cards-grid.two-cols {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
-"""
-
-with open("style.css", "w", encoding="utf-8") as f:
-    f.write(css_content)
-print("style.css generated successfully.")
