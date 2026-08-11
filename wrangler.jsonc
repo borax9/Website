@@ -1,2 +1,7 @@
-// wrangler.jsonc
-"name": "webpage",
+{
+  "name": "webpage",
+  "compatibility_date": "2026-08-11",
+  "assets": {
+    "directory": "."
+  }
+}
