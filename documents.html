@@ -97,8 +97,8 @@
             flex-direction: column;
             gap: 12px;
         }
-        .btn-sumup {
-            background: #00a0d2;
+        .btn-stripe {
+            background: #635bff;
             color: #fff;
             padding: 12px 20px;
             border-radius: 5px;
@@ -110,8 +110,8 @@
             gap: 8px;
             transition: background 0.3s;
         }
-        .btn-sumup:hover {
-            background: #0082b0;
+        .btn-stripe:hover {
+            background: #5147e5;
         }
         .btn-close-modal {
             background: transparent;
@@ -174,22 +174,36 @@
                     <span class="lang-pt" style="display:none;">Documentos</span>
                 </a>
                 
-                <a href="news.html" target="_blank">
-                    <span class="lang-tr">Haberler</span>
-                    <span class="lang-en" style="display:none;">News</span>
-                    <span class="lang-pt" style="display:none;">Notícias</span>
-                </a>
-
-                <a href="index.html#partners">
-                    <span class="lang-tr">Ortaklar</span>
-                    <span class="lang-en" style="display:none;">Partners</span>
-                    <span class="lang-pt" style="display:none;">Parceiros</span>
-                </a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">
+                        <span class="lang-tr">Haberler & Blog ▾</span>
+                        <span class="lang-en" style="display:none;">News & Blog ▾</span>
+                        <span class="lang-pt" style="display:none;">Notícias & Blog ▾</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="news.html" target="_blank">
+                            <span class="lang-tr">Haberler</span>
+                            <span class="lang-en" style="display:none;">News</span>
+                            <span class="lang-pt" style="display:none;">Notícias</span>
+                        </a>
+                        <a href="blog.html" target="_blank">
+                            <span class="lang-tr">Blog</span>
+                            <span class="lang-en" style="display:none;">Blog</span>
+                            <span class="lang-pt" style="display:none;">Blog</span>
+                        </a>
+                    </div>
+                </div>
 
                 <a href="index.html#contact">
                     <span class="lang-tr">İletişim</span>
                     <span class="lang-en" style="display:none;">Contact</span>
                     <span class="lang-pt" style="display:none;">Contato</span>
+                </a>
+
+                <a href="register.html" target="_blank" style="background: #0056b3; padding: 6px 12px; border-radius: 4px; color: #fff;">
+                    <span class="lang-tr">Üye Ol</span>
+                    <span class="lang-en" style="display:none;">Register</span>
+                    <span class="lang-pt" style="display:none;">Inscrever-se</span>
                 </a>
 
                 <div class="dropdown lang-selector">
@@ -249,7 +263,6 @@
                     </p>
 
                     <div style="margin-top: 2rem;">
-                        <!-- Butona basınca doğrudan Drive yerine bağış modalı açılacak -->
                         <button onclick="openDonateModal()" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
                             📥 <span class="lang-tr">İndir (€5 Bağış / Download)</span>
                             <span class="lang-en" style="display:none;">Download (€5 Donation)</span>
@@ -279,8 +292,8 @@
             </p>
 
             <div class="modal-buttons">
-                <!-- BURAYA SUMUP ÖDEME LİNKİNİ YAPIŞTIRACAKSIN -->
-                <a href="https://pay.sumup.com/b2c/XFVHQ2ZLJ4" target="_blank" onclick="handleDonationClick()" class="btn-sumup">
+                <!-- Stripe Ödeme Linki -->
+                <a href="https://buy.stripe.com/14A6oHdoveOL2UU1ny8Ra0d" target="_blank" onclick="handleDonationClick()" class="btn-stripe">
                     💳 <span class="lang-tr">5 € ile Bağış Yap ve İndir</span>
                     <span class="lang-en" style="display:none;">Donate €5 & Download</span>
                     <span class="lang-pt" style="display:none;">Doar €5 e Baixar</span>
@@ -322,7 +335,7 @@
                     <span class="lang-tr">Toplam Ziyaretçi:</span>
                     <span class="lang-en" style="display:none;">Total Visitors:</span>
                     <span class="lang-pt" style="display:none;">Total de Visitantes:</span>
-                    <span id="visitor-count" style="font-weight: bold; color: #4da3ff; margin-left: 5px;">Yükleniyor...</span>
+                    <span id="visitor-count" style="font-weight: bold; color: #4da3ff; margin-left: 5px;">313</span>
                 </p>
             </div>
 
@@ -360,17 +373,12 @@
         }
 
         function handleDonationClick() {
-            // Kullanıcı SumUp butonuna tıkladığında yeni sekmede ödeme açılır.
-            // Arka planda ise kullanıcıya Google Drive linkini modal kapandıktan sonra sunabiliriz veya
-            // SumUp'ın yönlendirme (redirect) URL'ine doğrudan Google Drive linkini koyabilirsin.
             setTimeout(() => {
-                // Alternatif olarak ödeme sayfasına gittikten sonra kullanıcıyı direkt drive linkine de yönlendirebiliriz:
                 window.open(googleDriveLink, '_blank');
                 closeDonateModal();
             }, 1000);
         }
 
-        // Modal dışına tıklandığında kapanması için
         window.onclick = function(event) {
             let modal = document.getElementById('donateModal');
             if (event.target == modal) {
@@ -400,13 +408,19 @@
             const savedLang = localStorage.getItem('preferred_lang') || 'tr';
             setLanguage(savedLang);
 
+            // Sayacı 313'ten başlatıp API üzerinden artırarak devam ettiriyoruz
             fetch('https://api.counterapi.dev/v1/dotaltai/documents/up')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('visitor-count').innerText = data.count;
+                    // Eğer API'den gelen sayı 313'ten küçükse veya ilk kez kuruluyorsa 313 baz alınır
+                    let currentCount = data.count;
+                    if (currentCount < 313) {
+                        currentCount = 313;
+                    }
+                    document.getElementById('visitor-count').innerText = currentCount;
                 })
                 .catch(error => {
-                    document.getElementById('visitor-count').innerText = '-';
+                    document.getElementById('visitor-count').innerText = '313';
                 });
         }
     </script>
