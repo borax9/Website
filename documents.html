@@ -335,7 +335,7 @@
                     <span class="lang-tr">Toplam Ziyaretçi:</span>
                     <span class="lang-en" style="display:none;">Total Visitors:</span>
                     <span class="lang-pt" style="display:none;">Total de Visitantes:</span>
-                    <span id="visitor-count" style="font-weight: bold; color: #4da3ff; margin-left: 5px;">313</span>
+                    <span id="visitor-count" style="font-weight: bold; color: #4da3ff; margin-left: 5px;">326</span>
                 </p>
             </div>
 
@@ -408,19 +408,19 @@
             const savedLang = localStorage.getItem('preferred_lang') || 'tr';
             setLanguage(savedLang);
 
-            // Sayacı 313'ten başlatıp API üzerinden artırarak devam ettiriyoruz
+            // Sayacı 326'dan başlatıp API üzerinden artırarak devam ettiriyoruz
             fetch('https://api.counterapi.dev/v1/dotaltai/documents/up')
                 .then(response => response.json())
                 .then(data => {
-                    // Eğer API'den gelen sayı 313'ten küçükse veya ilk kez kuruluyorsa 313 baz alınır
+                    // Eğer API'den gelen sayı 326'dan küçükse veya ilk kez kuruluyorsa 326 baz alınır
                     let currentCount = data.count;
-                    if (currentCount < 313) {
-                        currentCount = 313;
+                    if (currentCount < 326) {
+                        currentCount = 326;
                     }
                     document.getElementById('visitor-count').innerText = currentCount;
                 })
                 .catch(error => {
-                    document.getElementById('visitor-count').innerText = '313';
+                    document.getElementById('visitor-count').innerText = '326';
                 });
         }
     </script>
