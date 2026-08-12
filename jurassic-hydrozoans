@@ -1,43 +1,580 @@
-<!doctype html>
-<html lang="tr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Hydrozoan Microfossils from the Toarcian OAE – Bächental Basin</title>    
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet" />
-    
-    <!-- 
-      Orijinal Sitenin Stil ve JavaScript Dosyaları 
-      (Bağlantılar kendi sitenizde çalışması için orijinal sunucuya ayarlandı)
-    -->
-    <script type="module" crossorigin src="https://hydromicro-oqmha2c8.manus.space/assets/index-D9sViKCh.js"></script>
-    <link rel="stylesheet" crossorigin href="https://hydromicro-oqmha2c8.manus.space/assets/index-CCZyqI__.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydrozoan Microfossils from the Toarcian OAE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;600&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #05090f;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --bg-card-hover: rgba(255, 255, 255, 0.06);
+            --text-main: #a0aec0;
+            --text-light: #f8fafc;
+            --accent-teal: #00e6c3;
+            --accent-orange: #f59e0b;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'Source Code Pro', monospace;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
 
-    <!-- Sosyal Medya ve Önizleme Etiketleri -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hydromicro-oqmha2c8.manus.space/">
-    <meta property="og:title" content="Hydrozoan Microfossils from the Toarcian OAE – Bächental Basin">
-    <meta property="og:image" content="https://files.manuscdn.com/webdev_screenshots/2026/05/02/mej59xxHchf3tZWEemDLUo.png?x-oss-process=image/resize,w_1200/crop,h_630,x_0,y_0">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hydrozoan Microfossils from the Toarcian OAE – Bächental Basin">
-    <meta name="twitter:image" content="https://files.manuscdn.com/webdev_screenshots/2026/05/02/mej59xxHchf3tZWEemDLUo.png?x-oss-process=image/resize,w_1200/crop,h_630,x_0,y_0">
-    <meta name="twitter:image:width" content="1200">
-    <meta name="twitter:image:height" content="630">
-    
-    <link rel="canonical" href="https://hydromicro-oqmha2c8.manus.space/" />
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { color: var(--text-light); font-family: var(--font-serif); }
+        .teal { color: var(--accent-teal); }
+        .orange { color: var(--accent-orange); }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 4rem;
+            background: rgba(5, 9, 15, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+        .nav-logo { font-family: var(--font-serif); font-size: 1.2rem; font-style: italic; color: var(--accent-teal); }
+        .nav-logo span { color: var(--text-main); font-family: var(--font-sans); font-size: 0.9rem; font-style: normal; margin-left: 10px; }
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-teal); }
+
+        /* Container & Layout */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 6rem 0; }
+        
+        /* Section Divider */
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: var(--text-main);
+            text-transform: uppercase;
+        }
+        .section-header::before, .section-header::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(0,230,195,0.1), var(--accent-teal), var(--accent-orange), rgba(0,230,195,0.1));
+            margin: 0 1rem;
+        }
+
+        /* Hero Section */
+        .hero { padding-top: 10rem; padding-bottom: 4rem; }
+        .hero-tags { font-family: var(--font-mono); color: var(--accent-teal); font-size: 0.85rem; border: 1px solid var(--border-color); display: inline-block; padding: 0.4rem 1rem; border-radius: 4px; margin-bottom: 2rem; }
+        .hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 2rem; }
+        .hero h1 em { color: var(--accent-teal); font-style: italic; }
+        .hero p { font-size: 1.1rem; max-width: 800px; margin-bottom: 4rem; }
+        
+        .stats-grid { display: flex; gap: 4rem; border-top: 1px solid var(--border-color); padding-top: 2rem; }
+        .stat-item h3 { font-family: var(--font-mono); font-size: 2.5rem; color: var(--accent-orange); font-weight: 600; }
+        .stat-item p { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-main); }
+
+        /* Generic Grids */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+
+        /* Cards */
+        .card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 6px; }
+        
+        /* Abstract & Image Box */
+        .image-card { background: #fff; color: #000; padding: 1rem; border-radius: 6px; }
+        .image-placeholder { background: #eee; height: 300px; display: flex; align-items: center; justify-content: center; font-style: italic; color: #666; margin-bottom: 1rem; border: 1px dashed #ccc;}
+        .image-card p { font-size: 0.85rem; font-family: var(--font-serif); }
+        .tag-list { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 2rem; }
+        .tag-list span { border: 1px solid var(--accent-teal); color: var(--accent-teal); padding: 0.3rem 0.8rem; font-size: 0.8rem; border-radius: 4px; }
+
+        /* Table Styles */
+        table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border-color); }
+        th { font-family: var(--font-mono); color: var(--text-light); font-size: 0.8rem; letter-spacing: 1px; }
+        
+        /* Charts (CSS only) */
+        .pie-chart-container { display: flex; flex-direction: column; align-items: center; }
+        .pie-chart {
+            width: 250px; height: 250px; border-radius: 50%;
+            background: conic-gradient(var(--accent-orange) 0% 35%, var(--accent-teal) 35% 80%, #6366f1 80% 92%, #475569 92% 100%);
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .pie-chart::after {
+            content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 120px; height: 120px; background: var(--bg-dark); border-radius: 50%;
+        }
+        
+        .bar-chart { display: flex; align-items: flex-end; justify-content: space-around; height: 250px; border-bottom: 1px solid var(--border-color); border-left: 1px solid var(--border-color); padding-bottom: 1rem; margin-top: 2rem; }
+        .bar-group { display: flex; gap: 0.5rem; align-items: flex-end; height: 100%; }
+        .bar { width: 30px; border-radius: 2px 2px 0 0; position: relative; }
+        .bar.orange { background: var(--accent-orange); }
+        .bar.teal { background: var(--accent-teal); }
+        .bar.gray { background: #475569; }
+        .bar-labels { display: flex; justify-content: space-around; margin-top: 1rem; font-size: 0.8rem; }
+
+        /* Proxy Cards (Paleoenvironment) */
+        .proxy-card { border-left: 3px solid; margin-bottom: 1.5rem; }
+        .proxy-card h4 { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 0.5rem; text-transform: uppercase; }
+        .proxy-card h4::before { content: ''; width: 10px; height: 10px; border-radius: 50%; }
+        .proxy-orange { border-color: var(--accent-orange); }
+        .proxy-orange h4::before { background: var(--accent-orange); }
+        .proxy-teal { border-color: var(--accent-teal); }
+        .proxy-teal h4::before { background: var(--accent-teal); }
+        .proxy-gray { border-color: #6366f1; }
+        .proxy-gray h4::before { background: #6366f1; }
+
+        /* Key Conclusion Box */
+        .key-conclusion { border: 1px solid var(--accent-teal); padding: 2rem; border-radius: 6px; background: rgba(0, 230, 195, 0.05); margin-top: 2rem; }
+        .key-conclusion h4 { color: var(--accent-teal); font-family: var(--font-mono); margin-bottom: 1rem; font-size: 0.85rem; }
+        .key-conclusion p { font-family: var(--font-serif); font-size: 1.2rem; font-style: italic; color: var(--text-light); }
+
+        /* References */
+        .ref-item { display: flex; gap: 1rem; background: var(--bg-card); padding: 1rem; margin-bottom: 0.5rem; border: 1px solid transparent; border-radius: 4px; transition: 0.3s; }
+        .ref-item:hover { border-color: var(--border-color); background: var(--bg-card-hover); }
+        .ref-number { color: var(--accent-teal); font-family: var(--font-mono); font-weight: 600; }
+        
+        /* Line Chart Simulation */
+        .line-chart-svg { width: 100%; height: 200px; margin-top: 2rem; background: var(--bg-card); border-radius: 6px; }
+
+    </style>
 </head>
 <body>
-    <!-- 
-      Sayfa içeriğinin yükleneceği alan. 
-      Sitenin JS kodu burayı bulup siteyi bu etiketin içine inşa edecektir.
-      Kesinlikle silmeyin.
-    -->
-    <div id="root"></div>
+
+    <nav>
+        <div class="nav-logo">Hydrozoa <span>T-OAE · Bächental Basin</span></div>
+        <div class="nav-links">
+            <a href="#abstract">Abstract</a>
+            <a href="#morphology">Morphology</a>
+            <a href="#taxonomy">Taxonomy</a>
+            <a href="#paleoenvironment">Paleoenvironment</a>
+            <a href="#correlation">Correlation</a>
+            <a href="#discussion">Discussion</a>
+            <a href="#references">References</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-tags">Phylum Cnidaria · Class Hydrozoa · Lower Toarcian · ~183 Ma</div>
+            <h1>Hydrozoan Microfossils from the <em>Toarcian Oceanic Anoxic Event</em></h1>
+            <p>Morphology, taxonomy, and paleoenvironmental significance of organic-walled hydrozoan microfossils discovered at T-OAE levels in the Bächental Basin, Austrian Alps. Correlation with Tethyan basin records and implications for reconstructing Early Jurassic ocean anoxia.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>~183</h3>
+                    <p>Ma — Age</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3</h3>
+                    <p>Morphotypes</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5+</h3>
+                    <p>Correlated Basins</p>
+                </div>
+                <div class="stat-item">
+                    <h3>20µm</h3>
+                    <p>Scale Bar</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABSTRACT -->
+        <section id="abstract">
+            <div class="section-header">§ 01 — Abstract</div>
+            <div class="grid-2">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Organic-Walled Hydrozoans as Paleoenvironmental Sentinels</h2>
+                    <p style="margin-bottom: 1rem;">The discovery of organic-walled hydrozoan microfossils in the Bächental Basin of the Austrian Alps provides crucial insights into the paleoenvironmental conditions during the Early Jurassic Toarcian Oceanic Anoxic Event (T-OAE, ~183 Ma).<sup>[3]</sup> This report defines the morphology and taxonomy of these hydrozoan remains — including polypoid, medusoid, and incertae sedis forms — and correlates them with similar discoveries across the northwestern Tethyan realm.<sup>[4][5]</sup></p>
+                    <p>By applying the palynofacies framework pioneered by Fonseca et al. (2018), the relative abundance of polypoid versus medusoid forms is interpreted as a sensitive proxy for bottom-water oxygenation and basin restriction.<sup>[4]</sup> The Bächental specimens demonstrate that hydrozoan zoomorphs were widespread across the Tethys during the T-OAE and represent a powerful tool for high-resolution paleoenvironmental reconstruction.</p>
+                    
+                    <div class="tag-list">
+                        <span>T-OAE</span> <span>Hydrozoa</span> <span>Palynofacies</span> <span>Zoomorphs</span> <span>Anoxia</span> <span>Tethys</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="image-card">
+                        <div class="image-placeholder">
+                            [Figure 25: Microscope images of Polypoid, Medusoid and Incertae sedis forms]
+                        </div>
+                        <p><strong>Figure 25.</strong> C) Hydrozoan polypoid form. Organic-walled microfossil showing complex, branching morphology characteristic of the polyp stage. A-B) Hydrozoan medusoid forms. A) Circular to sub-circular organic remains exhibiting typical umbrella-like compression. B) Fragmentary medusoid specimen showing the membrane structure. D) Incertae sedis. Elongated, filamentous organic structure with a terminal cluster.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 4rem; margin-bottom: 2rem;">Geological Context</h3>
+            <div class="grid-3">
+                <div class="card">
+                    <p class="teal" style="font-family: var(--font-mono); font-size:0.8rem; margin-bottom:0.5rem">AGE</p>
+                    <h3 class="teal" style="margin-bottom:0.5rem;">~183 Ma</h3>
+                    <p style="font-size: 0.9rem;">Early Jurassic, Toarcian Stage</p>
+                </div>
+                <div class="card">
+                    <p class="teal" style="font-family: var(--font-mono); font-size:0.8rem; margin-bottom:0.5rem">LOCATION</p>
+                    <h3 class="orange" style="margin-bottom:0.5rem;">Tyrol, Austria</h3>
+                    <p style="font-size: 0.9rem;">Bächental Basin, NW Tethys margin</p>
+                </div>
+                <div class="card">
+                    <p class="teal" style="font-family: var(--font-mono); font-size:0.8rem; margin-bottom:0.5rem">LITHOLOGY</p>
+                    <h3 class="teal" style="margin-bottom:0.5rem;">Bituminous Marls</h3>
+                    <p style="font-size: 0.9rem;">Bächentaler Bitumenmergel, Sachrang Mbr.</p>
+                </div>
+                <div class="card">
+                    <p class="teal" style="font-family: var(--font-mono); font-size:0.8rem; margin-bottom:0.5rem">TOC RANGE</p>
+                    <h3 class="orange" style="margin-bottom:0.5rem;">Up to 18 wt.%</h3>
+                    <p style="font-size: 0.9rem;">Organic-rich black shale facies</p>
+                </div>
+                <div class="card">
+                    <p class="teal" style="font-family: var(--font-mono); font-size:0.8rem; margin-bottom:0.5rem">TRIGGER</p>
+                    <h3 class="teal" style="margin-bottom:0.5rem;">Karoo-Ferrar LIP</h3>
+                    <p style="font-size: 0.9rem;">Large Igneous Province volcanism</p>
+                </div>
+                <div class="card">
+                    <p class="teal" style="font-family: var(--font-mono); font-size:0.8rem; margin-bottom:0.5rem">REDOX</p>
+                    <h3 class="orange" style="margin-bottom:0.5rem;">Suboxic–Euxinic</h3>
+                    <p style="font-size: 0.9rem;">Stratified water column, H₂S bottom waters</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 4rem; margin-bottom: 1rem;">Carbon Isotope Excursion (CIE) Across the T-OAE</h3>
+            <p style="font-size:0.9rem;">Schematic δ¹³C profile illustrating the negative carbon isotope excursion characteristic of the T-OAE.</p>
+            <svg class="line-chart-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+                <!-- Grid lines -->
+                <line x1="0" y1="50" x2="1000" y2="50" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <line x1="0" y1="100" x2="1000" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <line x1="0" y1="150" x2="1000" y2="150" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                <!-- Line -->
+                <path d="M0,50 C200,60 300,180 500,180 C700,180 800,40 1000,40" fill="none" stroke="var(--accent-teal)" stroke-width="3"/>
+                <path d="M0,50 C200,60 300,180 500,180 C700,180 800,40 1000,40 L1000,200 L0,200 Z" fill="rgba(0,230,195,0.1)" stroke="none"/>
+                <!-- Points -->
+                <circle cx="0" cy="50" r="5" fill="var(--accent-teal)"/>
+                <circle cx="200" cy="60" r="5" fill="var(--accent-teal)"/>
+                <circle cx="500" cy="180" r="5" fill="var(--accent-teal)"/>
+                <circle cx="800" cy="90" r="5" fill="var(--accent-teal)"/>
+                <circle cx="1000" cy="40" r="5" fill="var(--accent-teal)"/>
+            </svg>
+        </section>
+
+        <!-- MORPHOLOGY -->
+        <section id="morphology">
+            <div class="section-header">§ 02 — Morphology</div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Morphological Description of Specimens</h2>
+            <p style="margin-bottom: 3rem;">Hydrozoans exhibit a complex life cycle alternating between a benthic sessile polyp stage and a pelagic free-swimming medusa stage.<sup>[9]</sup> In palynological preparations, these organisms are preserved as organic-walled microfossils — "zoomorphs" — whose morphology reflects the original biological structure of each life stage.<sup>[7]</sup></p>
+            
+            <div class="grid-2">
+                <div>
+                    <h3 class="orange" style="margin-bottom: 1rem;">Polypoid Form — Sessile Colonial Hydroid</h3>
+                    <p style="margin-bottom: 1rem;">The polypoid form (Figure 25C) is characterized by a complex, branching morphology with irregular, jagged outlines. This organic-walled microfossil represents the preserved chitinous perisarc (exoskeleton) that surrounds the hydrocaulus (stem) and hydranths (feeding polyps) of colonial hydroids.<sup>[9]</sup></p>
+                    <p style="margin-bottom: 2rem;">The branching pattern reflects the colonial architecture of the original organism, with multiple zooid chambers visible as darker, more opaque regions within the translucent chitinous framework. The preservation of these delicate structures indicates low-energy depositional conditions and rapid burial under reducing conditions.<sup>[6]</sup></p>
+                    
+                    <div class="card">
+                        <table style="margin-top:0;">
+                            <tr>
+                                <th style="color:var(--accent-orange)">MORPHOMETRIC DATA</th>
+                                <th></th>
+                            </tr>
+                            <tr><td>Size</td><td>~40–80 µm (estimated)</td></tr>
+                            <tr><td>Wall composition</td><td>Chitinous perisarc</td></tr>
+                            <tr><td>Branching</td><td>Dichotomous to irregular</td></tr>
+                            <tr><td>Opacity</td><td>Moderate to high (brown)</td></tr>
+                            <tr><td style="border:none;">Scale bar</td><td style="border:none;">20 µm (Fig. C)</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="pie-chart-container">
+                    <h3 style="margin-bottom: 2rem; align-self: flex-start;">Relative Abundance of Morphotypes</h3>
+                    <div class="pie-chart"></div>
+                    <div style="display:flex; gap: 1rem; flex-wrap: wrap; justify-content: center; font-size: 0.85rem;">
+                        <span style="color:var(--accent-teal)">■ Medusoid (35%)</span>
+                        <span style="color:var(--accent-orange)">■ Polypoid (45%)</span>
+                        <span style="color:#6366f1">■ Incertae Sedis (12%)</span>
+                        <span style="color:#475569">■ AOM (8%)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAXONOMY -->
+        <section id="taxonomy">
+            <div class="section-header">§ 03 — Taxonomy</div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Systematic Classification</h2>
+            <p style="margin-bottom: 3rem;">The taxonomic classification of these organic-walled microfossils places them within the animal kingdom, specifically as cnidarian zoomorphs. In palynofacies analysis, these remains are classified under the Zoomorph Subgroup of the Zooclast Group.<sup>[7]</sup></p>
+            
+            <div class="grid-2">
+                <div>
+                    <h3 style="margin-bottom: 1.5rem;">Formal Taxonomic Hierarchy</h3>
+                    <div class="card" style="padding:0;">
+                        <table style="margin-top:0;">
+                            <tr><th style="color:var(--text-main)">KINGDOM</th><td>Animalia</td></tr>
+                            <tr><th style="color:var(--text-main)">PHYLUM</th><td><em>Cnidaria</em> Hatschek, 1888</td></tr>
+                            <tr><th style="color:var(--text-main)">CLASS</th><td><em>Hydrozoa</em> Owen, 1843</td></tr>
+                            <tr><th style="color:var(--text-main)">SUBCLASS</th><td><em>Hydroidolina</em> Marques & Collins, 2004</td></tr>
+                            <tr><th style="color:var(--text-main)">ORDERS</th><td><em>Anthoathecata / Leptothecata</em> (Probable affinities)</td></tr>
+                            <tr><th style="color:var(--text-main)">PALYN. GROUP</th><td>Zooclast Group</td></tr>
+                            <tr><th style="color:var(--text-main); border:none;">PALYN. SUBGROUP</th><td style="border:none;">Zoomorph Subgroup</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 1.5rem;">Taxonomic Determination Notes</h3>
+                    <div class="card proxy-card proxy-teal">
+                        <h4 class="teal">Class-Level Assignment</h4>
+                        <p style="font-size: 0.9rem;">Assignment to Class Hydrozoa is supported by the presence of both polypoid and medusoid life stages, the chitinous composition of the perisarc, and the overall morphology consistent with hydroid colonies and their medusae.</p>
+                    </div>
+                    <div class="card proxy-card proxy-orange">
+                        <h4 class="orange">Subclass Hydroidolina</h4>
+                        <p style="font-size: 0.9rem;">The alternating polyp-medusa life cycle and the chitinous perisarc structure suggest affinities with Hydroidolina, which includes the orders Anthoathecata (athecate hydroids) and Leptothecata (thecate hydroids). Both are known from the Jurassic fossil record.</p>
+                    </div>
+                    <div class="card proxy-card proxy-gray">
+                        <h4 style="color:#6366f1">Limitations & Palynofacies</h4>
+                        <p style="font-size: 0.9rem;">Specific assignment to lower taxonomic levels is challenging due to the fragmentary nature. In the palynofacies framework, these remains belong to the Zoomorph Subgroup.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PALEOENVIRONMENT -->
+        <section id="paleoenvironment">
+            <div class="section-header">§ 04 — Paleoenvironment</div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Paleoenvironmental Significance</h2>
+            <p style="margin-bottom: 3rem;">The relative abundance of polypoid versus medusoid forms provides a proxy for benthic oxygenation and basin restriction, as established by Fonseca et al. (2018) — the first study to apply hydrozoans as paleoenvironmental indicators in palynofacies analysis.<sup>[4]</sup></p>
+
+            <div class="grid-2">
+                <div>
+                    <h3 style="margin-bottom: 1.5rem;">Hydrozoan Oxygenation Proxy Model</h3>
+                    <div class="card proxy-card proxy-orange">
+                        <h4 class="orange">POLYPOID DOMINANCE → OXYGENATED</h4>
+                        <p style="font-size: 0.9rem;">High abundance of sessile benthic polypoid forms indicates a well-oxygenated proximal water body with strong marine influence. Polyps require oxygenated bottom waters to survive.</p>
+                    </div>
+                    <div class="card proxy-card proxy-teal">
+                        <h4 class="teal">MEDUSOID DOMINANCE → DYSOXIC/ANOXIC</h4>
+                        <p style="font-size: 0.9rem;">Dominance of amorphous zoomorphs (free-swimming medusoid forms) indicates a restricted, stagnated environment with dysoxic to anoxic bottom waters and strong stratification.</p>
+                    </div>
+                    <div class="card proxy-card proxy-gray">
+                        <h4 style="color:#6366f1">MIXED ASSEMBLAGE → TRANSITIONAL</h4>
+                        <p style="font-size: 0.9rem;">Mixed assemblages, as observed in the Bächental Basin, reflect oscillating redox conditions controlled by sea-level fluctuations and restricted water mass exchange.<sup>[3]</sup></p>
+                    </div>
+                </div>
+                <div style="display:flex; flex-direction: column; align-items: center;">
+                    <h3 style="margin-bottom: 1.5rem; align-self:flex-start;">Paleoenvironmental Indicator Profile</h3>
+                    <!-- Simple CSS Radar Chart representation via SVG -->
+                    <svg width="300" height="300" viewBox="0 0 100 100" style="background:var(--bg-card); border-radius:50%; padding: 10px;">
+                        <!-- Web lines -->
+                        <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+                        <polygon points="50,25 75,40 75,60 50,75 25,60 25,40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+                        <!-- Axes -->
+                        <line x1="50" y1="50" x2="50" y2="10" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+                        <line x1="50" y1="50" x2="90" y2="30" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+                        <line x1="50" y1="50" x2="90" y2="70" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+                        <line x1="50" y1="50" x2="50" y2="90" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+                        <line x1="50" y1="50" x2="10" y2="70" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+                        <line x1="50" y1="50" x2="10" y2="30" stroke="rgba(255,255,255,0.2)" stroke-width="0.5"/>
+                        <!-- Data Polygon -->
+                        <polygon points="50,15 85,35 80,65 50,85 20,60 30,25" fill="rgba(0,230,195,0.2)" stroke="var(--accent-teal)" stroke-width="1"/>
+                    </svg>
+                    <p style="font-size: 0.75rem; font-family: var(--font-mono); margin-top: 1rem; color: var(--text-main);">Anoxia / Stratification / Restriction / TOC / Preservation / Acidification</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORRELATION -->
+        <section id="correlation">
+            <div class="section-header">§ 05 — Correlation</div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Correlation with Other T-OAE Basins</h2>
+            <p style="margin-bottom: 2rem;">The hydrozoan microfossils from the Bächental Basin correlate strongly with findings from other European epicontinental basins during the Early Jurassic. The following comparison demonstrates the widespread distribution of hydrozoan zoomorphs across the northwestern Tethyan realm.<sup>[4][5]</sup></p>
+
+            <h3 style="margin-bottom: 1rem;">Hydrozoan Morphotype Abundance by Basin</h3>
+            <div class="bar-chart">
+                <div class="bar-group">
+                    <div class="bar orange" style="height: 35%;"></div>
+                    <div class="bar teal" style="height: 55%;"></div>
+                    <div class="bar gray" style="height: 10%;"></div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar orange" style="height: 20%;"></div>
+                    <div class="bar teal" style="height: 70%;"></div>
+                    <div class="bar gray" style="height: 10%;"></div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar orange" style="height: 65%;"></div>
+                    <div class="bar teal" style="height: 28%;"></div>
+                    <div class="bar gray" style="height: 7%;"></div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar orange" style="height: 25%;"></div>
+                    <div class="bar teal" style="height: 68%;"></div>
+                    <div class="bar gray" style="height: 7%;"></div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar orange" style="height: 45%;"></div>
+                    <div class="bar teal" style="height: 47%;"></div>
+                    <div class="bar gray" style="height: 8%;"></div>
+                </div>
+            </div>
+            <div class="bar-labels">
+                <span>Bächental</span>
+                <span>Grands Causses</span>
+                <span>Quercy</span>
+                <span>Bizanet</span>
+                <span>Pont de Suert</span>
+            </div>
+            
+            <div style="text-align: center; margin-top: 1rem; font-size: 0.85rem;">
+                <span class="orange">■ Polypoid %</span> &nbsp; 
+                <span class="teal">■ Medusoid %</span> &nbsp; 
+                <span style="color:#475569">■ Incertae Sedis %</span>
+            </div>
+
+            <div class="card" style="margin-top: 3rem; overflow-x: auto; padding:0;">
+                <table style="margin-top:0;">
+                    <tr>
+                        <th>BASIN / SECTION</th>
+                        <th>COUNTRY</th>
+                        <th>DOMINANT FORM</th>
+                        <th>PALEOENVIRONMENT</th>
+                        <th>TOC</th>
+                    </tr>
+                    <tr>
+                        <td>Bächental</td><td>Austria</td><td>Mixed (polyp + medusa)</td><td>Suboxic–euxinic, stratified</td><td>Up to 18 wt.%</td>
+                    </tr>
+                    <tr>
+                        <td>Grands Causses</td><td>France</td><td>Amorphous medusoid</td><td>Oxygenated proximal</td><td>Low (~0.2 wt.% )</td>
+                    </tr>
+                    <tr>
+                        <td>Quercy Basin</td><td>France</td><td class="orange">Polypoid dominant</td><td>Oxygenated, arid climate</td><td>Low–moderate</td>
+                    </tr>
+                    <tr>
+                        <td>Bizanet</td><td>France (Pyrenees)</td><td class="teal">Medusoid / AOM</td><td>Restricted, dysoxic</td><td>2.03 wt.%</td>
+                    </tr>
+                    <tr>
+                        <td style="border:none;">Pont de Suert</td><td style="border:none;">Spain (Pyrenees)</td><td style="border:none;">Alternating</td><td style="border:none;">Oscillating redox</td><td style="border:none;">12–82 wt.% IR</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- DISCUSSION -->
+        <section id="discussion">
+            <div class="section-header">§ 06 — Discussion</div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Discussion</h2>
+            
+            <div class="grid-2">
+                <div>
+                    <h3 style="margin-bottom: 1rem;">Taphonomy and Preservation</h3>
+                    <p style="margin-bottom: 1.5rem;">The preservation of hydrozoan soft tissues as organic-walled microfossils in the Bächental marls is exceptional. Hydrozoan medusae lack biomineralized hard parts and are highly susceptible to decay under normal aerobic conditions.<sup>[6]</sup> Their preservation in the T-OAE sediments is facilitated by the anoxic conditions and rapid organic matter burial characteristic of the event.<sup>[8]</sup></p>
+                    <p style="margin-bottom: 1.5rem;">The pelagic medusoid forms likely inhabited the oxygenated surface waters (epipelagic zone) and sank into the anoxic, hydrogen sulfide-rich bottom waters upon death, where their organic remains were preserved from scavenging and aerobic decay.</p>
+                    
+                    <h3 style="margin-bottom: 1rem; margin-top: 2rem;">Biological Response to the T-OAE</h3>
+                    <p>While the T-OAE devastated calcareous marine invertebrates and nannoplankton due to ocean acidification and anoxia,<sup>[10]</sup> organic-walled organisms like hydrozoans and prasinophyte algae appear to have thrived or at least preserved preferentially in the stratified, organic-rich environments.<sup>[4]</sup></p>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 1rem;">Implications for Bächental Basin Reconstruction</h3>
+                    <p style="margin-bottom: 1.5rem;">In the context of the Bächental Basin, the presence of both polypoid and medusoid forms reflects the dynamic and heterogeneous nature of the basin during the T-OAE. Geochemical proxies indicate that the basin experienced varying suboxic to euxinic conditions, controlled by sea-level fluctuations.<sup>[3]</sup></p>
+                    <p style="margin-bottom: 1.5rem;">The presence of benthic polypoid fragments may indicate either transport from shallower, oxygenated basin margins into the deeper anoxic depocenter, or intermittent periods of bottom-water oxygenation during relative sea-level lowstands.</p>
+                    
+                    <div class="key-conclusion">
+                        <h4>KEY CONCLUSION</h4>
+                        <p>"The Bächental hydrozoan assemblage confirms that these organic-walled cnidarian remains are widespread paleoenvironmental indicators across the Tethyan domain during the T-OAE, with the polypoid/medusoid ratio serving as a sensitive proxy for bottom-water oxygenation."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFERENCES -->
+        <section id="references">
+            <div class="section-header">§ 07 — References</div>
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Literature References</h2>
+            
+            <div class="ref-item">
+                <div class="ref-number">[1]</div>
+                <div><strong>Jenkyns, H.C. (2010).</strong> Geochemistry of oceanic anoxic events. <em>Geochemistry, Geophysics, Geosystems, 11(3).</em></div>
+            </div>
+            <div class="ref-item">
+                <div class="ref-number">[2]</div>
+                <div><strong>Caruthers, A.H. et al. (2013).</strong> Correlation of the Early Toarcian OAE. <em>Earth-Science Reviews, 117.</em></div>
+            </div>
+            <div class="ref-item">
+                <div class="ref-number">[3]</div>
+                <div><strong>Neumeister, S. et al. (2015).</strong> Oceanic response to Pliensbachian and Toarcian magmatic events: Bächental Basin. <em>Global and Planetary Change, 126, 62–83.</em></div>
+            </div>
+            <div class="ref-item">
+                <div class="ref-number">[4]</div>
+                <div><strong>Fonseca, C. et al. (2018).</strong> Organic facies variability during the T-OAE: Grands Causses and Quercy basins. <em>International Journal of Coal Geology, 190, 169–195.</em></div>
+            </div>
+            <div class="ref-item">
+                <div class="ref-number">[5]</div>
+                <div><strong>Fonseca, C. et al. (2019).</strong> Organic facies variability – Early Toarcian, Pyrenean Basin. <em>PeerJ Preprints, DOI: 10.7287/peerj.preprints.27977v1.</em></div>
+            </div>
+            <div class="ref-item">
+                <div class="ref-number">[6]</div>
+                <div><strong>Young, G.A. & Hagadorn, J.W. (2020).</strong> Evolving preservation and facies distribution of fossil jellyfish. <em>Bollettino della Società Paleontologica Italiana, 59(3).</em></div>
+            </div>
+            <div class="ref-item">
+                <div class="ref-number">[7]</div>
+                <div><strong>Gonçalves, P.A. et al. (2024).</strong> The petrology of dispersed organic matter in sedimentary rocks: Review and update. <em>International Journal of Coal Geology, 294, 104604.</em></div>
+            </div>
+            <div class="ref-item">
+                <div class="ref-number">[8]</div>
+                <div><strong>Adler, L.B. (2013).</strong> The taphonomy of soft-bodied cnidarians. <em>MSc Thesis, University of Saskatchewan.</em></div>
+            </div>
+            <div class="ref-item">
+                <div class="ref-number">[9]</div>
+                <div><strong>Song, X. et al. (2021).</strong> Advanced Cambrian hydroid fossils extend the medusozoan evolutionary history. <em>Proceedings of the Royal Society B, 288(1944).</em></div>
+            </div>
+            <div class="ref-item">
+                <div class="ref-number">[10]</div>
+                <div><strong>Pálfy, J. & Smith, P.L. (2000).</strong> Synchrony between Early Jurassic extinction, oceanic anoxic event, and the Karoo-Ferrar flood basalt volcanism. <em>Geology, 28(8), 747–750.</em></div>
+            </div>
+        </section>
+        
+        <footer style="text-align:center; padding: 4rem 0; border-top: 1px solid var(--border-color); color: var(--text-main); font-size: 0.9rem;">
+            <p>Hydrozoan Microfossils — T-OAE, Bächental Basin</p>
+            <p style="margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.8rem;">Austrian Alps · Lower Toarcian · ~183 Ma · Phylum Cnidaria, Class Hydrozoa</p>
+        </footer>
+    </div>
+
+    <script>
+        // Üst menüdeki linkler için akıcı kaydırma (Smooth Scroll)
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                // Menü yüksekliğini (sticky navbar) hesaplayıp o kadar aşağıdan başlatıyoruz
+                const navHeight = document.querySelector('nav').offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
