@@ -838,7 +838,7 @@
                     </div>
                 </div>
 
-                <!-- FEES (Total: €500) - PORTAL DEMONSTRATION'IN TAM ALTINA TAŞINDI -->
+                <!-- FEES (Total: €500) - PORTAL DEMONSTRATION'IN TAM ALTINDA -->
                 <div class="campusa-section">
                     <h3 style="color: var(--secondary-color, #0056b3);">
                         <span class="lang-pt">Custos do Programa (Total: €500)</span>
@@ -908,37 +908,87 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
-                <!-- Şirket Bilgileri -->
+                <!-- Şirket Bilgileri / Company Info -->
                 <div class="footer-col">
                     <h4>BORAX</h4>
                     <p><strong>BORAX - ATIVIDADES DE CONSULTORIA, CIENTIFICAS, TÉCNICAS E ENGENHARIA</strong></p>
-                    <p><strong>VAT:</strong> 308356829</p>
+                    <p><strong>VAT / NIF:</strong> 308356829</p>
                     <p><strong>CAE:</strong> 74992, 71120</p>
-                    <p><strong>Kuruluş:</strong> Lisbon, Portugal 2560-192</p>
-                    <p><strong>Adres:</strong> Bratislava, Slovakia 811 02</p>
+                    <p>
+                        <strong class="lang-pt">Sede:</strong>
+                        <strong class="lang-en" style="display:none;">Headquarters:</strong> 
+                        Lisbon, Portugal 2560-192
+                    </p>
+                    <p>
+                        <strong class="lang-pt">Endereço:</strong>
+                        <strong class="lang-en" style="display:none;">Address:</strong> 
+                        Bratislava, Slovakia 811 02
+                    </p>
                 </div>
 
-                <!-- Hızlı Bağlantılar -->
+                <!-- Hızlı Bağlantılar / Quick Links -->
                 <div class="footer-col">
-                    <h4>Hızlı Bağlantılar</h4>
+                    <h4>
+                        <span class="lang-pt">Links Rápidos</span>
+                        <span class="lang-en" style="display:none;">Quick Links</span>
+                    </h4>
                     <ul>
-                        <li><a href="index.html#about">Hakkımızda</a></li>
-                        <li><a href="services.html">BORAX Danışmanlık</a></li>
-                        <li><a href="services.html">Engineering Services</a></li>
-                        <li><a href="index.html#documents">Belgeler</a></li>
-                        <li><a href="news.html">Haberler</a></li>
-                        <li><a href="index.html#contact">İletişim</a></li>
+                        <li>
+                            <a href="index.html#about">
+                                <span class="lang-pt">Sobre Nós</span>
+                                <span class="lang-en" style="display:none;">About Us</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html">
+                                <span class="lang-pt">Consultoria BORAX</span>
+                                <span class="lang-en" style="display:none;">BORAX Consulting</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html">
+                                <span class="lang-pt">Serviços de Engenharia</span>
+                                <span class="lang-en" style="display:none;">Engineering Services</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#documents">
+                                <span class="lang-pt">Documentos</span>
+                                <span class="lang-en" style="display:none;">Documents</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news.html">
+                                <span class="lang-pt">Notícias</span>
+                                <span class="lang-en" style="display:none;">News</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.html#contact">
+                                <span class="lang-pt">Contactos</span>
+                                <span class="lang-en" style="display:none;">Contact</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- İletişim Bilgileri & İstatistik -->
+                <!-- İletişim Bilgileri & İstatistik / Contact & Stats -->
                 <div class="footer-col">
-                    <h4>İletişim</h4>
-                    <p><strong>Telefon:</strong> +421 940 194 980</p>
+                    <h4>
+                        <span class="lang-pt">Contactos</span>
+                        <span class="lang-en" style="display:none;">Contact</span>
+                    </h4>
+                    <p>
+                        <strong class="lang-pt">Telefone:</strong>
+                        <strong class="lang-en" style="display:none;">Phone:</strong> 
+                        +421 940 194 980
+                    </p>
                     <p><strong>Email:</strong> tdotaltai@gmail.com / agbulut1@uniba.sk</p>
                     <p><strong>Instagram:</strong> @tdoteurasia</p>
                     <div class="visitor-count">
-                        Toplam Ziyaretçi: <span id="visitor-count">220</span>
+                        <span class="lang-pt">Total de Visitantes:</span>
+                        <span class="lang-en" style="display:none;">Total Visitors:</span> 
+                        <span id="visitor-count">225</span>
                     </div>
                 </div>
             </div>
@@ -1027,20 +1077,20 @@
             const savedLang = localStorage.getItem('preferred_lang_campusa') || 'pt';
             setLanguage(savedLang);
 
-            // Canlı Ziyaretçi Sayacı (220 Taban Sayısı + Gerçek API Değeri)
+            // Canlı Ziyaretçi Sayacı (225 Taban Sayısı + Gerçek API Değeri)
             fetch('https://abacus.jasoncameron.dev/hit/dotaltai/homepage')
                 .then(response => response.json())
                 .then(data => {
                     const counterElem = document.getElementById('visitor-count');
                     if(counterElem && data.value) {
-                        const baseVisitors = 220;
+                        const baseVisitors = 225;
                         const totalVisitors = baseVisitors + parseInt(data.value);
                         counterElem.innerText = totalVisitors;
                     }
                 })
                 .catch(error => {
                     const counterElem = document.getElementById('visitor-count');
-                    if(counterElem) counterElem.innerText = '220';
+                    if(counterElem) counterElem.innerText = '225';
                     console.error('Sayaç çekilirken bir hata oluştu:', error);
                 });
         }
