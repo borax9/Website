@@ -3,8 +3,13 @@
   "name": "website",
   "compatibility_date": "2026-08-12",
   "assets": {
-    "directory": ".",
-    "html_handling": "drop-trailing-slash",
-    "not_found_handling": "404-page"
+    "directory": ".", 
+    "binding": "ASSETS",
+    // .git klasörünün yüklenmesini engellemek için ignore eklenmelidir:
+    "ignore": [
+      ".git",
+      ".wrangler",
+      "node_modules"
+    ]
   }
 }
