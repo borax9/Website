@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- MOBİL MENÜ DÜZELTMELERİ --- */
+        /* --- MOBİL MENÜ VE MODAL STİLLERİ --- */
         .navbar {
             z-index: 9999 !important;
             position: relative;
@@ -53,9 +53,78 @@
             text-decoration: none;
             font-weight: 600;
             transition: background 0.3s;
+            border: none;
+            cursor: pointer;
         }
         .btn-primary:hover {
             background: #004494;
+        }
+        
+        /* BAĞIŞ MODAL (POPUP) STİLLERİ */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-content {
+            background: #111a2e;
+            color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .modal-content h3 {
+            color: #00e6c3;
+            margin-bottom: 15px;
+        }
+        .modal-content p {
+            font-size: 0.95rem;
+            color: #a0aec0;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .modal-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .btn-sumup {
+            background: #00a0d2;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+        }
+        .btn-sumup:hover {
+            background: #0082b0;
+        }
+        .btn-close-modal {
+            background: transparent;
+            color: #a0aec0;
+            border: 1px solid #475569;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-close-modal:hover {
+            background: rgba(255,255,255,0.05);
+            color: #fff;
         }
     </style>
 </head>
@@ -180,16 +249,51 @@
                     </p>
 
                     <div style="margin-top: 2rem;">
-                        <a href="https://drive.google.com/drive/folders/1xvPsnM9V4szwejZ9tCtQnpEJ_-EdV9WU?usp=drive_link" target="_blank" rel="noopener" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-                            📥 <span class="lang-tr">İndir (Download)</span>
-                            <span class="lang-en" style="display:none;">Download</span>
-                            <span class="lang-pt" style="display:none;">Baixar</span>
-                        </a>
+                        <!-- Butona basınca doğrudan Drive yerine bağış modalı açılacak -->
+                        <button onclick="openDonateModal()" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                            📥 <span class="lang-tr">İndir (€5 Bağış / Download)</span>
+                            <span class="lang-en" style="display:none;">Download (€5 Donation)</span>
+                            <span class="lang-pt" style="display:none;">Baixar (Doação €5)</span>
+                        </button>
                     </div>
                 </article>
             </div>
         </div>
     </section>
+
+    <!-- BAĞIŞ & ERİŞİM KİLİDİ MODALI -->
+    <div id="donateModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3 class="lang-tr">Veri Setine Erişim için Destek Olun</h3>
+            <h3 class="lang-en" style="display:none;">Support Us to Access the Dataset</h3>
+            <h3 class="lang-pt" style="display:none;">Apoie-nos para Acessar o Conjunto de Dados</h3>
+
+            <p class="lang-tr">
+                Bu veri setine erişebilmek için derneğimizin çalışmalarına <strong>5 € (Euro)</strong> tutarında bağışta bulunmanız gerekmektedir. Ödemeyi tamamladıktan sonra Google Drive indirme bağlantısı otomatik olarak açılacaktır.
+            </p>
+            <p class="lang-en" style="display:none;">
+                To access this dataset, a donation of <strong>€5</strong> is required to support our association's work. Once the payment is completed, the Google Drive download link will automatically unlock.
+            </p>
+            <p class="lang-pt" style="display:none;">
+                Para acessar este conjunto de dados, é necessária uma doação de <strong>€5</strong> para apoiar o trabalho de nossa associação. Assim que o pagamento for concluído, o link de download do Google Drive será desbloqueado.
+            </p>
+
+            <div class="modal-buttons">
+                <!-- BURAYA SUMUP ÖDEME LİNKİNİ YAPIŞTIRACAKSIN -->
+                <a href="BURAYA_SUMUP_ODEME_LINKINI_YAPISTIR" target="_blank" onclick="handleDonationClick()" class="btn-sumup">
+                    💳 <span class="lang-tr">5 € ile Bağış Yap ve İndir</span>
+                    <span class="lang-en" style="display:none;">Donate €5 & Download</span>
+                    <span class="lang-pt" style="display:none;">Doar €5 e Baixar</span>
+                </a>
+                
+                <button onclick="closeDonateModal()" class="btn-close-modal">
+                    <span class="lang-tr">İptal</span>
+                    <span class="lang-en" style="display:none;">Cancel</span>
+                    <span class="lang-pt" style="display:none;">Cancelar</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -243,8 +347,37 @@
         </div>
     </footer>
 
-    <!-- DİL DEĞİŞTİRME VE SAYAC SCRIPTİ -->
+    <!-- SCRIPT KODLARI (DİL, SAYAC VE MODAL) -->
     <script>
+        const googleDriveLink = "https://drive.google.com/drive/folders/1xvPsnM9V4szwejZ9tCtQnpEJ_-EdV9WU?usp=drive_link";
+
+        function openDonateModal() {
+            document.getElementById('donateModal').style.display = 'flex';
+        }
+
+        function closeDonateModal() {
+            document.getElementById('donateModal').style.display = 'none';
+        }
+
+        function handleDonationClick() {
+            // Kullanıcı SumUp butonuna tıkladığında yeni sekmede ödeme açılır.
+            // Arka planda ise kullanıcıya Google Drive linkini modal kapandıktan sonra sunabiliriz veya
+            // SumUp'ın yönlendirme (redirect) URL'ine doğrudan Google Drive linkini koyabilirsin.
+            setTimeout(() => {
+                // Alternatif olarak ödeme sayfasına gittikten sonra kullanıcıyı direkt drive linkine de yönlendirebiliriz:
+                window.open(googleDriveLink, '_blank');
+                closeDonateModal();
+            }, 1000);
+        }
+
+        // Modal dışına tıklandığında kapanması için
+        window.onclick = function(event) {
+            let modal = document.getElementById('donateModal');
+            if (event.target == modal) {
+                closeDonateModal();
+            }
+        }
+
         function setLanguage(lang) {
             document.documentElement.lang = lang;
             document.getElementById('current-lang').innerText = lang.toUpperCase();
