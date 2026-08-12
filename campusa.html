@@ -838,7 +838,7 @@
                     </div>
                 </div>
 
-                <!-- FEES (Total: €500) - PORTAL'DAN SONRAYA TAŞINDI -->
+                <!-- FEES (Total: €500) - PORTAL DEMONSTRATION'IN TAM ALTINA TAŞINDI -->
                 <div class="campusa-section">
                     <h3 style="color: var(--secondary-color, #0056b3);">
                         <span class="lang-pt">Custos do Programa (Total: €500)</span>
@@ -938,7 +938,7 @@
                     <p><strong>Email:</strong> tdotaltai@gmail.com / agbulut1@uniba.sk</p>
                     <p><strong>Instagram:</strong> @tdoteurasia</p>
                     <div class="visitor-count">
-                        Toplam Ziyaretçi: <span id="visitor-count">-</span>
+                        Toplam Ziyaretçi: <span id="visitor-count">220</span>
                     </div>
                 </div>
             </div>
@@ -1027,16 +1027,20 @@
             const savedLang = localStorage.getItem('preferred_lang_campusa') || 'pt';
             setLanguage(savedLang);
 
-            // Canlı Ziyaretçi Sayacı
+            // Canlı Ziyaretçi Sayacı (220 Taban Sayısı + Gerçek API Değeri)
             fetch('https://abacus.jasoncameron.dev/hit/dotaltai/homepage')
                 .then(response => response.json())
                 .then(data => {
                     const counterElem = document.getElementById('visitor-count');
-                    if(counterElem) counterElem.innerText = data.value;
+                    if(counterElem && data.value) {
+                        const baseVisitors = 220;
+                        const totalVisitors = baseVisitors + parseInt(data.value);
+                        counterElem.innerText = totalVisitors;
+                    }
                 })
                 .catch(error => {
                     const counterElem = document.getElementById('visitor-count');
-                    if(counterElem) counterElem.innerText = '-';
+                    if(counterElem) counterElem.innerText = '220';
                     console.error('Sayaç çekilirken bir hata oluştu:', error);
                 });
         }
@@ -1068,5 +1072,3 @@
     </script>
 </body>
 </html>
-
-
