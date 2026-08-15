@@ -103,7 +103,7 @@
         
         /* Abstract & Image Box */
         .image-card { background: #fff; color: #000; padding: 1rem; border-radius: 6px; }
-        .image-placeholder { background: #eee; height: 300px; display: flex; align-items: center; justify-content: center; font-style: italic; color: #666; margin-bottom: 1rem; border: 1px dashed #ccc;}
+        .image-card img { width: 100%; height: auto; border-radius: 4px; margin-bottom: 1rem; display: block; border: 1px solid #e2e8f0; }
         .image-card p { font-size: 0.85rem; font-family: var(--font-serif); }
         .tag-list { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 2rem; }
         .tag-list span { border: 1px solid var(--accent-teal); color: var(--accent-teal); padding: 0.3rem 0.8rem; font-size: 0.8rem; border-radius: 4px; }
@@ -154,9 +154,6 @@
         .ref-item { display: flex; gap: 1rem; background: var(--bg-card); padding: 1rem; margin-bottom: 0.5rem; border: 1px solid transparent; border-radius: 4px; transition: 0.3s; }
         .ref-item:hover { border-color: var(--border-color); background: var(--bg-card-hover); }
         .ref-number { color: var(--accent-teal); font-family: var(--font-mono); font-weight: 600; }
-        
-        /* Line Chart Simulation */
-        .line-chart-svg { width: 100%; height: 200px; margin-top: 2rem; background: var(--bg-card); border-radius: 6px; }
 
     </style>
 </head>
@@ -217,9 +214,7 @@
                 </div>
                 <div>
                     <div class="image-card">
-                        <div class="image-placeholder">
-                            [Figure 25: Microscope images of Polypoid, Medusoid and Incertae sedis forms]
-                        </div>
+                        <img src="images/hydrozoan.jpg" alt="Microscope images of Polypoid, Medusoid and Incertae sedis forms">
                         <p><strong>Figure 25.</strong> C) Hydrozoan polypoid form. Organic-walled microfossil showing complex, branching morphology characteristic of the polyp stage. A-B) Hydrozoan medusoid forms. A) Circular to sub-circular organic remains exhibiting typical umbrella-like compression. B) Fragmentary medusoid specimen showing the membrane structure. D) Incertae sedis. Elongated, filamentous organic structure with a terminal cluster.</p>
                     </div>
                 </div>
@@ -258,24 +253,6 @@
                     <p style="font-size: 0.9rem;">Stratified water column, H₂S bottom waters</p>
                 </div>
             </div>
-            
-            <h3 style="margin-top: 4rem; margin-bottom: 1rem;">Carbon Isotope Excursion (CIE) Across the T-OAE</h3>
-            <p style="font-size:0.9rem;">Schematic δ¹³C profile illustrating the negative carbon isotope excursion characteristic of the T-OAE.</p>
-            <svg class="line-chart-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
-                <!-- Grid lines -->
-                <line x1="0" y1="50" x2="1000" y2="50" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-                <line x1="0" y1="100" x2="1000" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-                <line x1="0" y1="150" x2="1000" y2="150" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-                <!-- Line -->
-                <path d="M0,50 C200,60 300,180 500,180 C700,180 800,40 1000,40" fill="none" stroke="var(--accent-teal)" stroke-width="3"/>
-                <path d="M0,50 C200,60 300,180 500,180 C700,180 800,40 1000,40 L1000,200 L0,200 Z" fill="rgba(0,230,195,0.1)" stroke="none"/>
-                <!-- Points -->
-                <circle cx="0" cy="50" r="5" fill="var(--accent-teal)"/>
-                <circle cx="200" cy="60" r="5" fill="var(--accent-teal)"/>
-                <circle cx="500" cy="180" r="5" fill="var(--accent-teal)"/>
-                <circle cx="800" cy="90" r="5" fill="var(--accent-teal)"/>
-                <circle cx="1000" cy="40" r="5" fill="var(--accent-teal)"/>
-            </svg>
         </section>
 
         <!-- MORPHOLOGY -->
