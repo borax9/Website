@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Sosyal Medya, Beğeni ve Yorum Ek Stilleri */
+        /* Sosyal Medya ve Paylaşım Ek Stilleri */
         .news-actions {
             display: flex;
             align-items: center;
@@ -31,6 +31,7 @@
             align-items: center;
             gap: 6px;
             transition: opacity 0.2s;
+            text-decoration: none;
         }
         .action-btn:hover {
             opacity: 0.7;
@@ -63,46 +64,6 @@
         }
         .share-dropdown:hover .share-content {
             display: block;
-        }
-        .comments-section {
-            margin-top: 15px;
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        .comment-input-group {
-            display: flex;
-            gap: 8px;
-            margin-top: 10px;
-        }
-        .comment-input-group input {
-            flex: 1;
-            padding: 8px 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-        .comment-input-group button {
-            padding: 8px 16px;
-            background-color: var(--primary-color, #2c5e3b);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-        .comments-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-            font-size: 0.85rem;
-        }
-        .comments-list li {
-            background: #fff;
-            padding: 6px 10px;
-            border-radius: 4px;
-            margin-bottom: 6px;
-            border: 1px solid #eee;
         }
     </style>
 </head>
@@ -231,15 +192,17 @@
 
                     <!-- FOTOĞRAF YERİNE HTML GÖMME (IFRAME) ALANI -->
                     <div style="width: 100%; text-align: center; background: #fdfdfd; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; margin-top: 1rem;">
-                        <!-- Embed ScienceDirect Link -->
                         <iframe src="https://www.sciencedirect.com/science/article/pii/S2666544125000462?via%3Dihub" width="100%" height="600" style="border: none; display: block;" title="ScienceDirect Article"></iframe>
                     </div>
 
-                    <!-- ETKİLEŞİM ALANLARI -->
+                    <!-- ETKİLEŞİM ALANLARI (INSTAGRAM ENTEGRELİ) -->
                     <div class="news-actions">
-                        <button class="action-btn" onclick="likePost('article1')">
-                            ❤️ <span id="like-text-article1">Beğen</span> (<span id="like-count-article1">128</span>)
+                        <!-- Beğen Butonu: Doğrudan Instagram Postuna Yönlendirir -->
+                        <button class="action-btn" onclick="openInstagramPost('https://www.instagram.com/p/DNYVps_oHTb/?img_index=1')">
+                            ❤️ <span class="lang-tr">Instagram'da Beğen</span><span class="lang-en" style="display:none;">Like on Instagram</span><span class="lang-pt" style="display:none;">Gostar no Instagram</span>
                         </button>
+
+                        <!-- Sosyal Medyada Paylaş Dropdown -->
                         <div class="share-dropdown">
                             <button class="action-btn">
                                 🔗 <span class="lang-tr">Paylaş</span><span class="lang-en" style="display:none;">Share</span><span class="lang-pt" style="display:none;">Partilhar</span>
@@ -251,21 +214,11 @@
                                 <a href="javascript:void(0);" onclick="shareSocial('copy', '')">Bağlantıyı Kopyala</a>
                             </div>
                         </div>
-                        <button class="action-btn" onclick="toggleComments('comments-box-article1')">
-                            💬 <span class="lang-tr">Yorumlar</span><span class="lang-en" style="display:none;">Comments</span><span class="lang-pt" style="display:none;">Comentários</span> (<span id="comment-count-article1">0</span>)
-                        </button>
-                    </div>
 
-                    <!-- Yorum Bölümü -->
-                    <div id="comments-box-article1" class="comments-section" style="display: none;">
-                        <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Yorumlar</h4>
-                        <ul id="comments-list-article1" class="comments-list">
-                            <!-- Yorumlar buraya eklenecek -->
-                        </ul>
-                        <div class="comment-input-group">
-                            <input type="text" id="comment-input-article1" placeholder="Yorumunuzu yazın...">
-                            <button onclick="addComment('article1')">Gönder</button>
-                        </div>
+                        <!-- Yorum Yap Butonu: Doğrudan Instagram Postuna Yönlendirir -->
+                        <button class="action-btn" onclick="openInstagramPost('https://www.instagram.com/p/DNYVps_oHTb/?img_index=1')">
+                            💬 <span class="lang-tr">Instagram'da Yorum Yap</span><span class="lang-en" style="display:none;">Comment on Instagram</span><span class="lang-pt" style="display:none;">Comentar no Instagram</span>
+                        </button>
                     </div>
                 </article>
 
@@ -312,10 +265,12 @@
                         <img src="images/escnovo.jpg" alt="Portekiz ESC Gönüllülük Projesi" style="width: 100%; height: auto; display: block; border-radius: 8px;">
                     </div>
 
+                    <!-- ETKİLEŞİM ALANLARI -->
                     <div class="news-actions">
-                        <button class="action-btn" onclick="likePost('esc')">
-                            ❤️ <span id="like-text-esc">Beğen</span> (<span id="like-count-esc">14</span>)
+                        <button class="action-btn" onclick="openInstagramPost('https://www.instagram.com/tdoteurasia/')">
+                            ❤️ <span class="lang-tr">Instagram'da Beğen</span><span class="lang-en" style="display:none;">Like on Instagram</span><span class="lang-pt" style="display:none;">Gostar no Instagram</span>
                         </button>
+                        
                         <div class="share-dropdown">
                             <button class="action-btn">
                                 🔗 <span class="lang-tr">Paylaş</span><span class="lang-en" style="display:none;">Share</span><span class="lang-pt" style="display:none;">Partilhar</span>
@@ -327,21 +282,10 @@
                                 <a href="javascript:void(0);" onclick="shareSocial('copy', '')">Bağlantıyı Kopyala</a>
                             </div>
                         </div>
-                        <button class="action-btn" onclick="toggleComments('comments-box-esc')">
-                            💬 <span class="lang-tr">Yorumlar</span><span class="lang-en" style="display:none;">Comments</span><span class="lang-pt" style="display:none;">Comentários</span> (<span id="comment-count-esc">2</span>)
-                        </button>
-                    </div>
 
-                    <div id="comments-box-esc" class="comments-section" style="display: none;">
-                        <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Yorumlar</h4>
-                        <ul id="comments-list-esc" class="comments-list">
-                            <li><strong>Ahmet Y.:</strong> Harika bir fırsat, başvurdum!</li>
-                            <li><strong>Elif K.:</strong> Bilgi paketi çok detaylı hazırlanmış, başarılar.</li>
-                        </ul>
-                        <div class="comment-input-group">
-                            <input type="text" id="comment-input-esc" placeholder="Yorumunuzu yazın...">
-                            <button onclick="addComment('esc')">Gönder</button>
-                        </div>
+                        <button class="action-btn" onclick="openInstagramPost('https://www.instagram.com/tdoteurasia/')">
+                            💬 <span class="lang-tr">Instagram'da Yorum Yap</span><span class="lang-en" style="display:none;">Comment on Instagram</span><span class="lang-pt" style="display:none;">Comentar no Instagram</span>
+                        </button>
                     </div>
 
                 </article>
@@ -401,45 +345,12 @@
             setLanguage(savedLang);
         }
 
-        let likedPosts = {};
-        function likePost(postId) {
-            let countElem = document.getElementById('like-count-' + postId);
-            let textElem = document.getElementById('like-text-' + postId);
-            let count = parseInt(countElem.innerText);
-            
-            if (!likedPosts[postId]) {
-                count++;
-                likedPosts[postId] = true;
-                textElem.innerText = "Beğenildi";
-            } else {
-                count--;
-                likedPosts[postId] = false;
-                textElem.innerText = "Beğen";
-            }
-            countElem.innerText = count;
+        // Instagram Gönderisine Yönlendirme Fonksiyonu
+        function openInstagramPost(url) {
+            window.open(url, '_blank');
         }
 
-        function toggleComments(boxId) {
-            let box = document.getElementById(boxId);
-            box.style.display = box.style.display === 'none' ? 'block' : 'none';
-        }
-
-        function addComment(postId) {
-            let input = document.getElementById('comment-input-' + postId);
-            let text = input.value.trim();
-            if (text !== "") {
-                let list = document.getElementById('comments-list-' + postId);
-                let newItem = document.createElement('li');
-                newItem.innerHTML = `<strong>Ziyaretçi:</strong> ${text}`;
-                list.appendChild(newItem);
-                
-                let countElem = document.getElementById('comment-count-' + postId);
-                countElem.innerText = parseInt(countElem.innerText) + 1;
-                
-                input.value = "";
-            }
-        }
-
+        // Sosyal Medyada Paylaşım Fonksiyonu
         function shareSocial(platform, titleText) {
             let url = window.location.href;
             let text = titleText || "Eurasia NHA Haberleri";
