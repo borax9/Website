@@ -185,7 +185,77 @@
         <div class="container">
             <div class="news-container" style="max-width: 900px; margin: 0 auto;">
                 
-                <!-- PORTEKİZ ESC GÖNÜLLÜLÜK PROJESİ (TEK AKTİF HABER) -->
+                <!-- YENİ EKLENEN MAKALE HABERİ -->
+                <article class="card" id="news-details-article" style="margin-bottom: 2rem; padding: 2rem; transition: transform 0.2s;">
+                    <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                        <span class="lang-tr">13 Ağustos 2025</span>
+                        <span class="lang-en" style="display:none;">August 13, 2025</span>
+                        <span class="lang-pt" style="display:none;">13 de Agosto de 2025</span>
+                    </div>
+                    
+                    <a href="#news-details-article" style="text-decoration: none; color: inherit;">
+                        <h2 class="lang-tr" style="margin-bottom: 1rem; cursor: pointer;">Derneğimizin Öncülüğünde Uluslararası Arenada Yeni Bilimsel Makalemiz Yayımlandı</h2>
+                        <h2 class="lang-en" style="display:none; margin-bottom: 1rem; cursor: pointer;">Our New Scientific Article Published in the International Arena Under the Leadership of Our Association</h2>
+                        <h2 class="lang-pt" style="display:none; margin-bottom: 1rem; cursor: pointer;">O Nosso Novo Artigo Científico Publicado na Esfera Internacional sob a Liderança da Nossa Associação</h2>
+                    </a>
+                    
+                    <p class="lang-tr">Geçtiğimiz yıl 13 Ağustos'ta ScienceDirect üzerinden yayımlanan ve içerdiği özgün değerlerle derneğimizi uluslararası platformlarda ön plana çıkaran bilimsel makalemizi sizlerle paylaşmaktan büyük gurur duyuyoruz. Bu çalışma, alanındaki literatüre önemli veriler kazandırmasının yanı sıra, tüm araştırma ve yazım süreçlerinde derneğimizin ve bizzat Dernek Başkanımızın üstlendiği büyük rolle öne çıkmaktadır.</p>
+                    <p class="lang-tr">Makalemizin en çarpıcı yönlerinden biri, kullanılan araştırma metodolojisinin doğrudan Dernek Başkanımızın yüksek lisans tezinden üretilmiş olmasıdır. Bu durum, araştırmanın temelinin tamamen derneğimize özgü ve yenilikçi bir yaklaşıma dayandığını vurgulamaktadır. Bu önemli başarıya giden yolda bizimle omuz omuza çalışan tüm ortak kuruluşlarımıza ve projeye değerli katkılarını sunan tüm yazarlara en içten teşekkürlerimizi sunarız.</p>
+                    
+                    <p class="lang-en" style="display:none;">We are proud to share our scientific article, published last year on August 13 via ScienceDirect, which brings our association to the forefront on international platforms with its unique contributions. This study not only provides crucial data to the literature in its field but also stands out with the major role assumed by our association and our Association President personally throughout all research and writing processes.</p>
+                    <p class="lang-en" style="display:none;">One of the most striking aspects of our article is that the research methodology used was directly derived from the master's thesis of our Association President. This emphasizes that the foundation of the research is based on a completely unique and innovative approach specific to our association. We extend our most sincere thanks to all our partner institutions who worked shoulder to shoulder with us on the path to this significant success and to all the authors who provided their valuable contributions.</p>
+                    
+                    <p class="lang-pt" style="display:none;">Temos o orgulho de partilhar o nosso artigo científico, publicado no ano passado a 13 de agosto via ScienceDirect, que coloca a nossa associação na vanguarda das plataformas internacionais com os seus contributos únicos. Este estudo não só fornece dados cruciais para a literatura na sua área, como também se destaca pelo papel principal assumido pela nossa associação e pessoalmente pelo nosso Presidente da Associação ao longo de todos os processos de investigação e escrita.</p>
+                    <p class="lang-pt" style="display:none;">Um dos aspetos mais marcantes do nosso artigo é que a metodologia de investigação utilizada foi diretamente derivada da dissertação de mestrado do nosso Presidente da Associação. Isto enfatiza que a base da investigação assenta numa abordagem completamente única e inovadora específica da nossa associação. Estendemos os nossos mais sinceros agradecimentos a todas as instituições parceiras que trabalharam lado a lado connosco rumo a este importante sucesso, e a todos os autores que deram os seus valiosos contributos.</p>
+                    
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.5rem; margin-top: 1rem;">
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2666544125000462?via%3Dihub" target="_blank" style="display: inline-block; background-color: var(--primary-color, #2c5e3b); color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-size: 0.9rem; font-weight: 600;">
+                            <span class="lang-tr">Makaleyi İncele</span>
+                            <span class="lang-en" style="display:none;">View Article</span>
+                            <span class="lang-pt" style="display:none;">Ver Artigo</span>
+                        </a>
+                    </div>
+
+                    <!-- THUMBNAIL FOTOĞRAFI: 'images/makale-thumbnail.jpg' kısmını gerçek görselinizin dosya yolu ile değiştirebilirsiniz -->
+                    <div style="width: 100%; text-align: center; background: #000; border-radius: 8px; overflow: hidden; margin-top: 1rem;">
+                        <img src="images/makale-thumbnail.jpg" alt="ScienceDirect Makale" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+                    </div>
+
+                    <!-- ETKİLEŞİM ALANLARI -->
+                    <div class="news-actions">
+                        <button class="action-btn" onclick="likePost('article1')">
+                            ❤️ <span id="like-text-article1">Beğen</span> (<span id="like-count-article1">24</span>)
+                        </button>
+                        <div class="share-dropdown">
+                            <button class="action-btn">
+                                🔗 <span class="lang-tr">Paylaş</span><span class="lang-en" style="display:none;">Share</span><span class="lang-pt" style="display:none;">Partilhar</span>
+                            </button>
+                            <div class="share-content">
+                                <a href="javascript:void(0);" onclick="shareSocial('whatsapp', 'Derneğimizin Öncülüğünde Uluslararası Arenada Yeni Bilimsel Makalemiz Yayımlandı')">WhatsApp</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('twitter', 'Derneğimizin Öncülüğünde Uluslararası Arenada Yeni Bilimsel Makalemiz Yayımlandı')">X (Twitter)</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('facebook', '')">Facebook</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('copy', '')">Bağlantıyı Kopyala</a>
+                            </div>
+                        </div>
+                        <button class="action-btn" onclick="toggleComments('comments-box-article1')">
+                            💬 <span class="lang-tr">Yorumlar</span><span class="lang-en" style="display:none;">Comments</span><span class="lang-pt" style="display:none;">Comentários</span> (<span id="comment-count-article1">0</span>)
+                        </button>
+                    </div>
+
+                    <!-- Yorum Bölümü -->
+                    <div id="comments-box-article1" class="comments-section" style="display: none;">
+                        <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Yorumlar</h4>
+                        <ul id="comments-list-article1" class="comments-list">
+                            <!-- Yorumlar buraya eklenecek -->
+                        </ul>
+                        <div class="comment-input-group">
+                            <input type="text" id="comment-input-article1" placeholder="Yorumunuzu yazın...">
+                            <button onclick="addComment('article1')">Gönder</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ESKİ HABER: PORTEKİZ ESC GÖNÜLLÜLÜK PROJESİ -->
                 <article class="card" id="news-details" style="margin-bottom: 2rem; padding: 2rem; transition: transform 0.2s;">
                     <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
                         <span class="lang-tr">5 Ağustos 2026</span>
@@ -193,7 +263,6 @@
                         <span class="lang-pt" style="display:none;">5 de Agosto de 2026</span>
                     </div>
                     
-                    <!-- Haberin içine girildiğinde odaklanılacak veya tıklanınca detay açılacak başlık -->
                     <a href="#news-details" style="text-decoration: none; color: inherit;">
                         <h2 class="lang-tr" style="margin-bottom: 1rem; cursor: pointer;">Portekiz'de Uzun Dönem Gönüllülük Projesi Başvurusu (ESC)</h2>
                         <h2 class="lang-en" style="display:none; margin-bottom: 1rem; cursor: pointer;">Long-Term Volunteering Project Application in Portugal (ESC)</h2>
@@ -225,47 +294,39 @@
                         </a>
                     </div>
 
-                    <!-- TAM GÖZÜKEN RESMİ (object-fit kaldırıldı / orjinal oran korundu) -->
                     <div style="width: 100%; text-align: center; background: #000; border-radius: 8px; overflow: hidden; margin-top: 1rem;">
                         <img src="images/escnovo.jpg" alt="Portekiz ESC Gönüllülük Projesi" style="width: 100%; height: auto; display: block; border-radius: 8px;">
                     </div>
 
-                    <!-- ETKİLEŞİM ALANLARI: BEĞENİ, YORUM, PAYLAŞIM -->
                     <div class="news-actions">
-                        <!-- Beğeni Butonu -->
-                        <button class="action-btn" onclick="likePost()">
-                            ❤️ <span id="like-text">Beğen</span> (<span id="like-count">14</span>)
+                        <button class="action-btn" onclick="likePost('esc')">
+                            ❤️ <span id="like-text-esc">Beğen</span> (<span id="like-count-esc">14</span>)
                         </button>
-
-                        <!-- Sosyal Medyada Paylaş Dropdown -->
                         <div class="share-dropdown">
                             <button class="action-btn">
                                 🔗 <span class="lang-tr">Paylaş</span><span class="lang-en" style="display:none;">Share</span><span class="lang-pt" style="display:none;">Partilhar</span>
                             </button>
                             <div class="share-content">
-                                <a href="javascript:void(0);" onclick="shareSocial('whatsapp')">WhatsApp</a>
-                                <a href="javascript:void(0);" onclick="shareSocial('twitter')">X (Twitter)</a>
-                                <a href="javascript:void(0);" onclick="shareSocial('facebook')">Facebook</a>
-                                <a href="javascript:void(0);" onclick="shareSocial('copy')">Bağlantıyı Kopyala</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('whatsapp', 'Portekiz\'de Uzun Dönem Gönüllülük Projesi Başvurusu (ESC)')">WhatsApp</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('twitter', 'Portekiz\'de Uzun Dönem Gönüllülük Projesi Başvurusu (ESC)')">X (Twitter)</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('facebook', '')">Facebook</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('copy', '')">Bağlantıyı Kopyala</a>
                             </div>
                         </div>
-
-                        <!-- Yorum Yap Açma Butonu -->
-                        <button class="action-btn" onclick="toggleComments()">
-                            💬 <span class="lang-tr">Yorumlar</span><span class="lang-en" style="display:none;">Comments</span><span class="lang-pt" style="display:none;">Comentários</span> (<span id="comment-count">2</span>)
+                        <button class="action-btn" onclick="toggleComments('comments-box-esc')">
+                            💬 <span class="lang-tr">Yorumlar</span><span class="lang-en" style="display:none;">Comments</span><span class="lang-pt" style="display:none;">Comentários</span> (<span id="comment-count-esc">2</span>)
                         </button>
                     </div>
 
-                    <!-- Yorum Bölümü (Başlangıçta Gizli / Tıklanınca Açılır) -->
-                    <div id="comments-box" class="comments-section" style="display: none;">
+                    <div id="comments-box-esc" class="comments-section" style="display: none;">
                         <h4 style="font-size: 0.95rem; margin-bottom: 8px;">Yorumlar</h4>
-                        <ul id="comments-list" class="comments-list">
+                        <ul id="comments-list-esc" class="comments-list">
                             <li><strong>Ahmet Y.:</strong> Harika bir fırsat, başvurdum!</li>
                             <li><strong>Elif K.:</strong> Bilgi paketi çok detaylı hazırlanmış, başarılar.</li>
                         </ul>
                         <div class="comment-input-group">
-                            <input type="text" id="comment-input" placeholder="Yorumunuzu yazın...">
-                            <button onclick="addComment()">Gönder</button>
+                            <input type="text" id="comment-input-esc" placeholder="Yorumunuzu yazın...">
+                            <button onclick="addComment('esc')">Gönder</button>
                         </div>
                     </div>
 
@@ -326,40 +387,42 @@
             setLanguage(savedLang);
         }
 
-        // Beğenme Fonksiyonu
-        let liked = false;
-        function likePost() {
-            let countElem = document.getElementById('like-count');
+        // Dinamik Beğenme Fonksiyonu
+        let likedPosts = {};
+        function likePost(postId) {
+            let countElem = document.getElementById('like-count-' + postId);
+            let textElem = document.getElementById('like-text-' + postId);
             let count = parseInt(countElem.innerText);
-            if (!liked) {
+            
+            if (!likedPosts[postId]) {
                 count++;
-                liked = true;
-                document.getElementById('like-text').innerText = "Beğenildi";
+                likedPosts[postId] = true;
+                textElem.innerText = "Beğenildi";
             } else {
                 count--;
-                liked = false;
-                document.getElementById('like-text').innerText = "Beğen";
+                likedPosts[postId] = false;
+                textElem.innerText = "Beğen";
             }
             countElem.innerText = count;
         }
 
-        // Yorum Bölümünü Aç/Kapat
-        function toggleComments() {
-            let box = document.getElementById('comments-box');
+        // Dinamik Yorum Bölümünü Aç/Kapat
+        function toggleComments(boxId) {
+            let box = document.getElementById(boxId);
             box.style.display = box.style.display === 'none' ? 'block' : 'none';
         }
 
-        // Yorum Ekleme Fonksiyonu
-        function addComment() {
-            let input = document.getElementById('comment-input');
+        // Dinamik Yorum Ekleme Fonksiyonu
+        function addComment(postId) {
+            let input = document.getElementById('comment-input-' + postId);
             let text = input.value.trim();
             if (text !== "") {
-                let list = document.getElementById('comments-list');
+                let list = document.getElementById('comments-list-' + postId);
                 let newItem = document.createElement('li');
                 newItem.innerHTML = `<strong>Ziyaretçi:</strong> ${text}`;
                 list.appendChild(newItem);
                 
-                let countElem = document.getElementById('comment-count');
+                let countElem = document.getElementById('comment-count-' + postId);
                 countElem.innerText = parseInt(countElem.innerText) + 1;
                 
                 input.value = "";
@@ -367,9 +430,9 @@
         }
 
         // Sosyal Medyada Paylaşım Fonksiyonu
-        function shareSocial(platform) {
-            let url = window.fLocation ? window.fLocation.href : window.location.href;
-            let text = "Portekiz'de Uzun Dönem Gönüllülük Projesi Başvurusu (ESC)";
+        function shareSocial(platform, titleText) {
+            let url = window.location.href;
+            let text = titleText || "Eurasia NHA Haberleri";
             
             if (platform === 'whatsapp') {
                 window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text + " - " + url)}`, '_blank');
