@@ -9,18 +9,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .navbar { z-index: 9999 !important; position: relative; }
+        
+        /* Logo Alanı Düzenlemesi */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Logolar ve yazı arasındaki boşluk */
+        }
+        .logo-img {
+            height: 40px;
+            object-fit: contain;
+        }
+        .v-divider {
+            height: 30px;
+            width: 1px;
+            background-color: #e2e8f0;
+            display: inline-block;
+        }
+
         @media (max-width: 768px) {
             .nav-container { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 15px 10px; }
             .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; width: 100%; }
             .nav-links a { padding: 8px 10px; }
             .dropdown { position: relative; }
             .dropdown-content { z-index: 10000 !important; min-width: 180px; }
+            .logo { gap: 10px; }
+            .logo-img { height: 35px; }
         }
 
+        /* Hero Banner Görsel Arka Plan Düzenlemesi */
         .hero-banner {
-            background: linear-gradient(135deg, #07192c 0%, #004494 100%);
+            /* Hem görsel hem de okunabilirlik için gradyan katman bir arada */
+            background: linear-gradient(135deg, rgba(7, 25, 44, 0.9) 0%, rgba(0, 68, 148, 0.8) 100%), 
+                        url('images/boraxh.jpg') no-repeat center center;
+            background-size: cover;
             color: #ffffff;
-            padding: 3.5rem 2rem;
+            padding: 4rem 2rem; /* Biraz daha genişletildi */
             border-radius: 12px;
             margin-bottom: 2.5rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -44,7 +68,7 @@
             line-height: 1.7;
             max-width: 900px;
             margin: 0;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Okunabilirlik için gölge artırıldı */
             font-weight: 400;
         }
         .consulting-grid {
@@ -167,7 +191,12 @@
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Eurasia NHA Logo" style="height: 40px; object-fit: contain;">
+                <!-- BORAX Logo eklendi -->
+                <img src="images/borax.png" alt="BORAX Consulting Logo" class="logo-img">
+                <!-- Ayırıcı çizgi -->
+                <span class="v-divider"></span>
+                <!-- Eurasia Logo -->
+                <img src="images/logo.png" alt="Eurasia NHA Logo" class="logo-img">
                 <span>Eurasia NHA</span>
             </a>
             
@@ -256,13 +285,13 @@
     <section class="section" style="padding-top: 2rem;">
         <div class="container">
             
-            <!-- HERO BANNER -->
+            <!-- HERO BANNER (images/boraxh.jpg CSS içinde arka plan olarak eklendi) -->
             <div class="hero-banner">
                 <span class="hero-badge">BORAX CONSULTING FIRM</span>
                 
-                <h1 class="lang-en" style="margin: 0 0 1rem 0; font-size: 2.2rem; font-weight: 700;">International Technical Consultancy & Project Management</h1>
-                <h1 class="lang-tr" style="display:none; margin: 0 0 1rem 0; font-size: 2.2rem; font-weight: 700;">Uluslararası Teknik Danışmanlık ve Proje Yönetimi</h1>
-                <h1 class="lang-pt" style="display:none; margin: 0 0 1rem 0; font-size: 2.2rem; font-weight: 700;">Consultoria Técnica Internacional e Gestão de Projetos</h1>
+                <h1 class="lang-en" style="margin: 0 0 1rem 0; font-size: 2.2rem; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">International Technical Consultancy & Project Management</h1>
+                <h1 class="lang-tr" style="display:none; margin: 0 0 1rem 0; font-size: 2.2rem; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Uluslararası Teknik Danışmanlık ve Proje Yönetimi</h1>
+                <h1 class="lang-pt" style="display:none; margin: 0 0 1rem 0; font-size: 2.2rem; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Consultoria Técnica Internacional e Gestão de Projetos</h1>
 
                 <p class="lang-en hero-description">
                     BORAX is a premier independent consulting firm specializing in engineering infrastructure, geological subcontracting, restoration project advisory, and European exchange frameworks.
