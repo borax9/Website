@@ -71,6 +71,16 @@
         .share-dropdown:hover .share-content {
             display: block;
         }
+        .preview-card {
+            width: 100%;
+            background: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
     </style>
 </head>
 <body>
@@ -151,7 +161,7 @@
         <div class="container">
             <div class="news-container" style="max-width: 900px; margin: 0 auto;">
 
-                <!-- YENİ EKLENEN HABER: PORTEKİZ FCT NOVA YER BİLİMLERİ HABERİ -->
+                <!-- HABER 1: PORTEKİZ FCT NOVA YER BİLİMLERİ HABERİ (GÖRSEL POSTER İLE) -->
                 <article class="card" id="news-fct-unl" style="margin-bottom: 2rem; padding: 2rem; transition: transform 0.2s;">
                     <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
                         <span class="lang-tr">20 Mayıs 2024</span>
@@ -165,19 +175,16 @@
                         <h2 class="lang-pt" style="display:none; margin-bottom: 1rem; cursor: pointer;">Competição de Posteres do 75º Congresso Geológico da Turquia Destacada no Website da FCT NOVA</h2>
                     </a>
                     
-                    <!-- TÜRKÇE METİN -->
                     <div class="lang-tr">
                         <p>Portekiz'in köklü akademilerinden <strong>NOVA Üniversiteler Grubu Bilim ve Teknoloji Fakültesi (FCT NOVA) Yer Bilimleri Departmanı (DCT)</strong>, resmi web sitesinde yayımladığı özel haberle <strong>75. Türkiye Jeoloji Kurultayı Poster Yarışması</strong>'nı duyurdu.</p>
                         <p>Uluslararası akademik ortaklarımızla yürüttüğümüz çalışmaların ve genç araştırmacıları teşvik eden organizasyonların Portekiz basınında yer alması, Türkiye ile Portekiz arasındaki yer bilimleri ve doğa tarihi alanındaki bilimsel köprüyü güçlendirmeye devam ediyor.</p>
                     </div>
                     
-                    <!-- İNGİLİZCE METİN -->
                     <div class="lang-en" style="display:none;">
                         <p>The <strong>Department of Earth Sciences (DCT) at FCT NOVA (NOVA School of Science and Technology, Portugal)</strong> featured the <strong>75th Geological Congress of Turkey Poster Competition</strong> in a special news article on its official portal.</p>
                         <p>This international feature highlights the academic collaboration between Turkey and Portugal, strengthening scientific bonds and supporting young researchers in the field of geosciences and natural history.</p>
                     </div>
                     
-                    <!-- PORTEKİZCE METİN -->
                     <div class="lang-pt" style="display:none;">
                         <p>O <strong>Departamento de Ciências da Terra (DCT) da FCT NOVA (Faculdade de Ciências e Tecnologia da Universidade NOVA de Lisboa)</strong> destacou no seu portal oficial a notícia sobre a <strong>Competição de Posteres do 75º Congresso Geológico da Turquia</strong>.</p>
                         <p>Esta divulgação internacional reforça a cooperação académica entre a Turquia e Portugal, promovendo o intercâmbio científico e o incentivo aos jovens investigadores na área das geociências e história natural.</p>
@@ -185,15 +192,15 @@
 
                     <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.5rem; margin-top: 1.5rem;">
                         <a href="https://www.dct.fct.unl.pt/noticias/2024/05/competicao-de-posteres-do-75th-geological-congress-turkey" target="_blank" style="display: inline-block; background-color: var(--primary-color, #2c5e3b); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95rem; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                            <span class="lang-tr">Haberi FCT UNL Portalında İncele</span>
-                            <span class="lang-en" style="display:none;">View News on FCT UNL Portal</span>
-                            <span class="lang-pt" style="display:none;">Ver Notícia no Portal FCT UNL</span>
+                            <span class="lang-tr">Haberi FCT UNL Portalında İncele ↗</span>
+                            <span class="lang-en" style="display:none;">View News on FCT UNL Portal ↗</span>
+                            <span class="lang-pt" style="display:none;">Ver Notícia no Portal FCT UNL ↗</span>
                         </a>
                     </div>
 
-                    <!-- FOTOĞRAF YERİNE HTML GÖMME (IFRAME) ALANI -->
-                    <div style="width: 100%; text-align: center; background: #fdfdfd; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; margin-top: 1rem;">
-                        <iframe src="https://www.dct.fct.unl.pt/noticias/2024/05/competicao-de-posteres-do-75th-geological-congress-turkey" width="100%" height="600" style="border: none; display: block;" title="FCT UNL News Article"></iframe>
+                    <!-- EKLENEN POSTER GÖRSELİ (novo.jpg) -->
+                    <div style="width: 100%; border-radius: 8px; overflow: hidden; margin-top: 1rem; border: 1px solid #eaeaea; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                        <img src="images/novo.jpg" alt="FCT NOVA 75th Geological Congress Poster" style="width: 100%; height: auto; display: block;">
                     </div>
 
                     <!-- ETKİLEŞİM ALANLARI -->
@@ -220,7 +227,7 @@
                     </div>
                 </article>
                 
-                <!-- MAKALE HABERİ -->
+                <!-- HABER 2: MAKALE HABERİ -->
                 <article class="card" id="news-details-article" style="margin-bottom: 2rem; padding: 2rem; transition: transform 0.2s;">
                     <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
                         <span class="lang-tr">13 Ağustos 2025</span>
@@ -234,40 +241,32 @@
                         <h2 class="lang-pt" style="display:none; margin-bottom: 1rem; cursor: pointer;">O Nosso Artigo Científico Publicado numa Revista Internacional Q1 sob a Liderança da Nossa Associação</h2>
                     </a>
                     
-                    <!-- TÜRKÇE METİN -->
                     <div class="lang-tr">
                         <p>Geçtiğimiz yıl 13 Ağustos'ta Elsevier bünyesinde yer alan prestijli <strong>"Artificial Intelligence in Geosciences"</strong> dergisinde yayımlanan bilimsel makalemizi sizlerle paylaşmaktan büyük gurur duyuyoruz. Alanındaki en üst düzey yayınları temsil eden <strong>Q1 (Birinci Çeyrek) statüsüne</strong> sahip ve güncel <strong>Etki Faktörü (Impact Factor) 5.4</strong> olan bu saygın dergide çalışmamızın yer alması, derneğimizin uluslararası bilim camiasındaki vizyonunu ve akademik ağırlığını bir kez daha kanıtlamıştır.</p>
-                        
                         <p>Bilimsel literatüre inovatif bir bakış açısı kazandıran bu çalışmanın tasarlanmasından veri analizine, saha organizasyonundan yazım aşamasına kadar tüm süreçlerinde derneğimizin ve bizzat Dernek Başkanımızın çok büyük bir rolü bulunmaktadır. Makalemizin en çarpıcı özelliği, araştırma <strong>metodolojisinin tamamen Dernek Başkanımızın yüksek lisans (master) tezinden üretilmiş olmasıdır</strong>. Bu durum, bilimsel yaklaşımımızın ve uyguladığımız ölçüm metotlarının dışarıdan alınma değil; doğrudan derneğimize özgü, yenilikçi ve derin bir bilimsel temele dayandığını vurgulamaktadır.</p>
-
-                        <p>Doğa tarihi incelemelerini ve çevresel metotları yapay zeka analizleriyle birleştiren bu çalışma, gelecekteki disiplinler arası araştırmalara da öncü bir özet niteliği taşımaktadır. Başta bu benzersiz metodolojinin hayata geçirilmesi olmak üzere, başarıya giden yolda bizimle omuz omuza çalışan ve desteklerini esirgemeyen tüm ortak kuruluşlarımıza, değerli veri sağlayıcılarımıza ve emeği geçen tüm yazar kadrosuna sonsuz teşekkürlerimizi sunarız.</p>
+                        <p>Doğa tarihi incelemelerini ve çevresel metotları yapay zeka analizleriyle birleştiren bu çalışma, gelecekteki disiplinler arası araştırmalara da öncü bir özet niteliği taşımaktadır.</p>
                     </div>
                     
-                    <!-- İNGİLİZCE METİN -->
                     <div class="lang-en" style="display:none;">
                         <p>We are immensely proud to share our scientific article published last year on August 13 in the prestigious <strong>"Artificial Intelligence in Geosciences"</strong> journal under Elsevier. The inclusion of our study in this esteemed journal, which holds a <strong>Q1 status</strong> representing top-tier publications in its field and boasts a current <strong>Impact Factor of 5.4</strong>, proves the vision and academic power of our association in the international scientific community.</p>
-                        <p>Our association, and specifically our Association President personally, played a tremendous role in all processes of this study, from its design to data analysis and writing. One of the most striking aspects of our article is that its <strong>research methodology was entirely derived from the master's thesis of our Association President</strong>. This emphasizes that our scientific approach and methodologies are genuinely unique to our association, grounded in an innovative and deep academic foundation.</p>
-                        <p>We extend our endless gratitude to all our partner organizations who worked shoulder-to-shoulder with us and to all contributing authors on the path to this historic milestone.</p>
+                        <p>Our association, and specifically our Association President personally, played a tremendous role in all processes of this study. One of the most striking aspects of our article is that its <strong>research methodology was entirely derived from the master's thesis of our Association President</strong>.</p>
                     </div>
                     
-                    <!-- PORTEKİZCE METİN -->
                     <div class="lang-pt" style="display:none;">
-                        <p>Temos um enorme orgulho em partilhar o nosso artigo científico publicado no ano passado, a 13 de agosto, na prestigiada revista <strong>"Artificial Intelligence in Geosciences"</strong> da Elsevier. A inclusão do nosso estudo nesta conceituada revista, que detém o <strong>estatuto Q1</strong> representando as publicações de topo na sua área com um <strong>Fator de Impacto atual de 5.4</strong>, comprova a visão e o poder académico da nossa associação na comunidade científica internacional.</p>
-                        <p>A nossa associação, e pessoalmente o nosso Presidente da Associação, desempenharam um papel fundamental em todos os processos deste estudo. O aspeto mais marcante do nosso artigo é que a sua <strong>metodologia de investigação derivou inteiramente da dissertação de mestrado do nosso Presidente</strong>. Isto enfatiza que a nossa abordagem científica e as metodologias aplicadas são genuinamente únicas da nossa associação, baseadas num profundo e inovador alicerce académico.</p>
-                        <p>Estendemos a nossa infinita gratidão a todas as organizações parceiras que trabalharam lado a lado connosco, bem como a todos os autores que contribuíram para este marco histórico.</p>
+                        <p>Temos um enorme orgulho em partilhar o nosso artigo científico publicado no ano passado, a 13 de agosto, na prestigiada revista <strong>"Artificial Intelligence in Geosciences"</strong> da Elsevier. A inclusão do nosso estudo nesta conceituada revista, que detém o <strong>estatuto Q1</strong> com um <strong>Fator de Impacto atual de 5.4</strong>, comprova a visão e o poder académico da nossa associação.</p>
+                        <p>O aspeto mais marcante do nosso artigo é que a sua <strong>metodologia de investigação derivou inteiramente da dissertação de mestrado do nosso Presidente</strong>.</p>
                     </div>
 
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.5rem; margin-top: 1.5rem;">
-                        <a href="https://www.sciencedirect.com/science/article/pii/S2666544125000462?via%3Dihub" target="_blank" style="display: inline-block; background-color: var(--primary-color, #2c5e3b); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95rem; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                            <span class="lang-tr">Makaleyi ScienceDirect'te İncele</span>
-                            <span class="lang-en" style="display:none;">View Article on ScienceDirect</span>
-                            <span class="lang-pt" style="display:none;">Ver Artigo na ScienceDirect</span>
+                    <!-- PREVIEW CARD -->
+                    <div class="preview-card">
+                        <div style="font-size: 2.2rem; margin-bottom: 8px;">📚</div>
+                        <h4 style="margin-bottom: 6px; color: #1a202c; font-size: 1.05rem;">Elsevier ScienceDirect - Artificial Intelligence in Geosciences</h4>
+                        <p style="color: #4a5568; font-size: 0.88rem; margin-bottom: 16px;">ISSN: 2666-5441 | Impact Factor: 5.4 (Q1)</p>
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2666544125000462?via%3Dihub" target="_blank" rel="noopener" style="display: inline-block; background-color: var(--primary-color, #2c5e3b); color: white; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;">
+                            <span class="lang-tr">Makaleyi ScienceDirect'te Oku ↗</span>
+                            <span class="lang-en" style="display:none;">Read Article on ScienceDirect ↗</span>
+                            <span class="lang-pt" style="display:none;">Ler Artigo na ScienceDirect ↗</span>
                         </a>
-                    </div>
-
-                    <!-- FOTOĞRAF YERİNE HTML GÖMME (IFRAME) ALANI -->
-                    <div style="width: 100%; text-align: center; background: #fdfdfd; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; margin-top: 1rem;">
-                        <iframe src="https://www.sciencedirect.com/science/article/pii/S2666544125000462?via%3Dihub" width="100%" height="600" style="border: none; display: block;" title="ScienceDirect Article"></iframe>
                     </div>
 
                     <!-- ETKİLEŞİM ALANLARI -->
@@ -294,7 +293,7 @@
                     </div>
                 </article>
 
-                <!-- PORTEKİZ ESC GÖNÜLLÜLÜK PROJESİ HABERİ -->
+                <!-- HABER 3: PORTEKİZ ESC GÖNÜLLÜLÜK PROJESİ HABERİ -->
                 <article class="card" id="news-details" style="margin-bottom: 2rem; padding: 2rem; transition: transform 0.2s;">
                     <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
                         <span class="lang-tr">5 Ağustos 2026</span>
@@ -309,8 +308,8 @@
                     </a>
                     
                     <p class="lang-tr">Avrupa Dayanışma Programı (ESC) kapsamında Portekiz’in Santa Cruz / Torres Vedras bölgesinde gerçekleştirilecek 3 aylık uzun dönem ESC Gönüllülük Projesi için başvurular başlamıştır. Kahramanmaraş Sütçü İmam Üniversitesi ABAUM koordinatörlüğünde yürütülecek projede gönüllüler Sociedade de História Natural (SHN) bünyesinde paleontoloji, doğa tarihi, çevresel koruma ve kültürel miras çalışmalarına destek olacaktır.</p>
-                    <p class="lang-en" style="display:none;">Applications are open for the 3-month long-term ESC Volunteering Project in Santa Cruz / Torres Vedras, Portugal, under the European Solidarity Corps. Coordinated by KSÜ ABAUM, selected volunteers will support paleontology, natural history, environmental protection, and cultural heritage activities at Sociedade de História Natural (SHN).</p>
-                    <p class="lang-pt" style="display:none;">Estão abertas as candidaturas para o Projeto de Voluntariado ESC de longa duração (3 meses) em Santa Cruz / Torres Vedras, Portugal, no âmbito do Corpo Europeu de Solidariedade. Coordenado pela KSÜ ABAUM, os voluntários apoiarão atividades de paleontologia, história natural, proteção ambiental e património cultural na Sociedade de História Natural (SHN).</p>
+                    <p class="lang-en" style="display:none;">Applications are open for the 3-month long-term ESC Volunteering Project in Santa Cruz / Torres Vedras, Portugal, under the European Solidarity Corps.</p>
+                    <p class="lang-pt" style="display:none;">Estão abertas as candidaturas para o Projeto de Voluntariado ESC de longa duração (3 meses) em Santa Cruz / Torres Vedras, Portugal, no âmbito do Corpo Europeu de Solidariedade.</p>
                     
                     <ul class="list-unstyled" style="margin-top: 1rem; margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6;">
                         <li><strong><span class="lang-tr">Faaliyet Yeri:</span><span class="lang-en" style="display:none;">Location:</span><span class="lang-pt" style="display:none;">Localização:</span></strong> Santa Cruz / Torres Vedras, Portekiz</li>
@@ -333,8 +332,8 @@
                         </a>
                     </div>
 
-                    <div style="width: 100%; text-align: center; background: #000; border-radius: 8px; overflow: hidden; margin-top: 1rem;">
-                        <img src="images/escnovo.jpg" alt="Portekiz ESC Gönüllülük Projesi" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+                    <div style="width: 100%; border-radius: 8px; overflow: hidden; margin-top: 1rem; border: 1px solid #eaeaea; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+                        <img src="images/escnovo.jpg" alt="Portekiz ESC Gönüllülük Projesi" style="width: 100%; height: auto; display: block;">
                     </div>
 
                     <!-- ETKİLEŞİM ALANLARI -->
