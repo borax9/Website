@@ -45,13 +45,13 @@
         .share-content {
             display: none;
             position: absolute;
-            bottom: 100%; /* Menünün kart dışına taşmaması için yukarıya doğru açılmasını sağlar */
+            bottom: 100%;
             left: 50%;
-            transform: translateX(-50%); /* Menüyü butonun üst ortasına hizalar */
+            transform: translateX(-50%);
             background-color: #fff;
             min-width: 160px;
             box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-            z-index: 9999; /* Diğer tüm içeriklerin üstünde görünmesini garanti eder */
+            z-index: 9999;
             border-radius: 6px;
             overflow: hidden;
             border: 1px solid #ddd;
@@ -150,8 +150,77 @@
     <section class="section">
         <div class="container">
             <div class="news-container" style="max-width: 900px; margin: 0 auto;">
+
+                <!-- YENİ EKLENEN HABER: PORTEKİZ FCT NOVA YER BİLİMLERİ HABERİ -->
+                <article class="card" id="news-fct-unl" style="margin-bottom: 2rem; padding: 2rem; transition: transform 0.2s;">
+                    <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
+                        <span class="lang-tr">20 Mayıs 2024</span>
+                        <span class="lang-en" style="display:none;">May 20, 2024</span>
+                        <span class="lang-pt" style="display:none;">20 de Maio de 2024</span>
+                    </div>
+                    
+                    <a href="#news-fct-unl" style="text-decoration: none; color: inherit;">
+                        <h2 class="lang-tr" style="margin-bottom: 1rem; cursor: pointer;">Portekiz FCT NOVA Üniversitesi Web Sitesinde 75. Türkiye Jeoloji Kurultayı Poster Yarışması Duyuruldu</h2>
+                        <h2 class="lang-en" style="display:none; margin-bottom: 1rem; cursor: pointer;">75th Geological Congress of Turkey Poster Competition Featured on Portugal FCT NOVA University Website</h2>
+                        <h2 class="lang-pt" style="display:none; margin-bottom: 1rem; cursor: pointer;">Competição de Posteres do 75º Congresso Geológico da Turquia Destacada no Website da FCT NOVA</h2>
+                    </a>
+                    
+                    <!-- TÜRKÇE METİN -->
+                    <div class="lang-tr">
+                        <p>Portekiz'in köklü akademilerinden <strong>NOVA Üniversiteler Grubu Bilim ve Teknoloji Fakültesi (FCT NOVA) Yer Bilimleri Departmanı (DCT)</strong>, resmi web sitesinde yayımladığı özel haberle <strong>75. Türkiye Jeoloji Kurultayı Poster Yarışması</strong>'nı duyurdu.</p>
+                        <p>Uluslararası akademik ortaklarımızla yürüttüğümüz çalışmaların ve genç araştırmacıları teşvik eden organizasyonların Portekiz basınında yer alması, Türkiye ile Portekiz arasındaki yer bilimleri ve doğa tarihi alanındaki bilimsel köprüyü güçlendirmeye devam ediyor.</p>
+                    </div>
+                    
+                    <!-- İNGİLİZCE METİN -->
+                    <div class="lang-en" style="display:none;">
+                        <p>The <strong>Department of Earth Sciences (DCT) at FCT NOVA (NOVA School of Science and Technology, Portugal)</strong> featured the <strong>75th Geological Congress of Turkey Poster Competition</strong> in a special news article on its official portal.</p>
+                        <p>This international feature highlights the academic collaboration between Turkey and Portugal, strengthening scientific bonds and supporting young researchers in the field of geosciences and natural history.</p>
+                    </div>
+                    
+                    <!-- PORTEKİZCE METİN -->
+                    <div class="lang-pt" style="display:none;">
+                        <p>O <strong>Departamento de Ciências da Terra (DCT) da FCT NOVA (Faculdade de Ciências e Tecnologia da Universidade NOVA de Lisboa)</strong> destacou no seu portal oficial a notícia sobre a <strong>Competição de Posteres do 75º Congresso Geológico da Turquia</strong>.</p>
+                        <p>Esta divulgação internacional reforça a cooperação académica entre a Turquia e Portugal, promovendo o intercâmbio científico e o incentivo aos jovens investigadores na área das geociências e história natural.</p>
+                    </div>
+
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.5rem; margin-top: 1.5rem;">
+                        <a href="https://www.dct.fct.unl.pt/noticias/2024/05/competicao-de-posteres-do-75th-geological-congress-turkey" target="_blank" style="display: inline-block; background-color: var(--primary-color, #2c5e3b); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 0.95rem; font-weight: 600; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <span class="lang-tr">Haberi FCT UNL Portalında İncele</span>
+                            <span class="lang-en" style="display:none;">View News on FCT UNL Portal</span>
+                            <span class="lang-pt" style="display:none;">Ver Notícia no Portal FCT UNL</span>
+                        </a>
+                    </div>
+
+                    <!-- FOTOĞRAF YERİNE HTML GÖMME (IFRAME) ALANI -->
+                    <div style="width: 100%; text-align: center; background: #fdfdfd; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; margin-top: 1rem;">
+                        <iframe src="https://www.dct.fct.unl.pt/noticias/2024/05/competicao-de-posteres-do-75th-geological-congress-turkey" width="100%" height="600" style="border: none; display: block;" title="FCT UNL News Article"></iframe>
+                    </div>
+
+                    <!-- ETKİLEŞİM ALANLARI -->
+                    <div class="news-actions">
+                        <button class="action-btn" onclick="openInstagramPost('https://www.instagram.com/tdoteurasia/')">
+                            ❤️ <span class="lang-tr">Instagram'da Beğen</span><span class="lang-en" style="display:none;">Like on Instagram</span><span class="lang-pt" style="display:none;">Gostar no Instagram</span>
+                        </button>
+
+                        <div class="share-dropdown">
+                            <button class="action-btn">
+                                🔗 <span class="lang-tr">Paylaş</span><span class="lang-en" style="display:none;">Share</span><span class="lang-pt" style="display:none;">Partilhar</span>
+                            </button>
+                            <div class="share-content">
+                                <a href="javascript:void(0);" onclick="shareSocial('whatsapp', 'Portekiz FCT NOVA Üniversitesi Web Sitesinde 75. Türkiye Jeoloji Kurultayı Poster Yarışması Duyuruldu')">WhatsApp</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('twitter', 'Portekiz FCT NOVA Üniversitesi Web Sitesinde 75. Türkiye Jeoloji Kurultayı Poster Yarışması Duyuruldu')">X (Twitter)</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('facebook', '')">Facebook</a>
+                                <a href="javascript:void(0);" onclick="shareSocial('copy', '')">Bağlantıyı Kopyala</a>
+                            </div>
+                        </div>
+
+                        <button class="action-btn" onclick="openInstagramPost('https://www.instagram.com/tdoteurasia/')">
+                            💬 <span class="lang-tr">Instagram'da Yorum Yap</span><span class="lang-en" style="display:none;">Comment on Instagram</span><span class="lang-pt" style="display:none;">Comentar no Instagram</span>
+                        </button>
+                    </div>
+                </article>
                 
-                <!-- YENİ EKLENEN MAKALE HABERİ -->
+                <!-- MAKALE HABERİ -->
                 <article class="card" id="news-details-article" style="margin-bottom: 2rem; padding: 2rem; transition: transform 0.2s;">
                     <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
                         <span class="lang-tr">13 Ağustos 2025</span>
@@ -225,7 +294,7 @@
                     </div>
                 </article>
 
-                <!-- ESKİ HABER: PORTEKİZ ESC GÖNÜLLÜLÜK PROJESİ -->
+                <!-- PORTEKİZ ESC GÖNÜLLÜLÜK PROJESİ HABERİ -->
                 <article class="card" id="news-details" style="margin-bottom: 2rem; padding: 2rem; transition: transform 0.2s;">
                     <div style="color: var(--accent-color); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem;">
                         <span class="lang-tr">5 Ağustos 2026</span>
