@@ -282,13 +282,13 @@
             <h3 class="lang-pt" style="display:none;">Apoie-nos para Acessar o Conjunto de Dados</h3>
 
             <p class="lang-tr">
-                Bu veri setine erişebilmek için derneğimizin çalışmalarına <strong>5 € (Euro)</strong> tutarında bağışta bulunmanız gerekmektedir. Ödemeyi tamamladıktan sonra Google Drive indirme bağlantısı otomatik olarak açılacaktır.
+                Bu veri setine erişebilmek için derneğimizin çalışmalarına <strong>5 € (Euro)</strong> tutarında bağışta bulunmanız gerekmektedir. Ödemeyi tamamladıktan sonra veri seti otomatik olarak cihazınıza inecektir.
             </p>
             <p class="lang-en" style="display:none;">
-                To access this dataset, a donation of <strong>€5</strong> is required to support our association's work. Once the payment is completed, the Google Drive download link will automatically unlock.
+                To access this dataset, a donation of <strong>€5</strong> is required to support our association's work. Once the payment is completed, the dataset will automatically download to your device.
             </p>
             <p class="lang-pt" style="display:none;">
-                Para acessar este conjunto de dados, é necessária uma doação de <strong>€5</strong> para apoiar o trabalho de nossa associação. Assim que o pagamento for concluído, o link de download do Google Drive será desbloqueado.
+                Para acessar este conjunto de dados, é necessária uma doação de <strong>€5</strong> para apoiar o trabalho de nossa associação. Assim que o pagamento for concluído, o conjunto de dados será baixado automaticamente.
             </p>
 
             <div class="modal-buttons">
@@ -362,7 +362,8 @@
 
     <!-- SCRIPT KODLARI (DİL, SAYAC VE MODAL) -->
     <script>
-        const googleDriveLink = "https://drive.google.com/drive/folders/1xvPsnM9V4szwejZ9tCtQnpEJ_-EdV9WU?usp=drive_link";
+        // Yeni Dataset indirme adresi (Repo'daki dataset dosyası)
+        const localDatasetPath = "dataset/dataset.zip"; 
 
         function openDonateModal() {
             document.getElementById('donateModal').style.display = 'flex';
@@ -373,10 +374,18 @@
         }
 
         function handleDonationClick() {
+            // Kullanıcı Stripe sayfasına (yeni sekmede) giderken, bu sekmede dosyayı sitemiz içinden indiriyoruz
             setTimeout(() => {
-                window.open(googleDriveLink, '_blank');
+                let downloadLink = document.createElement('a');
+                downloadLink.href = localDatasetPath;
+                downloadLink.download = "EurasiaNHA_Dataset.zip"; // İnen dosyanın varsayılan adı
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+                
                 closeDonateModal();
-            }, 1000);
+                alert("Ödeme işlemi için yönlendirildiniz. Dosya indirme işlemi başlatıldı.");
+            }, 2500); // Tıkladıktan 2.5 saniye sonra otomatik indirir
         }
 
         window.onclick = function(event) {
@@ -408,19 +417,24 @@
             const savedLang = localStorage.getItem('preferred_lang') || 'tr';
             setLanguage(savedLang);
 
-            // Sayacı 326'dan başlatıp API üzerinden artırarak devam ettiriyoruz
-            fetch('https://api.counterapi.dev/v1/dotaltai/documents/up')
+            // ZİYARETÇİ SAYACI (Her girişte artması garanti edildi)
+            // Önce tarayıcı lokalinde sayacı artırıyoruz
+            let localVisitorCount = parseInt(localStorage.getItem('dotaltai_visitors')) || 326;
+            localVisitorCount++; 
+            localStorage.setItem('dotaltai_visitors', localVisitorCount);
+
+            // API'yi çağırıp duruma göre güncelliyoruz
+            fetch('https://api.counterapi.dev/v1/dotaltai_site/documents_visits/up')
                 .then(response => response.json())
                 .then(data => {
-                    // Eğer API'den gelen sayı 326'dan küçükse veya ilk kez kuruluyorsa 326 baz alınır
-                    let currentCount = data.count;
-                    if (currentCount < 326) {
-                        currentCount = 326;
-                    }
-                    document.getElementById('visitor-count').innerText = currentCount;
+                    let apiCount = data.count;
+                    // API hata verse veya sıfırlansa bile, kullanıcının cihazındaki en yüksek değer baz alınır.
+                    let finalCount = Math.max(apiCount, localVisitorCount);
+                    document.getElementById('visitor-count').innerText = finalCount;
                 })
                 .catch(error => {
-                    document.getElementById('visitor-count').innerText = '326';
+                    // Eğer API çalışmazsa her girdiğinizde lokal olarak artmaya devam eden sayıyı göster
+                    document.getElementById('visitor-count').innerText = localVisitorCount;
                 });
         }
     </script>
