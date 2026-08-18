@@ -1,0 +1,17 @@
+!table
+!version 300
+!charset WindowsLatin1
+
+Definition Table
+  Type NATIVE Charset "Neutral"
+  Fields 2
+    ID Char (20) ;
+    TextEntry Char (254) ;
+ReadOnly
+begin_metadata
+"\Discover" = ""
+"\Discover\Version" = "2.0"
+"\Discover\Module" = "Legend"
+"\Discover\Date" = "12/03/2002"
+"\IsReadOnly" = "FALSE"
+end_metadata

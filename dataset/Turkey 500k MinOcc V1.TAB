@@ -1,0 +1,13 @@
+!table
+!version 300
+!charset WindowsLatin1
+
+Definition Table
+  Type NATIVE Charset "WindowsLatin1"
+  Fields 6
+    Type Char (10) ;
+    Description Char (30) ;
+    Mineral_1 Char (10) ;
+    Mineral_2 Char (10) ;
+    Mineral_3 Char (10) ;
+    Source Char (30) ;

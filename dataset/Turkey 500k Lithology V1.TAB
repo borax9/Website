@@ -1,0 +1,14 @@
+!table
+!version 300
+!charset WindowsLatin1
+
+Definition Table
+  Type NATIVE Charset "WindowsLatin1"
+  Fields 7
+    Map_Code Char (31) ;
+    Description Char (84) ;
+    Age Char (30) Index 1 ;
+    Lith_Association Char (50) Index 2 ;
+    Legend_Order_Number Float ;
+    Map_Code_Unique Char (18) Index 3 ;
+    Map_sheet Char (25) Index 4 ;
