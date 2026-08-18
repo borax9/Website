@@ -60,12 +60,12 @@
             background: #004494;
         }
         
-        /* BAĞIŞ MODAL (POPUP) STİLLERİ */
+        /* MODAL (POPUP) STİLLERİ */
         .modal-overlay {
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.75);
             z-index: 10000;
             justify-content: center;
             align-items: center;
@@ -76,21 +76,22 @@
             color: #fff;
             padding: 30px;
             border-radius: 8px;
-            max-width: 500px;
+            max-width: 550px;
             width: 100%;
-            text-align: center;
+            text-align: left;
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
         }
         .modal-content h3 {
             color: #00e6c3;
             margin-bottom: 15px;
+            text-align: center;
         }
         .modal-content p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #a0aec0;
-            margin-bottom: 20px;
-            line-height: 1.6;
+            margin-bottom: 15px;
+            line-height: 1.5;
         }
         .modal-buttons {
             display: flex;
@@ -120,7 +121,7 @@
             padding: 8px 15px;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 5px;
         }
         .btn-close-modal:hover {
             background: rgba(255,255,255,0.05);
@@ -227,14 +228,14 @@
                 <span class="lang-pt" style="display:none;">Documentos e Conjuntos de Dados</span>
             </h2>
             <p class="section-subtitle" style="text-align: center; margin-bottom: 40px;">
-                <span class="lang-tr">Derneğimiz tarafından sağlanan coğrafi bilgi ve veri setleri:</span>
-                <span class="lang-en" style="display:none;">Geographic information and datasets provided by our association:</span>
-                <span class="lang-pt" style="display:none;">Informações geográficas e conjuntos de dados fornecidos por nossa associação:</span>
+                <span class="lang-tr">Derneğimiz ve Borax Consulting iş birliğiyle sağlanan coğrafi veri setleri:</span>
+                <span class="lang-en" style="display:none;">Geographic datasets provided in collaboration with Borax Consulting:</span>
+                <span class="lang-pt" style="display:none;">Conjuntos de dados geográficos fornecidos em colaboração com Borax Consulting:</span>
             </p>
             
             <div class="cards-grid" style="max-width: 900px; margin: 0 auto;">
                 <article class="card" style="grid-column: 1 / -1;">
-                    <div class="card-badge">GIS Dataset</div>
+                    <div class="card-badge">GIS Dataset Service</div>
                     <h3>Geological Map of Turkiye</h3>
                     
                     <p class="lang-tr" style="white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
@@ -243,7 +244,7 @@
                         • Jeoloji Lejandı: "Turkey500k_GeologyLegend"
                         • Litoloji: "Turkey500k_Lithology"
                         • Mineral Oluşumları: "Turkey500k_MinOcc"
-                        Tam öznitelikli olarak MapInfo formatında sağlanmış olup, ArcGIS ve QGIS ile uyumludur (stiller QGIS'te yorumlanmaz).
+                        Tam öznitelikli olarak MapInfo ve KMZ formatlarında sağlanmış olup, ArcGIS, QGIS ve Google Earth ile uyumludur.
                     </p>
                     <p class="lang-en" style="display:none; white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
                         Geological map data of Turkey (1:500,000 scale, 1961) was digitised in MapInfo and reprojected to WGS84 (lat/long). The dataset includes:
@@ -251,7 +252,7 @@
                         • Geology Legend: "Turkey500k_GeologyLegend"
                         • Lithology: "Turkey500k_Lithology"
                         • Mineral Occurrences: "Turkey500k_MinOcc"
-                        Fully attributed and provided in MapInfo format, with ArcGIS and QGIS compatibility (styles not interpreted in QGIS).
+                        Fully attributed and provided in MapInfo and KMZ formats, compatible with ArcGIS, QGIS, and Google Earth.
                     </p>
                     <p class="lang-pt" style="display:none; white-space: pre-line; line-height: 1.7; margin-top: 1rem;">
                         Os dados do mapa geológico da Turquia (escala 1:500.000, 1961) foram digitalizados no MapInfo e reprojetados para WGS84 (lat/long). O conjunto de dados inclui:
@@ -259,14 +260,14 @@
                         • Legenda Geológica: "Turkey500k_GeologyLegend"
                         • Litologia: "Turkey500k_Lithology"
                         • Ocorrências Minerais: "Turkey500k_MinOcc"
-                        Totalmente atribuído e fornecido no formato MapInfo, com compatibilidade ArcGIS e QGIS (estilos não interpretados no QGIS).
+                        Totalmente atribuído e fornecido nos formatos MapInfo e KMZ, compatível com ArcGIS, QGIS e Google Earth.
                     </p>
 
                     <div style="margin-top: 2rem;">
                         <button onclick="openDonateModal()" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-                            📥 <span class="lang-tr">İndir (€5 Bağış / Download)</span>
-                            <span class="lang-en" style="display:none;">Download (€5 Donation)</span>
-                            <span class="lang-pt" style="display:none;">Baixar (Doação €5)</span>
+                            📥 <span class="lang-tr">Satın Al ve İndir (€5 Hizmet Bedeli)</span>
+                            <span class="lang-en" style="display:none;">Purchase & Download (€5 Service Fee)</span>
+                            <span class="lang-pt" style="display:none;">Comprar e Baixar (Taxa €5)</span>
                         </button>
                     </div>
                 </article>
@@ -274,35 +275,60 @@
         </div>
     </section>
 
-    <!-- BAĞIŞ & ERİŞİM KİLİDİ MODALI -->
+    <!-- SATIN ALMA VE DOSYA LİSTESİ MODALI -->
     <div id="donateModal" class="modal-overlay">
         <div class="modal-content">
-            <h3 class="lang-tr">Veri Setine Erişim için Destek Olun</h3>
-            <h3 class="lang-en" style="display:none;">Support Us to Access the Dataset</h3>
-            <h3 class="lang-pt" style="display:none;">Apoie-nos para Acessar o Conjunto de Dados</h3>
+            <h3 class="lang-tr">GIS Veri Seti Satın Alma & Dosya İçeriği</h3>
+            <h3 class="lang-en" style="display:none;">GIS Dataset Purchase & File List</h3>
+            <h3 class="lang-pt" style="display:none;">Compra do Conjunto de Dados GIS e Arquivos</h3>
+
+            <!-- BORAX CONSULTING DETAYLARI -->
+            <div style="background: rgba(255,255,255,0.05); padding: 12px 15px; border-radius: 6px; margin: 12px 0; font-size: 0.82rem; color: #cbd5e1; border: 1px solid rgba(255,255,255,0.1);">
+                <strong style="color: #00e6c3;">Hizmet Sağlayıcı / Service Provider:</strong><br>
+                <strong>BORAX - ATIVIDADES DE CONSULTORIA, CIENTIFICAS, TÉCNICAS E ENGENHARIA</strong><br>
+                <strong>VAT:</strong> 308356829 | <strong>CAE:</strong> 74992, 71120<br>
+                <strong>Kuruluş:</strong> Lisbon, Portugal 2560-192 | <strong>Adres:</strong> Bratislava, Slovakia 811 02<br>
+                <strong>Tel:</strong> +421 940 194 980
+            </div>
 
             <p class="lang-tr">
-                Bu veri setine erişebilmek için derneğimizin çalışmalarına <strong>5 € (Euro)</strong> tutarında bağışta bulunmanız gerekmektedir. Ödeme sekmesi açıldığında veri seti indirmesi cihazınızda başlatılacaktır.
+                Bu teknik GIS veri seti hizmeti <strong>Borax Consulting</strong> tarafından sağlanmaktadır. <strong>5 €</strong> tutarındaki hizmet bedeli ödemesi tamamlandıktan sonra indirme otomatik olarak başlayacaktır.
             </p>
             <p class="lang-en" style="display:none;">
-                To access this dataset, a donation of <strong>€5</strong> is required to support our association's work. Once the payment page opens, the dataset download will start automatically.
+                This technical GIS dataset service is provided by <strong>Borax Consulting</strong>. Upon completing the <strong>€5</strong> service fee, the dataset download will start automatically.
             </p>
             <p class="lang-pt" style="display:none;">
-                Para acessar este conjunto de dados, é necessária uma doação de <strong>€5</strong> para apoiar o trabalho de nossa associação. Assim que a página de pagamento for aberta, o download do conjunto de dados será iniciado automaticamente.
+                Este serviço de conjunto de dados GIS é fornecido pela <strong>Borax Consulting</strong>. Após concluir o pagamento da taxa de serviço de <strong>€5</strong>, o download começará automaticamente.
             </p>
+
+            <!-- DOSYA LİSTESİ -->
+            <div style="margin: 15px 0; max-height: 170px; overflow-y: auto; background: #0a0f1d; padding: 12px; border-radius: 6px; font-size: 0.83rem; border: 1px solid #1e293b;">
+                <strong style="color: #4da3ff; display: block; margin-bottom: 6px;" class="lang-tr">📦 Paket İçeriği (dataset.rar):</strong>
+                <strong style="color: #4da3ff; display: block; margin-bottom: 6px; display:none;" class="lang-en">📦 Package Contents (dataset.rar):</strong>
+                <strong style="color: #4da3ff; display: block; margin-bottom: 6px; display:none;" class="lang-pt">📦 Conteúdo do Pacote (dataset.rar):</strong>
+                
+                <ul style="padding-left: 20px; margin: 0; color: #94a3b8; line-height: 1.5;">
+                    <li><code>Geology_Map_Turkiye_Tdotaltai.kmz</code></li>
+                    <li><code>Readme.txt</code></li>
+                    <li><code>Turkey 500K geology legend</code> (.DAT, .ID, .MAP, .TAB)</li>
+                    <li><code>Turkey 500k Faults V1</code> (.DAT, .ID, .IND, .MAP, .TAB)</li>
+                    <li><code>Turkey 500k Lithology V1</code> (.DAT, .ID, .IND, .MAP, .TAB)</li>
+                    <li><code>Turkey 500k MinOcc V1</code> (.DAT, .ID, .MAP, .TAB)</li>
+                </ul>
+            </div>
 
             <div class="modal-buttons">
                 <!-- Stripe Ödeme Linki -->
-                <a href="https://buy.stripe.com/14A6oHdoveOL2UU1ny8Ra0d" target="_blank" onclick="handleDonationClick()" class="btn-stripe">
-                    💳 <span class="lang-tr">5 € ile Bağış Yap ve İndir</span>
-                    <span class="lang-en" style="display:none;">Donate €5 & Download</span>
-                    <span class="lang-pt" style="display:none;">Doar €5 e Baixar</span>
+                <a href="https://buy.stripe.com/14A6oHdoveOL2UU1ny8Ra0d" onclick="closeDonateModal()" class="btn-stripe" style="text-align: center;">
+                    💳 <span class="lang-tr">5 € Öde ve İndir (Borax Consulting)</span>
+                    <span class="lang-en" style="display:none;">Pay €5 & Download</span>
+                    <span class="lang-pt" style="display:none;">Pagar €5 e Baixar</span>
                 </a>
                 
                 <button onclick="closeDonateModal()" class="btn-close-modal">
-                    <span class="lang-tr">İptal</span>
-                    <span class="lang-en" style="display:none;">Cancel</span>
-                    <span class="lang-pt" style="display:none;">Cancelar</span>
+                    <span class="lang-tr">Kapat</span>
+                    <span class="lang-en" style="display:none;">Close</span>
+                    <span class="lang-pt" style="display:none;">Fechar</span>
                 </button>
             </div>
         </div>
@@ -355,14 +381,13 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 Eurasia Natural History Association. All rights reserved.</p>
+                <p>&copy; 2026 Eurasia Natural History Association & Borax Consulting. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- SCRIPT KODLARI (DİL, SAYAC VE MODAL) -->
+    <!-- SCRIPT KODLARI -->
     <script>
-        // Reponuzdaki dataset.rar dosyasının adresi
         const localDatasetPath = "dataset/dataset.rar"; 
 
         function openDonateModal() {
@@ -382,14 +407,6 @@
             document.body.removeChild(downloadLink);
         }
 
-        function handleDonationClick() {
-            // Stripe yeni sekmede açılırken 2 saniye sonra otomatik indirme başlatılır
-            setTimeout(() => {
-                triggerDownload();
-                closeDonateModal();
-            }, 2000);
-        }
-
         window.onclick = function(event) {
             let modal = document.getElementById('donateModal');
             if (event.target == modal) {
@@ -406,7 +423,7 @@
             });
             document.querySelectorAll('.lang-' + lang).forEach(el => {
                 el.style.display = 'inline';
-                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4' || el.tagName === 'ARTICLE' || el.tagName === 'SPAN') {
+                if(el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'P' || el.tagName === 'H4' || el.tagName === 'ARTICLE' || el.tagName === 'SPAN' || el.tagName === 'STRONG') {
                     if (el.classList.contains('lang-tr') || el.classList.contains('lang-en') || el.classList.contains('lang-pt')) {
                          el.style.display = ''; 
                     }
@@ -419,7 +436,7 @@
             const savedLang = localStorage.getItem('preferred_lang') || 'tr';
             setLanguage(savedLang);
 
-            // ZİYARETÇİ SAYACI
+            // ZİYARETÇİ SAYACI (326'dan itibaren her girişte kesintisiz artış)
             let localVisitorCount = parseInt(localStorage.getItem('dotaltai_visitors')) || 326;
             localVisitorCount++; 
             localStorage.setItem('dotaltai_visitors', localVisitorCount);
@@ -435,11 +452,13 @@
                     document.getElementById('visitor-count').innerText = localVisitorCount;
                 });
 
-            // Stripe ödemesinden dönüş yapıldığında otomatik indirme kontrolü
+            // Sadece ödeme tamamlanıp sitemize dönüldüğünde indirme başlatma (?status=success)
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('status') === 'success') {
-                alert("Ödemeniz için teşekkür ederiz! Veri seti indirmesi başlatılıyor...");
-                triggerDownload();
+                setTimeout(() => {
+                    alert("Ödemeniz onaylandı! Veri seti (dataset.rar) indiriliyor...");
+                    triggerDownload();
+                }, 800);
             }
         }
     </script>
